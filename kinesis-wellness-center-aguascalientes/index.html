@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinesis Wellness Center · Aguascalientes</title>
+<meta name="description" content="Entrenamiento funcional y Hyrox en Aguascalientes. Dos sucursales: Punta Campestre e Independencia. Reserva tu clase por WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --grafito:#1e1c1a;
+    --grafito-2:#2a2724;
+    --grafito-3:#3a3632;
+    --acido:#c8f03c;
+    --acido-osc:#9cbf1e;
+    --hueso:#eef0ec;
+    --hueso-2:#d9dcd5;
+    --gris:#a29d96;
+    --wa:#25d366;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Barlow",system-ui,sans-serif;font-size:17px;line-height:1.55;color:var(--hueso);background:var(--grafito);overflow-x:hidden}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--acido);outline-offset:3px}
+  .disp{font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;font-weight:900;line-height:.9;letter-spacing:.005em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  .demo{background:var(--acido);color:var(--grafito);font-size:13.5px;text-align:center;padding:8px 16px;font-weight:500}
+  .demo a{font-weight:700}
+
+  header{border-bottom:1px solid var(--grafito-3)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+  .marca{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+  .slot-logo{width:54px;height:54px;border:2px dashed var(--acido);display:grid;place-items:center;text-align:center;font-size:11px;font-weight:700;color:var(--acido);flex:none;line-height:1.1;border-radius:4px}
+  .marca strong{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:24px;display:block;line-height:1;letter-spacing:.02em}
+  .marca span{font-size:13.5px;color:var(--gris)}
+  nav{display:flex;gap:24px;font-weight:600;font-size:15px}
+  nav a{text-decoration:none;color:var(--hueso-2)}
+  nav a:hover{color:var(--acido)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;text-decoration:none;padding:14px 22px;border:2px solid transparent;border-radius:3px;transition:transform .15s,background .15s,color .15s;cursor:pointer;font-family:inherit}
+  .btn:active{transform:scale(.98)}
+  .btn-acido{background:var(--acido);color:var(--grafito)}
+  .btn-acido:hover{background:#d8ff52}
+  .btn-linea{border-color:var(--hueso-2);color:var(--hueso);background:transparent}
+  .btn-linea:hover{border-color:var(--acido);color:var(--acido)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .head-cta{padding:11px 18px;font-size:15px}
+
+  /* HERO */
+  .hero{padding:48px 0 40px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px;align-items:end}
+  .kicker{color:var(--acido);font-weight:600;font-size:16px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .kicker::before{content:"";width:28px;height:3px;background:var(--acido)}
+  .hero h1{font-size:clamp(64px,11vw,140px);text-transform:uppercase}
+  .hero h1 .out{color:transparent;-webkit-text-stroke:2px var(--hueso)}
+  .hero h1 .ac{color:var(--acido)}
+  .hero p.lead{max-width:540px;font-size:19px;color:var(--hueso-2);margin:26px 0 28px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .nota-res{font-size:14px;color:var(--gris);margin-top:14px}
+  .figura{position:relative;border:1px solid var(--grafito-3);background:
+      linear-gradient(var(--grafito-3) 1px,transparent 1px) 0 0/100% 40px,
+      var(--grafito-2);aspect-ratio:300/360;max-width:430px;justify-self:end;width:100%}
+  .figura svg{width:100%;height:100%;display:block}
+  .figura .rotulo{position:absolute;left:12px;bottom:10px;font-size:12.5px;color:var(--gris);font-weight:600}
+  .figura .rotulo b{color:var(--acido)}
+
+  /* TURNOS */
+  .turnos{background:var(--hueso);color:var(--grafito);padding:46px 0}
+  .turnos-top{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+  .turnos h2{font-size:clamp(40px,7vw,72px);text-transform:uppercase}
+  .turnos-top p{max-width:380px;color:#4c4944;font-weight:500}
+  .reloj{position:relative;height:84px;border:2px solid var(--grafito);background:#fff}
+  .reloj .blq{position:absolute;top:0;bottom:0;background:var(--grafito);color:var(--acido);display:flex;flex-direction:column;justify-content:center;padding:0 14px;overflow:hidden}
+  .reloj .blq b{font-family:"Big Shoulders Display",sans-serif;font-size:30px;line-height:1;font-weight:900}
+  .reloj .blq span{font-size:13px;color:var(--hueso-2);white-space:nowrap}
+  .reloj .m{left:calc((6 - 5) / 17 * 100%);width:calc(4 / 17 * 100%)}
+  .reloj .t{left:calc((16 - 5) / 17 * 100%);width:calc(4 / 17 * 100%)}
+  .escala{display:flex;justify-content:space-between;font-size:12.5px;color:#6b6760;margin-top:8px;font-weight:600}
+  .turnos .dias{margin-top:18px;font-weight:600;display:flex;flex-wrap:wrap;gap:8px}
+  .turnos .dias span{border:2px solid var(--grafito);padding:4px 12px;font-size:14px}
+
+  /* SECCIONES */
+  section.sec{padding:72px 0}
+  .sec-tit{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+  .sec-tit h2{font-size:clamp(42px,6.5vw,80px);text-transform:uppercase}
+  .sec-tit p{max-width:420px;color:var(--hueso-2)}
+
+  .clase{display:grid;grid-template-columns:90px 1fr auto;gap:20px;align-items:center;border-top:1px solid var(--grafito-3);padding:26px 0}
+  .clase:last-child{border-bottom:1px solid var(--grafito-3)}
+  .clase .num{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:56px;color:var(--acido);line-height:1}
+  .clase h3{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:34px;line-height:1;text-transform:uppercase;margin-bottom:6px}
+  .clase p{color:var(--hueso-2);max-width:560px}
+  .clase .donde{display:inline-block;font-size:13px;color:var(--acido);font-weight:600;margin-top:6px}
+  .clase .acc{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+
+  /* SUCURSALES */
+  .suc{background:var(--grafito-2);border-top:1px solid var(--grafito-3);border-bottom:1px solid var(--grafito-3)}
+  .tabs{display:flex;gap:0;border:2px solid var(--hueso);width:max-content;max-width:100%;margin-bottom:28px}
+  .tabs button{background:transparent;color:var(--hueso);border:0;padding:12px 22px;font:700 16px "Barlow",sans-serif;cursor:pointer}
+  .tabs button[aria-selected="true"]{background:var(--acido);color:var(--grafito)}
+  .suc-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:start}
+  .suc-info h3{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:46px;line-height:.95;text-transform:uppercase;margin-bottom:10px}
+  .suc-info .dir{color:var(--hueso-2);margin-bottom:20px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 24px}
+  .chips li{list-style:none;border:1.5px solid var(--grafito-3);padding:6px 12px;font-size:14.5px;font-weight:500;color:var(--hueso)}
+  .chips li::before{content:"";display:inline-block;width:7px;height:7px;background:var(--acido);margin-right:8px;vertical-align:middle}
+  .suc-info .lbl{font-weight:700;color:var(--acido);font-size:14px}
+  .mapa{border:2px solid var(--grafito-3);background:var(--grafito);aspect-ratio:4/3;width:100%}
+  .mapa iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.35) contrast(1.05)}
+  .suc-btns{display:flex;flex-wrap:wrap;gap:10px}
+
+  /* GALERIA */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .hueco{border:2px dashed var(--gris);min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;background:repeating-linear-gradient(-45deg,transparent 0 10px,rgba(200,240,60,.05) 10px 20px)}
+  .hueco b{font-family:"Big Shoulders Display",sans-serif;font-size:28px;font-weight:900;color:var(--acido);line-height:1}
+  .hueco span{font-size:14px;color:var(--hueso-2);margin-top:6px}
+  .gal .hueco:nth-child(1){grid-column:1 / 3;grid-row:1 / 3;min-height:460px}
+  .gal .hueco:nth-child(2){grid-column:3}
+  .gal .hueco:nth-child(3){grid-column:4}
+  .gal .hueco:nth-child(4){grid-column:3 / 5}
+
+  /* PROCESO */
+  .pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--grafito-3)}
+  .paso{padding:26px 22px;border-right:1px solid var(--grafito-3)}
+  .paso:last-child{border-right:0}
+  .paso .d{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:22px;color:var(--grafito);background:var(--acido);display:inline-block;padding:2px 10px;margin-bottom:16px}
+  .paso h3{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:28px;line-height:1;text-transform:uppercase;margin-bottom:8px}
+  .paso p{color:var(--hueso-2);font-size:16px}
+
+  /* OPINIONES / CTA */
+  .cierre{background:var(--acido);color:var(--grafito);padding:64px 0}
+  .cierre-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
+  .cierre h2{font-size:clamp(46px,8vw,96px);text-transform:uppercase}
+  .cierre p{font-size:18px;font-weight:500;margin-bottom:22px}
+  .cierre .btn-osc{background:var(--grafito);color:var(--acido)}
+  .cierre .btn-osc:hover{background:#000}
+  .cierre .btn-linea-osc{border-color:var(--grafito);color:var(--grafito)}
+  .cierre .btns{display:flex;flex-wrap:wrap;gap:12px}
+
+  footer{padding:36px 0 120px;color:var(--gris);font-size:14.5px}
+  footer .f{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--grafito-3);padding-top:24px}
+  footer a{color:var(--hueso)}
+
+  .fija{display:none}
+
+  @media (max-width:900px){
+    nav{display:none}
+    .hero-grid{grid-template-columns:1fr}
+    .figura{justify-self:start;max-width:300px}
+    .suc-grid{grid-template-columns:1fr}
+    .pasos{grid-template-columns:1fr 1fr}
+    .paso:nth-child(2){border-right:0}
+    .paso:nth-child(-n+2){border-bottom:1px solid var(--grafito-3)}
+    .cierre-grid{grid-template-columns:1fr}
+    .gal{grid-template-columns:1fr 1fr}
+    .gal .hueco:nth-child(n){grid-row:auto;min-height:200px}
+    .gal .hueco:nth-child(1),.gal .hueco:nth-child(4){grid-column:1 / 3}
+    .gal .hueco:nth-child(2){grid-column:1}
+    .gal .hueco:nth-child(3){grid-column:2}
+  }
+  @media (max-width:640px){
+    body{font-size:16px}
+    .head-cta{display:none}
+    .hero{padding-top:34px}
+    .hero h1 .out{-webkit-text-stroke:1.5px var(--hueso)}
+    .clase{grid-template-columns:52px 1fr;gap:14px}
+    .clase .num{font-size:40px}
+    .clase h3{font-size:28px}
+    .clase .acc{grid-column:1 / -1;justify-content:flex-start}
+    .pasos{grid-template-columns:1fr}
+    .paso{border-right:0;border-bottom:1px solid var(--grafito-3)}
+    .paso:last-child{border-bottom:0}
+    .reloj{height:96px}
+    .reloj .blq{padding:0 8px}
+    .reloj .blq b{font-size:22px}
+    .reloj .blq span{font-size:11.5px;white-space:normal;line-height:1.15}
+    .gal{grid-template-columns:1fr}
+    .gal .hueco:nth-child(n){grid-column:1;grid-row:auto;min-height:180px}
+    .tabs button{padding:11px 14px;font-size:15px}
+    .fija{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(30,28,26,.96);border-top:1px solid var(--grafito-3);z-index:50}
+    .fija a{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;text-decoration:none;padding:13px;border-radius:3px}
+    .fija .ll{background:var(--hueso);color:var(--grafito)}
+    .fija .wa{background:var(--wa);color:#08260f}
+    .fija svg{width:19px;height:19px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="marca" href="#inicio">
+      <span class="slot-logo">Tu<br>logo</span>
+      <span><strong>KINESIS</strong><span>Wellness Center · Aguascalientes</span></span>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#horario">Horario</a>
+      <a href="#clases">Clases</a>
+      <a href="#sucursales">Sucursales</a>
+      <a href="#primera-semana">Primera semana</a>
+    </nav>
+    <a class="btn btn-acido head-cta" href="https://wa.me/524492773340?text=Hola%2C%20quiero%20reservar%20una%20clase%20en%20Kinesis%20Wellness%20Center." target="_blank" rel="noopener">Reservar clase</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">Funcional · Hyrox · 2 sucursales</div>
+        <h1 class="disp">Entrena<br><span class="out">con</span> <span class="ac">método.</span></h1>
+        <p class="lead">Entrenamiento funcional en Punta Campestre e Independencia, abierto los 7 días en turno de mañana y de tarde. Reserva tu lugar por WhatsApp y llega directo a entrenar.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-acido" href="https://wa.me/524492773340?text=Hola%2C%20quiero%20reservar%20mi%20primera%20clase%20en%20Kinesis%20Wellness%20Center.%20%C2%BFQu%C3%A9%20horarios%20tienen%20disponibles%3F" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>
+            Reservar mi primera clase
+          </a>
+          <a class="btn btn-linea" href="#sucursales">Ver sucursales</a>
+        </div>
+        <p class="nota-res">Todas las clases requieren reservación previa.</p>
+      </div>
+      <div class="figura" aria-hidden="true">
+        <svg id="atleta" viewBox="0 0 300 360" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="40" y1="322" x2="260" y2="322" stroke="#3a3632" stroke-width="3"/>
+          <!-- estelas -->
+          <g stroke="#c8f03c" stroke-width="10" opacity=".14">
+            <path d="M145 110 L145 185"><animate attributeName="d" dur="2.4s" begin=".24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" values="M145 110 L145 185;M138 170 L108 240;M145 110 L145 185"/></path>
+            <circle cx="146" cy="78" r="17"><animate attributeName="cy" dur="2.4s" begin=".24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" values="78;140;78"/></circle>
+          </g>
+          <g stroke="#c8f03c" stroke-width="10" opacity=".3">
+            <path d="M145 110 L145 185"><animate attributeName="d" dur="2.4s" begin=".12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" values="M145 110 L145 185;M138 170 L108 240;M145 110 L145 185"/></path>
+            <circle cx="146" cy="78" r="17"><animate attributeName="cy" dur="2.4s" begin=".12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" values="78;140;78"/></circle>
+          </g>
+          <!-- figura -->
+          <g stroke="#eef0ec" stroke-width="10">
+            <path d="M120 320 L124 252 L145 185"><animate attributeName="d" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" values="M120 320 L124 252 L145 185;M120 320 L156 258 L108 240;M120 320 L124 252 L145 185"/></path>
+            <path d="M172 320 L166 252 L145 185"><animate attributeName="d" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" values="M172 320 L166 252 L145 185;M172 320 L190 260 L108 240;M172 320 L166 252 L145 185"/></path>
+            <path d="M145 110 L145 185"><animate attributeName="d" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" values="M145 110 L145 185;M138 170 L108 240;M145 110 L145 185"/></path>
+            <circle cx="146" cy="78" r="17" fill="#2a2724"><animate attributeName="cy" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" values="78;140;78"/></circle>
+          </g>
+          <g stroke="#c8f03c" stroke-width="9">
+            <path d="M145 116 L205 120"><animate attributeName="d" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" values="M145 116 L205 120;M138 176 L200 180;M145 116 L205 120"/></path>
+            <rect x="203" y="104" width="12" height="32" rx="3" fill="#c8f03c" stroke="none"><animate attributeName="y" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1" values="104;164;104"/></rect>
+          </g>
+        </svg>
+        <div class="rotulo">Movimiento · <b>sentadilla</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="turnos" id="horario">
+    <div class="wrap">
+      <div class="turnos-top">
+        <h2 class="disp">Dos turnos,<br>7 días.</h2>
+        <p>Antes del trabajo o al salir: elige el turno que te acomode, de lunes a domingo, en ambas sucursales.</p>
+      </div>
+      <div class="reloj" role="img" aria-label="Horario: de 6:00 a 10:00 y de 16:00 a 20:00">
+        <div class="blq m"><b>6:00–10:00</b><span>Turno mañana</span></div>
+        <div class="blq t"><b>16:00–20:00</b><span>Turno tarde</span></div>
+      </div>
+      <div class="escala" aria-hidden="true"><span>5:00</span><span>9:00</span><span>13:00</span><span>17:00</span><span>22:00</span></div>
+      <div class="dias"><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="clases">
+    <div class="wrap">
+      <div class="sec-tit">
+        <h2 class="disp">Clases</h2>
+        <p>Pregunta por disponibilidad y precio directo por WhatsApp; te respondemos con los horarios libres.</p>
+      </div>
+      <div class="clase">
+        <div class="num">01</div>
+        <div>
+          <h3>Entrenamiento funcional</h3>
+          <p>Fuerza, resistencia y movilidad con movimientos que usas todos los días. En grupo y con reservación.</p>
+          <span class="donde">Punta Campestre · Independencia</span>
+        </div>
+        <div class="acc">
+          <a class="btn btn-acido" href="https://wa.me/524492773340?text=Hola%2C%20quiero%20reservar%20una%20clase%20de%20entrenamiento%20funcional%20en%20Kinesis.%20%C2%BFQu%C3%A9%20horarios%20tienen%3F" target="_blank" rel="noopener">Reservar clase</a>
+          <a class="btn btn-linea" href="https://wa.me/524492773340?text=Hola%2C%20%C2%BFme%20pueden%20compartir%20el%20precio%20del%20entrenamiento%20funcional%20en%20Kinesis%3F" target="_blank" rel="noopener">Preguntar precio</a>
+        </div>
+      </div>
+      <div class="clase">
+        <div class="num">02</div>
+        <div>
+          <h3>Hyrox</h3>
+          <p>Entrena con el formato de carrera y estaciones funcionales de Hyrox, ya sea para competir o para retarte.</p>
+          <span class="donde">Sucursal Independencia</span>
+        </div>
+        <div class="acc">
+          <a class="btn btn-acido" href="https://wa.me/524492773340?text=Hola%2C%20quiero%20reservar%20una%20clase%20de%20Hyrox%20en%20Kinesis%20Independencia." target="_blank" rel="noopener">Reservar clase</a>
+          <a class="btn btn-linea" href="https://wa.me/524492773340?text=Hola%2C%20%C2%BFme%20pueden%20compartir%20el%20precio%20de%20las%20clases%20de%20Hyrox%20en%20Kinesis%3F" target="_blank" rel="noopener">Preguntar precio</a>
+        </div>
+      </div>
+      <div class="clase">
+        <div class="num">03</div>
+        <div>
+          <h3>Fisioterapia</h3>
+          <p>La sucursal Independencia cuenta con fisioterapeuta. Pregunta cómo agendar tu valoración.</p>
+          <span class="donde">Sucursal Independencia</span>
+        </div>
+        <div class="acc">
+          <a class="btn btn-linea" href="https://wa.me/524492773340?text=Hola%2C%20quiero%20informes%20sobre%20el%20servicio%20de%20fisioterapia%20en%20Kinesis%20Independencia." target="_blank" rel="noopener">Preguntar precio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec suc" id="sucursales">
+    <div class="wrap">
+      <div class="sec-tit">
+        <h2 class="disp">Sucursales</h2>
+        <p>Elige la que te quede más cerca. Mismo horario en ambas.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Sucursales">
+        <button role="tab" aria-selected="true" data-s="pc">Punta Campestre</button>
+        <button role="tab" aria-selected="false" data-s="ind">Independencia</button>
+      </div>
+      <div class="suc-grid">
+        <div class="suc-info">
+          <h3 id="s-nombre">Punta Campestre</h3>
+          <p class="dir" id="s-dir">Av. Punta Campestre 108-1, Local 14, La Punta Campestre, 20329 Aguascalientes, Ags.</p>
+          <span class="lbl">Instalaciones</span>
+          <ul class="chips" id="s-chips"></ul>
+          <div class="suc-btns">
+            <a class="btn btn-acido" id="s-wa" href="#" target="_blank" rel="noopener">Reservar en esta sucursal</a>
+            <a class="btn btn-linea" id="s-como" href="#" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+        </div>
+        <div class="mapa">
+          <iframe id="s-mapa" title="Mapa de la sucursal" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Av.%20Punta%20Campestre%20108%2C%20La%20Punta%20Campestre%2C%2020329%20Aguascalientes%2C%20Ags.&z=16&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="galeria">
+    <div class="wrap">
+      <div class="sec-tit">
+        <h2 class="disp">Así se entrena</h2>
+        <p>Espacios listos para las fotos de cada sucursal.</p>
+      </div>
+      <div class="gal">
+        <div class="hueco"><b>Imagen 1</b><span>Clase de funcional en acción, con el grupo completo y el área de entrenamiento al fondo.</span></div>
+        <div class="hueco"><b>Imagen 2</b><span>Detalle de equipo: kettlebells, balones o rack de peso libre.</span></div>
+        <div class="hueco"><b>Imagen 3</b><span>Fachada o entrada de la sucursal, para que te reconozcan al llegar.</span></div>
+        <div class="hueco"><b>Imagen 4</b><span>Entrenamiento Hyrox: remo, ski o trineo en la sucursal Independencia.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="primera-semana" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-tit">
+        <h2 class="disp">Tu primera semana</h2>
+        <p>Empezar es sencillo. Así funciona desde el primer mensaje.</p>
+      </div>
+      <div class="pasos">
+        <div class="paso"><span class="d">Paso 1</span><h3>Escribe</h3><p>Mándanos WhatsApp, dinos tu sucursal y el turno que prefieres.</p></div>
+        <div class="paso"><span class="d">Paso 2</span><h3>Reserva</h3><p>Te confirmamos lugar y horario disponible. Todas las clases son con reservación.</p></div>
+        <div class="paso"><span class="d">Paso 3</span><h3>Llega</h3><p>Ven con ropa cómoda y agua. Hay estacionamiento en ambas sucursales.</p></div>
+        <div class="paso"><span class="d">Paso 4</span><h3>Repite</h3><p>Agenda tus siguientes clases en el turno que te acomode, cualquier día de la semana.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <div class="wrap cierre-grid">
+      <h2 class="disp">Muy bien calificado por quienes entrenan aquí.</h2>
+      <div>
+        <p>Lee lo que dicen sus usuarios y aparta tu primera clase hoy.</p>
+        <div class="btns">
+          <a class="btn btn-osc" href="https://www.google.com/maps/search/?api=1&query=Kinesis+Wellness+Center+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+          <a class="btn btn-linea btn-linea-osc" href="https://instagram.com/kinesiswellnesscenter" target="_blank" rel="noopener">@kinesiswellnesscenter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap f">
+    <div><strong style="color:var(--hueso)">Kinesis Wellness Center</strong><br>Tel. <a href="tel:+524492773340">449 277 3340</a> · Lunes a domingo, 6:00–10:00 y 16:00–20:00</div>
+    <div>Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">FixA Consultoría</a></div>
+  </div>
+</footer>
+
+<div class="fija">
+  <a class="ll" href="tel:+524492773340"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Llamar</a>
+  <a class="wa" href="https://wa.me/524492773340?text=Hola%2C%20quiero%20reservar%20una%20clase%20en%20Kinesis%20Wellness%20Center." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var S={
+    pc:{nombre:"Punta Campestre",dir:"Av. Punta Campestre 108-1, Local 14, La Punta Campestre, 20329 Aguascalientes, Ags.",
+      q:"Av. Punta Campestre 108, La Punta Campestre, 20329 Aguascalientes, Ags.",
+      chips:["Entrenamiento funcional","Aire acondicionado","Estacionamiento","Lockers","Vestidores","Wi-Fi"]},
+    ind:{nombre:"Independencia",dir:"Av. Independencia 1890, Villas de San Nicolás, 20115 Aguascalientes, Ags.",
+      q:"Av. Independencia 1890, Villas de San Nicolás, 20115 Aguascalientes, Ags.",
+      chips:["Entrenamiento funcional","Hyrox","Área de cardio","Peso libre","Máquinas","Zona de estiramiento","Fisioterapeuta","Regaderas","Vestidor","Estacionamiento","Wi-Fi"]}
+  };
+  var tabs=document.querySelectorAll('.tabs button');
+  function pon(k){
+    var s=S[k],e=encodeURIComponent;
+    document.getElementById('s-nombre').textContent=s.nombre;
+    document.getElementById('s-dir').textContent=s.dir;
+    var ul=document.getElementById('s-chips');ul.innerHTML='';
+    s.chips.forEach(function(c){var li=document.createElement('li');li.textContent=c;ul.appendChild(li);});
+    var m=document.getElementById('s-mapa'),src="https://www.google.com/maps?q="+e(s.q)+"&z=16&output=embed";
+    if(m.getAttribute('src')!==src)m.setAttribute('src',src);
+    document.getElementById('s-wa').href="https://wa.me/524492773340?text="+e("Hola, quiero reservar una clase en Kinesis sucursal "+s.nombre+".");
+    document.getElementById('s-como').href="https://www.google.com/maps/search/?api=1&query="+e(s.q);
+    tabs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.s===k?'true':'false');});
+  }
+  tabs.forEach(function(b){b.addEventListener('click',function(){pon(b.dataset.s);});});
+  pon('pc');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)'),svg=document.getElementById('atleta');
+  function mov(){ if(!svg.pauseAnimations)return; if(mq.matches){svg.pauseAnimations();svg.setCurrentTime(0);} else svg.unpauseAnimations(); }
+  mov(); if(mq.addEventListener)mq.addEventListener('change',mov);
+})();
+</script>
+</body>
+</html>

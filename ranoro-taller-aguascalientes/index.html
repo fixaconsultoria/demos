@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranoro · Taller mecánico en Aguascalientes</title>
+<meta name="description" content="Taller mecánico Ranoro en Jardín de la Convención, Aguascalientes. Mantenimiento, diagnóstico y reparación. Cotiza por WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --asfalto:#1d252e;
+  --asfalto-2:#26313c;
+  --asfalto-3:#334252;
+  --linea:#3e4e5f;
+  --papel:#f4f5f2;
+  --papel-2:#e7e9e4;
+  --naranja:#ff6a13;
+  --naranja-hondo:#d9520a;
+  --senal:#ffd23f;
+  --texto:#1d252e;
+  --gris:#5d6873;
+  --gris-claro:#a9b4bf;
+  --wa:#1fa855;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--texto);background:var(--papel);overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--senal);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:"Chakra Petch","IBM Plex Sans",sans-serif;line-height:1.05;letter-spacing:-.01em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+
+.demo{background:var(--senal);color:#2a2410;font-size:13.5px;text-align:center;padding:8px 16px;line-height:1.4}
+.demo a{font-weight:600}
+
+/* Header */
+header{background:var(--asfalto);color:var(--papel);border-bottom:1px solid var(--linea)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.slot-logo{width:54px;height:54px;border:2px dashed var(--naranja);border-radius:8px;display:grid;place-items:center;text-align:center;font-size:11px;font-weight:600;color:var(--naranja);flex:none;line-height:1.1;font-family:"Chakra Petch",sans-serif}
+.marca strong{font-family:"Chakra Petch",sans-serif;font-size:24px;letter-spacing:.04em;display:block;line-height:1}
+.marca span{font-size:13.5px;color:var(--gris-claro)}
+nav{display:flex;gap:24px;font-size:15px}
+nav a{text-decoration:none;color:var(--gris-claro)}
+nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:16px;text-decoration:none;border-radius:6px;padding:14px 22px;border:2px solid transparent;transition:background .15s,transform .15s;cursor:pointer;font-family:inherit}
+.btn:active{transform:translateY(1px)}
+.btn-naranja{background:var(--naranja);color:#1b1006}
+.btn-naranja:hover{background:#ff7f33}
+.btn-borde{border-color:var(--gris-claro);color:var(--papel)}
+.btn-borde:hover{border-color:#fff}
+.btn svg{width:20px;height:20px;flex:none}
+.bar .btn{padding:11px 18px;font-size:15px}
+
+/* Hero */
+.hero{background:var(--asfalto);color:var(--papel);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;background:repeating-linear-gradient(90deg,var(--asfalto-3) 0 46px,transparent 46px 62px)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;padding-top:64px;padding-bottom:84px}
+.ficha{display:inline-flex;align-items:center;gap:10px;font-family:"Chakra Petch",sans-serif;font-size:14px;color:var(--senal);border:1px solid var(--linea);border-radius:4px;padding:6px 12px;margin-bottom:22px}
+.ficha i{width:8px;height:8px;border-radius:50%;background:var(--senal);display:block}
+.hero h1{font-size:clamp(38px,5.6vw,64px);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--naranja)}
+.hero p.lead{font-size:18px;color:#cdd5dd;max-width:520px;margin-bottom:30px}
+.acciones{display:flex;flex-wrap:wrap;gap:12px}
+.dato-hero{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:14.5px;color:var(--gris-claro)}
+.dato-hero span{display:flex;align-items:center;gap:8px}
+.dato-hero b{color:var(--papel);font-weight:600}
+
+.escaner{position:relative;background:var(--asfalto-2);border:1px solid var(--linea);border-radius:10px;padding:20px 20px 16px}
+.escaner-top{display:flex;justify-content:space-between;font-family:"Chakra Petch",sans-serif;font-size:13px;color:var(--gris-claro);margin-bottom:6px}
+.escaner-top b{color:var(--senal);font-weight:600}
+#auto{width:100%;height:auto}
+.escaner-lista{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.escaner-lista div{font-size:12.5px;color:var(--gris-claro);border-top:2px solid var(--linea);padding-top:6px;transition:border-color .3s,color .3s}
+.escaner-lista div.on{border-color:var(--naranja);color:var(--papel)}
+
+/* Escaneo animado */
+.scan-line{animation:scan 5.5s cubic-bezier(.45,0,.55,1) infinite}
+@keyframes scan{0%{transform:translateX(0)}50%{transform:translateX(520px)}100%{transform:translateX(0)}}
+.punto circle.halo{opacity:0;transform-box:fill-box;transform-origin:center}
+.punto.on circle.halo{animation:pulso 1.6s ease-out infinite}
+.punto circle.nucleo{fill:var(--asfalto-3);transition:fill .3s}
+.punto.on circle.nucleo{fill:var(--naranja)}
+@keyframes pulso{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(2.6)}}
+
+/* Sin sorpresas */
+.promesa{background:var(--naranja);color:#1b1006}
+.promesa .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding-top:36px;padding-bottom:36px}
+.promesa svg{width:64px;height:64px}
+.promesa h2{font-size:clamp(26px,3.4vw,38px)}
+.promesa p{font-size:17px;max-width:620px;margin-top:6px}
+.promesa .btn{background:var(--asfalto);color:var(--papel)}
+.promesa .btn:hover{background:#000}
+
+section{padding:84px 0}
+.titulo{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+.titulo h2{font-size:clamp(30px,4vw,46px);max-width:640px}
+.titulo p{max-width:420px;color:var(--gris)}
+.num{font-family:"Chakra Petch",sans-serif;color:var(--naranja-hondo);font-weight:600;font-size:15px;display:block;margin-bottom:10px}
+
+/* Orden de servicio */
+.orden{background:#fff;border:1px solid var(--papel-2);border-radius:8px;overflow:hidden;box-shadow:0 1px 0 var(--papel-2)}
+.orden-cab{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:var(--papel-2);padding:14px 22px;font-family:"Chakra Petch",sans-serif;font-size:14px;color:var(--gris)}
+.fila{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:22px;border-top:1px dashed #cfd4cd}
+.fila:first-of-type{border-top:0}
+.casilla{width:28px;height:28px;border:2px solid var(--asfalto);border-radius:4px;display:grid;place-items:center}
+.casilla svg{width:18px;height:18px;opacity:0;transition:opacity .2s}
+.fila:hover .casilla svg{opacity:1}
+.fila h3{font-size:22px;margin-bottom:4px}
+.fila p{color:var(--gris);font-size:15.5px}
+.btn-cot{background:var(--asfalto);color:#fff;padding:11px 18px;font-size:15px}
+.btn-cot:hover{background:var(--naranja-hondo)}
+.orden-pie{padding:14px 22px;background:var(--papel);font-size:14.5px;color:var(--gris);border-top:1px solid var(--papel-2)}
+
+/* Proceso */
+.proceso{background:var(--asfalto);color:var(--papel)}
+.proceso .titulo p{color:var(--gris-claro)}
+.via{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.via::before{content:"";position:absolute;left:0;right:0;top:27px;height:6px;background:repeating-linear-gradient(90deg,var(--gris-claro) 0 10px,transparent 10px 22px);opacity:.35}
+.paso{position:relative;padding-right:24px}
+.paso .marcador{width:60px;height:60px;border-radius:50%;background:var(--asfalto);border:3px solid var(--naranja);display:grid;place-items:center;font-family:"Chakra Petch",sans-serif;font-weight:700;font-size:22px;color:var(--naranja);position:relative;z-index:1;margin-bottom:20px}
+.paso h3{font-size:22px;margin-bottom:8px}
+.paso p{color:#c4cdd6;font-size:15.5px}
+.extra{margin-top:48px;display:flex;gap:18px;align-items:center;border:1px solid var(--linea);border-radius:8px;padding:20px 22px;flex-wrap:wrap}
+.extra svg{width:42px;height:42px;flex:none}
+.extra div{flex:1;min-width:220px}
+.extra h3{font-size:20px;margin-bottom:2px}
+.extra p{color:#c4cdd6;font-size:15.5px}
+
+/* Galería */
+.galeria{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:200px 200px;gap:14px}
+.hueco{border:2px dashed #b6bdb4;border-radius:8px;background:repeating-linear-gradient(-45deg,#fff 0 10px,var(--papel) 10px 20px);display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:var(--gris)}
+.hueco b{font-family:"Chakra Petch",sans-serif;font-size:18px;color:var(--texto)}
+.hueco span{font-size:14px}
+.hueco.grande{grid-row:span 2}
+.hueco.ancho{grid-column:span 2}
+
+/* Visita */
+.visita{display:grid;grid-template-columns:1fr 1.25fr;gap:32px;align-items:stretch}
+.tarjeta{background:#fff;border:1px solid var(--papel-2);border-radius:8px;padding:28px}
+.tarjeta h3{font-size:24px;margin-bottom:16px}
+.horario{width:100%;border-collapse:collapse;font-size:16px;margin-bottom:22px}
+.horario td{padding:10px 0;border-bottom:1px solid var(--papel-2)}
+.horario td:last-child{text-align:right;font-family:"Chakra Petch",sans-serif;font-weight:600}
+.horario tr.hoy td{color:var(--naranja-hondo)}
+.cerrado{color:var(--gris)}
+.dir{display:flex;gap:10px;margin-bottom:20px;color:var(--gris)}
+.dir svg{width:22px;height:22px;flex:none;margin-top:2px;color:var(--naranja-hondo)}
+.pila{display:flex;flex-direction:column;gap:10px}
+.btn-claro{border-color:var(--asfalto);color:var(--asfalto)}
+.btn-claro:hover{background:var(--asfalto);color:#fff}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#18914a}
+.mapa{border-radius:8px;overflow:hidden;border:1px solid var(--papel-2);min-height:380px;background:var(--papel-2)}
+.mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+
+footer{background:#141a20;color:var(--gris-claro);padding:40px 0 110px;font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:var(--papel);font-family:"Chakra Petch",sans-serif;font-size:18px}
+
+.barra-movil{display:none}
+
+@media (max-width:900px){
+  nav{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:36px;padding-top:44px;padding-bottom:64px}
+  .promesa .wrap{grid-template-columns:1fr;gap:16px}
+  .via{grid-template-columns:1fr 1fr;row-gap:34px}
+  .via::before{display:none}
+  .visita{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .bar .btn{display:none}
+  section{padding:60px 0}
+  .escaner{padding:14px 12px 12px}
+  .escaner-lista{grid-template-columns:1fr 1fr}
+  .fila{grid-template-columns:auto 1fr;padding:18px}
+  .fila .btn-cot{grid-column:1 / -1;justify-self:start}
+  .via{grid-template-columns:1fr}
+  .galeria{grid-template-columns:1fr 1fr;grid-template-rows:180px 150px 150px}
+  .hueco.grande{grid-row:auto;grid-column:span 2}
+  .hueco.ancho{grid-column:span 2}
+  .acciones .btn{flex:1 1 100%}
+  .barra-movil{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(29,37,46,.96);border-top:1px solid var(--linea);z-index:50}
+  .barra-movil .btn{padding:13px 10px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .scan-line{animation:none;transform:translateX(260px)}
+  .punto.on circle.halo{animation:none;opacity:0}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="marca" href="#inicio">
+      <span class="slot-logo">Tu<br>logo</span>
+      <span><strong>RANORO</strong><span>Taller mecánico · Aguascalientes</span></span>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#visita">Horario y ubicación</a>
+    </nav>
+    <a class="btn btn-naranja" data-wa="Hola, vi su página y quiero cotizar un servicio para mi auto." href="https://wa.me/524491425323">Cotizar por WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" style="padding:0">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="ficha"><i></i>Jardín de la Convención · Aguascalientes</span>
+      <h1>Tu auto revisado a fondo, <em>y tú enterado</em> de cada paso.</h1>
+      <p class="lead">Mantenimiento, diagnóstico y reparación general en Av. de la Convención de 1914 Sur. Antes de cualquier cambio en el costo, te consultamos.</p>
+      <div class="acciones">
+        <a class="btn btn-naranja" data-wa="Hola, quiero cotizar un servicio para mi auto. Mi auto es: " href="https://wa.me/524491425323">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3Z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+        <a class="btn btn-borde" href="tel:+524491425323">Llamar 449 142 5323</a>
+      </div>
+      <div class="dato-hero">
+        <span>Lunes a viernes <b>8:30–17:30</b></span>
+        <span>Sábado <b>8:30–13:30</b></span>
+      </div>
+    </div>
+
+    <div class="escaner" aria-label="Ilustración: auto en revisión">
+      <div class="escaner-top"><span>Revisión en curso</span><b id="estado">Escaneando…</b></div>
+      <svg id="auto" viewBox="0 0 560 250" role="img" aria-label="Auto en vista lateral con una línea de diagnóstico que lo recorre">
+        <defs>
+          <linearGradient id="haz" x1="0" x2="1">
+            <stop offset="0" stop-color="#ff6a13" stop-opacity="0"/>
+            <stop offset=".5" stop-color="#ff6a13" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#ff6a13" stop-opacity="0"/>
+          </linearGradient>
+          <clipPath id="marco"><rect x="0" y="0" width="560" height="250"/></clipPath>
+        </defs>
+        <!-- piso con riel -->
+        <line x1="10" y1="214" x2="550" y2="214" stroke="#3e4e5f" stroke-width="2"/>
+        <g stroke="#3e4e5f" stroke-width="3">
+          <line x1="30" y1="226" x2="50" y2="226"/><line x1="80" y1="226" x2="100" y2="226"/><line x1="130" y1="226" x2="150" y2="226"/><line x1="180" y1="226" x2="200" y2="226"/><line x1="230" y1="226" x2="250" y2="226"/><line x1="280" y1="226" x2="300" y2="226"/><line x1="330" y1="226" x2="350" y2="226"/><line x1="380" y1="226" x2="400" y2="226"/><line x1="430" y1="226" x2="450" y2="226"/><line x1="480" y1="226" x2="500" y2="226"/><line x1="530" y1="226" x2="550" y2="226"/>
+        </g>
+        <!-- carrocería -->
+        <path d="M48 178 L52 148 Q56 132 74 128 L150 118 L206 76 Q218 66 236 66 L356 66 Q374 66 388 76 L446 118 L492 126 Q516 130 518 150 L520 178 Z" fill="#26313c" stroke="#a9b4bf" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- ventanas -->
+        <path d="M168 118 L214 82 Q222 76 232 76 L290 76 L290 118 Z" fill="#1d252e" stroke="#a9b4bf" stroke-width="1.5"/>
+        <path d="M302 118 L302 76 L352 76 Q364 76 374 84 L420 118 Z" fill="#1d252e" stroke="#a9b4bf" stroke-width="1.5"/>
+        <!-- líneas de puerta -->
+        <path d="M296 120 L296 176 M166 122 L170 176 M420 122 L414 176" stroke="#5d6873" stroke-width="1.5" fill="none"/>
+        <line x1="318" y1="136" x2="338" y2="136" stroke="#a9b4bf" stroke-width="3" stroke-linecap="round"/>
+        <line x1="188" y1="136" x2="208" y2="136" stroke="#a9b4bf" stroke-width="3" stroke-linecap="round"/>
+        <!-- faros -->
+        <path d="M500 136 L516 140 L516 152 L498 150 Z" fill="#ffd23f"/>
+        <rect x="50" y="140" width="12" height="14" rx="2" fill="#ff6a13"/>
+        <!-- ruedas -->
+        <g>
+          <circle cx="140" cy="182" r="34" fill="#141a20" stroke="#a9b4bf" stroke-width="2.5"/>
+          <circle cx="140" cy="182" r="15" fill="#334252" stroke="#a9b4bf" stroke-width="2"/>
+          <circle cx="428" cy="182" r="34" fill="#141a20" stroke="#a9b4bf" stroke-width="2.5"/>
+          <circle cx="428" cy="182" r="15" fill="#334252" stroke="#a9b4bf" stroke-width="2"/>
+        </g>
+        <!-- puntos de revisión -->
+        <g class="punto" data-x="140" data-i="0"><circle class="halo" cx="140" cy="182" r="9" fill="#ff6a13"/><circle class="nucleo" cx="140" cy="182" r="6"/></g>
+        <g class="punto" data-x="250" data-i="1"><circle class="halo" cx="250" cy="160" r="9" fill="#ff6a13"/><circle class="nucleo" cx="250" cy="160" r="6"/></g>
+        <g class="punto" data-x="428" data-i="2"><circle class="halo" cx="428" cy="182" r="9" fill="#ff6a13"/><circle class="nucleo" cx="428" cy="182" r="6"/></g>
+        <g class="punto" data-x="478" data-i="3"><circle class="halo" cx="478" cy="132" r="9" fill="#ff6a13"/><circle class="nucleo" cx="478" cy="132" r="6"/></g>
+        <!-- haz de escaneo -->
+        <g clip-path="url(#marco)">
+          <g class="scan-line" id="haz-g">
+            <rect x="0" y="40" width="40" height="176" fill="url(#haz)"/>
+            <line x1="20" y1="40" x2="20" y2="216" stroke="#ff6a13" stroke-width="2"/>
+          </g>
+        </g>
+      </svg>
+      <div class="escaner-lista" aria-hidden="true">
+        <div data-i="0">Frenos y suspensión</div>
+        <div data-i="1">Motor</div>
+        <div data-i="2">Llantas y dirección</div>
+        <div data-i="3">Luces y eléctrico</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="promesa">
+  <div class="wrap">
+    <svg viewBox="0 0 64 64" fill="none" stroke="#1b1006" stroke-width="3.5" aria-hidden="true"><rect x="10" y="8" width="44" height="50" rx="4"/><path d="M22 8v-2h20v2"/><path d="M20 30l8 8 16-16"/></svg>
+    <div>
+      <h2>Sin sorpresas: te consultamos antes de cualquier cambio en el costo.</h2>
+      <p>Si durante la revisión aparece algo que modifique lo cotizado, primero te lo explicamos y tú decides si se hace.</p>
+    </div>
+    <a class="btn" data-wa="Hola, quiero agendar una revisión para mi auto." href="https://wa.me/524491425323">Agendar revisión</a>
+  </div>
+</div>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="titulo">
+      <div><span class="num">01 — Servicios</span><h2>Marca lo que necesita tu auto y pide tu cotización.</h2></div>
+      <p>Cada botón abre WhatsApp con el servicio ya escrito. Solo agrega marca, modelo y año de tu auto.</p>
+    </div>
+    <div class="orden">
+      <div class="orden-cab"><span>Orden de servicio</span><span>Ranoro · Aguascalientes</span></div>
+      <div class="fila">
+        <span class="casilla"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a13" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span>
+        <div><h3>Mantenimiento preventivo</h3><p>Revisión periódica para que tu auto siga funcionando bien y evitar fallas mayores.</p></div>
+        <a class="btn btn-cot" data-wa="Hola, quiero cotizar un mantenimiento preventivo. Mi auto es: " href="https://wa.me/524491425323">Cotizar</a>
+      </div>
+      <div class="fila">
+        <span class="casilla"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a13" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span>
+        <div><h3>Diagnóstico</h3><p>¿Un ruido, un testigo encendido o algo que no se siente bien? Lo revisamos para encontrar la causa.</p></div>
+        <a class="btn btn-cot" data-wa="Hola, quiero cotizar un diagnóstico. Mi auto es: ___ y presenta: " href="https://wa.me/524491425323">Cotizar</a>
+      </div>
+      <div class="fila">
+        <span class="casilla"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a13" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span>
+        <div><h3>Frenos y suspensión</h3><p>Revisión y reparación para manejar con seguridad y comodidad.</p></div>
+        <a class="btn btn-cot" data-wa="Hola, quiero cotizar una revisión de frenos y suspensión. Mi auto es: " href="https://wa.me/524491425323">Cotizar</a>
+      </div>
+      <div class="fila">
+        <span class="casilla"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a13" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span>
+        <div><h3>Reparación general</h3><p>Cuéntanos qué le pasa a tu auto y te decimos cómo podemos ayudarte.</p></div>
+        <a class="btn btn-cot" data-wa="Hola, quiero cotizar una reparación. Mi auto es: ___ y el problema es: " href="https://wa.me/524491425323">Cotizar</a>
+      </div>
+      <div class="orden-pie">Confirma por WhatsApp la disponibilidad de cada servicio para tu modelo de auto.</div>
+    </div>
+  </div>
+</section>
+
+<section class="proceso" id="proceso">
+  <div class="wrap">
+    <div class="titulo">
+      <div><span class="num" style="color:var(--naranja)">02 — Proceso</span><h2>Así trabajamos tu auto.</h2></div>
+      <p>Cuatro pasos claros, para que sepas en qué va tu auto y nada se haga sin tu autorización.</p>
+    </div>
+    <div class="via">
+      <div class="paso"><div class="marcador">1</div><h3>Recepción</h3><p>Nos cuentas qué notas en tu auto y registramos lo que necesitas.</p></div>
+      <div class="paso"><div class="marcador">2</div><h3>Diagnóstico</h3><p>Revisamos el auto para identificar qué hace falta y te lo explicamos.</p></div>
+      <div class="paso"><div class="marcador">3</div><h3>Autorización</h3><p>Antes de cualquier cambio en el costo, te consultamos. Tú decides.</p></div>
+      <div class="paso"><div class="marcador">4</div><h3>Entrega</h3><p>Te avisamos cuando tu auto está listo para que pases por él.</p></div>
+    </div>
+    <div class="extra">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#ffd23f" stroke-width="3" aria-hidden="true"><path d="M6 30h30l6-8h-4l-4-8H14l-6 8"/><circle cx="14" cy="32" r="5"/><circle cx="34" cy="32" r="5"/><path d="M4 40h40"/></svg>
+      <div><h3>¿Cómo llegas mientras tu auto está en el taller?</h3><p>Ranoro ofrece servicio de transporte para sus clientes. Pregunta los detalles por WhatsApp al agendar.</p></div>
+      <a class="btn btn-naranja" data-wa="Hola, quiero preguntar por el servicio de transporte mientras mi auto está en el taller." href="https://wa.me/524491425323">Preguntar</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="titulo">
+      <div><span class="num">03 — El taller</span><h2>Conoce dónde cuidamos tu auto.</h2></div>
+      <p>Espacios listos para las fotos del taller.</p>
+    </div>
+    <div class="galeria">
+      <div class="hueco grande"><b>Imagen 1</b><span>Fachada del taller con el letrero, vista desde la avenida.</span></div>
+      <div class="hueco"><b>Imagen 2</b><span>Área de trabajo con un auto en el elevador.</span></div>
+      <div class="hueco"><b>Imagen 3</b><span>Mecánico usando el escáner de diagnóstico.</span></div>
+      <div class="hueco ancho"><b>Imagen 4</b><span>Equipo del taller o zona de recepción de autos.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visita" style="padding-top:0">
+  <div class="wrap">
+    <div class="titulo">
+      <div><span class="num">04 — Visítanos</span><h2>Horario y ubicación.</h2></div>
+    </div>
+    <div class="visita">
+      <div class="tarjeta">
+        <h3>Horario</h3>
+        <table class="horario" id="horario">
+          <tr data-d="1"><td>Lunes</td><td>8:30 – 17:30</td></tr>
+          <tr data-d="2"><td>Martes</td><td>8:30 – 17:30</td></tr>
+          <tr data-d="3"><td>Miércoles</td><td>8:30 – 17:30</td></tr>
+          <tr data-d="4"><td>Jueves</td><td>8:30 – 17:30</td></tr>
+          <tr data-d="5"><td>Viernes</td><td>8:30 – 17:30</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>8:30 – 13:30</td></tr>
+          <tr data-d="0"><td>Domingo</td><td class="cerrado">Cerrado</td></tr>
+        </table>
+        <p class="dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Av. de la Convención de 1914 Sur 1421, Jardín de la Convención, 20267 Aguascalientes, Ags.</p>
+        <div class="pila">
+          <a class="btn btn-wa" data-wa="Hola, quiero agendar una visita al taller." href="https://wa.me/524491425323">Escribir por WhatsApp</a>
+          <a class="btn btn-claro" href="tel:+524491425323">Llamar 449 142 5323</a>
+          <a class="btn btn-claro" href="https://www.google.com/maps/search/?api=1&amp;query=Ranoro+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa de Ranoro en Aguascalientes" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.+de+la+Convenci%C3%B3n+de+1914+Sur+1421,+Jard%C3%ADn+de+la+Convenci%C3%B3n,+20267+Aguascalientes,+Ags.&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>RANORO</strong><br>Taller mecánico · Aguascalientes, Ags.</div>
+    <div>Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">FixA Consultoría</a></div>
+  </div>
+</footer>
+
+<div class="barra-movil">
+  <a class="btn btn-naranja" href="tel:+524491425323">Llamar</a>
+  <a class="btn btn-wa" data-wa="Hola, vi su página y quiero cotizar un servicio para mi auto." href="https://wa.me/524491425323">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var base="https://wa.me/524491425323?text=";
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href=base+encodeURIComponent(a.getAttribute("data-wa"));
+    a.target="_blank";a.rel="noopener";
+  });
+  var hoy=new Date().getDay();
+  var fila=document.querySelector('#horario tr[data-d="'+hoy+'"]');
+  if(fila) fila.classList.add("hoy");
+
+  var puntos=[].slice.call(document.querySelectorAll(".punto"));
+  var items=[].slice.call(document.querySelectorAll(".escaner-lista div"));
+  var estado=document.getElementById("estado");
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function marcar(i){puntos[i].classList.add("on");items[i].classList.add("on");}
+  if(reduce){puntos.forEach(function(p,i){marcar(i)});estado.textContent="Revisión lista";return;}
+  var haz=document.getElementById("haz-g");
+  function ciclo(){
+    var tr=getComputedStyle(haz).transform,x=0;
+    if(tr&&tr!=="none"){var m=tr.match(/matrix\(([^)]+)\)/);if(m)x=parseFloat(m[1].split(",")[4]);}
+    var cx=x+20;
+    puntos.forEach(function(p,i){if(cx>=+p.getAttribute("data-x")) marcar(i);});
+    var todos=puntos.every(function(p){return p.classList.contains("on")});
+    estado.textContent=todos?"Revisión lista":"Escaneando…";
+    requestAnimationFrame(ciclo);
+  }
+  requestAnimationFrame(ciclo);
+})();
+</script>
+</body>
+</html>

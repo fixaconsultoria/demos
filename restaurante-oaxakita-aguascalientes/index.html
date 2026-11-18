@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurante Oaxakita · Cocina oaxaqueña en Aguascalientes</title>
+<meta name="description" content="Mole negro, mole amarillo, tlayudas, tasajo y caldo de piedra en Valle Dorado, Aguascalientes. Reserva o pide para llevar por WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --barro:#141314;
+  --barro-2:#1f1d20;
+  --barro-3:#2c2a2e;
+  --brillo:#8d8a92;
+  --grana:#a3164f;
+  --grana-hondo:#7a0f3b;
+  --cempa:#f29a14;
+  --cempa-claro:#ffc35a;
+  --agave:#5f8f6c;
+  --agave-claro:#9cc4a6;
+  --cal:#f4f1ee;
+  --texto:#e9e5e1;
+  --tenue:#b3adb4;
+  --wa:#1fa855;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6;color:var(--texto);background:var(--barro);overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--cempa);outline-offset:3px;border-radius:6px}
+h1,h2,h3,.display{font-family:"Bowlby One","Arial Black",Impact,sans-serif;font-weight:400;line-height:1.02;letter-spacing:.005em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+
+.demo{background:var(--cempa);color:#2a1700;font-size:13.5px;text-align:center;padding:8px 16px;font-weight:500}
+.demo a{color:#2a1700;font-weight:800}
+
+/* greca band */
+.greca{height:30px;color:var(--grana)}
+.greca svg{width:100%;height:30px}
+
+header{position:relative;z-index:3;background:var(--barro)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+.marca{display:flex;align-items:center;gap:14px;text-decoration:none;min-width:0}
+.slot-logo{width:60px;height:60px;border:2px dashed var(--cempa);border-radius:12px;display:grid;place-items:center;text-align:center;font-size:11px;font-weight:800;color:var(--cempa);flex:none;line-height:1.1;background:rgba(242,154,20,.06)}
+.marca strong{font-family:"Bowlby One","Arial Black",sans-serif;font-weight:400;font-size:21px;display:block;line-height:1.1;color:var(--cal)}
+.marca span{font-size:14px;color:var(--tenue)}
+nav{display:flex;gap:24px;font-weight:700;font-size:15px}
+nav a{text-decoration:none;color:var(--tenue)}
+nav a:hover{color:var(--cempa-claro)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;border:2px solid transparent;transition:transform .15s ease,background .15s ease,color .15s ease;cursor:pointer;font-family:inherit}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-grana{background:var(--grana);color:#fff}
+.btn-grana:hover{background:var(--grana-hondo)}
+.btn-cempa{background:var(--cempa);color:#231300}
+.btn-cempa:hover{background:var(--cempa-claro)}
+.btn-linea{border-color:var(--brillo);color:var(--cal)}
+.btn-linea:hover{border-color:var(--cempa);color:var(--cempa-claro)}
+
+/* HERO */
+.hero{position:relative;background:radial-gradient(120% 90% at 78% 30%,#2a2630 0%,var(--barro) 60%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:72px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(95,143,108,.16);color:var(--agave-claro);border:1px solid rgba(156,196,166,.35);padding:7px 14px;border-radius:999px;font-weight:700;font-size:14.5px}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--agave-claro);display:block}
+.hero h1{font-size:clamp(40px,6.4vw,78px);color:var(--cal);margin:20px 0 18px}
+.hero h1 em{font-style:normal;color:var(--cempa)}
+.hero h1 b{font-weight:400;color:var(--grana);-webkit-text-stroke:0}
+.hero p.lead{font-size:19px;color:var(--tenue);max-width:34em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:15px;color:var(--tenue)}
+.hero-meta strong{color:var(--cal)}
+
+.olla-wrap{position:relative;max-width:460px;margin:0 auto;width:100%}
+.olla-wrap svg{width:100%;height:auto;overflow:visible}
+.vapor path{fill:none;stroke:#d8d3dc;stroke-width:5;stroke-linecap:round;opacity:0;animation:vapor 4.8s ease-in-out infinite}
+.vapor path:nth-child(2){animation-delay:1.4s}
+.vapor path:nth-child(3){animation-delay:2.8s}
+@keyframes vapor{
+  0%{opacity:0;transform:translateY(18px) scaleY(.9)}
+  25%{opacity:.55}
+  70%{opacity:.18}
+  100%{opacity:0;transform:translateY(-34px) scaleY(1.08)}
+}
+.brasa{animation:brasa 2.6s ease-in-out infinite alternate}
+@keyframes brasa{from{opacity:.55}to{opacity:1}}
+
+/* section base */
+section{position:relative}
+.sec{padding:84px 0}
+.kicker{color:var(--cempa);font-weight:800;font-size:15px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:28px;height:3px;background:var(--grana);border-radius:2px}
+h2{font-size:clamp(32px,4.6vw,54px);color:var(--cal)}
+.sub{color:var(--tenue);max-width:38em;margin-top:14px;font-size:18px}
+
+/* IMPRESCINDIBLES */
+.menu{background:var(--cal);color:var(--barro)}
+.menu h2{color:var(--barro)}
+.menu .sub{color:#5b5560}
+.menu .kicker{color:var(--grana)}
+.lista{list-style:none;margin-top:44px;border-top:2px solid var(--barro)}
+.lista li{display:grid;grid-template-columns:72px 1fr auto;gap:20px;align-items:center;padding:22px 0;border-bottom:2px solid var(--barro)}
+.lista .n{font-family:"Bowlby One","Arial Black",sans-serif;font-size:28px;color:var(--grana)}
+.lista h3{font-size:clamp(30px,5.2vw,64px);line-height:1;color:var(--barro)}
+.lista p{color:#5b5560;font-size:16px;margin-top:6px;max-width:34em}
+.lista li:hover h3{color:var(--grana)}
+.lista .btn{white-space:nowrap}
+.btn-barro{background:var(--barro);color:var(--cal)}
+.btn-barro:hover{background:var(--grana)}
+.nota{margin-top:22px;font-size:15px;color:#5b5560}
+
+/* DOS FORMAS */
+.formas-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.forma{border:1.5px solid var(--barro-3);border-radius:22px;padding:32px;background:var(--barro-2);display:flex;flex-direction:column;gap:14px}
+.forma.a{border-color:rgba(163,22,79,.6);background:linear-gradient(160deg,rgba(163,22,79,.22),var(--barro-2) 60%)}
+.forma.b{border-color:rgba(242,154,20,.5);background:linear-gradient(160deg,rgba(242,154,20,.16),var(--barro-2) 60%)}
+.forma h3{font-size:30px;color:var(--cal)}
+.forma p{color:var(--tenue)}
+.forma .btn{align-self:flex-start;margin-top:auto}
+
+/* GALERIA */
+.galeria{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:40px}
+.slot{border:2px dashed #5c5862;border-radius:18px;background:repeating-linear-gradient(-45deg,#1b1a1d 0 10px,#211f23 10px 20px);display:flex;flex-direction:column;justify-content:flex-end;padding:18px;min-height:220px;color:var(--tenue)}
+.slot strong{color:var(--cempa-claro);font-size:18px;display:block}
+.slot span{font-size:14.5px}
+.g1{grid-column:span 4;min-height:320px}
+.g2{grid-column:span 2;min-height:320px}
+.g3{grid-column:span 3}
+.g4{grid-column:span 3}
+
+/* PROCESO */
+.proceso{background:var(--barro-2)}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;counter-reset:p}
+.paso{padding:6px 28px 6px 0;position:relative}
+.paso+.paso{padding-left:28px;border-left:1.5px dashed var(--barro-3)}
+.paso .num{font-family:"Bowlby One","Arial Black",sans-serif;font-size:64px;line-height:1;color:transparent;-webkit-text-stroke:2px var(--agave-claro)}
+.paso h3{font-size:24px;color:var(--cal);margin:14px 0 8px}
+.paso p{color:var(--tenue)}
+.confianza{margin-top:52px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:28px 30px;border-radius:20px;background:var(--barro);border:1.5px solid var(--barro-3)}
+.confianza p{font-size:20px;color:var(--cal);max-width:30em}
+.confianza p strong{color:var(--cempa)}
+
+/* VISITA */
+.visita-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;margin-top:40px;align-items:stretch}
+.datos{display:flex;flex-direction:column;gap:22px}
+.dato h3{font-family:"Karla",sans-serif;font-weight:800;font-size:15px;color:var(--agave-claro);margin-bottom:4px}
+.dato p{font-size:19px;color:var(--cal)}
+.dato a{color:var(--cempa-claro)}
+.horario{border:1.5px dashed var(--cempa);border-radius:16px;padding:18px 20px;color:var(--cal)}
+.horario p{font-size:17px}
+.mapa{border-radius:22px;overflow:hidden;border:1.5px solid var(--barro-3);min-height:380px;background:var(--barro-2)}
+.mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:grayscale(.25) contrast(1.05)}
+
+footer{border-top:1.5px solid var(--barro-3);padding:34px 0 120px;color:var(--tenue);font-size:15px}
+.foot{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:space-between;align-items:center}
+footer a{color:var(--cempa-claro)}
+
+/* barra móvil */
+.movil{display:none;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(20,19,20,.94);backdrop-filter:blur(8px);border-top:1px solid var(--barro-3);gap:10px}
+.movil a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 10px;border-radius:999px;font-weight:800;text-decoration:none;font-size:16px}
+.movil svg{width:20px;height:20px}
+.m-tel{background:var(--cempa);color:#231300}
+.m-wa{background:var(--wa);color:#fff}
+
+@media (max-width:900px){
+  nav{display:none}
+  .hero-grid{grid-template-columns:1fr;padding-top:34px;padding-bottom:56px;gap:20px}
+  .olla-wrap{max-width:340px;order:-1}
+  .formas-grid,.visita-grid{grid-template-columns:1fr}
+  .pasos{grid-template-columns:1fr;gap:30px}
+  .paso,.paso+.paso{padding:0;border-left:0}
+  .paso+.paso{border-top:1.5px dashed var(--barro-3);padding-top:26px}
+  .galeria{grid-template-columns:1fr 1fr}
+  .g1{grid-column:span 2;min-height:240px}
+  .g2,.g3,.g4{grid-column:span 1;min-height:200px}
+  .g4{grid-column:span 2}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .sec{padding:64px 0}
+  .movil{display:flex}
+  .bar .btn{display:none}
+  .lista li{grid-template-columns:44px 1fr;gap:6px 14px}
+  .lista .n{font-size:22px}
+  .lista .btn{grid-column:2;justify-self:start;margin-top:10px;padding:11px 18px;font-size:15px}
+  .forma{padding:24px}
+  .confianza{padding:22px}
+  .confianza p{font-size:18px}
+  .hero p.lead{font-size:17.5px}
+  .marca strong{font-size:19px}
+  .hero-cta .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .vapor path{animation:none;opacity:.35}
+  .brasa{animation:none}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="marca" href="#inicio">
+      <div class="slot-logo">Tu<br>logo</div>
+      <div><strong>Oaxakita</strong><span>Cocina oaxaqueña · Valle Dorado</span></div>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#imprescindibles">Platillos</a>
+      <a href="#reserva">Reservar</a>
+      <a href="#visitanos">Ubicación</a>
+    </nav>
+    <a class="btn btn-grana" href="https://wa.me/524495803465?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20una%20reservaci%C3%B3n%20en%20Oaxakita." target="_blank" rel="noopener">Reservar</a>
+  </div>
+  <div class="greca" aria-hidden="true">
+    <svg preserveAspectRatio="none" viewBox="0 0 1200 30"><defs><pattern id="mitla" width="60" height="30" patternUnits="userSpaceOnUse"><path d="M0 26H12V8H42V20H24V14H30" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="miter"/><path d="M30 26H60" fill="none" stroke="currentColor" stroke-width="4"/><path d="M48 4V14" fill="none" stroke="#f29a14" stroke-width="4"/></pattern></defs><rect width="1200" height="30" fill="url(#mitla)"/></svg>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="chip"><i></i>Miles de opiniones en Google</span>
+      <h1>El sabor de <em>Oaxaca</em>, servido en <b>Aguascalientes</b>.</h1>
+      <p class="lead">Mole negro, mole amarillo, tlayudas, tasajo y caldo de piedra en Av. Las Américas. Aparta tu mesa o pide para llevar con un mensaje.</p>
+      <div class="hero-cta">
+        <a class="btn btn-grana" href="https://wa.me/524495803465?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20reservar%20una%20mesa%20en%20Oaxakita.%20%C2%BFTienen%20lugar%20para%E2%80%A6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4Z"/></svg>Reservar mesa</a>
+        <a class="btn btn-linea" href="https://wa.me/524495803465?text=Hola%2C%20quiero%20hacer%20un%20pedido%20para%20llevar%20en%20Oaxakita.%20%C2%BFMe%20comparten%20el%20men%C3%BA%3F" target="_blank" rel="noopener">Pedir para llevar</a>
+      </div>
+      <div class="hero-meta">
+        <span><strong>Av. Las Américas 1738</strong>, Valle Dorado</span>
+        <span><a href="tel:+524495803465" style="text-decoration:none"><strong>449 580 3465</strong></a></span>
+      </div>
+    </div>
+
+    <div class="olla-wrap" aria-hidden="true">
+      <svg viewBox="0 0 420 420">
+        <defs>
+          <radialGradient id="cuerpo" cx="38%" cy="38%" r="70%">
+            <stop offset="0" stop-color="#5d5a63"/>
+            <stop offset=".28" stop-color="#2a282d"/>
+            <stop offset=".7" stop-color="#121113"/>
+            <stop offset="1" stop-color="#050505"/>
+          </radialGradient>
+          <linearGradient id="borde" x1="0" x2="1">
+            <stop offset="0" stop-color="#1b1a1d"/><stop offset=".45" stop-color="#6e6b74"/><stop offset="1" stop-color="#141315"/>
+          </linearGradient>
+          <radialGradient id="mole" cx="50%" cy="50%" r="60%">
+            <stop offset="0" stop-color="#5a1a12"/><stop offset="1" stop-color="#220807"/>
+          </radialGradient>
+          <radialGradient id="fuego" cx="50%" cy="100%" r="80%">
+            <stop offset="0" stop-color="#ffc35a"/><stop offset=".5" stop-color="#f29a14" stop-opacity=".6"/><stop offset="1" stop-color="#a3164f" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- circulo grana -->
+        <circle cx="210" cy="232" r="168" fill="#a3164f" opacity=".16"/>
+        <circle cx="210" cy="232" r="168" fill="none" stroke="#a3164f" stroke-width="2" stroke-dasharray="4 10" opacity=".7"/>
+        <!-- brasas -->
+        <ellipse class="brasa" cx="210" cy="372" rx="120" ry="26" fill="url(#fuego)"/>
+        <!-- vapor -->
+        <g class="vapor">
+          <path d="M170 128c-14-20 14-30 0-52s12-30 2-48"/>
+          <path d="M212 120c-14-22 16-32 2-56s14-30 2-50"/>
+          <path d="M252 128c-14-20 14-30 0-52s12-30 2-48"/>
+        </g>
+        <!-- asas -->
+        <path d="M86 200c-40-4-44 50-6 52" fill="none" stroke="#2c2a2e" stroke-width="14" stroke-linecap="round"/>
+        <path d="M334 200c40-4 44 50 6 52" fill="none" stroke="#2c2a2e" stroke-width="14" stroke-linecap="round"/>
+        <!-- cuerpo -->
+        <path d="M96 168c-26 40-22 128 26 168 44 36 132 36 176 0 48-40 52-128 26-168Z" fill="url(#cuerpo)"/>
+        <!-- grabado tipo greca sobre la olla -->
+        <path d="M118 236H146V222H172V250H160V236" fill="none" stroke="#8d8a92" stroke-width="3" opacity=".55"/>
+        <path d="M184 236H212V222H238V250H226V236" fill="none" stroke="#8d8a92" stroke-width="3" opacity=".55"/>
+        <path d="M250 236H278V222H304V250H292V236" fill="none" stroke="#8d8a92" stroke-width="3" opacity=".55"/>
+        <path d="M112 262c60 14 136 14 196 0" fill="none" stroke="#8d8a92" stroke-width="2" opacity=".35"/>
+        <!-- brillo -->
+        <path d="M128 196c-10 26-8 62 6 92" fill="none" stroke="#c9c5ce" stroke-width="7" stroke-linecap="round" opacity=".28"/>
+        <!-- boca -->
+        <ellipse cx="210" cy="168" rx="118" ry="26" fill="url(#borde)"/>
+        <ellipse cx="210" cy="170" rx="100" ry="18" fill="url(#mole)"/>
+        <ellipse cx="190" cy="166" rx="26" ry="4" fill="#9a3a24" opacity=".6"/>
+        <!-- cuchara de madera -->
+        <path d="M262 168L318 76" stroke="#b07a3d" stroke-width="9" stroke-linecap="round"/>
+        <ellipse cx="322" cy="70" rx="10" ry="16" transform="rotate(32 322 70)" fill="#c08a4a"/>
+        <!-- hojas de agave -->
+        <path d="M58 378c18-40 40-70 62-84-8 30-26 62-62 84Z" fill="#5f8f6c"/>
+        <path d="M74 382c4-46 18-80 34-98 0 34-12 70-34 98Z" fill="#9cc4a6" opacity=".8"/>
+        <path d="M362 378c-18-40-40-70-62-84 8 30 26 62 62 84Z" fill="#5f8f6c"/>
+        <path d="M346 382c-4-46-18-80-34-98 0 34 12 70 34 98Z" fill="#9cc4a6" opacity=".8"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec menu" id="imprescindibles">
+  <div class="wrap">
+    <div class="kicker">Nuestra cocina</div>
+    <h2>Los cinco imprescindibles</h2>
+    <p class="sub">Los platillos oaxaqueños por los que nos buscan. Pregúntanos qué hay hoy y cómo se sirven.</p>
+    <ol class="lista">
+      <li><span class="n">01</span><div><h3>Mole negro</h3><p>El mole más emblemático de Oaxaca, oscuro y profundo.</p></div><a class="btn btn-barro" href="https://wa.me/524495803465?text=Hola%2C%20quiero%20preguntar%20por%20el%20mole%20negro%20en%20Oaxakita." target="_blank" rel="noopener">Preguntar</a></li>
+      <li><span class="n">02</span><div><h3>Mole amarillo</h3><p>Otro de los moles clásicos de la cocina oaxaqueña.</p></div><a class="btn btn-barro" href="https://wa.me/524495803465?text=Hola%2C%20quiero%20preguntar%20por%20el%20mole%20amarillo%20en%20Oaxakita." target="_blank" rel="noopener">Preguntar</a></li>
+      <li><span class="n">03</span><div><h3>Tlayudas</h3><p>La tortilla grande y crujiente que se comparte en la mesa.</p></div><a class="btn btn-barro" href="https://wa.me/524495803465?text=Hola%2C%20quiero%20preguntar%20por%20las%20tlayudas%20en%20Oaxakita." target="_blank" rel="noopener">Preguntar</a></li>
+      <li><span class="n">04</span><div><h3>Tasajo</h3><p>Carne de res al estilo oaxaqueño.</p></div><a class="btn btn-barro" href="https://wa.me/524495803465?text=Hola%2C%20quiero%20preguntar%20por%20el%20tasajo%20en%20Oaxakita." target="_blank" rel="noopener">Preguntar</a></li>
+      <li><span class="n">05</span><div><h3>Caldo de piedra</h3><p>El caldo tradicional que se cuece con piedras calientes.</p></div><a class="btn btn-barro" href="https://wa.me/524495803465?text=Hola%2C%20quiero%20preguntar%20por%20el%20caldo%20de%20piedra%20en%20Oaxakita." target="_blank" rel="noopener">Preguntar</a></li>
+    </ol>
+    <p class="nota">¿Buscas otro platillo? <a href="https://wa.me/524495803465?text=Hola%2C%20%C2%BFme%20pueden%20compartir%20el%20men%C3%BA%20completo%20de%20Oaxakita%3F" target="_blank" rel="noopener" style="color:var(--grana);font-weight:800">Pide el menú completo por WhatsApp</a>.</p>
+  </div>
+</section>
+
+<section class="sec" id="reserva">
+  <div class="wrap">
+    <div class="kicker">Ven o llévatelo</div>
+    <h2>Dos formas de disfrutar Oaxakita</h2>
+    <div class="formas-grid">
+      <div class="forma a">
+        <h3>En el restaurante</h3>
+        <p>Para la comida en familia, una celebración o una visita con quien todavía no conoce la cocina oaxaqueña. Escríbenos cuántas personas son y a qué hora llegan.</p>
+        <a class="btn btn-grana" href="https://wa.me/524495803465?text=Hola%2C%20quiero%20reservar%20en%20Oaxakita.%20Somos%20___%20personas%2C%20para%20el%20d%C3%ADa%20___%20a%20las%20___." target="_blank" rel="noopener">Reservar mesa</a>
+      </div>
+      <div class="forma b">
+        <h3>Para llevar</h3>
+        <p>¿Se te antojó mole en casa o en la oficina? Pregunta por el menú, haz tu pedido y te decimos cuándo pasar por él.</p>
+        <a class="btn btn-cempa" href="https://wa.me/524495803465?text=Hola%2C%20quiero%20pedir%20para%20llevar%20en%20Oaxakita.%20Mi%20pedido%20es%3A" target="_blank" rel="noopener">Pedir para llevar</a>
+      </div>
+    </div>
+
+    <div class="galeria">
+      <div class="slot g1"><strong>Imagen 1</strong><span>Foto cenital de un plato de mole negro recién servido, con luz cálida.</span></div>
+      <div class="slot g2"><strong>Imagen 2</strong><span>Una tlayuda completa sobre la mesa.</span></div>
+      <div class="slot g3"><strong>Imagen 3</strong><span>El comedor del restaurante con mesas puestas.</span></div>
+      <div class="slot g4"><strong>Imagen 4</strong><span>La fachada sobre Av. Las Américas, para que te ubiquen al llegar.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec proceso">
+  <div class="wrap">
+    <div class="kicker">Sin llamadas ni esperas</div>
+    <h2>Reserva en 3 pasos</h2>
+    <div class="pasos">
+      <div class="paso"><div class="num">1</div><h3>Escríbenos</h3><p>Toca cualquier botón de reservar. El mensaje ya va escrito; solo agrega día, hora y número de personas.</p></div>
+      <div class="paso"><div class="num">2</div><h3>Confirmamos</h3><p>Te respondemos por WhatsApp con la disponibilidad para la fecha que elegiste.</p></div>
+      <div class="paso"><div class="num">3</div><h3>Llega y disfruta</h3><p>Te esperamos en Av. Las Américas 1738, en Valle Dorado.</p></div>
+    </div>
+    <div class="confianza">
+      <p>Comensales de Aguascalientes ya nos dejaron <strong>miles de opiniones en Google</strong>. Léelas antes de venir.</p>
+      <a class="btn btn-linea" href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante+Oaxakita+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visitanos">
+  <div class="wrap">
+    <div class="kicker">Visítanos</div>
+    <h2>En Valle Dorado</h2>
+    <div class="visita-grid">
+      <div class="datos">
+        <div class="dato"><h3>Dirección</h3><p>Av. Las Américas 1738, Valle Dorado, 20235 Aguascalientes, Ags.</p></div>
+        <div class="dato"><h3>Teléfono</h3><p><a href="tel:+524495803465">449 580 3465</a></p></div>
+        <div class="horario">
+          <div class="dato"><h3>Horario</h3><p>Consulta nuestro horario por WhatsApp.</p></div>
+          <a class="btn btn-cempa" style="margin-top:14px" href="https://wa.me/524495803465?text=Hola%2C%20%C2%BFcu%C3%A1l%20es%20su%20horario%20de%20hoy%20en%20Oaxakita%3F" target="_blank" rel="noopener">Preguntar horario</a>
+        </div>
+        <a class="btn btn-linea" style="align-self:flex-start" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+Las+Am%C3%A9ricas+1738,+Valle+Dorado,+20235+Aguascalientes,+Ags." target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa de Restaurante Oaxakita" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.+Las+Am%C3%A9ricas+1738,+Valle+Dorado,+20235+Aguascalientes,+Ags.&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="greca" aria-hidden="true">
+  <svg preserveAspectRatio="none" viewBox="0 0 1200 30"><rect width="1200" height="30" fill="url(#mitla)"/></svg>
+</div>
+<footer>
+  <div class="wrap foot">
+    <span>Restaurante Oaxakita · Av. Las Américas 1738, Valle Dorado, Aguascalientes</span>
+    <span>Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">FixA Consultoría</a></span>
+  </div>
+</footer>
+
+<div class="movil">
+  <a class="m-tel" href="tel:+524495803465"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>Llamar</a>
+  <a class="m-wa" href="https://wa.me/524495803465?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20una%20reservaci%C3%B3n%20en%20Oaxakita." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4Z"/></svg>WhatsApp</a>
+</div>
+</body>
+</html>
