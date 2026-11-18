@@ -3,207 +3,352 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consultorio Dental y Ortodoncia · El Cerrito, Puebla</title>
-<meta name="description" content="Consultorio Dental y Ortodoncia en El Cerrito, Puebla. Ortodoncia, limpiezas, resinas y odontología general. Agenda tu cita por WhatsApp.">
+<title>Consultorio Dental y Ortodoncia · Puebla</title>
+<meta name="description" content="Ortodoncia y odontología general en El Cerrito, Puebla. Agenda tu valoración por WhatsApp.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f7f9f8; --ink:#14302b; --muted:#56706a; --brand:#1f7a68; --brand-dark:#155a4c;
-    --accent:#e9f3ef; --card:#ffffff; --line:#dfe8e4; --wa:#25D366;
+    --porcelana:#f5f7fb;
+    --blanco:#ffffff;
+    --cobalto:#1c3d8f;
+    --cobalto-hondo:#12224a;
+    --azulejo:#d8e2f6;
+    --yema:#e6ad2e;
+    --gris:#5b6785;
+    --wa:#1fa855;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  html{scroll-behavior:smooth}
+  body{font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--cobalto-hondo);background:var(--porcelana)}
   a{color:inherit}
-  .demo-bar{background:#14302b;color:#e6f0ec;font-size:13px;text-align:center;padding:8px 14px}
-  .demo-bar a{color:#9fe0cc}
-  header{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;max-width:1080px;margin:auto}
-  .brand{display:flex;align-items:center;gap:12px}
-  .mark{width:46px;height:46px;flex:none}
-  .art{position:relative}
-  .art svg.scene{width:100%;height:auto;display:block}
-  .art .hero-card{position:relative;margin:-60px 18px 0}
-  .svc .ic svg{width:26px;height:26px;stroke:var(--brand);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-  .logo{font-family:Fraunces,serif;font-weight:600;font-size:19px;line-height:1.2}
-  .logo small{display:block;font-family:Inter;font-weight:500;font-size:12px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
-  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;padding:13px 22px;border-radius:999px;transition:background .2s}
-  .btn:hover{background:var(--brand-dark)}
-  .btn.ghost{background:transparent;color:var(--brand);border:1.5px solid var(--brand)}
-  .btn.small{padding:9px 16px;font-size:14px}
-  .hero{max-width:1080px;margin:auto;padding:36px 22px 56px;display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center}
-  .eyebrow{display:inline-block;background:var(--accent);color:var(--brand-dark);font-weight:600;font-size:13px;padding:6px 12px;border-radius:999px;margin-bottom:18px}
-  h1{font-family:Fraunces,serif;font-weight:600;font-size:clamp(34px,5vw,52px);line-height:1.08;margin-bottom:18px}
-  .lead{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:28px}
-  .ctas{display:flex;gap:12px;flex-wrap:wrap}
-  .hero-card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 20px 50px -30px rgba(20,48,43,.35)}
-  .hero-card h3{font-family:Fraunces,serif;font-size:20px;margin-bottom:14px}
-  .hours{list-style:none;font-size:15px}
-  .hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line)}
-  .hours li:last-child{border:0}
-  .hours span:last-child{font-weight:600}
-  .closed{color:#b5523b}
-  section{max-width:1080px;margin:auto;padding:56px 22px}
-  h2{font-family:Fraunces,serif;font-weight:600;font-size:clamp(28px,4vw,38px);margin-bottom:10px}
-  .sub{color:var(--muted);margin-bottom:32px;max-width:560px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .svc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
-  .svc .ic{width:44px;height:44px;border-radius:12px;background:var(--accent);display:grid;place-items:center;font-size:22px;margin-bottom:14px}
-  .svc h3{font-size:17px;margin-bottom:6px}
-  .svc p{color:var(--muted);font-size:15px}
-  .why{background:var(--brand);color:#fff;border-radius:28px;padding:44px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-  .why h3{font-family:Fraunces,serif;font-size:22px;margin-bottom:6px}
-  .why p{color:#d3ece4;font-size:15px}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
-  .step{padding:22px;border-left:3px solid var(--brand);background:var(--card);border-radius:0 16px 16px 0}
-  .step:before{counter-increment:s;content:"0" counter(s);font-family:Fraunces,serif;font-size:28px;color:var(--brand);display:block;margin-bottom:6px}
-  .step p{color:var(--muted);font-size:15px}
-  .visit{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
-  .visit .box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
-  .visit .box p{margin-bottom:10px}
-  .map{border-radius:20px;overflow:hidden;min-height:280px;border:1px solid var(--line)}
-  .map iframe{width:100%;height:100%;min-height:280px;border:0}
-  .final{text-align:center;background:var(--accent);border-radius:28px;padding:52px 24px}
-  .final p{color:var(--muted);margin:8px auto 24px;max-width:460px}
-  footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 22px 100px}
-  .wa-float{position:fixed;right:18px;bottom:18px;background:var(--wa);color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 25px -8px rgba(0,0,0,.35);text-decoration:none}
-  .wa-float svg{width:30px;height:30px}
-  @media (max-width:820px){
-    .hero,.visit{grid-template-columns:1fr}
-    .grid,.why,.steps{grid-template-columns:1fr}
-    header .btn{display:none}
-    .hero{padding-top:20px}
+  :focus-visible{outline:3px solid var(--yema);outline-offset:3px;border-radius:6px}
+  h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.05;letter-spacing:-.02em}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  .demo{background:var(--cobalto-hondo);color:#cdd8f3;font-size:13.5px;text-align:center;padding:9px 16px}
+  .demo a{color:#fff}
+
+  .talavera{height:22px;background-color:var(--cobalto);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='22' viewBox='0 0 44 22'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.6'%3E%3Cpath d='M22 2l4 9-4 9-4-9z'/%3E%3Cpath d='M13 11h18'/%3E%3Ccircle cx='22' cy='11' r='2.4' fill='%23e6ad2e' stroke='none'/%3E%3Cpath d='M0 0l6 6M44 0l-6 6M0 22l6-6M44 22l-6-6'/%3E%3C/g%3E%3C/svg%3E");background-size:44px 22px}
+
+  header{background:var(--blanco)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+  .marca{display:flex;align-items:center;gap:14px;text-decoration:none}
+  .slot-logo{width:58px;height:58px;border:2px dashed #9fb2df;border-radius:14px;display:grid;place-items:center;text-align:center;font-size:11px;font-weight:600;color:var(--cobalto);background:repeating-linear-gradient(-45deg,#fff 0 6px,#f0f4fc 6px 12px);flex:none;line-height:1.15}
+  .marca strong{color:var(--cobalto-hondo);font-family:"Bricolage Grotesque",sans-serif;font-size:19px;display:block;line-height:1.15}
+  .marca span{font-size:14px;color:var(--gris)}
+  nav{display:flex;gap:26px;font-weight:500;font-size:15px}
+  nav a{text-decoration:none;color:var(--gris)}
+  nav a:hover{color:var(--cobalto)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:16px;text-decoration:none;border-radius:12px;padding:15px 24px;border:2px solid transparent;transition:transform .15s ease,background .15s}
+  .btn:active{transform:scale(.98)}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-wa:hover{background:#178a45}
+  .btn-sec{border-color:var(--cobalto);color:var(--cobalto);background:transparent}
+  .btn-sec:hover{background:var(--azulejo)}
+  .btn svg{width:20px;height:20px;flex:none}
+
+  .hero{background:var(--blanco);padding:40px 0 0}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:stretch}
+  .hero h1{font-size:clamp(42px,6.4vw,78px);font-weight:800;color:var(--cobalto-hondo);margin-bottom:22px}
+  .hero p.intro{font-size:19px;color:var(--gris);max-width:30em;margin-bottom:30px}
+  .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+  .datos{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:15px;color:var(--gris);padding-bottom:40px}
+  .datos b{color:var(--cobalto-hondo);font-weight:600}
+  .slot{position:relative;border:2px dashed #9fb2df;border-radius:22px;background:repeating-linear-gradient(-45deg,#fbfcff 0 10px,#eef3fc 10px 20px);display:grid;place-items:center;text-align:center;color:var(--cobalto);padding:24px}
+  .slot .t{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:22px;display:block}
+  .slot .d{font-size:14px;color:var(--gris);display:block;margin-top:4px}
+  .slot svg{width:42px;height:42px;stroke:var(--cobalto);fill:none;stroke-width:1.6;margin-bottom:10px}
+  .hero .slot{min-height:460px;border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom:none}
+
+  .alinear{background:var(--cobalto);color:#fff;padding:46px 0 52px;overflow:hidden}
+  .alinear-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
+  .alinear h2{font-size:clamp(30px,3.6vw,44px);font-weight:700}
+  .alinear p{color:#cdd8f3;margin-top:12px;max-width:26em}
+  .sonrisa{width:100%;height:auto;display:block}
+  .diente{fill:#fff;transform-box:fill-box;transform-origin:center;animation:alinea 1.6s cubic-bezier(.3,.7,.2,1) .5s both}
+  .arco{stroke:var(--yema);stroke-width:4;fill:none;stroke-dasharray:640;stroke-dashoffset:640;animation:traza 1.2s ease 1.6s forwards}
+  .bracket{fill:var(--azulejo);opacity:0;animation:aparece .3s ease 1.5s forwards}
+  @keyframes alinea{from{transform:translateY(var(--y,0)) rotate(var(--r,0deg))}to{transform:none}}
+  @keyframes traza{to{stroke-dashoffset:0}}
+  @keyframes aparece{to{opacity:1}}
+  @media (prefers-reduced-motion:reduce){.diente,.arco,.bracket{animation:none;opacity:1;stroke-dashoffset:0}}
+
+  section{padding:88px 0}
+  .titulo{max-width:620px;margin-bottom:44px}
+  .titulo h2{font-size:clamp(32px,4.2vw,50px);font-weight:700;margin-bottom:12px}
+  .titulo p{color:var(--gris);font-size:18px}
+
+  .tratamientos{border-top:2px solid var(--cobalto-hondo)}
+  .trat{display:grid;grid-template-columns:64px 1fr auto;gap:22px;align-items:center;padding:24px 0;border-bottom:1px solid #d5dcec}
+  .trat .ic{width:56px;height:56px;border-radius:50%;background:var(--azulejo);display:grid;place-items:center}
+  .trat .ic svg{width:28px;height:28px;stroke:var(--cobalto);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .trat h3{font-size:24px;font-weight:700;margin-bottom:4px}
+  .trat p{color:var(--gris);font-size:16px;max-width:36em}
+  .trat a{font-weight:600;color:var(--cobalto);text-decoration:none;white-space:nowrap;font-size:15px;padding:10px 14px;border-radius:10px;border:1.5px solid #c3cfec}
+  .trat a:hover{background:var(--azulejo)}
+
+  .visita{background:var(--blanco)}
+  .pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;counter-reset:p}
+  .paso{position:relative;padding-top:64px}
+  .paso:before{counter-increment:p;content:counter(p);position:absolute;top:0;left:0;width:46px;height:46px;border-radius:50%;background:var(--yema);color:var(--cobalto-hondo);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px;display:grid;place-items:center}
+  .paso:not(:last-child):after{content:"";position:absolute;top:22px;left:58px;right:-24px;border-top:2px dashed #b9c6e6}
+  .paso h3{font-size:22px;margin-bottom:8px}
+  .paso p{color:var(--gris);font-size:16px}
+
+  .galeria{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto auto;gap:18px}
+  .galeria .slot:first-child{grid-row:span 2;min-height:420px}
+  .galeria .slot{min-height:200px}
+
+  .confianza{background:var(--cobalto-hondo);color:#fff}
+  .confianza .titulo p{color:#b7c4e6}
+  .razones{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #2f4377}
+  .razon{padding:28px 28px 8px 0}
+  .razon+.razon{padding-left:28px;border-left:1px solid #2f4377}
+  .razon h3{font-size:23px;margin-bottom:10px;color:#fff}
+  .razon p{color:#b7c4e6;font-size:16px}
+  .opiniones{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;background:#1b2f63;border-radius:18px;padding:24px 28px}
+  .opiniones p{color:#dfe7fb;max-width:34em}
+  .opiniones a{color:var(--cobalto-hondo);background:var(--yema)}
+
+  .ubica{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
+  .ficha{background:var(--blanco);border-radius:22px;padding:32px;border:1px solid #d5dcec}
+  .ficha h3{font-size:18px;margin:18px 0 6px}
+  .ficha h3:first-child{margin-top:0}
+  .horario{width:100%;border-collapse:collapse;font-size:16px}
+  .horario td{padding:7px 0;border-bottom:1px dashed #d5dcec}
+  .horario td:last-child{text-align:right;font-weight:600}
+  .cerrado{color:#b2412c}
+  .mapa{border-radius:22px;overflow:hidden;min-height:360px;border:1px solid #d5dcec;background:var(--azulejo)}
+  .mapa iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+
+  .cierre{background:var(--blanco);text-align:center}
+  .cierre h2{font-size:clamp(34px,5vw,60px);font-weight:800;max-width:14em;margin:0 auto 18px}
+  .cierre p{color:var(--gris);font-size:18px;max-width:30em;margin:0 auto 30px}
+
+  footer{padding:30px 0 110px;font-size:14px;color:var(--gris);text-align:center}
+
+  .movil{display:none}
+  @media (max-width:860px){
+    nav{display:none}
+    .hero-grid,.alinear-grid,.ubica{grid-template-columns:1fr}
+    .hero .slot{min-height:260px;border-radius:22px;border-bottom:2px dashed #9fb2df}
+    .hero-grid{gap:8px}
+    .datos{padding-bottom:28px}
+    .trat{grid-template-columns:52px 1fr}
+    .trat a{grid-column:2;justify-self:start}
+    .trat .ic{width:48px;height:48px}
+    .pasos,.razones{grid-template-columns:1fr}
+    .paso:after{display:none}
+    .razon+.razon{padding-left:0;border-left:0;border-top:1px solid #2f4377}
+    .galeria{grid-template-columns:1fr}
+    .galeria .slot:first-child{grid-row:auto;min-height:260px}
+    section{padding:64px 0}
+    .bar .btn{display:none}
+    .movil{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid #d5dcec;z-index:10}
+    .movil .btn{padding:13px 10px}
   }
 </style>
 </head>
 <body>
 
-<div class="demo-bar">Propuesta de diseño creada por <a href="https://fixaconsultoria.com">FixA Consultoría</a> · Este no es el sitio oficial del consultorio</div>
+<div class="demo">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com">FixA Consultoría</a>. No es el sitio oficial del consultorio.</div>
 
 <header>
-  <div class="brand">
-    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
-      <rect width="48" height="48" rx="14" fill="#1f7a68"/>
-      <path d="M24 13.5c-2.2-1.6-4.6-2.3-7-1.7-3.6.9-5.5 4.6-4.8 8.6.5 2.9 1.6 5.2 2.3 8.2.6 2.6.8 6.2 2.6 7.6 1.6 1.2 3-1 3.4-3.1.5-2.6 1.4-5.2 3.5-5.2s3 2.6 3.5 5.2c.4 2.1 1.8 4.3 3.4 3.1 1.8-1.4 2-5 2.6-7.6.7-3 1.8-5.3 2.3-8.2.7-4-1.2-7.7-4.8-8.6-2.4-.6-4.8.1-7 1.7z" fill="#fff"/>
-      <path d="M15.5 21.5h17" stroke="#1f7a68" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="19.5" cy="21.5" r="1.8" fill="#1f7a68"/><circle cx="24" cy="21.5" r="1.8" fill="#1f7a68"/><circle cx="28.5" cy="21.5" r="1.8" fill="#1f7a68"/>
-    </svg>
-    <div class="logo">Consultorio Dental y Ortodoncia<small>El Cerrito · Puebla</small></div>
+  <div class="wrap bar">
+    <a class="marca" href="#">
+      <span class="slot-logo">Tu<br>logo</span>
+      <span><strong>Consultorio Dental y Ortodoncia</strong><span>El Cerrito, Puebla</span></span>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#tratamientos">Tratamientos</a>
+      <a href="#primera-visita">Primera visita</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/522221187661?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Agendar valoración</a>
   </div>
-  <a class="btn small" href="https://wa.me/522221187661?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">Agendar cita</a>
 </header>
 
 <div class="hero">
-  <div>
-    <span class="eyebrow">⭐ Pacientes satisfechos en Google</span>
-    <h1>Tu sonrisa en manos de especialistas en ortodoncia</h1>
-    <p class="lead">Atención cercana y explicaciones claras en cada paso de tu tratamiento. Ortodoncia, limpiezas y odontología general en El Cerrito, Puebla.</p>
-    <div class="ctas">
-      <a class="btn" href="https://wa.me/522221187661?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">Agendar por WhatsApp</a>
-      <a class="btn ghost" href="tel:+522221187661">Llamar</a>
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Una sonrisa alineada empieza con una buena explicación.</h1>
+      <p class="intro">Ortodoncia y odontología general en El Cerrito. Antes de empezar te mostramos qué necesitan tus dientes, cuánto tiempo tomará y cuánto cuesta, sin sorpresas a mitad del tratamiento.</p>
+      <div class="acciones">
+        <a class="btn btn-wa" href="https://wa.me/522221187661?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.6c1.2.4 2.5.6 3.8.6 6.6 0 12-5.4 12-12S22.6 3 16 3zm5.3 15c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.1 5 4.4.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+          Agendar por WhatsApp
+        </a>
+        <a class="btn btn-sec" href="tel:+522221187661">Llamar al 222 118 7661</a>
+      </div>
+      <div class="datos">
+        <span><b>Lunes a viernes</b> 9 a 20 h</span>
+        <span><b>Sábado</b> 9 a 14 h</span>
+        <span><b>16 de Septiembre 5747</b>, planta baja</span>
+      </div>
     </div>
-  </div>
-  <div class="art">
-  <svg class="scene" viewBox="0 0 440 340" role="img" aria-label="Ilustración de una sonrisa sana con ortodoncia">
-    <defs>
-      <linearGradient id="bgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dff0e9"/><stop offset="1" stop-color="#bfe3d6"/></linearGradient>
-      <linearGradient id="toothG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef5f2"/></linearGradient>
-    </defs>
-    <rect x="10" y="10" width="420" height="320" rx="36" fill="url(#bgG)"/>
-    <circle cx="350" cy="80" r="46" fill="#ffffff" opacity=".45"/>
-    <circle cx="80" cy="270" r="60" fill="#1f7a68" opacity=".08"/>
-    <!-- diente grande -->
-    <g transform="translate(130 50)">
-      <path d="M90 22C79 14 66 10 53 13 33 18 22 38 26 61c3 16 9 29 13 45 4 15 5 35 15 43 9 7 17-5 19-17 3-15 8-29 17-29s14 14 17 29c2 12 10 24 19 17 10-8 11-28 15-43 4-16 10-29 13-45 4-23-7-43-27-48-13-3-26 1-37 9z" fill="url(#toothG)" stroke="#14302b" stroke-width="3"/>
-      <path d="M44 40c3-9 10-14 18-15" stroke="#9fd3c2" stroke-width="6" stroke-linecap="round" fill="none"/>
-      <!-- bracket -->
-      <rect x="74" y="58" width="32" height="22" rx="5" fill="#1f7a68"/>
-      <path d="M20 69h140" stroke="#1f7a68" stroke-width="3" stroke-linecap="round"/>
-      <rect x="84" y="64" width="12" height="10" rx="2" fill="#dff0e9"/>
-    </g>
-    <!-- cepillo -->
-    <g transform="translate(300 150) rotate(-35)">
-      <rect x="0" y="0" width="110" height="14" rx="7" fill="#1f7a68"/>
-      <rect x="-4" y="-22" width="34" height="22" rx="4" fill="#ffffff" stroke="#14302b" stroke-width="2.5"/>
-      <path d="M2 -22v-8M9 -22v-8M16 -22v-8M23 -22v-8" stroke="#9fd3c2" stroke-width="3" stroke-linecap="round"/>
-    </g>
-    <!-- destellos -->
-    <g fill="#f2c14e">
-      <path d="M110 70l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/>
-      <path d="M345 225l3.5 8 8 3.5-8 3.5-3.5 8-3.5-8-8-3.5 8-3.5z"/>
-      <path d="M330 40l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
-    </g>
-  </svg>
-  <div class="hero-card">
-    <h3>Horario de atención</h3>
-    <ul class="hours">
-      <li><span>Lunes a viernes</span><span>9:00 – 20:00</span></li>
-      <li><span>Sábado</span><span>9:00 – 14:00</span></li>
-      <li><span>Domingo</span><span class="closed">Cerrado</span></li>
-    </ul>
-  </div>
+    <div class="slot" role="img" aria-label="Espacio para imagen 1">
+      <div>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+        <span class="t">Imagen 1</span>
+        <span class="d">Foto de la doctora o del equipo atendiendo</span>
+      </div>
+    </div>
   </div>
 </div>
 
-<section id="servicios">
-  <h2>Nuestros servicios</h2>
-  <p class="sub">Todo lo que tu boca necesita, en un solo lugar y con un plan explicado desde la primera consulta.</p>
-  <div class="grid">
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 5.5C10.6 4.5 9 4 7.5 4.4 5.2 5 4 7.3 4.5 9.8c.3 1.8 1 3.2 1.4 5 .4 1.6.5 3.9 1.6 4.8 1 .8 1.9-.6 2.1-1.9.3-1.6.9-3.2 2.4-3.2s2.1 1.6 2.4 3.2c.2 1.3 1.1 2.7 2.1 1.9 1.1-.9 1.2-3.2 1.6-4.8.4-1.8 1.1-3.2 1.4-5C20 7.3 18.8 5 16.5 4.4 15 4 13.4 4.5 12 5.5z"/><path d="M5 10h14"/><rect x="10" y="8.5" width="4" height="3" rx=".8"/></svg></div><h3>Ortodoncia</h3><p>Brackets y tratamientos para alinear tus dientes, con seguimiento puntual en cada cita.</p></div>
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div><h3>Limpieza dental</h3><p>Elimina sarro y manchas, y previene caries y problemas de encías.</p></div>
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20L15 9"/><rect x="13.5" y="3.5" width="7" height="5" rx="1.2" transform="rotate(45 17 6)"/><path d="M17 3l1-1M19.5 5.5l1-1M15 1.5"/></svg></div><h3>Resinas</h3><p>Tratamiento de caries con resinas del color de tu diente.</p></div>
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/><path d="M8.5 11h5M11 8.5v5"/></svg></div><h3>Valoración</h3><p>Revisión completa y un plan de tratamiento con opciones claras.</p></div>
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="2.6"/><circle cx="16.5" cy="8.5" r="2"/><path d="M3.5 19c0-3 2-5 4.5-5s4.5 2 4.5 5"/><path d="M13 19c0-2.4 1.5-4 3.5-4s3.5 1.6 3.5 4"/></svg></div><h3>Odontología familiar</h3><p>Atención para adultos y niños en un ambiente tranquilo.</p></div>
-    <div class="svc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M7.5 12h9"/></svg></div><h3>Urgencias</h3><p>¿Dolor o una molestia repentina? Escríbenos y te damos espacio lo antes posible.</p></div>
+<div class="talavera" aria-hidden="true"></div>
+
+<div class="alinear">
+  <div class="wrap alinear-grid">
+    <div>
+      <h2>De dientes encimados a una sonrisa pareja.</h2>
+      <p>Brackets metálicos y estéticos, con revisiones puntuales cada mes para que veas el avance desde las primeras semanas.</p>
+    </div>
+    <svg class="sonrisa" viewBox="0 0 640 170" role="img" aria-label="Animación de dientes que se alinean con brackets">
+      <path class="arco" d="M20 84 Q320 120 620 84"/>
+      <g>
+        <rect class="diente" style="--y:-18px;--r:-14deg" x="28" y="40" width="58" height="88" rx="22"/>
+        <rect class="diente" style="--y:14px;--r:10deg" x="100" y="38" width="62" height="96" rx="24"/>
+        <rect class="diente" style="--y:-22px;--r:-8deg" x="176" y="34" width="66" height="104" rx="26"/>
+        <rect class="diente" style="--y:20px;--r:16deg" x="256" y="30" width="60" height="112" rx="26"/>
+        <rect class="diente" style="--y:-10px;--r:-18deg" x="326" y="30" width="60" height="112" rx="26"/>
+        <rect class="diente" style="--y:24px;--r:8deg" x="398" y="34" width="66" height="104" rx="26"/>
+        <rect class="diente" style="--y:-16px;--r:-12deg" x="478" y="38" width="62" height="96" rx="24"/>
+        <rect class="diente" style="--y:12px;--r:14deg" x="554" y="40" width="58" height="88" rx="22"/>
+      </g>
+      <g>
+        <rect class="bracket" x="45" y="78" width="24" height="16" rx="4"/>
+        <rect class="bracket" x="119" y="81" width="24" height="16" rx="4"/>
+        <rect class="bracket" x="197" y="84" width="24" height="16" rx="4"/>
+        <rect class="bracket" x="274" y="86" width="24" height="16" rx="4"/>
+        <rect class="bracket" x="344" y="86" width="24" height="16" rx="4"/>
+        <rect class="bracket" x="419" y="84" width="24" height="16" rx="4"/>
+        <rect class="bracket" x="497" y="81" width="24" height="16" rx="4"/>
+        <rect class="bracket" x="571" y="78" width="24" height="16" rx="4"/>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<section id="tratamientos">
+  <div class="wrap">
+    <div class="titulo">
+      <h2>Tratamientos</h2>
+      <p>Pregunta el precio de cualquier tratamiento por WhatsApp. Te respondemos con un rango claro antes de tu cita.</p>
+    </div>
+    <div class="tratamientos">
+      <div class="trat">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h18"/><rect x="5" y="9.5" width="4" height="5" rx="1"/><rect x="10" y="9.5" width="4" height="5" rx="1"/><rect x="15" y="9.5" width="4" height="5" rx="1"/></svg></span>
+        <div><h3>Ortodoncia con brackets</h3><p>Metálicos o estéticos, para adolescentes y adultos. Incluye plan de tratamiento y revisiones mensuales.</p></div>
+        <a href="https://wa.me/522221187661?text=Hola%2C%20%C2%BFcu%C3%A1nto%20cuesta%20la%20ortodoncia%20con%20brackets%3F" target="_blank" rel="noopener">Preguntar precio</a>
+      </div>
+      <div class="trat">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4z"/><path d="M18 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span>
+        <div><h3>Limpieza dental</h3><p>Retiramos sarro y manchas y revisamos tus encías. Recomendada cada seis meses.</p></div>
+        <a href="https://wa.me/522221187661?text=Hola%2C%20%C2%BFcu%C3%A1nto%20cuesta%20una%20limpieza%20dental%3F" target="_blank" rel="noopener">Preguntar precio</a>
+      </div>
+      <div class="trat">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 5.5C10.6 4.5 9 4 7.5 4.4 5.2 5 4 7.3 4.5 9.8c.3 1.8 1 3.2 1.4 5 .4 1.6.5 3.9 1.6 4.8 1 .8 1.9-.6 2.1-1.9.3-1.6.9-3.2 2.4-3.2s2.1 1.6 2.4 3.2c.2 1.3 1.1 2.7 2.1 1.9 1.1-.9 1.2-3.2 1.6-4.8.4-1.8 1.1-3.2 1.4-5C20 7.3 18.8 5 16.5 4.4 15 4 13.4 4.5 12 5.5z"/><circle cx="14.5" cy="9" r="1.6"/></svg></span>
+        <div><h3>Resinas para caries</h3><p>Rellenos del mismo color que tu diente, en una sola cita y con anestesia local.</p></div>
+        <a href="https://wa.me/522221187661?text=Hola%2C%20%C2%BFcu%C3%A1nto%20cuesta%20una%20resina%3F" target="_blank" rel="noopener">Preguntar precio</a>
+      </div>
+      <div class="trat">
+        <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M7.5 12h9"/></svg></span>
+        <div><h3>Urgencias dentales</h3><p>Si tienes dolor fuerte o se te rompió un diente, escríbenos y buscamos espacio ese mismo día.</p></div>
+        <a href="https://wa.me/522221187661?text=Hola%2C%20tengo%20una%20urgencia%20dental" target="_blank" rel="noopener">Pedir ayuda</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="primera-visita">
+  <div class="wrap">
+    <div class="titulo">
+      <h2>Así es tu primera visita</h2>
+      <p>En unos 40 minutos sales sabiendo exactamente qué sigue.</p>
+    </div>
+    <div class="pasos">
+      <div class="paso"><h3>Revisión completa</h3><p>Revisamos dientes, encías y mordida, y te mostramos lo que encontramos.</p></div>
+      <div class="paso"><h3>Plan y presupuesto</h3><p>Te damos opciones de tratamiento con su costo y duración, para que decidas con calma.</p></div>
+      <div class="paso"><h3>Tú decides cuándo empezar</h3><p>Agendamos la siguiente cita solo cuando estés listo. Sin presión.</p></div>
+    </div>
   </div>
 </section>
 
 <section>
-  <div class="why">
-    <div><h3>Te explicamos todo</h3><p>Antes de cada procedimiento sabes qué se hará, por qué y cuánto cuesta.</p></div>
-    <div><h3>Consultorio limpio</h3><p>Instalaciones cuidadas y protocolos de higiene en cada consulta.</p></div>
-    <div><h3>Trato humano</h3><p>Paciencia y amabilidad para que te sientas cómodo, incluso si te dan nervios.</p></div>
+  <div class="wrap">
+    <div class="titulo">
+      <h2>Conoce el consultorio</h2>
+      <p>Un espacio limpio y tranquilo, en planta baja y fácil de encontrar.</p>
+    </div>
+    <div class="galeria">
+      <div class="slot" role="img" aria-label="Espacio para imagen 2"><div><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg><span class="t">Imagen 2</span><span class="d">Sillón dental y área de trabajo</span></div></div>
+      <div class="slot" role="img" aria-label="Espacio para imagen 3"><div><span class="t">Imagen 3</span><span class="d">Fachada o recepción</span></div></div>
+      <div class="slot" role="img" aria-label="Espacio para imagen 4"><div><span class="t">Imagen 4</span><span class="d">Un antes y después de ortodoncia</span></div></div>
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>Agendar es muy fácil</h2>
-  <p class="sub">Sin llamadas largas ni formularios.</p>
-  <div class="steps">
-    <div class="step"><strong>Escríbenos</strong><p>Mándanos un WhatsApp con tu nombre y el motivo de tu consulta.</p></div>
-    <div class="step"><strong>Elige tu horario</strong><p>Te proponemos el día y la hora que mejor te acomoden.</p></div>
-    <div class="step"><strong>Visítanos</strong><p>Te recibimos puntualmente y salimos con un plan claro.</p></div>
+<section class="confianza">
+  <div class="wrap">
+    <div class="titulo">
+      <h2>Por qué nuestros pacientes regresan</h2>
+      <p>Muchos llegan con miedo al dentista. Lo que más agradecen es cómo se les atiende.</p>
+    </div>
+    <div class="razones">
+      <div class="razon"><h3>Explicamos cada paso</h3><p>Antes de cada procedimiento sabes qué haremos y por qué. Puedes preguntar todo lo que quieras.</p></div>
+      <div class="razon"><h3>Precios claros</h3><p>Recibes tu presupuesto antes de empezar y no cambia a mitad del tratamiento.</p></div>
+      <div class="razon"><h3>Seguimiento real</h3><p>Te escribimos después de tu cita para saber cómo sigues.</p></div>
+    </div>
+    <div class="opiniones">
+      <p>Lee lo que dicen nuestros pacientes en Google antes de agendar.</p>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Consultorio+Dental+y+Ortodoncia+16+de+Septiembre+5747+El+Cerrito+Puebla" target="_blank" rel="noopener">Ver opiniones en Google</a>
+    </div>
   </div>
 </section>
 
 <section id="ubicacion">
-  <h2>Visítanos</h2>
-  <p class="sub">Estamos en planta baja, fácil de encontrar.</p>
-  <div class="visit">
-    <div class="box">
-      <p><strong>Dirección</strong><br>C. 16 de Septiembre 5747, local 18 (planta baja)<br>El Cerrito, 72440 Puebla, Pue.</p>
-      <p><strong>Teléfono / WhatsApp</strong><br><a href="tel:+522221187661">222 118 7661</a></p>
-      <p style="margin-top:18px"><a class="btn small" href="https://www.google.com/maps/search/?api=1&query=Consultorio+Dental+y+Ortodoncia+16+de+Septiembre+5747+El+Cerrito+Puebla" target="_blank" rel="noopener">Cómo llegar</a></p>
-    </div>
-    <div class="map">
-      <iframe loading="lazy" src="https://www.google.com/maps?q=19.0180197,-98.2140783&z=16&output=embed" title="Mapa del consultorio"></iframe>
+  <div class="wrap">
+    <div class="titulo"><h2>Dónde estamos</h2></div>
+    <div class="ubica">
+      <div class="ficha">
+        <h3>Dirección</h3>
+        <p>C. 16 de Septiembre 5747, local 18, planta baja<br>El Cerrito, 72440 Puebla, Pue.</p>
+        <h3>Horario</h3>
+        <table class="horario">
+          <tr><td>Lunes a viernes</td><td>9:00 a 20:00</td></tr>
+          <tr><td>Sábado</td><td>9:00 a 14:00</td></tr>
+          <tr><td>Domingo</td><td class="cerrado">Cerrado</td></tr>
+        </table>
+        <h3>Teléfono y WhatsApp</h3>
+        <p><a href="tel:+522221187661">222 118 7661</a></p>
+        <p style="margin-top:20px"><a class="btn btn-sec" href="https://www.google.com/maps/search/?api=1&query=Consultorio+Dental+y+Ortodoncia+16+de+Septiembre+5747+El+Cerrito+Puebla" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
+      </div>
+      <div class="mapa"><iframe loading="lazy" src="https://www.google.com/maps?q=19.0180197,-98.2140783&z=16&output=embed" title="Mapa del consultorio en El Cerrito, Puebla"></iframe></div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="final">
-    <h2>¿Listo para tu cita?</h2>
-    <p>Escríbenos hoy y agenda tu valoración. Te respondemos por WhatsApp.</p>
-    <a class="btn" href="https://wa.me/522221187661?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+<div class="talavera" aria-hidden="true"></div>
+
+<section class="cierre">
+  <div class="wrap">
+    <h2>Agenda tu valoración esta semana.</h2>
+    <p>Escríbenos por WhatsApp con tu nombre y el día que te acomoda. Te confirmamos tu cita en el mismo chat.</p>
+    <a class="btn btn-wa" href="https://wa.me/522221187661?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Agendar por WhatsApp</a>
   </div>
 </section>
 
-<footer>© Consultorio Dental y Ortodoncia · Puebla<br>Sitio de demostración elaborado por FixA Consultoría</footer>
+<footer>
+  <div class="wrap">Consultorio Dental y Ortodoncia, Puebla<br>Propuesta de sitio elaborada por FixA Consultoría</div>
+</footer>
 
-<a class="wa-float" href="https://wa.me/522221187661?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.99L4 29l8.25-1.6a12.1 12.1 0 0 0 3.79.61C22.68 28 28 22.64 28 16.03 28 9.42 22.68 3 16.04 3Zm0 22.2c-1.17 0-2.32-.2-3.41-.6l-.24-.09-4.9.95.98-4.73-.15-.25a9.6 9.6 0 0 1-1.46-5.1c0-5.32 4.33-9.65 9.18-9.65 5.3 0 9.6 4.33 9.6 9.65 0 5.47-4.3 9.82-9.6 9.82Zm5.27-7.2c-.29-.15-1.71-.84-1.98-.94-.27-.1-.46-.15-.65.15-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.43a8.7 8.7 0 0 1-1.61-2c-.17-.29 0-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.65-1.56-.89-2.14-.23-.56-.47-.48-.65-.49h-.55c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.43s1.05 2.82 1.2 3.01c.15.2 2.06 3.14 4.99 4.4.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.71-.7 1.96-1.37.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34Z"/></svg>
-</a>
+<div class="movil">
+  <a class="btn btn-sec" href="tel:+522221187661">Llamar</a>
+  <a class="btn btn-wa" href="https://wa.me/522221187661?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">WhatsApp</a>
+</div>
 
 </body>
 </html>
