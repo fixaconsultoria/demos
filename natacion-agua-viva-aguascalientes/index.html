@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Escuela de Natación Agua Viva · Aguascalientes</title>
+<meta name="description" content="Escuela de Natación Agua Viva en Trojes de Oriente, Aguascalientes. Pregunta horarios, grupos y costos por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --agua:#e6f7fb;
+  --azulejo:#bfe9f2;
+  --alberca:#0a7fa8;
+  --fondo:#03396c;
+  --noche:#02234a;
+  --boya-r:#ef4444;
+  --boya-b:#ffffff;
+  --sol:#ffcf33;
+  --texto:#0b2540;
+  --suave:#4b6680;
+  --wa:#169a57;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--texto);font-family:"Lexend",system-ui,sans-serif;font-size:16.5px;line-height:1.6;font-weight:400}
+a{color:inherit}
+.demo{background:var(--noche);color:#cfe8ff;font-size:13px;text-align:center;padding:8px 16px}
+.demo a{color:#fff;font-weight:600}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.b{font-family:"Baloo 2",system-ui,sans-serif}
+
+.top{position:absolute;top:0;left:0;right:0;z-index:5}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px;gap:14px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.logo{width:52px;height:52px;border:2px dashed rgba(255,255,255,.8);border-radius:50%;display:grid;place-items:center;font-size:11px;text-align:center;line-height:1.1;color:#fff}
+.marca b{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:24px;line-height:1;display:block}
+.marca small{opacity:.85;font-size:13px}
+.top nav{display:flex;gap:22px;color:#fff;font-size:15px}
+.top nav a{text-decoration:none;opacity:.9}
+.top nav a:hover{opacity:1;text-decoration:underline}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:14px;font-family:"Baloo 2",sans-serif;font-weight:700;font-size:17px;text-decoration:none;line-height:1;border:0;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-sol{background:var(--sol);color:var(--noche)}
+.btn-blanco{background:#fff;color:var(--fondo)}
+.btn-borde{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+
+/* HERO: alberca vista desde arriba */
+.hero{position:relative;background:linear-gradient(180deg,var(--alberca),var(--fondo));color:#fff;padding:150px 0 170px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse 60px 18px at 20% 30%,rgba(255,255,255,.18),transparent 70%),
+  radial-gradient(ellipse 80px 20px at 70% 20%,rgba(255,255,255,.14),transparent 70%),
+  radial-gradient(ellipse 50px 14px at 85% 60%,rgba(255,255,255,.14),transparent 70%),
+  radial-gradient(ellipse 70px 18px at 35% 70%,rgba(255,255,255,.12),transparent 70%);
+  animation:destellos 7s ease-in-out infinite alternate}
+@keyframes destellos{to{transform:translate(-30px,14px)}}
+.carril{position:absolute;left:-5%;right:-5%;height:14px;background:repeating-linear-gradient(90deg,var(--boya-r) 0 22px,var(--boya-b) 22px 44px,#2563eb 44px 66px,var(--boya-b) 66px 88px);border-radius:7px;opacity:.95;box-shadow:0 4px 0 rgba(0,0,0,.12)}
+.carril.c1{top:100px;animation:flota 5s ease-in-out infinite}
+.carril.c2{bottom:150px;animation:flota 6s ease-in-out .8s infinite}
+@keyframes flota{50%{transform:translateY(5px)}}
+.linea-fondo{position:absolute;left:0;right:0;top:50%;height:16px;background:rgba(2,35,74,.35);transform:translateY(-50%)}
+.linea-fondo::before,.linea-fondo::after{content:"";position:absolute;width:16px;height:70px;background:rgba(2,35,74,.35);top:-27px}
+.linea-fondo::before{left:6%}.linea-fondo::after{right:6%}
+.hero > .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.pill{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;font-size:14px}
+h1{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:clamp(46px,7vw,92px);line-height:.92;margin:16px 0 18px;letter-spacing:-.01em}
+h1 span{color:var(--sol)}
+.lead{font-size:19px;opacity:.92;max-width:30em;margin:0 0 26px;font-weight:300}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.nadador{width:100%;max-width:380px;justify-self:center}
+.nadador .brazo{transform-origin:150px 120px;animation:brazada 2.4s ease-in-out infinite}
+@keyframes brazada{0%{transform:rotate(0)}50%{transform:rotate(-200deg)}100%{transform:rotate(-360deg)}}
+.nadador .estela{animation:estela 2.4s linear infinite}
+@keyframes estela{to{stroke-dashoffset:-60}}
+.ola{position:absolute;left:0;bottom:-2px;width:200%;height:120px;animation:ola 14s linear infinite}
+.ola.o2{opacity:.5;animation-duration:22s;bottom:8px}
+@keyframes ola{to{transform:translateX(-50%)}}
+
+section{padding:80px 0}
+.h2{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:clamp(34px,4.6vw,54px);line-height:1;margin:0 0 12px;color:var(--fondo)}
+.sub{color:var(--suave);margin:0 0 36px;max-width:36em}
+
+/* carriles de servicio */
+.carriles{display:grid;gap:14px}
+.fila{display:grid;grid-template-columns:90px 1fr auto;gap:22px;align-items:center;background:var(--agua);border-radius:18px;padding:20px 24px;position:relative;overflow:hidden}
+.fila::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:repeating-linear-gradient(90deg,var(--boya-r) 0 16px,#fff 16px 32px,#2563eb 32px 48px,#fff 48px 64px);opacity:.7}
+.fila .n{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:54px;color:var(--alberca);line-height:1;text-align:center}
+.fila h3{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:26px;margin:0;line-height:1.1;color:var(--fondo)}
+.fila p{margin:2px 0 0;color:var(--suave);font-size:15.5px}
+
+/* beneficios */
+.azulejos{background:var(--agua);background-image:linear-gradient(var(--azulejo) 2px,transparent 2px),linear-gradient(90deg,var(--azulejo) 2px,transparent 2px);background-size:44px 44px}
+.ben{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ben div{background:#fff;border-radius:18px;padding:22px;box-shadow:0 10px 30px -18px rgba(3,57,108,.45)}
+.ben svg{width:44px;height:44px}
+.ben h3{font-family:"Baloo 2",sans-serif;font-size:21px;margin:10px 0 4px;color:var(--fondo);line-height:1.1}
+.ben p{margin:0;color:var(--suave);font-size:15px}
+
+/* primera clase */
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:p}
+.paso{border:2px solid var(--azulejo);border-radius:18px;padding:24px;position:relative}
+.paso::before{counter-increment:p;content:counter(p);position:absolute;top:-20px;left:20px;width:40px;height:40px;border-radius:50%;background:var(--sol);color:var(--noche);font-family:"Baloo 2",sans-serif;font-weight:800;font-size:22px;display:grid;place-items:center}
+.paso h3{font-family:"Baloo 2",sans-serif;font-size:22px;margin:8px 0 4px;color:var(--fondo)}
+.paso p{margin:0;color:var(--suave);font-size:15.5px}
+
+.fotos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.hueco{aspect-ratio:1;border:2px dashed var(--alberca);border-radius:18px;background:var(--agua);display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.hueco b{font-family:"Baloo 2",sans-serif;font-size:18px;color:var(--fondo)}
+.hueco span{font-size:13.5px;color:var(--suave);line-height:1.35}
+
+.ubica{background:var(--fondo);color:#fff}
+.ubica .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center}
+.ubica .h2{color:#fff}
+.ubica dl{display:grid;grid-template-columns:100px 1fr;gap:12px;margin:22px 0 26px}
+.ubica dt{opacity:.7;font-size:14px}
+.ubica dd{margin:0}
+.ubica .cta .btn-blanco{color:var(--fondo)}
+.mapa{border-radius:22px;overflow:hidden;border:6px solid rgba(255,255,255,.15)}
+.mapa iframe{display:block;width:100%;height:400px;border:0}
+
+footer{padding:26px 0 100px;font-size:14px;color:var(--suave)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.barra{display:none}
+
+@media (max-width:900px){
+  .top nav{display:none}
+  .hero{padding:140px 0 150px}
+  .hero > .wrap{grid-template-columns:1fr}
+  .nadador{max-width:280px}
+  .ben{grid-template-columns:1fr 1fr}
+  .pasos{grid-template-columns:1fr;gap:30px}
+  .fotos{grid-template-columns:1fr 1fr}
+  .ubica .wrap{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .top .btn{display:none}
+  .fila{grid-template-columns:56px 1fr;padding:18px}
+  .fila .n{font-size:40px}
+  .fila .btn{grid-column:1/-1;margin-bottom:6px}
+  .ben{grid-template-columns:1fr}
+  .mapa iframe{height:300px}
+  section{padding:60px 0}
+  .barra{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;padding:10px;box-shadow:0 -6px 20px rgba(3,57,108,.18)}
+  .barra .btn-borde{color:var(--fondo);box-shadow:inset 0 0 0 2px var(--fondo)}
+}
+@media (prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="demo">Propuesta de diseño hecha por FixA Consultoría. No es el sitio oficial del negocio. <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></div>
+
+<main>
+<section class="hero">
+  <header class="top">
+    <div class="wrap">
+      <a class="marca" href="#"><span class="logo">Tu logo</span><span><b>Agua Viva</b><small>Escuela de Natación · Aguascalientes</small></span></a>
+      <nav><a href="#clases">Clases</a><a href="#primera">Primera clase</a><a href="#ubicacion">Ubicación</a></nav>
+      <a class="btn btn-sol wa" href="https://wa.me/524499122631" data-text="Hola, quiero información de las clases de natación en Agua Viva." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+  <div class="carril c1"></div><div class="linea-fondo"></div><div class="carril c2"></div>
+  <div class="wrap">
+    <div>
+      <span class="pill">Trojes de Oriente · Aguascalientes</span>
+      <h1>Aprender a nadar, <span>a su ritmo.</span></h1>
+      <p class="lead">Clases de natación para niños y adultos en Trojes de Oriente. Pregunte por el grupo y el horario que mejor le acomodan, y reserve su lugar por WhatsApp.</p>
+      <div class="cta">
+        <a class="btn btn-sol wa" href="https://wa.me/524499122631" data-text="Hola, quiero inscribirme (o inscribir a mi hijo/a) a clases de natación. ¿Qué horarios tienen?" target="_blank" rel="noopener">Preguntar horarios</a>
+        <a class="btn btn-borde" href="tel:+524499122631">Llamar</a>
+      </div>
+    </div>
+    <svg class="nadador" viewBox="0 0 300 200" aria-hidden="true">
+      <path class="estela" d="M10 130 Q40 120 70 130 T130 130" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 16" opacity=".8"/>
+      <ellipse cx="160" cy="132" rx="95" ry="12" fill="rgba(255,255,255,.25)"/>
+      <path d="M90 128 Q150 112 210 122" stroke="#ffcf33" stroke-width="22" stroke-linecap="round" fill="none"/>
+      <circle cx="226" cy="116" r="17" fill="#ffcf33"/>
+      <path d="M212 108 a17 17 0 0 1 30 0" fill="#ef4444"/>
+      <rect x="226" y="112" width="14" height="6" rx="3" fill="#02234a"/>
+      <g class="brazo"><path d="M150 120 L150 72" stroke="#ffcf33" stroke-width="12" stroke-linecap="round"/></g>
+      <path d="M92 130 L62 120 M92 128 L64 138" stroke="#ffcf33" stroke-width="11" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <svg class="ola o2" viewBox="0 0 2400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60 T1500 60 T1800 60 T2100 60 T2400 60 V120 H0Z" fill="#fff"/></svg>
+  <svg class="ola" viewBox="0 0 2400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 Q200 30 400 70 T800 70 T1200 70 T1600 70 T2000 70 T2400 70 V120 H0Z" fill="#fff"/></svg>
+</section>
+
+<section id="clases">
+  <div class="wrap">
+    <h2 class="h2">Elija su carril</h2>
+    <p class="sub">Cada alumno avanza según su edad y su nivel en el agua. Escríbanos y le recomendamos el grupo adecuado.</p>
+    <div class="carriles">
+      <div class="fila"><span class="n">1</span><div><h3>Niños</h3><p>Perder el miedo al agua, flotar y aprender a nadar con seguridad.</p></div><a class="btn btn-wa wa" href="https://wa.me/524499122631" data-text="Hola, quiero informes de natación para niños. Mi hijo/a tiene ___ años." target="_blank" rel="noopener">Preguntar precio</a></div>
+      <div class="fila"><span class="n">2</span><div><h3>Adultos</h3><p>Nunca es tarde para aprender o para retomar la natación.</p></div><a class="btn btn-wa wa" href="https://wa.me/524499122631" data-text="Hola, soy adulto y quiero tomar clases de natación. ¿Qué horarios y costos tienen?" target="_blank" rel="noopener">Preguntar precio</a></div>
+      <div class="fila"><span class="n">3</span><div><h3>Mejorar técnica</h3><p>Para quienes ya nadan y quieren hacerlo mejor y con más resistencia.</p></div><a class="btn btn-wa wa" href="https://wa.me/524499122631" data-text="Hola, ya sé nadar y quiero mejorar mi técnica. ¿Qué grupo me recomiendan?" target="_blank" rel="noopener">Preguntar precio</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="azulejos">
+  <div class="wrap">
+    <h2 class="h2">Por qué nadar</h2>
+    <p class="sub">La natación es una habilidad para toda la vida.</p>
+    <div class="ben">
+      <div><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#ffcf33"/><path d="M12 24c4-4 6 4 10 0s6 4 10 0" stroke="#03396c" stroke-width="3" fill="none" stroke-linecap="round"/></svg><h3>Seguridad</h3><p>Saber nadar da confianza en albercas, playas y ríos.</p></div>
+      <div><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#bfe9f2"/><path d="M14 28l6-10 5 6 5-8" stroke="#03396c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Salud</h3><p>Ejercicio completo y de bajo impacto para las articulaciones.</p></div>
+      <div><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#ffcf33"/><circle cx="22" cy="20" r="6" stroke="#03396c" stroke-width="3" fill="none"/><path d="M13 33c2-5 16-5 18 0" stroke="#03396c" stroke-width="3" fill="none" stroke-linecap="round"/></svg><h3>Confianza</h3><p>Cada logro en el agua se nota también fuera de ella.</p></div>
+      <div><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#bfe9f2"/><path d="M22 12v10l6 4" stroke="#03396c" stroke-width="3" fill="none" stroke-linecap="round"/></svg><h3>Rutina</h3><p>Una actividad constante que ayuda a dormir y a concentrarse.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="primera">
+  <div class="wrap">
+    <h2 class="h2">Su primera clase</h2>
+    <p class="sub">Así de sencillo es empezar.</p>
+    <div class="pasos">
+      <div class="paso"><h3>Escríbanos</h3><p>Díganos la edad del alumno y su experiencia en el agua.</p></div>
+      <div class="paso"><h3>Elija horario</h3><p>Le compartimos los grupos y horarios disponibles.</p></div>
+      <div class="paso"><h3>¡Al agua!</h3><p>Traiga traje de baño, gorra, goggles y toalla.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2">Nuestra alberca</h2>
+    <div class="fotos">
+      <div class="hueco"><b>Imagen 1</b><span>Vista general de la alberca</span></div>
+      <div class="hueco"><b>Imagen 2</b><span>Clase de niños con su instructor</span></div>
+      <div class="hueco"><b>Imagen 3</b><span>Clase de adultos</span></div>
+      <div class="hueco"><b>Imagen 4</b><span>Entrada y recepción de la escuela</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ubica" id="ubicacion">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Estamos en Trojes de Oriente</h2>
+      <dl>
+        <dt>Dirección</dt><dd>Av. Monte Blanco 804, Trojes de Oriente 1ra Secc., 20115 Aguascalientes, Ags.</dd>
+        <dt>Teléfono</dt><dd><a href="tel:+524499122631">449 912 2631</a></dd>
+        <dt>Horario</dt><dd>Pregunte los horarios de clase por WhatsApp.</dd>
+      </dl>
+      <div class="cta">
+        <a class="btn btn-wa wa" href="https://wa.me/524499122631" data-text="Hola, quiero reservar mi lugar en clases de natación en Agua Viva." target="_blank" rel="noopener">Reservar lugar</a>
+        <a class="btn btn-blanco" href="https://www.google.com/maps/search/?api=1&query=Escuela+de+Nataci%C3%B3n+Agua+Viva+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa de Escuela de Natación Agua Viva" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.+Monte+Blanco+804,+Trojes+de+Oriente,+20115+Aguascalientes,+Ags.&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Escuela de Natación Agua Viva · Aguascalientes, Ags.</span><span>Propuesta de sitio elaborada por FixA Consultoría · <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></span></div></footer>
+<div class="barra"><a class="btn btn-borde" href="tel:+524499122631">Llamar</a><a class="btn btn-wa wa" href="https://wa.me/524499122631" data-text="Hola, quiero información de las clases de natación en Agua Viva." target="_blank" rel="noopener">WhatsApp</a></div>
+<script>document.querySelectorAll('a.wa[data-text]').forEach(a=>{a.href=a.href.split('?')[0]+'?text='+encodeURIComponent(a.dataset.text)});</script>
+</body>
+</html>

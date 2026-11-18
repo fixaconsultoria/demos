@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Florería Santa Anita · Aguascalientes</title>
+<meta name="description" content="Florería Santa Anita en Aguascalientes: arreglos florales, entrega a domicilio y artículos de decoración. Abierto todos los días de 8:00 a 23:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rosa:#e4007c;
+  --rosa-hondo:#a3005a;
+  --rosa-claro:#ffe3ef;
+  --rubor:#fff4f8;
+  --negro:#1a1016;
+  --gris:#6e5a66;
+  --sol:#ffd23f;
+  --tallo:#2f7d4f;
+  --wa:#178a4c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--rubor);color:var(--negro);font-family:"Nunito Sans",system-ui,sans-serif;font-size:17px;line-height:1.55}
+a{color:inherit}
+.demo{background:var(--negro);color:#f5e6ee;font-size:13px;text-align:center;padding:8px 16px}
+.demo a{color:#fff;font-weight:800}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.y{font-family:"Yeseva One",Georgia,serif;font-weight:400}
+
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:18px;padding-bottom:18px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:54px;height:54px;border:2px dashed var(--rosa);border-radius:16px;display:grid;place-items:center;font-size:11px;color:var(--rosa-hondo);font-weight:800;text-align:center;line-height:1.1;background:#fff}
+.marca b{font-family:"Yeseva One",serif;font-weight:400;font-size:24px;line-height:1;display:block}
+.marca small{color:var(--gris);font-size:13px}
+.abierto{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--negro);border-radius:999px;padding:8px 14px;font-weight:800;font-size:14px}
+.abierto i{width:10px;height:10px;border-radius:50%;background:#bbb}
+.abierto.si i{background:#21b35f;box-shadow:0 0 0 4px rgba(33,179,95,.2)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:16px;font-weight:800;font-size:15.5px;text-decoration:none;border:2px solid var(--negro);line-height:1;transition:transform .15s,box-shadow .15s;box-shadow:4px 4px 0 var(--negro)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--negro)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-rosa{background:var(--rosa);color:#fff}
+.btn-blanco{background:#fff}
+
+/* HERO */
+.hero{position:relative;padding:20px 0 70px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+h1{font-family:"Yeseva One",serif;font-weight:400;font-size:clamp(44px,6.6vw,88px);line-height:.98;margin:10px 0 18px;letter-spacing:-.01em}
+h1 span{color:var(--rosa)}
+.lead{font-size:19px;color:var(--gris);max-width:30em;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.ramo{position:relative;aspect-ratio:1/1.08}
+.ramo svg{width:100%;height:100%;overflow:visible}
+.flor{transform-box:fill-box;transform-origin:center;animation:abre 1.1s cubic-bezier(.3,1.5,.5,1) both}
+.f2{animation-delay:.25s}.f3{animation-delay:.45s}.f4{animation-delay:.65s}.f5{animation-delay:.85s}.f6{animation-delay:1.05s}.f7{animation-delay:1.2s}
+@keyframes abre{from{transform:scale(0) rotate(-40deg)}to{transform:scale(1) rotate(0)}}
+.mece{transform-origin:50% 92%;animation:mece 6s ease-in-out 1.5s infinite}
+@keyframes mece{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+.reloj{position:absolute;right:0;top:4%;background:var(--sol);border:2px solid var(--negro);border-radius:50%;width:130px;height:130px;display:grid;place-items:center;text-align:center;font-weight:800;font-size:13px;line-height:1.15;transform:rotate(10deg);box-shadow:4px 4px 0 var(--negro)}
+.reloj b{font-family:"Yeseva One",serif;font-weight:400;font-size:28px;display:block}
+
+/* ocasiones */
+section{padding:76px 0}
+.h2{font-family:"Yeseva One",serif;font-weight:400;font-size:clamp(34px,4.6vw,56px);line-height:1.02;margin:0 0 12px}
+.sub{color:var(--gris);margin:0 0 34px;max-width:34em}
+.ocasiones{background:#fff;border-top:2px solid var(--negro);border-bottom:2px solid var(--negro)}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.chip{border:2px solid var(--negro);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:8px;background:var(--rubor);text-decoration:none;transition:background .2s}
+.chip:hover{background:var(--rosa-claro)}
+.chip .ic{width:46px;height:46px}
+.chip h3{font-family:"Yeseva One",serif;font-weight:400;font-size:25px;margin:6px 0 0;line-height:1.05}
+.chip p{margin:0;color:var(--gris);font-size:15.5px;flex:1}
+.chip span{font-weight:800;color:var(--rosa-hondo);font-size:14.5px}
+
+/* cómo pedir */
+.pedir .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.ticket{background:#fff;border:2px solid var(--negro);border-radius:22px;padding:26px;box-shadow:8px 8px 0 var(--rosa)}
+.ticket ol{list-style:none;margin:0;padding:0;counter-reset:p}
+.ticket li{counter-increment:p;display:grid;grid-template-columns:48px 1fr;gap:14px;padding:16px 0;border-bottom:2px dotted #e9c6d7}
+.ticket li:last-child{border-bottom:0}
+.ticket li::before{content:counter(p);width:44px;height:44px;border-radius:50%;background:var(--rosa);color:#fff;display:grid;place-items:center;font-family:"Yeseva One",serif;font-size:20px}
+.ticket h3{margin:0 0 2px;font-size:18px}
+.ticket p{margin:0;color:var(--gris);font-size:15.5px}
+.extras{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.extras span{background:#fff;border:2px solid var(--negro);border-radius:999px;padding:8px 14px;font-weight:700;font-size:14.5px}
+
+/* fotos */
+.mosaico{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:200px 200px;gap:14px}
+.hueco{border:2px dashed var(--rosa);border-radius:22px;background:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
+.hueco b{font-size:15px}
+.hueco span{font-size:13.5px;color:var(--gris)}
+.mosaico .hueco:first-child{grid-row:span 2}
+.mosaico .hueco:nth-child(4){grid-column:span 2}
+
+/* visita */
+.visita{background:var(--negro);color:#fff}
+.visita .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center}
+.visita .h2 span{color:#ff7ab8}
+.visita dl{display:grid;grid-template-columns:110px 1fr;gap:12px 14px;margin:24px 0}
+.visita dt{color:#d6b9c8;font-size:14px}
+.visita dd{margin:0}
+.visita .btn{box-shadow:4px 4px 0 #ff7ab8;border-color:#fff}
+.visita .btn-blanco{color:var(--negro)}
+.visita .acc{display:flex;flex-wrap:wrap;gap:14px}
+.mapa{border:2px solid #fff;border-radius:22px;overflow:hidden}
+.mapa iframe{display:block;width:100%;height:400px;border:0}
+
+footer{padding:26px 0 100px;font-size:14px;color:var(--gris)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.barra{display:none}
+@media (max-width:900px){
+  .hero .wrap,.pedir .wrap,.visita .wrap{grid-template-columns:1fr}
+  .ramo{max-width:440px;margin:0 auto;width:100%}
+  .chips{grid-template-columns:1fr 1fr}
+  .mosaico{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .mosaico .hueco{min-height:170px}
+  .mosaico .hueco:first-child{grid-row:auto;grid-column:span 2;min-height:220px}
+}
+@media (max-width:560px){
+  .top .abierto{display:none}
+  .chips{grid-template-columns:1fr}
+  .reloj{width:104px;height:104px;font-size:11.5px}
+  .reloj b{font-size:22px}
+  .mapa iframe{height:300px}
+  section{padding:58px 0}
+  .barra{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:2px solid var(--negro);padding:10px}
+  .barra .btn{box-shadow:none;padding:14px 8px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="demo">Propuesta de diseño hecha por FixA Consultoría. No es el sitio oficial del negocio. <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marca" href="#"><span class="logo">Tu logo</span><span><b>Florería Santa Anita</b><small>Aguascalientes</small></span></a>
+    <span class="abierto" id="abierto"><i></i><span>Abierto todos los días de 8:00 a 23:00</span></span>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding-top:20px">
+  <div class="wrap">
+    <div>
+      <h1>Flores para <span>hoy mismo</span>, hasta las 11 de la noche.</h1>
+      <p class="lead">Arreglos florales con entrega a domicilio en Aguascalientes, todos los días de la semana. Cuéntenos la ocasión y su presupuesto, y le proponemos opciones por WhatsApp.</p>
+      <div class="cta">
+        <a class="btn btn-wa wa" href="https://wa.me/524499754436" data-text="Hola, quiero cotizar un arreglo floral con entrega a domicilio." target="_blank" rel="noopener">Cotizar mi arreglo</a>
+        <a class="btn btn-blanco" href="tel:+524499754436">Llamar</a>
+      </div>
+    </div>
+    <div class="ramo" aria-hidden="true">
+      <svg viewBox="0 0 440 480">
+        <g class="mece">
+          <g stroke="#2f7d4f" stroke-width="5" stroke-linecap="round" fill="none">
+            <path d="M220 470 C214 380 150 300 120 210"/><path d="M220 470 C222 360 230 260 226 150"/><path d="M220 470 C230 380 300 300 330 200"/><path d="M220 470 C210 400 90 360 70 310"/><path d="M220 470 C236 400 360 370 380 320"/><path d="M220 470 C216 390 180 330 170 290"/><path d="M220 470 C228 400 268 340 280 300"/>
+          </g>
+          <g fill="#2f7d4f"><path d="M150 330c-30-6-50 6-60 24 26 2 46-6 60-24Z"/><path d="M290 340c30-8 52 2 64 18-26 6-48 0-64-18Z"/><path d="M226 300c-12-24-8-46 6-60 6 24 4 44-6 60Z"/></g>
+          <!-- flores -->
+          <g class="flor f1" transform="translate(226 150)"><g fill="#e4007c">${''}</g></g>
+        </g>
+        <!-- envoltura -->
+        <path d="M150 380 L220 478 L290 380 L262 392 L220 455 L178 392Z" fill="#ffd23f" stroke="#1a1016" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M196 432c-20 6-36 22-30 32 10-2 26-14 30-32Zm48 0c20 6 36 22 30 32-10-2-26-14-30-32Z" fill="#e4007c" stroke="#1a1016" stroke-width="2.5"/>
+      </svg>
+      <div class="reloj"><div><b>8–23</b>abierto<br>los 7 días</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ocasiones" id="ocasiones">
+  <div class="wrap">
+    <h2 class="h2">¿Para qué ocasión?</h2>
+    <p class="sub">Toque la ocasión y se abre WhatsApp con su mensaje listo.</p>
+    <div class="chips">
+      <a class="chip wa" href="https://wa.me/524499754436" data-text="Hola, quiero un arreglo floral de cumpleaños. ¿Qué opciones tienen?" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 46 46"><circle cx="23" cy="23" r="21" fill="#ffd23f" stroke="#1a1016" stroke-width="2"/><path d="M14 30h18v-8H14Zm9-8v-6m-3 2 3-5 3 5" fill="none" stroke="#1a1016" stroke-width="2" stroke-linejoin="round"/></svg><h3>Cumpleaños</h3><p>Un detalle que llega a la puerta y alegra el día.</p><span>Pedir opciones →</span></a>
+      <a class="chip wa" href="https://wa.me/524499754436" data-text="Hola, quiero un arreglo floral para un aniversario. ¿Qué me recomiendan?" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 46 46"><circle cx="23" cy="23" r="21" fill="#ffe3ef" stroke="#1a1016" stroke-width="2"/><path d="M23 33s-10-6-10-13a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 7-10 13-10 13Z" fill="#e4007c" stroke="#1a1016" stroke-width="2"/></svg><h3>Amor y aniversario</h3><p>Rosas y arreglos para decirlo sin palabras.</p><span>Pedir opciones →</span></a>
+      <a class="chip wa" href="https://wa.me/524499754436" data-text="Hola, necesito un arreglo floral de condolencias. ¿Pueden entregarlo hoy?" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 46 46"><circle cx="23" cy="23" r="21" fill="#fff" stroke="#1a1016" stroke-width="2"/><path d="M23 12c4 4 4 9 0 12-4-3-4-8 0-12Zm0 12v10m-7-6c3 0 5 2 7 4m7-4c-3 0-5 2-7 4" fill="none" stroke="#1a1016" stroke-width="2" stroke-linecap="round"/></svg><h3>Condolencias</h3><p>Arreglos para acompañar a una familia en un momento difícil.</p><span>Pedir opciones →</span></a>
+      <a class="chip wa" href="https://wa.me/524499754436" data-text="Hola, quiero cotizar flores y decoración para un evento." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 46 46"><circle cx="23" cy="23" r="21" fill="#ffd23f" stroke="#1a1016" stroke-width="2"/><path d="M13 32h20M16 32V20h14v12M19 20v-4h8v4" fill="none" stroke="#1a1016" stroke-width="2" stroke-linejoin="round"/></svg><h3>Eventos</h3><p>Flores y artículos de decoración para su celebración.</p><span>Cotizar →</span></a>
+      <a class="chip wa" href="https://wa.me/524499754436" data-text="Hola, quiero enviar flores para felicitar a alguien (nacimiento / graduación)." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 46 46"><circle cx="23" cy="23" r="21" fill="#ffe3ef" stroke="#1a1016" stroke-width="2"/><path d="m23 12 3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z" fill="#ffd23f" stroke="#1a1016" stroke-width="2" stroke-linejoin="round"/></svg><h3>Felicitaciones</h3><p>Nacimientos, graduaciones y logros que merecen flores.</p><span>Pedir opciones →</span></a>
+      <a class="chip wa" href="https://wa.me/524499754436" data-text="Hola, quiero un arreglo floral. Mi presupuesto es de: " target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 46 46"><circle cx="23" cy="23" r="21" fill="#fff" stroke="#1a1016" stroke-width="2"/><path d="M23 13v20m5-16h-7a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-7" fill="none" stroke="#1a1016" stroke-width="2" stroke-linecap="round"/></svg><h3>Según mi presupuesto</h3><p>Díganos cuánto quiere invertir y le armamos opciones.</p><span>Preguntar precio →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="pedir">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Pedir es así de fácil</h2>
+      <p class="sub">Sin filas ni vueltas: todo por mensaje.</p>
+      <div class="extras"><span>Entrega a domicilio</span><span>Recoger en tienda</span><span>Pago con tarjeta</span><span>Artículos de decoración</span></div>
+    </div>
+    <div class="ticket">
+      <ol>
+        <li><div><h3>Nos dice la ocasión</h3><p>Y, si quiere, su presupuesto y colores favoritos.</p></div></li>
+        <li><div><h3>Le enviamos opciones</h3><p>Fotos y precios para que elija sin salir de casa.</p></div></li>
+        <li><div><h3>Confirma dirección y tarjeta</h3><p>Escribimos el mensaje que quiera en la tarjeta.</p></div></li>
+        <li><div><h3>Lo entregamos o pasa por él</h3><p>A domicilio o en la tienda de Av. Gabriela Mistral.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2">Nuestros arreglos</h2>
+    <p class="sub">Aquí van fotos reales de su trabajo.</p>
+    <div class="mosaico">
+      <div class="hueco"><b>Imagen 1</b><span>Su arreglo más pedido, en primer plano</span></div>
+      <div class="hueco"><b>Imagen 2</b><span>Ramo de rosas</span></div>
+      <div class="hueco"><b>Imagen 3</b><span>Arreglo de condolencias</span></div>
+      <div class="hueco"><b>Imagen 4</b><span>Fachada e interior de la florería</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Visítenos en <span>Santa Anita</span></h2>
+      <dl>
+        <dt>Dirección</dt><dd>Av. Gabriela Mistral 409, Santa Anita 1ra Secc., 20169 Aguascalientes, Ags.</dd>
+        <dt>Horario</dt><dd>Lunes a domingo, 8:00 a 23:00</dd>
+        <dt>Teléfono</dt><dd><a href="tel:+524499754436">449 975 4436</a></dd>
+      </dl>
+      <div class="acc">
+        <a class="btn btn-wa wa" href="https://wa.me/524499754436" data-text="Hola, quiero hacer un pedido en Florería Santa Anita." target="_blank" rel="noopener">Hacer pedido</a>
+        <a class="btn btn-blanco" href="https://www.google.com/maps/search/?api=1&query=Florer%C3%ADa+Santa+Anita+Av+Gabriela+Mistral+409+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa de Florería Santa Anita" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av+Gabriela+Mistral+409,+Santa+Anita+1ra+Secc,+20169+Aguascalientes,+Ags.&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Florería Santa Anita · Aguascalientes, Ags.</span><span>Propuesta de sitio elaborada por FixA Consultoría · <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></span></div></footer>
+<div class="barra"><a class="btn btn-blanco" href="tel:+524499754436">Llamar</a><a class="btn btn-wa wa" href="https://wa.me/524499754436" data-text="Hola, quiero cotizar un arreglo floral." target="_blank" rel="noopener">WhatsApp</a></div>
+
+<script>
+document.querySelectorAll('a.wa[data-text]').forEach(a=>{a.href=a.href.split('?')[0]+'?text='+encodeURIComponent(a.dataset.text)});
+// flores del ramo
+(function(){
+  const g=document.querySelector('.mece');const NS='http://www.w3.org/2000/svg';
+  const flores=[[226,150,46,'#e4007c',8],[120,210,38,'#ff7ab8',6],[330,200,40,'#ffd23f',10],[70,305,30,'#e4007c',5],[380,318,30,'#ff7ab8',7],[170,284,28,'#ffd23f',12],[280,296,32,'#a3005a',6]];
+  g.querySelector('.f1').remove();
+  flores.forEach((f,i)=>{const [x,y,r,c,n]=f;const fg=document.createElementNS(NS,'g');fg.setAttribute('class','flor f'+(i+1));
+    let h='';for(let k=0;k<n;k++){const a=360/n*k;h+=`<ellipse cx="${x}" cy="${y-r*.55}" rx="${r*.38}" ry="${r*.6}" fill="${c}" stroke="#1a1016" stroke-width="2" transform="rotate(${a} ${x} ${y})"/>`}
+    h+=`<circle cx="${x}" cy="${y}" r="${r*.28}" fill="${c==='#ffd23f'?'#a3005a':'#ffd23f'}" stroke="#1a1016" stroke-width="2"/>`;
+    fg.innerHTML=h;g.appendChild(fg)});
+  // abierto ahora (hora de Aguascalientes)
+  try{const h=Number(new Intl.DateTimeFormat('es-MX',{hour:'numeric',hour12:false,timeZone:'America/Mexico_City'}).format(new Date()));
+    const el=document.getElementById('abierto');if(h>=8&&h<23){el.classList.add('si');el.querySelector('span').textContent='Abierto ahora · hasta las 23:00'}else{el.querySelector('span').textContent='Cerrado · abrimos a las 8:00'}}catch(e){}
+})();
+</script>
+</body>
+</html>

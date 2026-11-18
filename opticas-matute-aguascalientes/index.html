@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ópticas Matute · Aguascalientes</title>
+<meta name="description" content="Ópticas Matute en Torre Plaza Bosques y en el Centro de Aguascalientes. Examen de la vista, armazones y lentes graduados. Pregunta precios por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,800;62..125,900&family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blanco:#ffffff;
+  --niebla:#f2f3f5;
+  --tinta:#101114;
+  --tinta-2:#4a4d55;
+  --linea:#dcdee3;
+  --rojo:#e23b3b;
+  --verde:#1f9d5c;
+  --rojo-suave:#fde8e8;
+  --verde-suave:#e3f5ec;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--blanco);color:var(--tinta);font-family:"Red Hat Text",system-ui,sans-serif;font-size:17px;line-height:1.55}
+a{color:inherit}
+.demo{background:var(--tinta);color:#eee;font-size:13px;text-align:center;padding:8px 16px}
+.demo a{color:#fff;font-weight:700}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.disp{font-family:"Archivo",sans-serif;font-stretch:118%;font-weight:900;letter-spacing:-.01em}
+
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:16px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:48px;height:48px;border:2px dashed #9aa0aa;border-radius:50%;display:grid;place-items:center;font-size:10px;color:#7a808b;text-align:center;line-height:1.1}
+.marca b{font-family:"Archivo",sans-serif;font-stretch:118%;font-weight:800;font-size:21px;display:block;line-height:1}
+.marca small{font-size:12.5px;color:var(--tinta-2)}
+nav{display:flex;gap:24px;font-weight:500;font-size:15px}
+nav a{text-decoration:none}
+nav a:hover{color:var(--rojo)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:2px solid var(--tinta);line-height:1;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--verde);border-color:var(--verde);color:#fff}
+.btn-out{background:#fff}
+.btn-dark{background:var(--tinta);color:#fff}
+
+/* HERO: cartilla */
+.hero{padding:48px 0 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.eti{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;padding:6px 12px;border-radius:999px;background:var(--niebla)}
+.eti i{width:9px;height:9px;border-radius:50%;background:var(--verde)}
+h1{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:900;font-size:clamp(40px,6vw,78px);line-height:.95;margin:18px 0 18px;letter-spacing:-.02em}
+h1 .bl{display:inline-block;filter:blur(6px);animation:enfoca 2.2s .4s ease forwards}
+@keyframes enfoca{to{filter:blur(0)}}
+.lead{font-size:19px;color:var(--tinta-2);max-width:30em;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+
+.cartilla{position:relative;background:#fff;border:2px solid var(--tinta);border-radius:6px;padding:28px 20px 22px;text-align:center;box-shadow:12px 12px 0 var(--tinta)}
+.cartilla .fila{font-family:"Archivo",sans-serif;font-stretch:100%;font-weight:800;letter-spacing:.32em;line-height:1.15;margin:0 0 8px;white-space:nowrap}
+.cartilla .fila:nth-child(1){font-size:86px}
+.cartilla .fila:nth-child(2){font-size:56px}
+.cartilla .fila:nth-child(3){font-size:40px}
+.cartilla .fila:nth-child(4){font-size:28px}
+.cartilla .fila:nth-child(5){font-size:20px}
+.cartilla .fila:nth-child(6){font-size:14px}
+.cartilla .fila:nth-child(7){font-size:10px}
+.duo{display:grid;grid-template-columns:1fr 1fr;margin-top:16px;border-radius:4px;overflow:hidden}
+.duo div{padding:14px 6px;font-family:"Archivo",sans-serif;font-weight:800;font-size:20px;color:#111}
+.duo div:first-child{background:var(--rojo)}
+.duo div:last-child{background:var(--verde)}
+.duo-cap{font-size:12.5px;color:var(--tinta-2);margin-top:8px}
+.lente{position:absolute;width:150px;height:150px;border-radius:50%;border:10px solid var(--tinta);left:50%;top:28%;pointer-events:none;box-shadow:0 0 0 2px #fff inset;backdrop-filter:blur(0);animation:mira 9s ease-in-out infinite;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.55),rgba(255,255,255,0) 45%)}
+.lente::after{content:"";position:absolute;width:70px;height:14px;background:var(--tinta);border-radius:8px;right:-62px;bottom:-14px;transform:rotate(40deg)}
+@keyframes mira{0%,100%{transform:translate(-90%,0)}33%{transform:translate(-10%,60px)}66%{transform:translate(-60%,150px)}}
+.cinta{margin-top:56px;background:var(--tinta);color:#fff;overflow:hidden;white-space:nowrap}
+.cinta div{display:inline-block;padding:14px 0;font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;font-size:18px;animation:corre 30s linear infinite}
+.cinta span{margin:0 26px}
+.cinta span:nth-child(odd){color:#ff8f8f}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+section{padding:80px 0}
+.titulo{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:36px;flex-wrap:wrap}
+.titulo h2{font-family:"Archivo",sans-serif;font-stretch:118%;font-weight:900;font-size:clamp(32px,4.4vw,52px);line-height:1;margin:0;letter-spacing:-.015em}
+.titulo p{margin:0;color:var(--tinta-2);max-width:28em}
+
+/* servicios como receta */
+.recetas{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.receta{border:2px solid var(--tinta);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:10px;background:#fff}
+.receta .ojo{display:flex;gap:6px;font-family:"Archivo",sans-serif;font-weight:800;font-size:12px}
+.receta .ojo span{padding:3px 8px;border-radius:4px}
+.receta .ojo span:first-child{background:var(--rojo-suave);color:#9b1c1c}
+.receta .ojo span:last-child{background:var(--verde-suave);color:#11643a}
+.receta h3{font-family:"Archivo",sans-serif;font-stretch:110%;font-weight:800;font-size:22px;margin:4px 0 0;line-height:1.1}
+.receta p{margin:0;color:var(--tinta-2);font-size:15.5px;flex:1}
+.receta a{align-self:flex-start;font-weight:700;font-size:14.5px;text-decoration:none;border-bottom:2px solid var(--rojo);padding-bottom:2px}
+
+/* señales */
+.senales{background:var(--niebla)}
+.sen{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--tinta)}
+.sen div{padding:24px 24px 24px 0;border-right:1px solid var(--linea)}
+.sen div+div{padding-left:24px}
+.sen div:last-child{border-right:0}
+.sen b{font-family:"Archivo",sans-serif;font-weight:900;font-size:40px;color:var(--rojo);line-height:1}
+.sen h3{margin:10px 0 6px;font-size:19px}
+.sen p{margin:0;color:var(--tinta-2);font-size:15.5px}
+
+/* fotos */
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.hueco{aspect-ratio:3/4;border:2px dashed #9aa0aa;border-radius:6px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;background:radial-gradient(circle at 50% 40%,#f6f7f9 0 30%,#eceef1 31% 32%,#f6f7f9 33%)}
+.hueco b{font-size:15px}
+.hueco span{font-size:13px;color:var(--tinta-2)}
+
+/* sucursales */
+.sucursales{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.suc{border:2px solid var(--tinta);border-radius:6px;overflow:hidden;background:#fff}
+.suc header{position:static;background:none;backdrop-filter:none;border-bottom:2px solid var(--tinta);padding:20px 22px}
+.suc header small{font-weight:700;font-size:12.5px;color:var(--rojo)}
+.suc h3{font-family:"Archivo",sans-serif;font-stretch:115%;font-weight:800;font-size:26px;margin:4px 0 6px;line-height:1.05}
+.suc p{margin:0;color:var(--tinta-2);font-size:15.5px}
+.suc iframe{width:100%;height:260px;border:0;display:block}
+.suc .acc{display:flex;flex-wrap:wrap;gap:10px;padding:18px 22px}
+.horario{margin-top:22px;padding:18px 22px;border-left:6px solid var(--verde);background:var(--niebla);font-size:16px}
+
+.final{background:var(--tinta);color:#fff;text-align:center}
+.final h2{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:900;font-size:clamp(34px,5vw,64px);margin:0 0 14px;line-height:1}
+.final p{color:#c9ccd3;margin:0 0 26px}
+.final .cta{justify-content:center}
+.final .btn-out{background:transparent;color:#fff;border-color:#fff}
+
+footer{padding:26px 0 100px;font-size:14px;color:var(--tinta-2)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.barra{display:none}
+
+@media (max-width:900px){
+  nav{display:none}
+  .hero .wrap{grid-template-columns:1fr}
+  .recetas{grid-template-columns:1fr 1fr}
+  .galeria{grid-template-columns:1fr 1fr}
+  .sucursales{grid-template-columns:1fr}
+  .sen{grid-template-columns:1fr}
+  .sen div,.sen div+div{padding:20px 0;border-right:0;border-bottom:1px solid var(--linea)}
+}
+@media (max-width:560px){
+  header .btn{display:none}
+  .recetas{grid-template-columns:1fr}
+  .cartilla .fila:nth-child(1){font-size:64px}
+  .cartilla .fila:nth-child(2){font-size:42px}
+  .cartilla .fila:nth-child(3){font-size:30px}
+  .cartilla .fila:nth-child(4){font-size:22px}
+  .cartilla .fila:nth-child(5){font-size:16px}
+  .cartilla .fila:nth-child(6){font-size:12px}
+  .cartilla .fila:nth-child(7){font-size:9px}
+  .cartilla{box-shadow:7px 7px 0 var(--tinta)}
+  .lente{width:110px;height:110px;border-width:8px}
+  section{padding:60px 0}
+  .barra{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:2px solid var(--tinta);padding:10px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  h1 .bl{filter:none}
+  .lente{transform:translate(-50%,40px)}
+}
+</style>
+</head>
+<body>
+<div class="demo">Propuesta de diseño hecha por FixA Consultoría. No es el sitio oficial del negocio. <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></div>
+
+<header>
+  <div class="wrap">
+    <a class="marca" href="#"><span class="logo">Tu logo</span><span><b>Ópticas Matute</b><small>Aguascalientes · 2 sucursales</small></span></a>
+    <nav><a href="#servicios">Servicios</a><a href="#fotos">Ópticas</a><a href="#sucursales">Sucursales</a></nav>
+    <a class="btn btn-wa wa" href="https://wa.me/524499122983" data-text="Hola, quiero información sobre lentes en Ópticas Matute." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <div>
+      <span class="eti"><i></i> Torre Plaza Bosques y Centro</span>
+      <h1>Vuelva a ver <span class="bl">todo nítido.</span></h1>
+      <p class="lead">Examen de la vista, armazones y lentes graduados en dos sucursales de Aguascalientes. Pregunte precios y disponibilidad por WhatsApp antes de visitarnos.</p>
+      <div class="cta">
+        <a class="btn btn-wa wa" href="https://wa.me/524499122983" data-text="Hola, quiero agendar un examen de la vista en Ópticas Matute." target="_blank" rel="noopener">Agendar examen de la vista</a>
+        <a class="btn btn-out" href="#sucursales">Ver sucursales</a>
+      </div>
+    </div>
+    <div class="cartilla" aria-label="Cartilla de agudeza visual decorativa">
+      <p class="fila">E</p><p class="fila">F P</p><p class="fila">T O Z</p><p class="fila">L P E D</p><p class="fila">P E C F D</p><p class="fila">E D F C Z P</p><p class="fila">M A T U T E A G S</p>
+      <div class="duo"><div>C O</div><div>C O</div></div>
+      <div class="duo-cap">Prueba rojo-verde: ¿ve más definidas las letras de un lado?</div>
+      <div class="lente" aria-hidden="true"></div>
+    </div>
+  </div>
+  <div class="cinta" aria-hidden="true"><div><span>Examen de la vista</span><span>Armazones</span><span>Lentes graduados</span><span>Lentes de sol</span><span>Ajustes y reparaciones</span><span>Examen de la vista</span><span>Armazones</span><span>Lentes graduados</span><span>Lentes de sol</span><span>Ajustes y reparaciones</span></div></div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="titulo"><h2>Lo que hacemos por su vista</h2><p>Escríbanos qué necesita y le respondemos con opciones y precios.</p></div>
+    <div class="recetas">
+      <article class="receta"><div class="ojo"><span>OD</span><span>OI</span></div><h3>Examen de la vista</h3><p>Medimos su graduación para que sus lentes queden exactos.</p><a class="wa" href="https://wa.me/524499122983" data-text="Hola, ¿cuánto cuesta el examen de la vista y qué horario tienen?" target="_blank" rel="noopener">Preguntar precio</a></article>
+      <article class="receta"><div class="ojo"><span>OD</span><span>OI</span></div><h3>Armazones</h3><p>Modelos para adulto y niño, para todos los estilos y presupuestos.</p><a class="wa" href="https://wa.me/524499122983" data-text="Hola, quiero ver opciones de armazones. ¿Me pueden mandar modelos y precios?" target="_blank" rel="noopener">Preguntar precio</a></article>
+      <article class="receta"><div class="ojo"><span>OD</span><span>OI</span></div><h3>Lentes graduados</h3><p>Micas para lejos, para cerca o para ambas distancias, según su receta.</p><a class="wa" href="https://wa.me/524499122983" data-text="Hola, tengo mi graduación y quiero cotizar lentes graduados." target="_blank" rel="noopener">Cotizar</a></article>
+      <article class="receta"><div class="ojo"><span>OD</span><span>OI</span></div><h3>Ajustes y reparaciones</h3><p>Tornillos, plaquetas y ajuste del armazón para que no se le caigan.</p><a class="wa" href="https://wa.me/524499122983" data-text="Hola, necesito ajustar o reparar mis lentes. ¿Lo pueden hacer?" target="_blank" rel="noopener">Preguntar</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="senales">
+  <div class="wrap">
+    <div class="titulo"><h2>¿Es momento de revisar su vista?</h2><p>Señales comunes de que conviene un examen.</p></div>
+    <div class="sen">
+      <div><b>01</b><h3>Entrecierra los ojos</h3><p>Para leer letreros, la pantalla o el pizarrón.</p></div>
+      <div><b>02</b><h3>Dolor de cabeza</h3><p>Al final del día o después de leer un rato.</p></div>
+      <div><b>03</b><h3>Aleja el celular</h3><p>Para enfocar letras pequeñas de cerca.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="fotos">
+  <div class="wrap">
+    <div class="titulo"><h2>Nuestras ópticas</h2></div>
+    <div class="galeria">
+      <div class="hueco"><b>Imagen 1</b><span>Fachada del local en Torre Plaza Bosques</span></div>
+      <div class="hueco"><b>Imagen 2</b><span>Exhibición de armazones</span></div>
+      <div class="hueco"><b>Imagen 3</b><span>Gabinete de examen de la vista</span></div>
+      <div class="hueco"><b>Imagen 4</b><span>Sucursal Madero, en el Centro</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="sucursales" style="padding-top:0">
+  <div class="wrap">
+    <div class="titulo"><h2>Dos sucursales</h2><a class="btn btn-out" href="https://www.google.com/maps/search/?api=1&query=%C3%93ptica+Matute+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a></div>
+    <div class="sucursales">
+      <article class="suc">
+        <header><small>Bosques del Prado</small><h3>Torre Plaza Bosques</h3><p>Av. Universidad 1001, Local 54, Bosques del Prado Norte, 20127 Aguascalientes, Ags.</p></header>
+        <iframe title="Mapa Ópticas Matute Torre Plaza Bosques" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Torre+Plaza+Bosques,+Av.+Universidad+1001,+Bosques+del+Prado+Norte,+Aguascalientes&z=16&output=embed"></iframe>
+        <div class="acc"><a class="btn btn-dark" href="tel:+524499122983">Llamar 449 912 2983</a><a class="btn btn-wa wa" href="https://wa.me/524499122983" data-text="Hola, quiero visitar la sucursal de Torre Plaza Bosques. ¿Qué horario tienen?" target="_blank" rel="noopener">WhatsApp</a></div>
+      </article>
+      <article class="suc">
+        <header><small>Zona Centro</small><h3>Madero</h3><p>Av. Francisco I. Madero 123, Zona Centro, 20000 Aguascalientes, Ags.</p></header>
+        <iframe title="Mapa Ópticas Matute Madero" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.+Francisco+I.+Madero+123,+Zona+Centro,+Aguascalientes&z=16&output=embed"></iframe>
+        <div class="acc"><a class="btn btn-dark" href="tel:+524499160280">Llamar 449 916 0280</a><a class="btn btn-out" href="https://www.google.com/maps/dir/?api=1&destination=Av.+Francisco+I.+Madero+123,+Aguascalientes" target="_blank" rel="noopener">Cómo llegar</a></div>
+      </article>
+    </div>
+    <div class="horario"><b>Horario:</b> consulte el horario de cada sucursal por WhatsApp o teléfono.</div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Sus próximos lentes empiezan con un mensaje.</h2>
+    <p>Cuéntenos qué necesita y le respondemos con opciones.</p>
+    <div class="cta"><a class="btn btn-wa wa" href="https://wa.me/524499122983" data-text="Hola, quiero información sobre lentes en Ópticas Matute." target="_blank" rel="noopener">Escribir por WhatsApp</a><a class="btn btn-out" href="tel:+524499122983">Llamar</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Ópticas Matute · Aguascalientes, Ags.</span><span>Propuesta de sitio elaborada por FixA Consultoría · <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></span></div></footer>
+<div class="barra"><a class="btn btn-dark" href="tel:+524499122983">Llamar</a><a class="btn btn-wa wa" href="https://wa.me/524499122983" data-text="Hola, quiero información sobre lentes en Ópticas Matute." target="_blank" rel="noopener">WhatsApp</a></div>
+<script>document.querySelectorAll('a.wa[data-text]').forEach(a=>{a.href=a.href.split('?')[0]+'?text='+encodeURIComponent(a.dataset.text)});</script>
+</body>
+</html>

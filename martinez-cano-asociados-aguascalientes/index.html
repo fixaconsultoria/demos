@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Martínez Cano & Asociados · Aguascalientes</title>
+<meta name="description" content="Martínez Cano & Asociados, despacho contable y fiscal en Bosques del Prado Norte, Aguascalientes. Contabilidad, declaraciones y defensa fiscal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --hoja:#f6faf8;
+  --cuadro:#d8e8e0;
+  --tinta:#0e1a17;
+  --tinta-2:#40524c;
+  --esmeralda:#0f7a58;
+  --esmeralda-h:#0a5a41;
+  --marca:#ffe066;
+  --rojo:#c2410c;
+  --blanco:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--hoja);color:var(--tinta);font-family:"Schibsted Grotesk",system-ui,sans-serif;font-size:17px;line-height:1.6}
+a{color:inherit}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.demo{background:var(--tinta);color:#d6e6df;font-size:13px;text-align:center;padding:8px 16px}
+.demo a{color:#fff;font-weight:600}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.grid-bg{background-image:linear-gradient(var(--cuadro) 1px,transparent 1px),linear-gradient(90deg,var(--cuadro) 1px,transparent 1px);background-size:28px 28px}
+
+.top{background:var(--blanco);border-bottom:1px solid var(--cuadro)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:50px;height:50px;border:2px dashed var(--tinta-2);display:grid;place-items:center;font-size:10.5px;color:var(--tinta-2);text-align:center;line-height:1.1}
+.marca b{font-family:"Familjen Grotesk",sans-serif;font-weight:700;font-size:21px;line-height:1;display:block}
+.marca small{font-size:12.5px;color:var(--tinta-2)}
+.top nav{display:flex;gap:24px;font-size:15px}
+.top nav a{text-decoration:none;color:var(--tinta-2)}
+.top nav a:hover{color:var(--esmeralda)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;font-weight:600;font-size:15.5px;text-decoration:none;border:1.5px solid var(--tinta);line-height:1;transition:background .15s,color .15s}
+.btn-wa{background:var(--esmeralda);border-color:var(--esmeralda);color:#fff}
+.btn-wa:hover{background:var(--esmeralda-h)}
+.btn-out{background:var(--blanco)}
+.btn-out:hover{background:var(--tinta);color:#fff}
+
+/* HERO */
+.hero{padding:64px 0 72px;border-bottom:1px solid var(--cuadro)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.eti{font-size:13px;color:var(--esmeralda);font-weight:600}
+h1{font-family:"Familjen Grotesk",sans-serif;font-weight:700;font-size:clamp(38px,5.4vw,66px);line-height:1.02;letter-spacing:-.025em;margin:12px 0 20px}
+h1 mark{background:linear-gradient(transparent 55%,var(--marca) 55%);color:inherit;padding:0 .1em}
+.lead{font-size:19px;color:var(--tinta-2);max-width:31em;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+
+/* protagonista: calendario fiscal */
+.cal{background:var(--blanco);border:1.5px solid var(--tinta);box-shadow:10px 10px 0 var(--esmeralda)}
+.cal-h{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1.5px solid var(--tinta);font-family:"Familjen Grotesk",sans-serif;font-weight:700;font-size:18px}
+.cal-h span{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:400;color:var(--tinta-2)}
+.dias{display:grid;grid-template-columns:repeat(7,1fr);padding:10px;gap:4px}
+.dias b{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--tinta-2);text-align:center;font-weight:400;padding:4px 0}
+.dia{aspect-ratio:1;display:grid;place-items:center;font-family:"JetBrains Mono",monospace;font-size:13px;border:1px solid var(--cuadro);position:relative}
+.dia.vacio{border-color:transparent}
+.dia.hoy{background:var(--tinta);color:#fff}
+.dia.limite{background:var(--marca);border-color:var(--tinta);font-weight:600}
+.dia.limite::after{content:"";position:absolute;inset:-5px;border:2px solid var(--rojo);border-radius:50%;animation:late 2s ease-in-out infinite}
+@keyframes late{50%{transform:scale(1.12);opacity:.4}}
+.cal-pie{border-top:1.5px solid var(--tinta);padding:14px 18px;display:flex;gap:14px;align-items:center;font-size:15px}
+.cal-pie .cuenta{font-family:"JetBrains Mono",monospace;font-size:28px;font-weight:600;color:var(--rojo);line-height:1;min-width:2.4ch}
+.cal-pie small{color:var(--tinta-2);display:block;font-size:12.5px}
+
+section{padding:80px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:34px}
+.sh h2{font-family:"Familjen Grotesk",sans-serif;font-weight:700;font-size:clamp(30px,4vw,48px);letter-spacing:-.02em;line-height:1.05;margin:0}
+.sh p{margin:0;color:var(--tinta-2);max-width:30em}
+
+/* servicios como libro mayor */
+.libro{background:var(--blanco);border:1.5px solid var(--tinta)}
+.renglon{display:grid;grid-template-columns:80px 1fr 1.2fr auto;gap:20px;align-items:center;padding:20px 22px;border-bottom:1px solid var(--cuadro)}
+.renglon:last-child{border-bottom:0}
+.renglon.enc{background:var(--tinta);color:#cfe3da;font-family:"JetBrains Mono",monospace;font-size:12px;padding:10px 22px}
+.renglon .cta-n{font-family:"JetBrains Mono",monospace;color:var(--tinta-2);font-size:14px}
+.renglon h3{font-family:"Familjen Grotesk",sans-serif;font-weight:600;font-size:21px;margin:0;line-height:1.15}
+.renglon p{margin:0;color:var(--tinta-2);font-size:15.5px}
+.renglon a{font-weight:600;font-size:14.5px;color:var(--esmeralda);text-decoration:none;white-space:nowrap;border-bottom:1.5px solid currentColor}
+
+/* para quién */
+.quien{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.q{background:var(--blanco);border:1.5px solid var(--tinta);padding:24px}
+.q .mono{font-size:12px;color:var(--esmeralda)}
+.q h3{font-family:"Familjen Grotesk",sans-serif;font-size:22px;margin:6px 0 6px}
+.q p{margin:0;color:var(--tinta-2);font-size:15.5px}
+
+/* proceso */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--tinta);background:var(--blanco)}
+.proc div{padding:24px 20px;border-right:1px solid var(--cuadro)}
+.proc div:last-child{border-right:0}
+.proc .mono{font-size:30px;font-weight:600;color:var(--esmeralda)}
+.proc h3{margin:8px 0 4px;font-size:18px}
+.proc p{margin:0;color:var(--tinta-2);font-size:15px}
+
+.fotos{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:14px}
+.hueco{min-height:230px;border:2px dashed var(--tinta-2);background:var(--blanco);display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.hueco b{font-size:15px}
+.hueco span{font-size:13.5px;color:var(--tinta-2)}
+
+.ubica .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:stretch}
+.ficha{background:var(--tinta);color:#e6f0ec;padding:30px;display:flex;flex-direction:column;gap:18px}
+.ficha h2{font-family:"Familjen Grotesk",sans-serif;font-size:34px;margin:0;line-height:1.05}
+.ficha dl{margin:0;display:grid;grid-template-columns:96px 1fr;gap:10px 14px}
+.ficha dt{font-family:"JetBrains Mono",monospace;font-size:12px;color:#9fbfb2;padding-top:4px}
+.ficha dd{margin:0}
+.ficha .cta{margin-top:auto}
+.ficha .btn-out{background:transparent;color:#fff;border-color:#fff}
+.mapa{border:1.5px solid var(--tinta);background:var(--blanco);padding:6px}
+.mapa iframe{display:block;width:100%;height:100%;min-height:380px;border:0}
+
+footer{padding:26px 0 100px;font-size:14px;color:var(--tinta-2)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.barra{display:none}
+
+@media (max-width:900px){
+  .top nav{display:none}
+  .hero .wrap{grid-template-columns:1fr}
+  .cal{max-width:460px}
+  .renglon{grid-template-columns:56px 1fr;gap:8px 14px}
+  .renglon p,.renglon a{grid-column:2}
+  .renglon a{justify-self:start}
+  .renglon.enc{display:none}
+  .quien{grid-template-columns:1fr}
+  .proc{grid-template-columns:1fr 1fr}
+  .proc div:nth-child(2){border-right:0}
+  .proc div:nth-child(-n+2){border-bottom:1px solid var(--cuadro)}
+  .fotos{grid-template-columns:1fr 1fr}
+  .fotos .hueco:first-child{grid-column:span 2}
+  .ubica .wrap{grid-template-columns:1fr}
+  .mapa iframe{min-height:300px}
+}
+@media (max-width:560px){
+  .top .btn{display:none}
+  .proc{grid-template-columns:1fr}
+  .proc div{border-right:0;border-bottom:1px solid var(--cuadro)}
+  section{padding:60px 0}
+  .cal{box-shadow:6px 6px 0 var(--esmeralda)}
+  .barra{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--blanco);border-top:1.5px solid var(--tinta);padding:10px}
+}
+@media (prefers-reduced-motion:reduce){*,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="demo">Propuesta de diseño hecha por FixA Consultoría. No es el sitio oficial del negocio. <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marca" href="#"><span class="logo">Tu logo</span><span><b>Martínez Cano &amp; Asociados</b><small>Contadores · Aguascalientes</small></span></a>
+    <nav><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#ubicacion">Contacto</a></nav>
+    <a class="btn btn-wa wa" href="https://wa.me/524495893704" data-text="Buen día, quiero información sobre los servicios contables de Martínez Cano & Asociados." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+<section class="hero grid-bg">
+  <div class="wrap">
+    <div>
+      <div class="eti mono">// Bosques del Prado Norte · Aguascalientes</div>
+      <h1>Sus impuestos al día, <mark>sin sustos</mark> del SAT.</h1>
+      <p class="lead">Contabilidad, declaraciones y asesoría fiscal para personas físicas y empresas. Si recibió un requerimiento o una auditoría, también le ayudamos a defenderse.</p>
+      <div class="cta">
+        <a class="btn btn-wa wa" href="https://wa.me/524495893704" data-text="Buen día, quiero una asesoría contable/fiscal con Martínez Cano & Asociados." target="_blank" rel="noopener">Solicitar asesoría</a>
+        <a class="btn btn-out" href="tel:+524495893704">Llamar 449 589 3704</a>
+      </div>
+    </div>
+    <div class="cal" aria-label="Calendario de obligaciones fiscales">
+      <div class="cal-h"><span id="mes-nom">Mes</span><span>calendario fiscal</span></div>
+      <div class="dias" id="dias"><b>L</b><b>M</b><b>M</b><b>J</b><b>V</b><b>S</b><b>D</b></div>
+      <div class="cal-pie"><span class="cuenta" id="cuenta">--</span><div><b id="cuenta-txt">días para el día 17</b><small>Fecha límite habitual para las declaraciones mensuales ante el SAT.</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sh"><h2>Servicios</h2><p>Cuéntenos su situación y le respondemos con una propuesta.</p></div>
+    <div class="libro">
+      <div class="renglon enc"><span>CTA.</span><span>CONCEPTO</span><span>DETALLE</span><span></span></div>
+      <div class="renglon"><span class="cta-n">101</span><h3>Contabilidad mensual</h3><p>Registro de sus operaciones y declaraciones a tiempo, cada mes.</p><a class="wa" href="https://wa.me/524495893704" data-text="Buen día, quiero cotizar el servicio de contabilidad mensual." target="_blank" rel="noopener">Cotizar</a></div>
+      <div class="renglon"><span class="cta-n">102</span><h3>Declaración anual</h3><p>Personas físicas y morales, con revisión de deducciones.</p><a class="wa" href="https://wa.me/524495893704" data-text="Buen día, necesito presentar mi declaración anual. ¿Cuál es el costo?" target="_blank" rel="noopener">Preguntar precio</a></div>
+      <div class="renglon"><span class="cta-n">103</span><h3>Defensa fiscal</h3><p>Atención de requerimientos, revisiones y auditorías del SAT.</p><a class="wa" href="https://wa.me/524495893704" data-text="Buen día, recibí un requerimiento o revisión del SAT y necesito asesoría." target="_blank" rel="noopener">Pedir asesoría</a></div>
+      <div class="renglon"><span class="cta-n">104</span><h3>Asesoría fiscal</h3><p>Le orientamos sobre el régimen y las obligaciones que le corresponden.</p><a class="wa" href="https://wa.me/524495893704" data-text="Buen día, quiero asesoría sobre mi régimen fiscal." target="_blank" rel="noopener">Preguntar precio</a></div>
+      <div class="renglon"><span class="cta-n">105</span><h3>Nómina e IMSS</h3><p>Cálculo de nómina y obligaciones patronales de su empresa.</p><a class="wa" href="https://wa.me/524495893704" data-text="Buen día, quiero cotizar el servicio de nómina e IMSS para mi empresa." target="_blank" rel="noopener">Cotizar</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="grid-bg" style="border-top:1px solid var(--cuadro);border-bottom:1px solid var(--cuadro)">
+  <div class="wrap">
+    <div class="sh"><h2>¿Es para usted?</h2></div>
+    <div class="quien">
+      <div class="q"><span class="mono">persona_fisica</span><h3>Profesionistas y freelancers</h3><p>Honorarios, arrendamiento o actividad empresarial sin complicaciones.</p></div>
+      <div class="q"><span class="mono">pyme</span><h3>Negocios y empresas</h3><p>Contabilidad, nómina e impuestos en un mismo lugar.</p></div>
+      <div class="q"><span class="mono">aviso_sat</span><h3>Quien recibió un aviso</h3><p>Cartas invitación, requerimientos o multas que necesita atender.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="wrap">
+    <div class="sh"><h2>Cómo trabajamos</h2></div>
+    <div class="proc">
+      <div><span class="mono">01</span><h3>Diagnóstico</h3><p>Revisamos su situación fiscal actual.</p></div>
+      <div><span class="mono">02</span><h3>Propuesta</h3><p>Le explicamos qué hacer y cuánto cuesta.</p></div>
+      <div><span class="mono">03</span><h3>Puesta al día</h3><p>Regularizamos lo pendiente.</p></div>
+      <div><span class="mono">04</span><h3>Seguimiento</h3><p>Le acompañamos mes a mes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sh"><h2>El despacho</h2></div>
+    <div class="fotos">
+      <div class="hueco"><b>Imagen 1</b><span>Equipo del despacho</span></div>
+      <div class="hueco"><b>Imagen 2</b><span>Oficina en Monte Everest</span></div>
+      <div class="hueco"><b>Imagen 3</b><span>Sala de juntas o atención a clientes</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ubica" id="ubicacion" style="padding-top:0">
+  <div class="wrap">
+    <div class="ficha">
+      <h2>Agende una asesoría</h2>
+      <dl>
+        <dt>DIRECCIÓN</dt><dd>Monte Everest 95, Local 6, Bosques del Prado Norte, 20127 Aguascalientes, Ags.</dd>
+        <dt>TELÉFONO</dt><dd><a href="tel:+524495893704">449 589 3704</a></dd>
+        <dt>HORARIO</dt><dd>Consulte disponibilidad por WhatsApp.</dd>
+      </dl>
+      <div class="cta">
+        <a class="btn btn-wa wa" href="https://wa.me/524495893704" data-text="Buen día, quiero agendar una asesoría con Martínez Cano & Asociados." target="_blank" rel="noopener">Agendar por WhatsApp</a>
+        <a class="btn btn-out" href="https://www.google.com/maps/search/?api=1&query=Mart%C3%ADnez+Cano+%26+Asociados+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa de Martínez Cano & Asociados" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Monte+Everest+95,+Bosques+del+Prado+Norte,+20127+Aguascalientes,+Ags.&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Martínez Cano &amp; Asociados · Aguascalientes, Ags.</span><span>Propuesta de sitio elaborada por FixA Consultoría · <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></span></div></footer>
+<div class="barra"><a class="btn btn-out" href="tel:+524495893704">Llamar</a><a class="btn btn-wa wa" href="https://wa.me/524495893704" data-text="Buen día, quiero información sobre sus servicios contables." target="_blank" rel="noopener">WhatsApp</a></div>
+
+<script>
+document.querySelectorAll('a.wa[data-text]').forEach(a=>{a.href=a.href.split('?')[0]+'?text='+encodeURIComponent(a.dataset.text)});
+(function(){
+  const meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const hoy=new Date();let y=hoy.getFullYear(),m=hoy.getMonth();
+  if(hoy.getDate()>17){m++;if(m>11){m=0;y++}}
+  document.getElementById('mes-nom').textContent=meses[m]+' '+y;
+  const cont=document.getElementById('dias');const primero=(new Date(y,m,1).getDay()+6)%7;const total=new Date(y,m+1,0).getDate();
+  for(let i=0;i<primero;i++){const d=document.createElement('div');d.className='dia vacio';cont.appendChild(d)}
+  for(let i=1;i<=total;i++){const d=document.createElement('div');d.className='dia';d.textContent=i;
+    if(i===17)d.classList.add('limite');
+    if(y===hoy.getFullYear()&&m===hoy.getMonth()&&i===hoy.getDate())d.classList.add('hoy');cont.appendChild(d)}
+  const lim=new Date(y,m,17);const dias=Math.ceil((lim-new Date(hoy.getFullYear(),hoy.getMonth(),hoy.getDate()))/864e5);
+  document.getElementById('cuenta').textContent=dias;
+  document.getElementById('cuenta-txt').textContent=dias===0?'hoy es día 17':(dias===1?'día para el 17':'días para el día 17');
+})();
+</script>
+</body>
+</html>

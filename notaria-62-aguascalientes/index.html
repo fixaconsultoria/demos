@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Notaría 62 · Aguascalientes</title>
+<meta name="description" content="Notaría Pública 62 en Valle del Campanario, Aguascalientes. Compraventas, testamentos, poderes y sociedades. Pregunta requisitos por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papel:#e9ecef;
+  --hoja:#f8f9fa;
+  --tinta:#161a22;
+  --tinta-2:#3d4452;
+  --gris:#6b7280;
+  --regla:#c9ced6;
+  --sello:#b42318;
+  --sello-hondo:#7f1610;
+  --wa:#1a7f4b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:"Public Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.demo{background:var(--tinta);color:#e9ecef;font-size:13px;text-align:center;padding:8px 16px}
+.demo a{color:#fff;font-weight:600}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.serif{font-family:"Newsreader",Georgia,serif}
+
+/* barra superior */
+header.top{border-bottom:1px solid var(--regla);background:var(--hoja)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.marca{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo-hueco{width:52px;height:52px;border:2px dashed var(--gris);border-radius:6px;display:grid;place-items:center;font-size:11px;color:var(--gris);text-align:center;line-height:1.1;flex:none}
+.marca b{font-family:"Newsreader",serif;font-weight:600;font-size:22px;letter-spacing:-.01em;display:block;line-height:1.1}
+.marca small{color:var(--gris);font-size:13px}
+.top nav{display:flex;gap:22px;font-size:15px}
+.top nav a{text-decoration:none;color:var(--tinta-2)}
+.top nav a:hover{color:var(--sello)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px/1 "Public Sans",sans-serif;padding:14px 20px;border-radius:4px;text-decoration:none;border:1.5px solid var(--tinta);transition:background .2s,color .2s}
+.btn-wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn-wa:hover{background:#136339}
+.btn-line{background:transparent;color:var(--tinta)}
+.btn-line:hover{background:var(--tinta);color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* hero: escritura */
+.hero{padding:56px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.folio{font-size:13px;color:var(--gris);letter-spacing:.04em;border-left:3px solid var(--sello);padding-left:10px;margin-bottom:18px}
+h1{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(38px,5.4vw,64px);line-height:1.04;letter-spacing:-.02em;margin:0 0 20px}
+h1 em{font-style:italic;color:var(--sello)}
+.hero p.lead{font-size:19px;color:var(--tinta-2);max-width:34em;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.datos-hero{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;color:var(--tinta-2)}
+.datos-hero span::before{content:"§ ";color:var(--sello);font-weight:700}
+
+.documento{position:relative;background:var(--hoja);border:1px solid var(--regla);box-shadow:0 1px 0 var(--regla),0 30px 60px -30px rgba(22,26,34,.35);padding:28px 28px 32px;aspect-ratio:4/5;overflow:hidden}
+.documento .guilloche{position:absolute;inset:0;opacity:.55}
+.documento .renglones{position:relative;display:grid;gap:12px;margin-top:150px}
+.documento .renglones i{display:block;height:7px;background:var(--regla);border-radius:2px}
+.documento .renglones i:nth-child(3n){width:78%}
+.documento .renglones i:nth-child(4n){width:88%}
+.documento .encab{position:relative;font-family:"Newsreader",serif;font-size:15px;color:var(--tinta-2);display:flex;justify-content:space-between;border-bottom:1px solid var(--regla);padding-bottom:10px}
+.sello{position:absolute;right:26px;bottom:26px;width:150px;height:150px;transform:rotate(-14deg)}
+.firma{position:absolute;left:30px;bottom:40px;width:160px}
+.firma path{stroke-dasharray:420;stroke-dashoffset:420;animation:trazo 2.4s .6s ease forwards}
+.sello{animation:estampa .5s 2.6s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes trazo{to{stroke-dashoffset:0}}
+@keyframes estampa{from{opacity:0;transform:rotate(-14deg) scale(1.6)}to{opacity:1;transform:rotate(-14deg) scale(1)}}
+.guilloche g{transform-origin:50% 50%;animation:gira 120s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+
+/* cláusulas */
+section{padding:72px 0}
+.sec-h{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:baseline;margin-bottom:36px}
+.sec-h .num{font-family:"Newsreader",serif;font-style:italic;color:var(--sello);font-size:20px}
+.sec-h h2{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(30px,3.6vw,44px);line-height:1.1;margin:0;letter-spacing:-.01em}
+.sec-h p{grid-column:2;margin:10px 0 0;color:var(--tinta-2);max-width:40em}
+
+.tramites{background:var(--hoja);border-top:1px solid var(--regla);border-bottom:1px solid var(--regla)}
+.lista{border-top:1px solid var(--tinta)}
+.tramite{display:grid;grid-template-columns:140px 1fr auto;gap:24px;align-items:center;padding:24px 0;border-bottom:1px solid var(--regla)}
+.tramite .art{font-family:"Newsreader",serif;font-size:15px;color:var(--gris)}
+.tramite h3{font-family:"Newsreader",serif;font-weight:600;font-size:24px;margin:0 0 4px}
+.tramite p{margin:0;color:var(--tinta-2);font-size:16px}
+.tramite a{font-size:14px;font-weight:600;color:var(--sello);text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:2px;white-space:nowrap}
+.tramite a:hover{color:var(--sello-hondo)}
+
+/* proceso */
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--tinta)}
+.paso{padding:26px 22px;border-right:1px solid var(--regla);background:var(--hoja)}
+.paso:last-child{border-right:0}
+.paso b{font-family:"Newsreader",serif;font-size:44px;font-weight:400;color:var(--sello);line-height:1}
+.paso h3{font-size:17px;margin:14px 0 6px}
+.paso p{margin:0;font-size:15px;color:var(--tinta-2)}
+
+/* fotos */
+.fotos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px}
+.hueco{border:2px dashed var(--gris);border-radius:4px;background:repeating-linear-gradient(135deg,transparent 0 12px,rgba(107,114,128,.07) 12px 13px);min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:var(--tinta-2)}
+.hueco b{font-size:15px}
+.hueco span{font-size:13px;color:var(--gris)}
+.fotos .hueco:first-child{grid-row:span 2;min-height:456px}
+
+/* ubicación */
+.ubica .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:start}
+.ficha{background:var(--hoja);border:1px solid var(--regla);padding:28px}
+.ficha dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:14px 16px;font-size:16px}
+.ficha dt{color:var(--gris);font-size:14px}
+.ficha dd{margin:0}
+.ficha table{border-collapse:collapse;width:100%;font-size:15px}
+.ficha td{padding:3px 0;vertical-align:top}
+.ficha td:first-child{padding-right:12px;white-space:nowrap}
+.ficha .acc{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.mapa{border:1px solid var(--tinta);background:var(--hoja);padding:8px}
+.mapa iframe{width:100%;height:420px;border:0;display:block;filter:grayscale(.35) contrast(1.05)}
+
+.cierre{background:var(--tinta);color:#e9ecef;text-align:left}
+.cierre .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center}
+.cierre h2{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.08;margin:0}
+.cierre p{color:#b9c0cc;margin:12px 0 0}
+.cierre .cta{justify-content:flex-end}
+.cierre .btn-line{color:#fff;border-color:#fff}
+
+footer{padding:28px 0 100px;font-size:14px;color:var(--gris)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+.barra{display:none}
+@media (max-width:860px){
+  .top nav{display:none}
+  .hero{padding:32px 0 48px}
+  .hero .wrap{grid-template-columns:1fr;gap:36px}
+  .documento{aspect-ratio:auto;height:380px}
+  .documento .renglones{margin-top:120px}
+  .sec-h{grid-template-columns:1fr;gap:6px}
+  .sec-h p{grid-column:1}
+  .tramite{grid-template-columns:1fr;gap:6px}
+  .pasos{grid-template-columns:1fr 1fr}
+  .paso:nth-child(2){border-right:0}
+  .paso:nth-child(-n+2){border-bottom:1px solid var(--regla)}
+  .fotos{grid-template-columns:1fr 1fr}
+  .fotos .hueco:first-child{grid-column:span 2;grid-row:auto;min-height:240px}
+  .ubica .wrap,.cierre .wrap{grid-template-columns:1fr}
+  .cierre .cta{justify-content:flex-start}
+  .mapa iframe{height:300px}
+  section{padding:56px 0}
+  .barra{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--hoja);border-top:1px solid var(--regla);padding:10px;gap:10px;box-shadow:0 -8px 24px rgba(0,0,0,.08)}
+  .barra .btn{padding:14px 10px}
+}
+@media (max-width:480px){
+  .pasos{grid-template-columns:1fr}
+  .paso{border-right:0;border-bottom:1px solid var(--regla)}
+  .top .btn{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .firma path{stroke-dashoffset:0}
+  .sello{opacity:1}
+}
+</style>
+</head>
+<body>
+<div class="demo">Propuesta de diseño hecha por FixA Consultoría. No es el sitio oficial del negocio. <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marca" href="#">
+      <span class="logo-hueco">Tu logo</span>
+      <span><b>Notaría 62</b><small>Aguascalientes · Valle del Campanario</small></span>
+    </a>
+    <nav><a href="#tramites">Trámites</a><a href="#proceso">Cómo trabajamos</a><a href="#ubicacion">Ubicación</a></nav>
+    <a class="btn btn-wa wa" href="https://wa.me/524499962303" data-text="Buen día, quisiera información sobre un trámite en la Notaría 62." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="folio">Notaría Pública 62 · Aguascalientes, Ags.</div>
+      <h1>Su patrimonio, <em>en orden</em> y con plena certeza jurídica.</h1>
+      <p class="lead">Compraventas, testamentos, poderes y constitución de sociedades en Valle del Campanario. Pregunte requisitos antes de venir y llegue con todo listo.</p>
+      <div class="cta">
+        <a class="btn btn-wa wa" href="https://wa.me/524499962303" data-text="Buen día, quisiera saber qué requisitos necesito para un trámite en la Notaría 62." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          Preguntar requisitos</a>
+        <a class="btn btn-line" href="tel:+524499962303">Llamar 449 996 2303</a>
+      </div>
+      <div class="datos-hero"><span>Paseo de la Soledad 101</span><span>Valle del Campanario</span><span>Lunes a viernes</span></div>
+    </div>
+
+    <div class="documento" aria-hidden="true">
+      <svg class="guilloche" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"><g id="rosa" fill="none" stroke="#b9c1cc" stroke-width=".6"></g></svg>
+      <div class="encab"><span>Escritura pública</span><span>Folio · · · ·</span></div>
+      <div class="renglones"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <svg class="firma" viewBox="0 0 160 60"><path d="M4 44c14-30 22-34 24-20s-6 22 2 14 16-30 22-24-8 26 0 22 14-18 22-14-4 14 4 12 18-14 28-10 12 8 22 4 16-12 26-8" fill="none" stroke="#161a22" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="sello" viewBox="0 0 150 150">
+        <defs><path id="circ" d="M75 75m-54 0a54 54 0 1 1 108 0a54 54 0 1 1-108 0"/></defs>
+        <circle cx="75" cy="75" r="70" fill="none" stroke="#b42318" stroke-width="3"/>
+        <circle cx="75" cy="75" r="62" fill="none" stroke="#b42318" stroke-width="1"/>
+        <circle cx="75" cy="75" r="40" fill="none" stroke="#b42318" stroke-width="1"/>
+        <text font-family="Public Sans,sans-serif" font-size="11.5" font-weight="700" letter-spacing="2.4" fill="#b42318"><textPath href="#circ">NOTARÍA PÚBLICA · AGUASCALIENTES ·</textPath></text>
+        <text x="75" y="86" text-anchor="middle" font-family="Newsreader,serif" font-size="34" font-weight="600" fill="#b42318">62</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="tramites" id="tramites">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Cláusula primera</span><h2>Trámites que puede resolver aquí</h2><p>Cada asunto es distinto. Escríbanos el tipo de trámite y le indicamos los documentos que necesita y el costo aproximado.</p></div>
+    <div class="lista">
+      <article class="tramite"><span class="art">Art. I</span><div><h3>Compraventa de inmuebles</h3><p>Escrituración de casas, terrenos y departamentos, con revisión previa de documentos.</p></div><a class="wa" href="https://wa.me/524499962303" data-text="Buen día, quiero informes para escriturar una compraventa de inmueble." target="_blank" rel="noopener">Preguntar precio</a></article>
+      <article class="tramite"><span class="art">Art. II</span><div><h3>Testamentos</h3><p>Deje claro a quién corresponden sus bienes y evite conflictos a su familia.</p></div><a class="wa" href="https://wa.me/524499962303" data-text="Buen día, quiero informes para hacer mi testamento." target="_blank" rel="noopener">Preguntar precio</a></article>
+      <article class="tramite"><span class="art">Art. III</span><div><h3>Poderes</h3><p>Poderes generales y especiales para que alguien de su confianza actúe en su nombre.</p></div><a class="wa" href="https://wa.me/524499962303" data-text="Buen día, necesito otorgar un poder notarial. ¿Qué requisitos piden?" target="_blank" rel="noopener">Preguntar precio</a></article>
+      <article class="tramite"><span class="art">Art. IV</span><div><h3>Constitución de sociedades</h3><p>Formalice su empresa y sus actas de asamblea ante notario.</p></div><a class="wa" href="https://wa.me/524499962303" data-text="Buen día, quiero informes para constituir una sociedad." target="_blank" rel="noopener">Preguntar precio</a></article>
+      <article class="tramite"><span class="art">Art. V</span><div><h3>Donaciones y sucesiones</h3><p>Transmisión de bienes en vida o tras un fallecimiento, con el procedimiento correcto.</p></div><a class="wa" href="https://wa.me/524499962303" data-text="Buen día, quiero informes sobre una donación o sucesión." target="_blank" rel="noopener">Preguntar precio</a></article>
+      <article class="tramite"><span class="art">Art. VI</span><div><h3>Fe de hechos y cotejos</h3><p>Certificación de documentos y hechos que necesite acreditar.</p></div><a class="wa" href="https://wa.me/524499962303" data-text="Buen día, necesito una fe de hechos o un cotejo de documentos." target="_blank" rel="noopener">Preguntar precio</a></article>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Cláusula segunda</span><h2>Así avanza su trámite</h2></div>
+    <div class="pasos">
+      <div class="paso"><b>1</b><h3>Nos escribe</h3><p>Por WhatsApp o teléfono nos cuenta qué necesita formalizar.</p></div>
+      <div class="paso"><b>2</b><h3>Lista de requisitos</h3><p>Le enviamos los documentos que debe reunir para su caso.</p></div>
+      <div class="paso"><b>3</b><h3>Revisión y cita</h3><p>Revisamos la documentación y agendamos la firma.</p></div>
+      <div class="paso"><b>4</b><h3>Firma</h3><p>Firma ante notario y seguimiento hasta la entrega.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Cláusula tercera</span><h2>La notaría</h2></div>
+    <div class="fotos">
+      <div class="hueco"><b>Imagen 1</b><span>Fachada de la notaría en Paseo de la Soledad</span></div>
+      <div class="hueco"><b>Imagen 2</b><span>Sala de firmas</span></div>
+      <div class="hueco"><b>Imagen 3</b><span>Recepción</span></div>
+      <div class="hueco"><b>Imagen 4</b><span>Equipo de la notaría</span></div>
+      <div class="hueco"><b>Imagen 5</b><span>Detalle de oficina o archivo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ubica" id="ubicacion" style="padding-top:0">
+  <div class="wrap">
+    <div class="ficha">
+      <div class="sec-h" style="grid-template-columns:1fr;margin-bottom:22px"><span class="num">Cláusula cuarta</span><h2>Ubicación y horario</h2></div>
+      <dl>
+        <dt>Dirección</dt><dd>Paseo de la Soledad 101, Valle del Campanario, 20118 Aguascalientes, Ags.</dd>
+        <dt>Teléfono</dt><dd><a href="tel:+524499962303">449 996 2303</a></dd>
+        <dt>Horario</dt><dd><table>
+          <tr><td>Lun a jue</td><td>9:00–14:00 y 16:30–19:30</td></tr>
+          <tr><td>Viernes</td><td>9:00–14:00 y 16:30–18:30</td></tr>
+          <tr><td>Sáb y dom</td><td>Cerrado</td></tr></table></dd>
+      </dl>
+      <div class="acc">
+        <a class="btn btn-wa wa" href="https://wa.me/524499962303" data-text="Buen día, quisiera agendar una cita en la Notaría 62." target="_blank" rel="noopener">Agendar cita</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Notar%C3%ADa+62+Paseo+de+la+Soledad+101+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa de la Notaría 62" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Paseo+de+la+Soledad+101,+Valle+del+Campanario,+20118+Aguascalientes,+Ags.&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+
+<section class="cierre">
+  <div class="wrap">
+    <div><h2>¿Tiene un trámite pendiente?</h2><p>Envíenos un mensaje y le decimos qué documentos reunir.</p></div>
+    <div class="cta"><a class="btn btn-wa wa" href="https://wa.me/524499962303" data-text="Buen día, tengo un trámite pendiente y quisiera orientación de la Notaría 62." target="_blank" rel="noopener">Escribir por WhatsApp</a><a class="btn btn-line" href="tel:+524499962303">Llamar</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Notaría Pública 62 · Aguascalientes, Ags.</span><span>Propuesta de sitio elaborada por FixA Consultoría · <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></span></div></footer>
+
+<div class="barra"><a class="btn btn-line" href="tel:+524499962303">Llamar</a><a class="btn btn-wa wa" href="https://wa.me/524499962303" data-text="Buen día, quisiera información sobre un trámite en la Notaría 62." target="_blank" rel="noopener">WhatsApp</a></div>
+
+<script>
+document.querySelectorAll('a.wa[data-text]').forEach(a=>{a.href=a.href.split('?')[0]+'?text='+encodeURIComponent(a.dataset.text)});
+// guilloche: rosetas de seguridad como en papel oficial
+(function(){const g=document.getElementById('rosa');if(!g)return;const cx=200,cy=250;let d='';
+for(let k=0;k<3;k++){const R=150-k*38,r=18+k*6,n=24+k*6;let s='';
+for(let t=0;t<=Math.PI*2+.01;t+=Math.PI/360){const rr=R+r*Math.sin(n*t);const x=cx+rr*Math.cos(t),y=cy+rr*Math.sin(t);s+=(s?'L':'M')+x.toFixed(1)+' '+y.toFixed(1)}
+d+='<path d="'+s+'Z"/>';
+for(let j=1;j<4;j++){let s2='';for(let t=0;t<=Math.PI*2+.01;t+=Math.PI/360){const rr=R-j*4+r*Math.sin(n*t+j*.5);s2+=(s2?'L':'M')+(cx+rr*Math.cos(t)).toFixed(1)+' '+(cy+rr*Math.sin(t)).toFixed(1)}d+='<path d="'+s2+'Z"/>'}}
+g.innerHTML=d})();
+</script>
+</body>
+</html>
