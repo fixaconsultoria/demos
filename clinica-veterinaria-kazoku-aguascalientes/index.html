@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Veterinaria Kazoku · Aguascalientes</title>
+<meta name="description" content="Clínica veterinaria en Jardines del Parque, Aguascalientes. Consulta, vacunación, cirugía y seguimiento. Pregunta por WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --papel:#f3f6f4;
+    --blanco:#ffffff;
+    --matcha:#3f6b45;
+    --matcha-hondo:#24412b;
+    --matcha-claro:#dfe9dd;
+    --tinta:#16191a;
+    --tinta-suave:#4a5250;
+    --kaki:#e0723a;
+    --kaki-claro:#fbe3d4;
+    --linea:#cbd6cc;
+    --wa:#1f9d55;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Zen Kaku Gothic New",system-ui,sans-serif;font-size:17px;line-height:1.7;color:var(--tinta);background:var(--papel);overflow-x:hidden}
+  a{color:inherit}
+  img,svg{display:block;max-width:100%}
+  :focus-visible{outline:3px solid var(--kaki);outline-offset:3px;border-radius:4px}
+  h1,h2,h3{font-family:"Zen Maru Gothic",sans-serif;line-height:1.15;font-weight:900}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+  .demo{background:var(--tinta);color:#c9d3cd;font-size:13.5px;text-align:center;padding:9px 16px;line-height:1.45}
+  .demo a{color:#fff;font-weight:700}
+
+  header{background:var(--papel);border-bottom:1px solid var(--linea)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:16px;padding-bottom:16px}
+  .marca{display:flex;align-items:center;gap:14px;text-decoration:none}
+  .slot-logo{width:60px;height:60px;border:2px dashed var(--matcha);border-radius:50%;display:grid;place-items:center;text-align:center;font-size:11px;font-weight:700;color:var(--matcha);background:var(--blanco);flex:none;line-height:1.15}
+  .marca strong{font-family:"Zen Maru Gothic",sans-serif;font-size:20px;display:block;line-height:1.2}
+  .marca span{font-size:14px;color:var(--tinta-suave)}
+  nav{display:flex;gap:26px;font-size:15px;font-weight:500}
+  nav a{text-decoration:none;color:var(--tinta-suave)}
+  nav a:hover{color:var(--matcha)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 26px;border:2px solid transparent;transition:transform .15s ease,background .15s ease}
+  .btn:active{transform:scale(.98)}
+  .btn-wa{background:var(--matcha);color:#fff}
+  .btn-wa:hover{background:var(--matcha-hondo)}
+  .btn-line{border-color:var(--tinta);color:var(--tinta);background:transparent}
+  .btn-line:hover{background:var(--tinta);color:#fff}
+  .btn svg{width:20px;height:20px;flex:none}
+
+  /* HERO asimétrico */
+  .hero{padding:64px 0 40px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .sello{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--matcha-hondo);background:var(--matcha-claro);padding:6px 16px 6px 8px;border-radius:999px;margin-bottom:22px}
+  .sello b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--kaki);color:#fff;font-family:"Zen Maru Gothic",sans-serif;font-size:14px}
+  .hero h1{font-size:clamp(38px,5.6vw,68px);letter-spacing:-.01em;max-width:13ch}
+  .hero h1 em{font-style:normal;color:var(--matcha);position:relative;white-space:nowrap}
+  .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.18em;background:var(--kaki-claro);z-index:-1;border-radius:4px}
+  .hero p.lead{font-size:19px;color:var(--tinta-suave);max-width:46ch;margin:22px 0 32px}
+  .acciones{display:flex;flex-wrap:wrap;gap:14px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:32px;font-size:15px;color:var(--tinta-suave)}
+  .meta span{display:flex;align-items:center;gap:8px}
+  .meta i{width:8px;height:8px;border-radius:50%;background:var(--kaki);display:block}
+
+  .enso-box{position:relative;justify-self:end;width:100%;max-width:440px}
+  .enso-box svg{width:100%;height:auto}
+  .enso-trazo{fill:none;stroke:var(--tinta);stroke-linecap:round;stroke-dasharray:1200;stroke-dashoffset:1200;animation:pincel 2.4s cubic-bezier(.6,.05,.3,1) .3s forwards}
+  .enso-fino{fill:none;stroke:var(--tinta);stroke-linecap:round;opacity:.35;stroke-dasharray:1200;stroke-dashoffset:1200;animation:pincel 2.6s cubic-bezier(.6,.05,.3,1) .5s forwards}
+  .silueta{opacity:0;transform:translateY(8px);animation:aparece .9s ease 1.9s forwards}
+  .sol{animation:late 4s ease-in-out 2.6s infinite;transform-origin:center;transform-box:fill-box}
+  @keyframes pincel{to{stroke-dashoffset:0}}
+  @keyframes aparece{to{opacity:1;transform:none}}
+  @keyframes late{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+  .enso-pie{text-align:center;font-family:"Zen Maru Gothic",sans-serif;font-size:15px;color:var(--tinta-suave);margin-top:4px}
+  .enso-pie b{color:var(--kaki)}
+
+  /* IMÁGENES */
+  .slot{border:2px dashed var(--matcha);border-radius:18px;background:repeating-linear-gradient(135deg,#fff 0 10px,#eef3ee 10px 20px);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;color:var(--matcha-hondo)}
+  .slot strong{font-family:"Zen Maru Gothic",sans-serif;font-size:20px}
+  .slot small{font-size:14px;color:var(--tinta-suave);max-width:30ch;line-height:1.45;margin-top:4px}
+
+  .galeria{padding:24px 0 72px}
+  .galeria-grid{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:200px 200px;gap:18px}
+  .galeria-grid .slot:first-child{grid-row:1/3}
+
+  /* SERVICIOS */
+  section h2{font-size:clamp(30px,3.8vw,46px);margin-bottom:14px}
+  .intro{color:var(--tinta-suave);max-width:52ch;font-size:18px}
+  .servicios{padding:80px 0;background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+  .serv-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+  .serv-grid aside{position:sticky;top:24px}
+  .nota{margin-top:22px;font-size:15px;background:var(--kaki-claro);border-left:4px solid var(--kaki);padding:12px 16px;border-radius:0 10px 10px 0}
+  .lista{list-style:none;counter-reset:s}
+  .lista li{counter-increment:s;display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;padding:26px 0;border-bottom:1px solid var(--linea)}
+  .lista li:first-child{border-top:1px solid var(--linea)}
+  .lista li::before{content:counter(s,decimal-leading-zero);font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:34px;color:var(--matcha);line-height:1}
+  .lista h3{font-size:22px;margin-bottom:4px}
+  .lista p{color:var(--tinta-suave);font-size:16px;line-height:1.55}
+  .precio{font-weight:700;font-size:15px;color:var(--matcha-hondo);text-decoration:none;border:2px solid var(--matcha);padding:9px 16px;border-radius:999px;white-space:nowrap;transition:background .15s}
+  .precio:hover{background:var(--matcha);color:#fff}
+
+  /* PROCESO */
+  .proceso{padding:84px 0;background:var(--matcha-hondo);color:#eef4ee;position:relative;overflow:hidden}
+  .proceso h2{color:#fff}
+  .proceso .intro{color:#bfd2c1}
+  .pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative}
+  .pasos::before{content:"";position:absolute;top:27px;left:28px;right:28px;height:2px;background:repeating-linear-gradient(90deg,#7fa685 0 8px,transparent 8px 16px)}
+  .paso{position:relative;padding-right:24px}
+  .paso .n{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--papel);color:var(--matcha-hondo);font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:22px;position:relative;margin-bottom:20px}
+  .paso:nth-child(2) .n{background:var(--kaki);color:#fff}
+  .paso h3{font-size:20px;color:#fff;margin-bottom:6px}
+  .paso p{font-size:15.5px;color:#c9dacb;line-height:1.6}
+
+  /* CONFIANZA */
+  .confianza{padding:84px 0}
+  .conf-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .resena{background:var(--blanco);border-radius:24px;padding:36px;border:1px solid var(--linea);position:relative}
+  .estrellas{display:flex;gap:4px;color:var(--kaki);margin-bottom:12px}
+  .estrellas svg{width:26px;height:26px}
+  .resena h3{font-size:26px;margin-bottom:10px}
+  .resena p{color:var(--tinta-suave);margin-bottom:22px}
+  .conf-slot{height:320px}
+
+  /* VISITA */
+  .visita{padding:0 0 96px}
+  .visita-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:0;background:var(--blanco);border-radius:28px;overflow:hidden;border:1px solid var(--linea)}
+  .datos{padding:40px}
+  .datos h2{margin-bottom:22px}
+  .dato{margin-bottom:22px}
+  .dato h3{font-size:16px;color:var(--matcha);margin-bottom:4px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700}
+  .horario{width:100%;border-collapse:collapse;font-size:16px}
+  .horario td{padding:6px 0;border-bottom:1px dashed var(--linea)}
+  .horario td:last-child{text-align:right;font-weight:500}
+  .cerrado{color:var(--kaki)}
+  .mapa{min-height:420px;background:var(--matcha-claro)}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+  footer{background:var(--tinta);color:#aeb8b2;padding:40px 0 48px;font-size:15px}
+  .pie{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+  footer strong{color:#fff;font-family:"Zen Maru Gothic",sans-serif}
+  footer a{color:#fff}
+
+  .movil{display:none}
+
+  @media (max-width:900px){
+    nav{display:none}
+    .hero{padding:40px 0 24px}
+    .hero-grid,.serv-grid,.conf-grid,.visita-grid{grid-template-columns:1fr}
+    .enso-box{justify-self:center;max-width:320px;order:-1}
+    .serv-grid aside{position:static}
+    .pasos{grid-template-columns:1fr 1fr;row-gap:36px}
+    .pasos::before{display:none}
+    .galeria-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px}
+    .galeria-grid .slot:first-child{grid-column:1/3;grid-row:auto}
+  }
+  @media (max-width:600px){
+    body{font-size:16px;padding-bottom:76px}
+    .wrap{padding:0 18px}
+    .bar .btn{display:none}
+    .lista li{grid-template-columns:44px 1fr;gap:12px}
+    .lista li::before{font-size:26px}
+    .lista .precio{grid-column:2;justify-self:start;margin-top:6px}
+    .pasos{grid-template-columns:1fr}
+    .galeria-grid{grid-template-columns:1fr;grid-template-rows:auto}
+    .galeria-grid .slot{min-height:170px}
+    .galeria-grid .slot:first-child{grid-column:auto;min-height:220px}
+    .datos{padding:28px 22px}
+    .resena{padding:26px}
+    .conf-slot{height:220px}
+    .acciones .btn{flex:1 1 100%}
+    .movil{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(243,246,244,.96);backdrop-filter:blur(8px);border-top:1px solid var(--linea);z-index:50}
+    .movil a{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;text-decoration:none;border-radius:999px;padding:13px 10px;font-size:16px}
+    .movil .llamar{background:var(--tinta);color:#fff}
+    .movil .wa{background:var(--wa);color:#fff}
+    .movil svg{width:20px;height:20px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .enso-trazo,.enso-fino{animation:none;stroke-dashoffset:0}
+    .silueta{animation:none;opacity:1;transform:none}
+    .sol{animation:none}
+    .btn,.precio{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">Propuesta de diseño hecha por FixA Consultoría. No es el sitio oficial del negocio. <a href="https://fixaconsultoria.com">fixaconsultoria.com</a></div>
+
+<header>
+  <div class="wrap bar">
+    <a class="marca" href="#inicio">
+      <div class="slot-logo">Tu logo</div>
+      <div><strong>Clínica Veterinaria Kazoku</strong><span>Jardines del Parque · Aguascalientes</span></div>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#visita-paso">Tu visita</a>
+      <a href="#ubicacion">Horario y ubicación</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/524499116518?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20para%20mi%20mascota." target="_blank" rel="noopener">Agendar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="sello"><b>家</b> Kazoku significa “familia”</div>
+        <h1>Tu mascota es parte de la <em>familia</em>. Aquí la atendemos así.</h1>
+        <p class="lead">Clínica veterinaria en Av. del Parque, Aguascalientes. Consulta, vacunas, cirugía y seguimiento para perros y gatos, con atención de lunes a sábado.</p>
+        <div class="acciones">
+          <a class="btn btn-wa" href="https://wa.me/524499116518?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20para%20mi%20mascota." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>
+            Agendar por WhatsApp</a>
+          <a class="btn btn-line" href="tel:+524499116518">Llamar 449 911 6518</a>
+        </div>
+        <div class="meta">
+          <span><i></i>Muy bien calificada en Google</span>
+          <span><i></i>Lun a Vie 9:30 – 20:00</span>
+          <span><i></i>Sábado 9:30 – 16:00</span>
+        </div>
+      </div>
+
+      <div class="enso-box">
+        <svg viewBox="0 0 400 400" role="img" aria-label="Ilustración: círculo de pincel con un perro y un gato juntos">
+          <circle class="sol" cx="292" cy="96" r="22" fill="#e0723a"/>
+          <path class="enso-trazo" stroke-width="22" d="M214 44 C 120 34, 48 100, 46 196 C 44 290, 118 360, 210 356 C 300 352, 360 284, 356 196 C 353 128, 318 78, 262 56"/>
+          <path class="enso-fino" stroke-width="5" d="M206 62 C 128 58, 66 118, 66 198 C 66 276, 128 336, 206 336"/>
+          <g class="silueta" fill="#3f6b45">
+            <!-- perro sentado -->
+            <path d="M120 300 C 116 262, 122 232, 140 214 C 134 204, 132 188, 138 174 L 128 150 C 126 142, 134 138, 140 144 L 156 160 C 166 154, 182 154, 192 160 L 206 144 C 212 138, 220 142, 218 150 L 210 174 C 216 190, 212 206, 204 214 C 220 232, 226 262, 222 300 Z"/>
+            <!-- cola del perro -->
+            <path d="M120 292 C 98 290, 88 272, 94 256" fill="none" stroke="#3f6b45" stroke-width="10" stroke-linecap="round"/>
+            <!-- gato sentado -->
+            <path d="M226 300 C 224 270, 230 248, 244 236 C 238 226, 236 214, 240 204 L 236 180 L 254 194 C 262 190, 272 190, 280 194 L 298 180 L 294 204 C 298 214, 296 226, 290 236 C 304 248, 310 270, 308 300 Z" fill="#16191a"/>
+            <!-- cola del gato -->
+            <path d="M306 296 C 330 296, 338 276, 326 260 C 318 250, 322 238, 332 236" fill="none" stroke="#16191a" stroke-width="9" stroke-linecap="round"/>
+            <!-- ojos -->
+            <circle cx="164" cy="186" r="4" fill="#f3f6f4"/><circle cx="186" cy="186" r="4" fill="#f3f6f4"/>
+            <circle cx="257" cy="214" r="3.5" fill="#e0723a"/><circle cx="277" cy="214" r="3.5" fill="#e0723a"/>
+            <!-- suelo -->
+            <path d="M92 302 H 330" stroke="#16191a" stroke-width="3" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <p class="enso-pie">Perros y gatos, <b>en familia</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="galeria" aria-label="Fotografías de la clínica">
+    <div class="wrap galeria-grid">
+      <div class="slot"><strong>Imagen 1</strong><small>Fachada de la clínica en Av. del Parque, con el letrero visible</small></div>
+      <div class="slot"><strong>Imagen 2</strong><small>Consultorio o mesa de exploración</small></div>
+      <div class="slot"><strong>Imagen 3</strong><small>El equipo atendiendo a un paciente</small></div>
+    </div>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <div class="wrap serv-grid">
+      <aside>
+        <h2>Lo que hacemos por tu mascota</h2>
+        <p class="intro">Desde la primera vacuna hasta la recuperación después de una cirugía. Escríbenos y te decimos precio y disponibilidad.</p>
+        <p class="nota">Confirma disponibilidad de cada servicio por WhatsApp.</p>
+      </aside>
+      <ol class="lista">
+        <li>
+          <div><h3>Consulta general</h3><p>Revisión completa cuando algo no anda bien o para un chequeo de rutina.</p></div>
+          <a class="precio" href="https://wa.me/524499116518?text=Hola%2C%20quisiera%20preguntar%20el%20precio%20de%20una%20consulta%20general." target="_blank" rel="noopener">Preguntar precio</a>
+        </li>
+        <li>
+          <div><h3>Vacunación y desparasitación</h3><p>Esquemas para cachorros, gatitos y refuerzos anuales.</p></div>
+          <a class="precio" href="https://wa.me/524499116518?text=Hola%2C%20quisiera%20preguntar%20el%20precio%20de%20vacunaci%C3%B3n%20y%20desparasitaci%C3%B3n." target="_blank" rel="noopener">Preguntar precio</a>
+        </li>
+        <li>
+          <div><h3>Cirugía y esterilización</h3><p>Procedimientos programados con indicaciones claras antes y después.</p></div>
+          <a class="precio" href="https://wa.me/524499116518?text=Hola%2C%20quisiera%20preguntar%20el%20precio%20de%20una%20esterilizaci%C3%B3n%20o%20cirug%C3%ADa." target="_blank" rel="noopener">Preguntar precio</a>
+        </li>
+        <li>
+          <div><h3>Seguimiento y control</h3><p>Revisiones posteriores para confirmar que tu mascota se recupera bien.</p></div>
+          <a class="precio" href="https://wa.me/524499116518?text=Hola%2C%20quisiera%20agendar%20una%20cita%20de%20seguimiento%20para%20mi%20mascota." target="_blank" rel="noopener">Preguntar precio</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="proceso" id="visita-paso">
+    <div class="wrap">
+      <h2>Cómo es una visita</h2>
+      <p class="intro">Sin vueltas: escribes, llegas y sales sabiendo qué sigue.</p>
+      <div class="pasos">
+        <div class="paso"><div class="n">1</div><h3>Escríbenos</h3><p>Cuéntanos por WhatsApp qué le pasa a tu mascota o qué servicio necesitas.</p></div>
+        <div class="paso"><div class="n">2</div><h3>Agenda tu horario</h3><p>Te proponemos un horario de lunes a sábado.</p></div>
+        <div class="paso"><div class="n">3</div><h3>Revisión en consultorio</h3><p>Exploramos a tu mascota y te explicamos lo que encontramos.</p></div>
+        <div class="paso"><div class="n">4</div><h3>Indicaciones y seguimiento</h3><p>Te vas con los pasos a seguir y la fecha de la siguiente revisión si hace falta.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="confianza">
+    <div class="wrap conf-grid">
+      <div class="resena">
+        <div class="estrellas" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg>
+        </div>
+        <h3>Familias de Aguascalientes ya nos recomiendan</h3>
+        <p>Kazoku está muy bien calificada en Google. Lee lo que dicen quienes ya traen a sus mascotas.</p>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Cl%C3%ADnica+Veterinaria+Kazoku+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+      </div>
+      <div class="slot conf-slot"><strong>Imagen 4</strong><small>Una mascota contenta con su familia en la clínica</small></div>
+    </div>
+  </section>
+
+  <section class="visita" id="ubicacion">
+    <div class="wrap">
+      <div class="visita-grid">
+        <div class="datos">
+          <h2>Ven a vernos</h2>
+          <div class="dato"><h3>Dirección</h3><p>Av. del Parque 360, Jardines del Parque, 20276 Aguascalientes, Ags.</p></div>
+          <div class="dato"><h3>Horario</h3>
+            <table class="horario">
+              <tr><td>Lunes a viernes</td><td>9:30 – 20:00</td></tr>
+              <tr><td>Sábado</td><td>9:30 – 16:00</td></tr>
+              <tr><td>Domingo</td><td class="cerrado">Cerrado</td></tr>
+            </table>
+          </div>
+          <div class="dato"><h3>Teléfono</h3><p><a href="tel:+524499116518">449 911 6518</a></p></div>
+          <a class="btn btn-wa" href="https://wa.me/524499116518?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20para%20mi%20mascota." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        </div>
+        <div class="mapa">
+          <iframe title="Mapa de Clínica Veterinaria Kazoku" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.%20del%20Parque%20360%2C%20Jardines%20del%20Parque%2C%2020276%20Aguascalientes%2C%20Ags.&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap pie">
+    <div><strong>Clínica Veterinaria Kazoku</strong><br>Av. del Parque 360, Jardines del Parque, Aguascalientes</div>
+    <div>Propuesta de sitio elaborada por FixA Consultoría · <a href="https://fixaconsultoria.com">fixaconsultoria.com</a></div>
+  </div>
+</footer>
+
+<div class="movil">
+  <a class="llamar" href="tel:+524499116518"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Llamar</a>
+  <a class="wa" href="https://wa.me/524499116518?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20para%20mi%20mascota." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>WhatsApp</a>
+</div>
+
+</body>
+</html>

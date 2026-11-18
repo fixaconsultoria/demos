@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VITAE&amp;RIDE Studio · Indoor cycling y Pilates en Aguascalientes</title>
+<meta name="description" content="Indoor cycling, Pilates y entrenamiento funcional en Valle del Campestre, Aguascalientes. Reserva tu clase por WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --noche:#160b17;
+    --ciruela:#221226;
+    --ciruela-2:#2e1933;
+    --linea:#43284a;
+    --coral:#ff4d5e;
+    --coral-suave:#ff8a95;
+    --lila:#b79cff;
+    --hueso:#f6eef6;
+    --gris:#b7a5bb;
+    --wa:#22c35e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Space Grotesk",system-ui,sans-serif;background:var(--noche);color:var(--hueso);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--lila);outline-offset:3px;border-radius:8px}
+  h1,h2,h3{font-family:"Unbounded",sans-serif;line-height:1.05;letter-spacing:-.01em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  .demo{background:var(--hueso);color:var(--noche);font-size:13.5px;text-align:center;padding:9px 16px;line-height:1.4}
+  .demo a{color:#7a1f4a;font-weight:700}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(22,11,23,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+  .marca{display:flex;align-items:center;gap:14px;text-decoration:none}
+  .slot-logo{width:56px;height:56px;border:2px dashed var(--lila);border-radius:50%;display:grid;place-items:center;font-size:10.5px;font-weight:700;color:var(--lila);text-align:center;line-height:1.1;flex:none}
+  .marca b{font-family:"Unbounded",sans-serif;font-weight:800;font-size:18px;letter-spacing:.02em;display:block;line-height:1.1}
+  .marca b i{font-style:normal;color:var(--coral)}
+  .marca small{font-size:13px;color:var(--gris)}
+  nav{display:flex;gap:28px;font-size:15px}
+  nav a{text-decoration:none;color:var(--gris)}
+  nav a:hover{color:var(--hueso)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;text-decoration:none;border-radius:999px;padding:15px 26px;border:2px solid transparent;transition:transform .15s ease,background .2s,color .2s;white-space:nowrap}
+  .btn:active{transform:scale(.97)}
+  .btn-coral{background:var(--coral);color:#1a0610}
+  .btn-coral:hover{background:var(--coral-suave)}
+  .btn-ghost{border-color:var(--linea);color:var(--hueso)}
+  .btn-ghost:hover{border-color:var(--lila)}
+  .btn svg{width:20px;height:20px;flex:none}
+  header .btn{padding:11px 20px;font-size:15px}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:64px;padding-bottom:72px}
+  .kicker{display:inline-flex;align-items:center;gap:10px;color:var(--lila);font-size:15px;font-weight:500}
+  .kicker::before{content:"";width:28px;height:2px;background:var(--lila)}
+  .hero h1{font-size:clamp(40px,6.2vw,78px);font-weight:800;margin:18px 0 22px}
+  .hero h1 em{font-style:normal;color:var(--coral)}
+  .hero p.lead{font-size:19px;color:#dccbe0;max-width:30em}
+  .acciones{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .nota{margin-top:18px;font-size:14px;color:var(--gris)}
+
+  .rueda-box{position:relative;aspect-ratio:1/1;max-width:520px;width:100%;justify-self:center}
+  .rueda-box::before{content:"";position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(255,77,94,.28),rgba(183,156,255,.12) 55%,transparent 70%);filter:blur(10px)}
+  #rueda{position:relative;width:100%;height:100%;display:block}
+  .cadencia{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);display:flex;align-items:flex-end;gap:5px;height:46px;padding:8px 16px;background:var(--ciruela);border:1px solid var(--linea);border-radius:999px}
+  .cadencia span{width:5px;border-radius:3px;background:var(--coral);height:30%;animation:pulso 1.1s ease-in-out infinite}
+  .cadencia span:nth-child(2n){background:var(--lila)}
+  .cadencia span:nth-child(1){animation-delay:-.1s}.cadencia span:nth-child(2){animation-delay:-.3s}.cadencia span:nth-child(3){animation-delay:-.5s}.cadencia span:nth-child(4){animation-delay:-.2s}.cadencia span:nth-child(5){animation-delay:-.7s}.cadencia span:nth-child(6){animation-delay:-.4s}.cadencia span:nth-child(7){animation-delay:-.9s}.cadencia span:nth-child(8){animation-delay:-.6s}.cadencia span:nth-child(9){animation-delay:-.15s}.cadencia span:nth-child(10){animation-delay:-.8s}
+  .cadencia small{font-size:11px;color:var(--gris);margin-left:8px;align-self:center;white-space:nowrap}
+  @keyframes pulso{0%,100%{height:25%}50%{height:100%}}
+
+  /* Franja de ruta */
+  .ruta{border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);background:var(--ciruela)}
+  .ruta .wrap{display:flex;gap:0;overflow:hidden}
+  .ruta div.item{flex:1;padding:18px 20px;border-right:1px solid var(--linea);font-size:15px;color:#dccbe0}
+  .ruta div.item:last-child{border-right:0}
+  .ruta b{display:block;font-family:"Unbounded",sans-serif;font-size:14px;color:var(--hueso);font-weight:600;margin-bottom:2px}
+
+  section{padding:96px 0}
+  .titulo{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+  .titulo h2{font-size:clamp(30px,4.2vw,50px);font-weight:800;max-width:15em}
+  .titulo p{color:var(--gris);max-width:28em}
+
+  /* Playlist de clases */
+  .playlist{list-style:none;border-top:1px solid var(--linea)}
+  .pista{display:grid;grid-template-columns:56px 1fr auto;gap:22px;align-items:center;padding:24px 8px;border-bottom:1px solid var(--linea);transition:background .2s}
+  .pista:hover{background:var(--ciruela)}
+  .num{font-family:"Unbounded",sans-serif;font-size:15px;color:var(--gris)}
+  .pista:hover .num{color:var(--coral)}
+  .pista h3{font-size:clamp(20px,2.4vw,28px);font-weight:600}
+  .pista p{color:var(--gris);font-size:15.5px;margin-top:4px;max-width:40em}
+  .pista .btn{padding:12px 20px;font-size:15px}
+  .eq{display:inline-flex;gap:3px;align-items:flex-end;height:14px;margin-left:12px;vertical-align:middle;opacity:0;transition:opacity .2s}
+  .eq i{width:3px;background:var(--coral);height:40%;animation:pulso .9s ease-in-out infinite}
+  .eq i:nth-child(2){animation-delay:-.3s}.eq i:nth-child(3){animation-delay:-.6s}
+  .pista:hover .eq{opacity:1}
+
+  /* Galería huecos */
+  .galeria{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:20px}
+  .hueco{border:2px dashed #6c4a74;border-radius:22px;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;min-height:220px;background:repeating-linear-gradient(135deg,var(--ciruela) 0 14px,var(--ciruela-2) 14px 28px)}
+  .hueco b{font-family:"Unbounded",sans-serif;font-size:15px;color:var(--lila)}
+  .hueco span{font-size:14px;color:#d6c6da}
+  .g1{grid-column:span 7;min-height:340px}.g2{grid-column:span 5}.g3{grid-column:span 5}.g4{grid-column:span 7}
+
+  /* Amenidades */
+  .amen{background:var(--hueso);color:var(--noche)}
+  .amen .titulo p{color:#5f4a63}
+  .amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--noche);border-radius:26px;overflow:hidden}
+  .amen-grid div{padding:30px 24px;border-right:2px solid var(--noche)}
+  .amen-grid div:last-child{border-right:0}
+  .amen-grid svg{width:42px;height:42px;margin-bottom:22px}
+  .amen-grid h3{font-size:18px;font-weight:600;margin-bottom:8px}
+  .amen-grid p{font-size:15px;color:#5f4a63}
+
+  /* Proceso */
+  .pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:p;position:relative}
+  .paso{position:relative;padding:28px 24px 30px;border-radius:24px;background:var(--ciruela);border:1px solid var(--linea)}
+  .paso::before{counter-increment:p;content:"0" counter(p);font-family:"Unbounded",sans-serif;font-size:44px;font-weight:800;color:transparent;-webkit-text-stroke:1.5px var(--coral);display:block;margin-bottom:18px}
+  .paso h3{font-size:19px;font-weight:600;margin-bottom:8px}
+  .paso p{color:var(--gris);font-size:15.5px}
+
+  /* Visita */
+  .visita-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:28px}
+  .horario{background:var(--ciruela);border:1px solid var(--linea);border-radius:26px;padding:32px}
+  .horario h3{font-size:22px;margin-bottom:18px}
+  table{width:100%;border-collapse:collapse;font-size:16px}
+  td{padding:13px 0;border-bottom:1px dashed var(--linea)}
+  td:last-child{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+  tr.hoy td{color:var(--coral)}
+  .dir{margin-top:24px;color:#dccbe0;font-size:15.5px}
+  .dir b{color:var(--hueso)}
+  .horario .acciones{margin-top:22px}
+  .horario .btn{padding:13px 20px;font-size:15px}
+  .mapa{border-radius:26px;overflow:hidden;border:1px solid var(--linea);min-height:420px;background:var(--ciruela)}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(.3) contrast(1.05)}
+
+  /* CTA final */
+  .cierre{padding:90px 0;text-align:center;background:radial-gradient(ellipse at 50% 120%,rgba(255,77,94,.35),transparent 60%)}
+  .cierre h2{font-size:clamp(32px,5vw,62px);font-weight:800;max-width:14em;margin:0 auto 18px}
+  .cierre p{color:#dccbe0;max-width:32em;margin:0 auto}
+  .cierre .acciones{justify-content:center}
+
+  footer{border-top:1px solid var(--linea);padding:34px 0 40px;font-size:14px;color:var(--gris)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer a{color:var(--lila)}
+
+  .movil{display:none}
+
+  @media (max-width:900px){
+    nav{display:none}
+    .hero-grid{grid-template-columns:1fr;padding-top:36px;padding-bottom:56px;gap:28px}
+    .rueda-box{max-width:340px;order:-1}
+    .ruta .wrap{flex-wrap:wrap;padding:0}
+    .ruta div.item{flex:1 1 50%;border-bottom:1px solid var(--linea)}
+    .ruta div.item:nth-child(2n){border-right:0}
+    .amen-grid{grid-template-columns:1fr 1fr}
+    .amen-grid div{border-bottom:2px solid var(--noche)}
+    .amen-grid div:nth-child(2n){border-right:0}
+    .amen-grid div:nth-last-child(-n+2){border-bottom:0}
+    .pasos{grid-template-columns:1fr 1fr}
+    .visita-grid{grid-template-columns:1fr}
+    .galeria .hueco{grid-column:span 12;min-height:200px}
+  }
+  @media (max-width:640px){
+    body{font-size:16px;padding-bottom:78px}
+    .wrap{padding:0 18px}
+    header .btn{display:none}
+    section{padding:68px 0}
+    .pista{grid-template-columns:36px 1fr;gap:12px 14px;padding:20px 4px}
+    .pista .btn{grid-column:2;justify-self:start}
+    .pasos{grid-template-columns:1fr}
+    .amen-grid{grid-template-columns:1fr}
+    .amen-grid div{border-right:0;border-bottom:2px solid var(--noche)!important}
+    .amen-grid div:last-child{border-bottom:0!important}
+    .acciones .btn{flex:1 1 100%}
+    .horario{padding:24px}
+    .movil{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(22,11,23,.96);border-top:1px solid var(--linea)}
+    .movil a{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15.5px}
+    .movil .llamar{border:2px solid var(--linea);color:var(--hueso)}
+    .movil .wa{background:var(--wa);color:#04210f}
+    .movil svg{width:19px;height:19px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .cadencia span{height:60%}
+    .cadencia span:nth-child(3n){height:90%}
+    .cadencia span:nth-child(4n){height:40%}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="marca" href="#inicio">
+      <span class="slot-logo">Tu<br>logo</span>
+      <span><b>VITAE<i>&amp;</i>RIDE</b><small>Studio · Valle del Campestre</small></span>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#clases">Clases</a>
+      <a href="#estudio">El estudio</a>
+      <a href="#primera">Primera clase</a>
+      <a href="#visita">Horario</a>
+    </nav>
+    <a class="btn btn-coral wa-link" data-msg="Hola, vi su página y quiero reservar una clase en VITAE&RIDE. ¿Qué horarios tienen disponibles?" href="https://wa.me/524492765614">Reservar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" style="padding:0">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">Indoor cycling · Pilates · Funcional</span>
+        <h1>Pedalea fuerte.<br>Muévete <em>mejor.</em></h1>
+        <p class="lead">Estudio boutique en Valle del Campestre con clases de indoor cycling, Pilates con sliders, peso libre y entrenamiento funcional. Aparta tu lugar por WhatsApp y llega directo a rodar.</p>
+        <div class="acciones">
+          <a class="btn btn-coral wa-link" data-msg="Hola, vi su página y quiero reservar mi primera clase en VITAE&RIDE. ¿Qué horarios tienen disponibles?" href="https://wa.me/524492765614">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+            Reservar mi primera clase
+          </a>
+          <a class="btn btn-ghost" href="#clases">Ver clases</a>
+        </div>
+        <p class="nota">Las clases requieren reservación previa.</p>
+      </div>
+
+      <div class="rueda-box" aria-hidden="true">
+        <svg id="rueda" viewBox="0 0 400 400">
+          <defs>
+            <linearGradient id="aro" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff4d5e"/><stop offset="1" stop-color="#b79cff"/>
+            </linearGradient>
+          </defs>
+          <circle cx="200" cy="200" r="176" fill="none" stroke="#43284a" stroke-width="2" stroke-dasharray="2 9"/>
+          <circle cx="200" cy="200" r="158" fill="none" stroke="url(#aro)" stroke-width="16"/>
+          <circle cx="200" cy="200" r="146" fill="none" stroke="#2e1933" stroke-width="4"/>
+          <g id="rayos" stroke="#f6eef6" stroke-opacity=".75" stroke-width="1.6" stroke-linecap="round"></g>
+          <circle cx="200" cy="200" r="30" fill="#221226" stroke="#ff4d5e" stroke-width="4"/>
+          <circle cx="200" cy="200" r="10" fill="#b79cff"/>
+          <g fill="#ff4d5e"><circle cx="200" cy="34" r="5"/></g>
+        </svg>
+        <div class="cadencia"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><small>cadencia</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ruta">
+    <div class="wrap">
+      <div class="item"><b>Valle del Campestre</b>Blvd. Colosio 400, Local 4</div>
+      <div class="item"><b>Desde 6:15 am</b>Lunes a viernes</div>
+      <div class="item"><b>Fin de semana</b>Clases sábado y domingo</div>
+      <div class="item"><b>Estacionamiento</b>Llega sin vueltas</div>
+    </div>
+  </div>
+
+  <section id="clases">
+    <div class="wrap">
+      <div class="titulo">
+        <h2>Elige tu clase, nosotros ponemos el ritmo.</h2>
+        <p>Cinco formas de entrenar en un mismo estudio. Toca “Reservar” y te confirmamos lugar y horario por WhatsApp.</p>
+      </div>
+      <ol class="playlist">
+        <li class="pista">
+          <span class="num">01</span>
+          <div><h3>Indoor cycling<span class="eq"><i></i><i></i><i></i></span></h3><p>Rodada en bici fija con música, intervalos y subidas. Cardio intenso para todos los niveles: tú marcas la resistencia.</p></div>
+          <a class="btn btn-coral wa-link" data-msg="Hola, quiero reservar una clase de Indoor cycling en VITAE&RIDE. ¿Qué horarios tienen disponibles?" href="https://wa.me/524492765614">Reservar</a>
+        </li>
+        <li class="pista">
+          <span class="num">02</span>
+          <div><h3>Pilates<span class="eq"><i></i><i></i><i></i></span></h3><p>Control, respiración y fuerza del centro del cuerpo. Mejora postura y movilidad con trabajo de bajo impacto.</p></div>
+          <a class="btn btn-coral wa-link" data-msg="Hola, quiero reservar una clase de Pilates en VITAE&RIDE. ¿Qué horarios tienen disponibles?" href="https://wa.me/524492765614">Reservar</a>
+        </li>
+        <li class="pista">
+          <span class="num">03</span>
+          <div><h3>Pilates con sliders<span class="eq"><i></i><i></i><i></i></span></h3><p>Pilates con discos deslizantes que suman inestabilidad y tensión constante para trabajar abdomen, glúteo y piernas.</p></div>
+          <a class="btn btn-coral wa-link" data-msg="Hola, quiero reservar una clase de Pilates con sliders en VITAE&RIDE. ¿Qué horarios tienen disponibles?" href="https://wa.me/524492765614">Reservar</a>
+        </li>
+        <li class="pista">
+          <span class="num">04</span>
+          <div><h3>Peso libre<span class="eq"><i></i><i></i><i></i></span></h3><p>Entrenamiento de fuerza con mancuernas y peso libre para tonificar y ganar resistencia muscular.</p></div>
+          <a class="btn btn-coral wa-link" data-msg="Hola, quiero reservar una clase de Peso libre en VITAE&RIDE. ¿Qué horarios tienen disponibles?" href="https://wa.me/524492765614">Reservar</a>
+        </li>
+        <li class="pista">
+          <span class="num">05</span>
+          <div><h3>Entrenamiento funcional<span class="eq"><i></i><i></i><i></i></span></h3><p>Movimientos que usas todos los días —empujar, jalar, saltar, cargar— en circuitos dinámicos para todo el cuerpo.</p></div>
+          <a class="btn btn-coral wa-link" data-msg="Hola, quiero reservar una clase de Entrenamiento funcional en VITAE&RIDE. ¿Qué horarios tienen disponibles?" href="https://wa.me/524492765614">Reservar</a>
+        </li>
+      </ol>
+      <div class="acciones" style="margin-top:28px">
+        <a class="btn btn-ghost wa-link" data-msg="Hola, vi su página de VITAE&RIDE. ¿Me pueden compartir precios y paquetes de clases?" href="https://wa.me/524492765614">Preguntar precio de paquetes</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="estudio" style="padding-top:0">
+    <div class="wrap">
+      <div class="titulo">
+        <h2>El estudio</h2>
+        <p>Espacios listos para sus fotografías reales.</p>
+      </div>
+      <div class="galeria">
+        <div class="hueco g1"><b>Imagen 1</b><span>Sala de cycling con las bicis alineadas y la iluminación de clase encendida.</span></div>
+        <div class="hueco g2"><b>Imagen 2</b><span>Grupo en plena clase de Pilates con sliders.</span></div>
+        <div class="hueco g3"><b>Imagen 3</b><span>Fachada o recepción del estudio en Blvd. Colosio.</span></div>
+        <div class="hueco g4"><b>Imagen 4</b><span>Zona de peso libre y funcional, con mancuernas y equipo ordenado.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="amen">
+    <div class="wrap">
+      <div class="titulo">
+        <h2>Llegas, entrenas, te vas tranquilo.</h2>
+        <p>Detalles del estudio pensados para que solo te preocupes por la clase.</p>
+      </div>
+      <div class="amen-grid">
+        <div>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#160b17" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="10"/><path d="M19 34V14h7a6 6 0 0 1 0 12h-7"/></svg>
+          <h3>Estacionamiento</h3><p>Sin buscar lugar antes de tu clase.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#160b17" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12h28v26H10z"/><path d="M10 20h28M10 28h28"/></svg>
+          <h3>Toallas de entrenamiento</h3><p>Para que no cargues de más.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#160b17" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6v20c0 4-6 6-6 12a6 6 0 0 0 6 4h14a4 4 0 0 0 0-8h-6c-2 0-4-2-4-4V6z"/><circle cx="16" cy="38" r="1" fill="#160b17"/><circle cx="22" cy="38" r="1" fill="#160b17"/></svg>
+          <h3>Calcetas antiderrapantes</h3><p>Agarre seguro en Pilates.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#160b17" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 14c-4-6-14-4-14 6 0 12 14 20 14 20s14-8 14-20c0-10-10-12-14-6z"/><path d="M24 14c0-4 2-7 6-8"/></svg>
+          <h3>Nutriólogo</h3><p>Acompaña tu entrenamiento con orientación en alimentación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="primera">
+    <div class="wrap">
+      <div class="titulo">
+        <h2>Tu primera clase, en cuatro pasos.</h2>
+        <p>Si nunca has tomado cycling o Pilates, no pasa nada: así empiezas.</p>
+      </div>
+      <div class="pasos">
+        <div class="paso"><h3>Escribe</h3><p>Mándanos un WhatsApp con la clase que te interesa.</p></div>
+        <div class="paso"><h3>Reserva</h3><p>Te confirmamos horario disponible y apartamos tu lugar.</p></div>
+        <div class="paso"><h3>Llega</h3><p>Ven unos minutos antes con ropa cómoda y agua; hay estacionamiento.</p></div>
+        <div class="paso"><h3>Rueda</h3><p>Disfruta la clase a tu ritmo y elige con qué seguir.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visita" style="padding-top:0">
+    <div class="wrap">
+      <div class="titulo"><h2>Horario y ubicación</h2></div>
+      <div class="visita-grid">
+        <div class="horario">
+          <h3>Horario</h3>
+          <table>
+            <tbody>
+              <tr data-d="1,2,3,4,5"><td>Lunes a viernes</td><td>6:15 – 21:00</td></tr>
+              <tr data-d="6"><td>Sábado</td><td>9:15 – 12:00</td></tr>
+              <tr data-d="0"><td>Domingo</td><td>10:15 – 12:00</td></tr>
+            </tbody>
+          </table>
+          <p class="dir"><b>Blvd. Luis Donaldo Colosio Murrieta 400, Local 4</b><br>Valle del Campestre, 20110 Aguascalientes, Ags.</p>
+          <p class="dir">Instagram: <a href="https://www.instagram.com/vitaeride.studio/" target="_blank" rel="noopener">@vitaeride.studio</a></p>
+          <div class="acciones">
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Vitae+Ride+Studio+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Blvd.+Luis+Donaldo+Colosio+Murrieta+400,+Valle+del+Campestre,+Aguascalientes" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+        </div>
+        <div class="mapa">
+          <iframe title="Mapa de VITAE&RIDE Studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Blvd.+Luis+Donaldo+Colosio+Murrieta+400,+Valle+del+Campestre,+20110+Aguascalientes,+Ags.&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <div class="wrap">
+      <h2>Tu lugar en la próxima clase te está esperando.</h2>
+      <p>Escríbenos, elige horario y llega a entrenar.</p>
+      <div class="acciones">
+        <a class="btn btn-coral wa-link" data-msg="Hola, vi su página y quiero reservar una clase en VITAE&RIDE. ¿Qué horarios tienen disponibles?" href="https://wa.me/524492765614">Reservar por WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+524492765614">Llamar 449 276 5614</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>VITAE&amp;RIDE Studio · Valle del Campestre, Aguascalientes</span>
+    <span>Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">FixA Consultoría</a></span>
+  </div>
+</footer>
+
+<div class="movil">
+  <a class="llamar" href="tel:+524492765614"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Llamar</a>
+  <a class="wa wa-link" data-msg="Hola, vi su página y quiero reservar una clase en VITAE&RIDE. ¿Qué horarios tienen disponibles?" href="https://wa.me/524492765614"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>WhatsApp</a>
+</div>
+
+<script>
+  // Enlaces de WhatsApp con texto prellenado
+  document.querySelectorAll('.wa-link').forEach(function(a){
+    a.href = 'https://wa.me/524492765614?text=' + encodeURIComponent(a.dataset.msg);
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+  // Rayos de la rueda
+  (function(){
+    var g = document.getElementById('rayos'), ns = 'http://www.w3.org/2000/svg';
+    for (var i = 0; i < 32; i++){
+      var a = i * Math.PI * 2 / 32, off = (i % 2 ? 1 : -1) * 0.35;
+      var l = document.createElementNS(ns, 'line');
+      l.setAttribute('x1', 200 + 26 * Math.cos(a + off)); l.setAttribute('y1', 200 + 26 * Math.sin(a + off));
+      l.setAttribute('x2', 200 + 146 * Math.cos(a)); l.setAttribute('y2', 200 + 146 * Math.sin(a));
+      g.appendChild(l);
+    }
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    var ang = 0, vel = 0.35, last = window.scrollY;
+    window.addEventListener('scroll', function(){ var y = window.scrollY; vel += Math.min(Math.abs(y - last) * 0.04, 6); last = y; }, {passive:true});
+    (function tick(){
+      vel += (0.35 - vel) * 0.04; ang = (ang + vel) % 360;
+      g.setAttribute('transform', 'rotate(' + ang.toFixed(2) + ' 200 200)');
+      requestAnimationFrame(tick);
+    })();
+  })();
+  // Resaltar el día de hoy
+  (function(){
+    var d = new Date().getDay();
+    document.querySelectorAll('tr[data-d]').forEach(function(tr){ if (tr.dataset.d.split(',').indexOf(String(d)) > -1) tr.classList.add('hoy'); });
+  })();
+</script>
+</body>
+</html>

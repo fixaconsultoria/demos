@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalamata Jardín de Eventos · Aguascalientes</title>
+<meta name="description" content="Jardín de eventos en Hacienda Nueva, Aguascalientes. Bodas, XV años, bautizos, cumpleaños y eventos corporativos. Cotiza por WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cal:#f7f6f1;
+    --cal-2:#eeede5;
+    --olivo:#7d8a62;
+    --olivo-gris:#a7ad92;
+    --olivo-claro:#d9dccb;
+    --pizarra:#3e5566;
+    --pizarra-claro:#dfe6ea;
+    --aceituna:#20231b;
+    --texto:#3b3f33;
+    --linea:#cfd0c3;
+    --wa:#1f9d55;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Manrope",system-ui,sans-serif;font-size:17px;line-height:1.65;color:var(--texto);background:var(--cal)}
+  a{color:inherit}
+  img,svg{display:block}
+  :focus-visible{outline:2px solid var(--pizarra);outline-offset:3px}
+  h1,h2,h3{font-family:"Syne",sans-serif;color:var(--aceituna);line-height:1.02;letter-spacing:-.025em;font-weight:700}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+  .demo{background:var(--aceituna);color:#c9ccbc;font-size:13.5px;text-align:center;padding:9px 16px}
+  .demo a{color:#fff;font-weight:600}
+
+  header{border-bottom:1px solid var(--linea)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:18px;padding-bottom:18px}
+  .marca{display:flex;align-items:center;gap:14px;text-decoration:none}
+  .logo{width:56px;height:56px;border:1.5px dashed var(--olivo);border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700;color:var(--olivo);text-align:center;line-height:1.1;flex:none;background:#fff}
+  .marca b{font-family:"Syne",sans-serif;font-size:20px;color:var(--aceituna);display:block;line-height:1.1;letter-spacing:-.01em}
+  .marca small{font-size:13.5px;color:#6c705f}
+  nav{display:flex;gap:28px;font-size:15px;font-weight:600}
+  nav a{text-decoration:none;color:#5d6152}
+  nav a:hover{color:var(--pizarra)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;text-decoration:none;padding:15px 24px;border:1.5px solid var(--aceituna);border-radius:999px;transition:background .2s,color .2s,transform .15s;cursor:pointer;font-family:inherit}
+  .btn:active{transform:scale(.98)}
+  .btn-wa{background:var(--aceituna);color:var(--cal)}
+  .btn-wa:hover{background:var(--pizarra);border-color:var(--pizarra)}
+  .btn-line{background:transparent;color:var(--aceituna)}
+  .btn-line:hover{background:var(--aceituna);color:var(--cal)}
+  .btn svg{width:19px;height:19px;flex:none}
+
+  /* HERO */
+  .hero{display:grid;grid-template-columns:1.25fr .75fr;border-bottom:1px solid var(--linea)}
+  .hero-txt{padding:72px 56px 72px 0;border-right:1px solid var(--linea)}
+  .lugar{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;color:var(--pizarra);margin-bottom:26px}
+  .lugar::before{content:"";width:28px;height:1.5px;background:var(--pizarra)}
+  .hero h1{font-size:clamp(44px,6.6vw,92px);font-weight:800}
+  .hero h1 em{font-style:normal;color:var(--olivo)}
+  .hero p.lead{font-size:19px;max-width:540px;margin:28px 0 36px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .hero-rama{position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:40px 0 40px 40px;background:linear-gradient(180deg,var(--cal) 0%,var(--cal-2) 100%)}
+  .rama{width:100%;max-width:330px;height:auto;margin:0 auto}
+  .rama .tallo{stroke:var(--aceituna);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-dasharray:600;stroke-dashoffset:600;animation:trazo 2.2s ease-out .2s forwards}
+  .rama .hoja{transform-box:fill-box;transform-origin:0% 50%;opacity:0;animation:brota .7s cubic-bezier(.2,.8,.3,1.2) forwards}
+  .rama .aceituna{opacity:0;animation:aparece .6s ease-out forwards}
+  @keyframes trazo{to{stroke-dashoffset:0}}
+  @keyframes brota{from{opacity:0;transform:scale(.2) rotate(-12deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+  @keyframes aparece{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+  .rama-nota{font-size:14px;color:#6c705f;border-top:1px solid var(--linea);padding-top:16px;margin-top:20px}
+  .rama-nota strong{display:block;font-family:"Syne",sans-serif;color:var(--aceituna);font-size:17px;margin-bottom:2px}
+
+  /* EVENTOS */
+  section{padding:88px 0}
+  .head{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:end;margin-bottom:44px}
+  .head h2{font-size:clamp(34px,4.4vw,56px)}
+  .head p{max-width:520px;color:#555a4b}
+  .num{font-family:"Syne",sans-serif;font-weight:600;font-size:14px;color:var(--olivo);margin-bottom:14px;display:block}
+  .eventos{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--aceituna)}
+  .ev{grid-column:span 2;padding:28px 28px 30px 0;border-bottom:1px solid var(--linea);display:flex;flex-direction:column;gap:12px}
+  .ev:nth-child(1),.ev:nth-child(2){grid-column:span 3}
+  .ev + .ev{padding-left:28px;border-left:1px solid var(--linea)}
+  .ev:nth-child(3){padding-left:0;border-left:none}
+  .ev h3{font-size:26px}
+  .ev p{color:#555a4b;font-size:16px;flex:1}
+  .ev a{align-self:flex-start;font-weight:700;font-size:15px;color:var(--pizarra);text-decoration:none;border-bottom:1.5px solid var(--pizarra);padding-bottom:2px}
+  .ev a:hover{color:var(--aceituna);border-color:var(--aceituna)}
+
+  /* GALERIA */
+  .galeria{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px}
+  .slot{border:1.5px dashed var(--olivo-gris);background:repeating-linear-gradient(135deg,#fbfaf6 0 10px,#f1f1ea 10px 20px);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#5d6152}
+  .slot b{font-family:"Syne",sans-serif;color:var(--aceituna);font-size:19px}
+  .slot span{font-size:14.5px;max-width:300px}
+  .slot.g1{grid-row:span 2}
+  .slot.g4{grid-column:span 2}
+
+  /* ARMADOR */
+  .armar{background:var(--pizarra);color:#e7edf0}
+  .armar h2{color:#fff}
+  .armar .num{color:var(--olivo-claro)}
+  .armar .head p{color:#c9d4da}
+  .form{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(255,255,255,.28)}
+  .campo{padding:28px;border-bottom:1px solid rgba(255,255,255,.28)}
+  .campo:nth-child(odd){border-right:1px solid rgba(255,255,255,.28)}
+  .campo.full{grid-column:1/-1;border-right:none}
+  .campo label,.campo legend{display:block;font-weight:700;color:#fff;margin-bottom:14px;font-size:16px}
+  fieldset{border:none}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chips input{position:absolute;opacity:0;pointer-events:none}
+  .chips label{margin:0;font-weight:600;font-size:15px;padding:10px 18px;border:1.5px solid rgba(255,255,255,.5);border-radius:999px;cursor:pointer;color:#e7edf0;transition:background .15s,color .15s}
+  .chips input:checked + label{background:var(--cal);color:var(--aceituna);border-color:var(--cal)}
+  .chips input:focus-visible + label{outline:2px solid #fff;outline-offset:3px}
+  select{width:100%;font:inherit;font-size:16px;padding:13px 14px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);border-radius:10px}
+  select option{color:var(--aceituna)}
+  input[type=range]{width:100%;accent-color:var(--olivo-claro);height:28px}
+  .valor{font-family:"Syne",sans-serif;font-size:30px;color:#fff;font-weight:700;margin-top:4px}
+  .resumen{grid-column:1/-1;padding:28px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+  .resumen p{max-width:620px;font-size:15.5px;color:#d4dde2}
+  .resumen p b{color:#fff}
+  .armar .btn-wa{background:var(--cal);color:var(--aceituna);border-color:var(--cal)}
+  .armar .btn-wa:hover{background:var(--olivo-claro);border-color:var(--olivo-claro)}
+
+  /* PROCESO */
+  .pasos{display:grid;grid-template-columns:repeat(4,1fr);counter-reset:p}
+  .paso{padding:0 26px 0 0;position:relative}
+  .paso + .paso{padding-left:26px;border-left:1px solid var(--linea)}
+  .paso::before{counter-increment:p;content:"0" counter(p);font-family:"Syne",sans-serif;font-weight:800;font-size:54px;color:var(--olivo-claro);display:block;line-height:1;margin-bottom:18px}
+  .paso h3{font-size:21px;margin-bottom:8px}
+  .paso p{font-size:15.5px;color:#555a4b}
+
+  /* VISITA */
+  .visita{display:grid;grid-template-columns:1fr 1.3fr;border-top:1px solid var(--aceituna);border-bottom:1px solid var(--linea)}
+  .datos{padding:40px 40px 40px 0;border-right:1px solid var(--linea);display:flex;flex-direction:column;gap:26px}
+  .dato small{display:block;font-weight:700;font-size:13.5px;color:var(--olivo);margin-bottom:4px}
+  .dato p{font-size:17px;color:var(--aceituna)}
+  .dato a{font-weight:600}
+  .datos .btns{display:flex;flex-wrap:wrap;gap:10px}
+  .mapa{min-height:420px;filter:saturate(.75)}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0}
+
+  .cierre{padding:96px 0;text-align:left}
+  .cierre-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end}
+  .cierre h2{font-size:clamp(36px,5vw,68px)}
+  .cierre .btns{display:flex;flex-direction:column;gap:12px;align-items:stretch}
+
+  footer{border-top:1px solid var(--linea);padding:30px 0 34px;font-size:14px;color:#6c705f}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+  footer a{color:var(--pizarra);font-weight:600}
+
+  .movil{display:none}
+
+  @media (max-width:900px){
+    nav{display:none}
+    .hero{grid-template-columns:1fr}
+    .hero-txt{padding:48px 0 36px;border-right:none;border-bottom:1px solid var(--linea)}
+    .hero-rama{padding:32px 0;flex-direction:row;align-items:center;gap:20px;background:none}
+    .rama{max-width:150px;margin:0}
+    .rama-nota{border-top:none;padding-top:0;margin-top:0}
+    .head{grid-template-columns:1fr;gap:12px}
+    .eventos{grid-template-columns:1fr}
+    .ev,.ev:nth-child(1),.ev:nth-child(2){grid-column:auto;padding:22px 0;border-left:none!important;padding-left:0!important}
+    .galeria{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+    .slot{min-height:190px}
+    .slot.g1{grid-row:auto;grid-column:span 2;min-height:240px}
+    .slot.g4{grid-column:span 2}
+    .form{grid-template-columns:1fr}
+    .campo:nth-child(odd){border-right:none}
+    .pasos{grid-template-columns:1fr 1fr;row-gap:36px}
+    .paso:nth-child(3){padding-left:0;border-left:none}
+    .visita{grid-template-columns:1fr}
+    .datos{padding:32px 0;border-right:none;border-bottom:1px solid var(--linea)}
+    .mapa,.mapa iframe{min-height:320px}
+    .cierre-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:600px){
+    body{font-size:16px;padding-bottom:74px}
+    .wrap{padding:0 18px}
+    section{padding:64px 0}
+    .marca small{display:none}
+    .bar .btn{display:none}
+    .hero p.lead{font-size:17px}
+    .hero-ctas .btn{flex:1 1 100%}
+    .galeria{grid-template-columns:1fr}
+    .slot.g1,.slot.g4{grid-column:auto}
+    .pasos{grid-template-columns:1fr}
+    .paso,.paso + .paso{padding:0 0 26px;border-left:none;border-bottom:1px solid var(--linea)}
+    .campo,.resumen{padding:22px 18px}
+    .resumen .btn{width:100%}
+    .movil{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(247,246,241,.96);border-top:1px solid var(--linea);backdrop-filter:blur(8px)}
+    .movil a{padding:13px 10px;font-size:15.5px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .rama .tallo{animation:none;stroke-dashoffset:0}
+    .rama .hoja,.rama .aceituna{animation:none;opacity:1}
+    .btn{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">Propuesta de diseño hecha por FixA Consultoría. No es el sitio oficial del negocio. <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></div>
+
+<header>
+  <div class="wrap bar">
+    <a class="marca" href="#inicio">
+      <span class="logo">Tu logo</span>
+      <span><b>Kalamata</b><small>Jardín de Eventos · Hacienda Nueva</small></span>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#eventos">Eventos</a>
+      <a href="#galeria">El jardín</a>
+      <a href="#cotizar">Cotizar</a>
+      <a href="#visita">Ubicación</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/524499147500?text=Hola%2C%20quiero%20informes%20para%20un%20evento%20en%20Kalamata%20Jard%C3%ADn%20de%20Eventos." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="wrap hero">
+    <div class="hero-txt">
+      <span class="lugar">Hacienda Nueva, Aguascalientes</span>
+      <h1>Un jardín al aire libre para el día que <em>van a recordar.</em></h1>
+      <p class="lead">Bodas, XV años, bautizos, cumpleaños y eventos de empresa en Kalamata Jardín de Eventos. Escríbenos tu fecha y agenda un recorrido para conocer el jardín en persona.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" href="https://wa.me/524499147500?text=Hola%2C%20quiero%20cotizar%20un%20evento%20en%20Kalamata%20Jard%C3%ADn%20de%20Eventos.%20%C2%BFTienen%20disponible%20mi%20fecha%3F" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .3-3.3-.7-2.8-1.1-4.5-4-4.6-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          Cotizar mi evento
+        </a>
+        <a class="btn btn-line" href="#cotizar">Armar solicitud</a>
+      </div>
+    </div>
+    <div class="hero-rama">
+      <svg class="rama" viewBox="0 0 300 380" role="img" aria-label="Ilustración de una rama de olivo">
+        <path class="tallo" d="M150 372 C 152 300, 140 240, 156 180 C 168 130, 150 80, 168 12"/>
+        <g fill="#7d8a62">
+          <path class="hoja" style="animation-delay:.6s"  d="M152 330 q -46 -8 -78 -34 q 48 2 78 34z"/>
+          <path class="hoja" style="animation-delay:.75s" d="M151 300 q 44 -14 80 -6 q -40 24 -80 6z"/>
+          <path class="hoja" style="animation-delay:.9s"  d="M148 262 q -50 -2 -84 -26 q 50 -4 84 26z"/>
+          <path class="hoja" style="animation-delay:1.05s" d="M152 228 q 40 -22 82 -20 q -36 30 -82 20z"/>
+          <path class="hoja" style="animation-delay:1.2s" d="M155 190 q -44 -10 -72 -40 q 46 6 72 40z"/>
+          <path class="hoja" style="animation-delay:1.35s" d="M160 156 q 40 -18 76 -12 q -34 26 -76 12z"/>
+          <path class="hoja" style="animation-delay:1.5s" d="M158 118 q -38 -14 -58 -44 q 40 10 58 44z"/>
+          <path class="hoja" style="animation-delay:1.65s" d="M163 84 q 34 -18 64 -16 q -28 24 -64 16z"/>
+          <path class="hoja" style="animation-delay:1.8s" d="M165 48 q -30 -12 -44 -36 q 32 8 44 36z"/>
+        </g>
+        <g fill="#a7ad92">
+          <path class="hoja" style="animation-delay:1.0s" d="M150 345 q 36 -2 62 14 q -38 8 -62 -14z"/>
+          <path class="hoja" style="animation-delay:1.4s" d="M156 205 q 30 4 54 22 q -34 2 -54 -22z"/>
+          <path class="hoja" style="animation-delay:1.75s" d="M161 100 q -30 4 -52 22 q 32 0 52 -22z"/>
+        </g>
+        <g fill="#3e5566">
+          <ellipse class="aceituna" style="animation-delay:2.1s" cx="198" cy="244" rx="9" ry="12"/>
+          <ellipse class="aceituna" style="animation-delay:2.25s" cx="112" cy="172" rx="8" ry="11"/>
+          <ellipse class="aceituna" style="animation-delay:2.4s" cx="205" cy="160" rx="7.5" ry="10"/>
+        </g>
+      </svg>
+      <div class="rama-nota"><strong>Muy bien calificado en Google</strong>Más de 100 opiniones de familias y empresas que ya celebraron aquí.</div>
+    </div>
+  </div>
+
+  <section id="eventos">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="num">01 · Eventos</span><h2>¿Qué vas a celebrar?</h2></div>
+        <p>Cuéntanos el tipo de evento y la fecha que tienes en mente. Te respondemos por WhatsApp con disponibilidad y la información para tu cotización.</p>
+      </div>
+      <div class="eventos">
+        <article class="ev"><h3>Bodas</h3><p>Ceremonia y recepción en un mismo lugar, al aire libre.</p><a href="https://wa.me/524499147500?text=Hola%2C%20quiero%20cotizar%20una%20boda%20en%20Kalamata%20Jard%C3%ADn%20de%20Eventos." target="_blank" rel="noopener">Cotizar boda</a></article>
+        <article class="ev"><h3>XV años</h3><p>Un espacio amplio para la fiesta, el vals y las fotos.</p><a href="https://wa.me/524499147500?text=Hola%2C%20quiero%20cotizar%20unos%20XV%20a%C3%B1os%20en%20Kalamata%20Jard%C3%ADn%20de%20Eventos." target="_blank" rel="noopener">Cotizar XV años</a></article>
+        <article class="ev"><h3>Bautizos</h3><p>Reuniones familiares de día, con espacio para los niños.</p><a href="https://wa.me/524499147500?text=Hola%2C%20quiero%20cotizar%20un%20bautizo%20en%20Kalamata%20Jard%C3%ADn%20de%20Eventos." target="_blank" rel="noopener">Cotizar</a></article>
+        <article class="ev"><h3>Cumpleaños</h3><p>Desde una comida familiar hasta una fiesta grande.</p><a href="https://wa.me/524499147500?text=Hola%2C%20quiero%20cotizar%20un%20cumplea%C3%B1os%20en%20Kalamata%20Jard%C3%ADn%20de%20Eventos." target="_blank" rel="noopener">Cotizar</a></article>
+        <article class="ev"><h3>Empresas</h3><p>Posadas, convivios y eventos de fin de año para tu equipo.</p><a href="https://wa.me/524499147500?text=Hola%2C%20quiero%20cotizar%20un%20evento%20de%20empresa%20en%20Kalamata%20Jard%C3%ADn%20de%20Eventos." target="_blank" rel="noopener">Cotizar</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="num">02 · El jardín</span><h2>Conócelo antes de decidir</h2></div>
+        <p>Las fotos de tu jardín van aquí: es lo primero que revisan las familias al comparar opciones.</p>
+      </div>
+      <div class="galeria">
+        <div class="slot g1"><b>Imagen 1</b><span>Vista amplia del jardín montado para una boda, de preferencia al atardecer.</span></div>
+        <div class="slot"><b>Imagen 2</b><span>Mesas decoradas con mantelería y centros de mesa.</span></div>
+        <div class="slot"><b>Imagen 3</b><span>Pista de baile o zona de la ceremonia.</span></div>
+        <div class="slot g4"><b>Imagen 4</b><span>El jardín iluminado de noche con invitados disfrutando.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cotizar" class="armar">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="num">03 · Cotización</span><h2>Arma tu solicitud en 20 segundos</h2></div>
+        <p>Elige lo que ya sabes de tu evento y envíalo por WhatsApp. Así te responden con la información correcta desde el primer mensaje.</p>
+      </div>
+      <form class="form" id="armador" onsubmit="return false">
+        <fieldset class="campo full">
+          <legend>Tipo de evento</legend>
+          <div class="chips">
+            <input type="radio" name="tipo" id="t1" value="una boda" checked><label for="t1">Boda</label>
+            <input type="radio" name="tipo" id="t2" value="unos XV años"><label for="t2">XV años</label>
+            <input type="radio" name="tipo" id="t3" value="un bautizo"><label for="t3">Bautizo</label>
+            <input type="radio" name="tipo" id="t4" value="un cumpleaños"><label for="t4">Cumpleaños</label>
+            <input type="radio" name="tipo" id="t5" value="un evento de empresa"><label for="t5">Empresa</label>
+            <input type="radio" name="tipo" id="t6" value="otro tipo de evento"><label for="t6">Otro</label>
+          </div>
+        </fieldset>
+        <div class="campo">
+          <label for="mes">Mes aproximado</label>
+          <select id="mes"></select>
+        </div>
+        <div class="campo">
+          <label for="inv">Invitados aproximados</label>
+          <input type="range" id="inv" min="20" max="500" step="10" value="150" aria-describedby="invv">
+          <div class="valor" id="invv">150</div>
+        </div>
+        <div class="resumen">
+          <p id="prev">Hola, me interesa <b>una boda</b> en Kalamata Jardín de Eventos…</p>
+          <a class="btn btn-wa" id="enviar" href="https://wa.me/524499147500" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="proceso">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="num">04 · Proceso</span><h2>De la primera visita al gran día</h2></div>
+        <p>Organizar un evento es más fácil cuando sabes qué sigue.</p>
+      </div>
+      <div class="pasos">
+        <div class="paso"><h3>Escríbenos</h3><p>Mándanos por WhatsApp el tipo de evento, la fecha y cuántos invitados esperas.</p></div>
+        <div class="paso"><h3>Visita el jardín</h3><p>Agenda un recorrido para conocer los espacios y resolver tus dudas en persona.</p></div>
+        <div class="paso"><h3>Aparta tu fecha</h3><p>Recibe tu cotización y confirma la fecha para asegurarla.</p></div>
+        <div class="paso"><h3>Celebra</h3><p>Llega el día y disfrútalo con tu familia e invitados.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visita" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="num">05 · Visítanos</span><h2>Cómo llegar</h2></div>
+        <p>Estamos en Hacienda Nueva, Aguascalientes.</p>
+      </div>
+      <div class="visita">
+        <div class="datos">
+          <div class="dato"><small>Dirección</small><p>Avenida del Paraíso S/N, Hacienda Nueva, 20010 Aguascalientes, Ags.</p></div>
+          <div class="dato"><small>Horario</small><p>Recorridos con cita previa. Agenda el tuyo por WhatsApp.</p></div>
+          <div class="dato"><small>Teléfono</small><p><a href="tel:+524499147500">449 914 7500</a></p></div>
+          <div class="btns">
+            <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Kalamata+Jard%C3%ADn+de+Eventos+Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+          </div>
+        </div>
+        <div class="mapa">
+          <iframe title="Mapa de Kalamata Jardín de Eventos" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Kalamata+Jard%C3%ADn+de+Eventos,+Avenida+del+Para%C3%ADso,+Hacienda+Nueva,+Aguascalientes&z=15&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre" style="padding-top:0">
+    <div class="wrap cierre-grid">
+      <h2>Las fechas buenas se apartan primero. ¿Ya tienes la tuya?</h2>
+      <div class="btns">
+        <a class="btn btn-wa" href="https://wa.me/524499147500?text=Hola%2C%20quiero%20saber%20si%20tienen%20disponible%20una%20fecha%20en%20Kalamata%20Jard%C3%ADn%20de%20Eventos." target="_blank" rel="noopener">Preguntar disponibilidad</a>
+        <a class="btn btn-line" href="tel:+524499147500">Llamar 449 914 7500</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Kalamata Jardín de Eventos · Aguascalientes</span>
+    <span>Propuesta de sitio elaborada por FixA Consultoría · <a href="https://fixaconsultoria.com" target="_blank" rel="noopener">fixaconsultoria.com</a></span>
+  </div>
+</footer>
+
+<div class="movil">
+  <a class="btn btn-line" href="tel:+524499147500">Llamar</a>
+  <a class="btn btn-wa" href="https://wa.me/524499147500?text=Hola%2C%20quiero%20cotizar%20un%20evento%20en%20Kalamata%20Jard%C3%ADn%20de%20Eventos." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var meses=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  var sel=document.getElementById("mes"),hoy=new Date();
+  var o=document.createElement("option");o.value="";o.textContent="Aún no lo sé";sel.appendChild(o);
+  for(var i=1;i<=18;i++){
+    var d=new Date(hoy.getFullYear(),hoy.getMonth()+i,1);
+    var t=meses[d.getMonth()]+" "+d.getFullYear();
+    var op=document.createElement("option");op.value=t;op.textContent=t.charAt(0).toUpperCase()+t.slice(1);sel.appendChild(op);
+  }
+  var inv=document.getElementById("inv"),invv=document.getElementById("invv"),prev=document.getElementById("prev"),env=document.getElementById("enviar");
+  function armar(){
+    var tipo=document.querySelector('input[name="tipo"]:checked').value;
+    var n=inv.value==="500"?"500 o más":inv.value;
+    invv.textContent=n;
+    var msg="Hola, me interesa "+tipo+" en Kalamata Jardín de Eventos"+(sel.value?(" para "+sel.value):"")+", con aproximadamente "+n+" invitados. ¿Me comparten disponibilidad y cotización?";
+    prev.innerHTML="";var b=document.createElement("b");b.textContent="Tu mensaje: ";prev.appendChild(b);prev.appendChild(document.createTextNode(msg));
+    env.href="https://wa.me/524499147500?text="+encodeURIComponent(msg);
+  }
+  document.getElementById("armador").addEventListener("input",armar);
+  document.getElementById("armador").addEventListener("change",armar);
+  armar();
+})();
+</script>
+</body>
+</html>
