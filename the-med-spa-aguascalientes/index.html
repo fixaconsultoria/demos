@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--
+  MINI MANUAL DE MARCA · The Med Spa (propuesta FixA)
+  Concepto: "piso 12": luz alta y calma sobre la ciudad; un espacio elevado para cuidar la piel.
+  Paleta: nube #FAF6F5 (fondo) · tinta #2A1B28 (texto) · ciruela #4A2545 (primario) · rubor #F2C6CF (acento) · plata #EDE6E8 (superficies).
+  Tipografía: Tenor Sans (marca y titulares) + Work Sans (texto).
+  Logo: hueco punteado "Tu logo" en ciruela con forma de arco (como ventana). Favicon: inicial "T" en ciruela.
+  Íconos: SVG lineales trazo 1.4.
+  Recurso gráfico: arcos de ventana.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Med Spa · Torre Plaza Bosques, Aguascalientes</title>
+<meta name="description" content="The Med Spa en Torre Plaza Bosques, piso 12, Aguascalientes. Tratamientos faciales y medicina estética. Agenda tu valoración por WhatsApp.">
+<meta property="og:title" content="The Med Spa · Aguascalientes">
+<meta property="og:description" content="Tratamientos faciales y medicina estética en Torre Plaza Bosques. Agenda por WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1713085085470-fba013d67e65?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8bWVkaWNhbCUyMGFlc3RoZXRpYyUyMGZhY2lhbCUyMHRyZWF0bWVudHxlbnwxfDB8fHwxNzk1MDc0NzU2fDA&amp;ixlib=rb-4.1.0&amp;w=1200&amp;q=80&amp;auto=format&amp;fit=crop">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M0 64V28A32 28 0 0 1 64 28V64Z' fill='%234A2545'/%3E%3Ctext x='32' y='50' font-family='Arial,sans-serif' font-size='32' text-anchor='middle' fill='%23F2C6CF'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--nube:#FAF6F5;--blanco:#fff;--tinta:#2A1B28;--tinta2:#62525F;--ciruela:#4A2545;--ciruela2:#331830;--rubor:#F2C6CF;--rubor2:#F8E1E6;--plata:#EDE6E8;--linea:#E2D6DA;--wa:#17834A}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--nube);color:var(--tinta);font:16.5px/1.7 "Work Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit}
+h1,h2,h3,.marca b,.serif{font-family:"Tenor Sans",sans-serif;font-weight:400}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.demo{background:var(--ciruela2);color:var(--rubor2);font-size:13px;text-align:center;padding:8px 16px}.demo a{color:#fff;font-weight:600}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px;border-bottom:1px solid var(--linea)}
+.marca{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo{width:46px;height:56px;border:1.5px dashed var(--ciruela);border-radius:23px 23px 4px 4px;display:grid;place-items:center;font-size:10px;color:var(--ciruela);text-align:center;line-height:1.1;flex:none}
+.marca b{display:block;font-size:24px;line-height:1;letter-spacing:.04em;text-transform:none}.marca small{font-size:12.5px;color:var(--tinta2)}
+nav.menu{display:flex;gap:30px;font-size:14.5px}nav.menu a{text-decoration:none;color:var(--tinta2)}nav.menu a:hover{color:var(--ciruela)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1 "Work Sans",sans-serif;padding:16px 26px;border-radius:999px;text-decoration:none;border:1px solid transparent;transition:background .25s,color .25s,box-shadow .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--ciruela);outline-offset:3px}
+.btn-wa{background:var(--wa);color:#fff}.btn-wa:hover{background:#126a3b;box-shadow:0 10px 24px rgba(23,131,74,.25)}
+.btn-ciruela{background:var(--ciruela);color:#fff}.btn-ciruela:hover{background:var(--ciruela2)}
+.btn-line{border-color:var(--ciruela);color:var(--ciruela)}.btn-line:hover{background:var(--ciruela);color:#fff}
+.btn-sm{padding:12px 18px;font-size:14px}
+/* hero */
+.hero{padding:56px 0 90px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+.piso{font-family:"Tenor Sans";font-size:clamp(150px,22vw,300px);line-height:.8;color:transparent;-webkit-text-stroke:1.5px #D9A3B1;position:absolute;right:430px;top:200px;font-size:230px;z-index:0;pointer-events:none}
+.etq{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--ciruela);background:var(--rubor2);padding:8px 16px;border-radius:999px;margin-bottom:24px}
+.etq svg{width:17px;height:17px}
+.hero h1{font-size:clamp(42px,5.8vw,76px);line-height:1.04;letter-spacing:-.01em;margin:0 0 22px;position:relative}
+.hero p{font-size:19px;color:var(--tinta2);max-width:28em;margin:0 0 34px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.arco{position:relative;z-index:1;justify-self:end;width:min(100%,470px)}
+.arco figure{margin:0;aspect-ratio:4/5;border-radius:240px 240px 0 0;overflow:hidden;box-shadow:0 40px 80px -30px rgba(74,37,69,.45)}
+.arco img{width:100%;height:100%;object-fit:cover}
+.arco .marco2{position:absolute;inset:-16px -16px 26px 26px;border:1px solid var(--ciruela);border-radius:256px 256px 0 0;z-index:-1;opacity:.35}
+.arco .tag{position:absolute;left:-34px;bottom:44px;background:var(--blanco);padding:16px 20px;border-radius:18px;box-shadow:0 18px 40px rgba(42,27,40,.14);font-size:14px;line-height:1.4;max-width:220px}
+.arco .tag b{font-family:"Tenor Sans";font-weight:400;font-size:19px;display:block;color:var(--ciruela)}
+section{padding:96px 0}
+.kicker{font-family:"Tenor Sans";font-size:16px;letter-spacing:.02em;color:var(--ciruela);margin-bottom:14px;display:block;opacity:.85}
+h2{font-size:clamp(32px,4.2vw,52px);line-height:1.08;margin:0 0 16px}
+.intro{color:var(--tinta2);font-size:18px;max-width:36em;margin:0 0 48px}
+/* menu de tratamientos */
+.menu-trat{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.menu-trat .fotos{position:sticky;top:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.menu-trat .fotos figure{margin:0;border-radius:200px 200px 16px 16px;overflow:hidden;aspect-ratio:3/4}
+.menu-trat .fotos figure:nth-child(2){margin-top:60px;border-radius:16px 16px 200px 200px}
+.menu-trat .fotos img{width:100%;height:100%;object-fit:cover}
+.lista{border-top:1px solid var(--linea)}
+.item{display:grid;grid-template-columns:52px 1fr auto;gap:20px;align-items:center;padding:28px 0;border-bottom:1px solid var(--linea)}
+.item .ico{width:52px;height:52px;border-radius:50%;background:var(--rubor2);display:grid;place-items:center;color:var(--ciruela)}
+.item .ico svg{width:26px;height:26px}
+.item h3{font-size:24px;margin:0 0 4px}.item p{margin:0;color:var(--tinta2);font-size:15.5px}
+/* banda */
+.banda{background:var(--ciruela);color:#fff;position:relative;overflow:hidden}
+.banda .kicker{color:var(--rubor)}.banda h2{color:#fff}.banda .intro{color:#E8D3DE}
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.paso{border-top:1px solid rgba(242,198,207,.4);padding-top:22px}
+.paso span{font-family:"Tenor Sans";font-size:40px;color:var(--rubor);display:block;line-height:1;margin-bottom:14px}
+.paso h3{font-size:22px;margin:0 0 6px;color:#fff}.paso p{margin:0;color:#E8D3DE;font-size:15.5px}
+/* galeria */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal figure{margin:0;border-radius:20px;overflow:hidden;aspect-ratio:4/5;position:relative}
+.gal figure:nth-child(2){border-radius:200px 200px 20px 20px}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.gal figure:hover img{transform:scale(1.04)}
+/* ubicacion */
+.ubic{display:grid;grid-template-columns:1fr 1.1fr;gap:0;background:var(--blanco);border-radius:28px;overflow:hidden;border:1px solid var(--linea)}
+.ubic .info{padding:44px}
+.ubic h3{font-size:30px;margin:0 0 10px}.ubic address{font-style:normal;color:var(--tinta2);margin-bottom:24px}
+.datos{display:grid;gap:12px;margin-bottom:28px}.datos div{display:flex;gap:12px;align-items:flex-start}.datos svg{width:22px;height:22px;color:var(--ciruela);flex:none;margin-top:3px}
+.acc{display:flex;flex-wrap:wrap;gap:10px}
+.mapa{min-height:420px;background:var(--plata)}.mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+/* cierre */
+.cierre{text-align:center;padding:100px 0 110px;position:relative;overflow:hidden}
+.cierre .arc{width:180px;height:220px;border:1px solid var(--ciruela);border-bottom:0;border-radius:90px 90px 0 0;margin:0 auto 30px;opacity:.4}
+.cierre h2{max-width:13em;margin:0 auto 16px}.cierre p{color:var(--tinta2);font-size:18px;margin:0 auto 32px;max-width:30em}.cierre .cta{justify-content:center}
+footer{background:var(--ciruela2);color:#DCC8D4;padding:46px 0 110px;font-size:14px}
+footer .wrap{display:grid;gap:20px}.pie{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .logo{border-color:var(--rubor);color:var(--rubor)}footer .marca b{color:#fff}footer .marca small{color:#C9B3C2}
+footer a{color:#fff}.creditos{font-size:12.5px}.creditos a{color:#DCC8D4}
+.barra{display:none}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+@media (max-width:920px){
+  nav.menu{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:48px}.arco{justify-self:center}
+  .menu-trat{grid-template-columns:1fr}.menu-trat .fotos{position:static}
+  .pasos{grid-template-columns:1fr 1fr;row-gap:30px}
+  .gal{grid-template-columns:1fr 1fr}.gal figure:nth-child(3){grid-column:1/-1;aspect-ratio:16/9}
+  .ubic{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  body{font-size:16px}section{padding:68px 0}
+  header .btn{display:none}
+  .hero{padding:36px 0 64px}.hero p{font-size:17px}.piso{display:none}
+  .arco{width:88%}.arco .tag{left:-18px;bottom:24px;max-width:190px;padding:12px 16px}
+  .item{grid-template-columns:44px 1fr;gap:14px}.item .ico{width:44px;height:44px}.item .btn{grid-column:2;justify-self:start}
+  .pasos{grid-template-columns:1fr}
+  .ubic .info{padding:30px 22px}
+  .barra{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--blanco);border-top:1px solid var(--linea);box-shadow:0 -6px 20px rgba(42,27,40,.08)}
+  .barra .btn{padding:15px 10px}
+}
+</style>
+</head>
+<body>
+<div class="demo">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+<header>
+  <div class="wrap">
+    <a class="marca" href="#inicio"><span class="logo">Tu logo</span><span><b>The Med Spa</b><small>Torre Plaza Bosques · piso 12</small></span></a>
+    <nav class="menu" aria-label="Secciones"><a href="#tratamientos">Tratamientos</a><a href="#visita">Tu visita</a><a href="#ubicacion">Ubicación</a></nav>
+    <a class="btn btn-ciruela btn-sm" href="https://wa.me/524497358159?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20en%20The%20Med%20Spa." target="_blank" rel="noopener">Agendar</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap">
+    
+    <div style="position:relative;z-index:1">
+      <span class="etq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V9a8 8 0 0 1 16 0v12"/><path d="M4 21h16M12 3v18"/></svg>Torre Plaza Bosques, piso 12</span>
+      <h1>Tu piel, en su mejor momento.</h1>
+      <p>Tratamientos faciales y medicina estética en un espacio tranquilo, por encima del ruido de la ciudad. Agenda tu valoración por WhatsApp.</p>
+      <div class="cta">
+        <a class="btn btn-wa" href="https://wa.me/524497358159?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20en%20The%20Med%20Spa." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Agendar por WhatsApp</a>
+        <a class="btn btn-line" href="#tratamientos">Ver tratamientos</a>
+      </div>
+    </div>
+    <div class="arco reveal">
+      <span class="marco2" aria-hidden="true"></span>
+      <figure><img src="https://images.unsplash.com/photo-1713085085470-fba013d67e65?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8bWVkaWNhbCUyMGFlc3RoZXRpYyUyMGZhY2lhbCUyMHRyZWF0bWVudHxlbnwxfDB8fHwxNzk1MDc0NzU2fDA&amp;ixlib=rb-4.1.0&amp;w=1600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Especialista aplicando un tratamiento facial con equipo a una paciente relajada" width="1200" height="1500" fetchpriority="high"></figure>
+      <div class="tag"><b>Valoración de piel</b>Te recomendamos el tratamiento adecuado para ti.</div>
+    </div>
+  </div>
+</section>
+
+<section id="tratamientos" style="padding-top:30px">
+  <div class="wrap">
+    <span class="kicker">Tratamientos</span>
+    <h2>Cuidado facial con criterio médico.</h2>
+    <p class="intro">Pregunta por cualquier tratamiento: te respondemos con precio y recomendaciones por WhatsApp.</p>
+    <div class="menu-trat">
+      <div class="fotos">
+        <figure class="reveal"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8bWVkaWNhbCUyMGFlc3RoZXRpYyUyMGZhY2lhbCUyMHRyZWF0bWVudHxlbnwxfDB8fHwxNzk1MDc0NzU2fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Paciente con mascarilla facial blanca durante un tratamiento" width="900" height="1200" loading="lazy"></figure>
+        <figure class="reveal"><img src="https://images.unsplash.com/photo-1761819921052-2c34973e012c?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTh8fG1lZGljYWwlMjBhZXN0aGV0aWMlMjBmYWNpYWwlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NTA3NDc1Nnww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Aplicación de tratamiento estético en el rostro con guantes" width="900" height="1200" loading="lazy"></figure>
+      </div>
+      <div class="lista">
+        <div class="item reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10" r="6"/><path d="M9.5 9h.01M14.5 9h.01M10 12.5c1.2.8 2.8.8 4 0M8 20h8"/></svg></span><div><h3>Faciales</h3><p>Limpieza, hidratación y cuidado de la piel según su tipo y necesidad.</p></div><a class="btn btn-line btn-sm" href="https://wa.me/524497358159?text=Hola%2C%20quiero%20preguntar%20el%20precio%20de%20los%20faciales." target="_blank" rel="noopener">Preguntar precio</a></div>
+        <div class="item reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 14 10M14 10l3-3 3 3-3 3zM8 6l1-2 1 2 2 1-2 1-1 2-1-2-2-1z"/></svg></span><div><h3>Aparatología facial</h3><p>Tratamientos con equipo para textura, firmeza y luminosidad de la piel.</p></div><a class="btn btn-line btn-sm" href="https://wa.me/524497358159?text=Hola%2C%20quiero%20preguntar%20por%20los%20tratamientos%20de%20aparatolog%C3%ADa." target="_blank" rel="noopener">Preguntar precio</a></div>
+        <div class="item reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 3 3 3M16 5l3 3M17.5 6.5 9 15M9 15l-3 3-2-2 3-3M7 11l6 6"/></svg></span><div><h3>Medicina estética</h3><p>Procedimientos estéticos con valoración previa y explicación clara de cada paso.</p></div><a class="btn btn-line btn-sm" href="https://wa.me/524497358159?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20medicina%20est%C3%A9tica." target="_blank" rel="noopener">Preguntar precio</a></div>
+        <div class="item reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.3-4.3M11 8v6M8 11h6"/></svg></span><div><h3>Valoración de piel</h3><p>Revisamos tu piel y te proponemos un plan de tratamiento a tu medida.</p></div><a class="btn btn-line btn-sm" href="https://wa.me/524497358159?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20de%20piel." target="_blank" rel="noopener">Agendar</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="banda" id="visita">
+  <div class="wrap">
+    <span class="kicker">Tu visita</span>
+    <h2>Así es tu primera cita.</h2>
+    <p class="intro">Sin prisas y con toda la información antes de cualquier tratamiento.</p>
+    <div class="pasos">
+      <div class="paso reveal"><span>01</span><h3>Agenda</h3><p>Escríbenos por WhatsApp y elige día y hora.</p></div>
+      <div class="paso reveal"><span>02</span><h3>Valoración</h3><p>Conocemos tu piel, tus objetivos y tus antecedentes.</p></div>
+      <div class="paso reveal"><span>03</span><h3>Tu plan</h3><p>Te explicamos opciones, sesiones y cuidados.</p></div>
+      <div class="paso reveal"><span>04</span><h3>Seguimiento</h3><p>Revisamos resultados y ajustamos lo necesario.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Así se vive</span>
+    <h2>Un momento solo para ti.</h2>
+    <div class="gal" style="margin-top:30px">
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1785860855601-58107d722164?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTF8fG1lZGljYWwlMjBhZXN0aGV0aWMlMjBmYWNpYWwlMjB0cmVhdG1lbnR8ZW58MXwwfHx8MTc5NTA3NDc1Nnww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Mujer mirándose en un espejo de mano en un sillón de cabina" width="900" height="1125" loading="lazy"></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Mnx8bWVkaWNhbCUyMGFlc3RoZXRpYyUyMGZhY2lhbCUyMHRyZWF0bWVudHxlbnwxfDB8fHwxNzk1MDc0NzU2fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Aplicación de mascarilla facial con brocha" width="900" height="1125" loading="lazy"></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1728949202477-bad2935775cb?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Nnx8bWVkaWNhbCUyMGFlc3RoZXRpYyUyMGZhY2lhbCUyMHRyZWF0bWVudHxlbnwxfDB8fHwxNzk1MDc0NzU2fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Hombre recibiendo un tratamiento facial con mascarilla" width="900" height="1125" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="ubicacion" style="padding-top:0">
+  <div class="wrap">
+    <span class="kicker">Ubicación</span>
+    <h2>Torre Plaza Bosques, piso 12.</h2>
+    <div class="ubic reveal" style="margin-top:30px">
+      <div class="info">
+        <h3>The Med Spa</h3>
+        <address>Av. Universidad 1001, piso 12, local 14, Torre Plaza Bosques, Bosques del Prado Norte, 20127 Aguascalientes, Ags.</address>
+        <div class="datos">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Atención con cita. Consulta horarios por WhatsApp.</span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>449 735 8159</span></div>
+        </div>
+        <div class="acc">
+          <a class="btn btn-wa btn-sm" href="https://wa.me/524497358159?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20en%20The%20Med%20Spa." target="_blank" rel="noopener">Agendar cita</a>
+          <a class="btn btn-line btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Torre%20Plaza%20Bosques%2C%20Av.%20Universidad%201001%2C%20Aguascalientes" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Med%20Spa%20Torre%20Plaza%20Bosques%20Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+        </div>
+      </div>
+      <div class="mapa"><iframe title="Mapa de The Med Spa" loading="lazy" src="https://www.google.com/maps?q=Torre%20Plaza%20Bosques%2C%20Av.%20Universidad%201001%2C%20Bosques%20del%20Prado%20Norte%2C%2020127%20Aguascalientes%2C%20Ags.&amp;z=16&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="cierre">
+  <div class="wrap">
+    <div class="arc" aria-hidden="true"></div>
+    <h2>Reserva tu valoración esta semana.</h2>
+    <p>Escríbenos y te ayudamos a elegir el tratamiento ideal para tu piel.</p>
+    <div class="cta"><a class="btn btn-ciruela" href="https://wa.me/524497358159?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20en%20The%20Med%20Spa." target="_blank" rel="noopener">Agendar por WhatsApp</a><a class="btn btn-line" href="tel:+524497358159">Llamar al 449 735 8159</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pie"><a class="marca" href="#inicio"><span class="logo">Tu logo</span><span><b>The Med Spa</b><small>Torre Plaza Bosques, piso 12 · Aguascalientes</small></span></a><span>Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com">FixA Consultoría</a></span></div>
+    <p class="creditos">Fotografías ilustrativas de <a href="https://unsplash.com/@lookphoto?utm_source=fixa_demos&amp;utm_medium=referral">Look Studio</a>, <a href="https://unsplash.com/@enginakyurt?utm_source=fixa_demos&amp;utm_medium=referral">engin akyurt</a>, <a href="https://unsplash.com/@patientperfect?utm_source=fixa_demos&amp;utm_medium=referral">Patient Perfect</a>, <a href="https://unsplash.com/@surprisechef?utm_source=fixa_demos&amp;utm_medium=referral">Sum Sum</a>, <a href="https://unsplash.com/@rosarafael?utm_source=fixa_demos&amp;utm_medium=referral">Rosa Rafael</a>, <a href="https://unsplash.com/@vmezas?utm_source=fixa_demos&amp;utm_medium=referral">Victor Meza</a> en <a href="https://unsplash.com/?utm_source=fixa_demos&amp;utm_medium=referral">Unsplash</a>. Se reemplazan por las del negocio.</p>
+  </div>
+</footer>
+<div class="barra"><a class="btn btn-line" href="tel:+524497358159">Llamar</a><a class="btn btn-wa" href="https://wa.me/524497358159?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20en%20The%20Med%20Spa." target="_blank" rel="noopener">WhatsApp</a></div>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:0,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('on')),2500);
+</script>
+</body>
+</html>
