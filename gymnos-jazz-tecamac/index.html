@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+  MINI MANUAL DE MARCA · Gymnos Jazz (propuesta FixA)
+  Concepto: "tercera llamada": el escenario oscuro, el foco que se enciende y el momento en que el ensayo se vuelve show.
+  Paleta: escenario #111014 (fondo) · telón #1C1A21 (superficies) · hueso #F4F1EC (texto) · foco #FFD23F (primario) · neón #FF4F8B (acento).
+  Tipografía: Anton (marca y titulares, siempre en mayúsculas por diseño de la fuente) + Inter Tight 400/500/600 (texto).
+  Logo: hueco punteado "Tu logo" rectangular horizontal, línea en foco. Favicon: inicial "G" en foco.
+  Íconos: SVG lineales, trazo 1.8.
+  Recurso gráfico: haz de luz radial y marquesina de texto en movimiento.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gymnos Jazz · Jazz, acrobacia y coreografías en Tecámac</title>
+<meta name="description" content="Gymnos Jazz en Calle Galeana, Tecámac. Clases de jazz, acrobacia, flexibilidad y expresión corporal. Coreografías para bodas y XV años. Informes por WhatsApp.">
+<meta property="og:title" content="Gymnos Jazz · Tecámac">
+<meta property="og:description" content="Jazz, acrobacia, flexibilidad y coreografías para bodas y XV años en Tecámac.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1690267364312-447c41773aaf?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NHx8ZGFuY2VyJTIwYWNyb2JhdGljcyUyMGZsZXhpYmlsaXR5fGVufDF8MHx8fDE3OTUxOTYwNjV8MA&amp;ixlib=rb-4.1.0&amp;w=1200&amp;q=80&amp;auto=format&amp;fit=crop">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23FFD23F'/%3E%3Ctext x='32' y='48' font-family='Impact,Arial,sans-serif' font-size='40' text-anchor='middle' fill='%23111014'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--esc:#111014;--telon:#1C1A21;--hueso:#F4F1EC;--gris:#B3ADB8;--foco:#FFD23F;--neon:#FF4F8B;--linea:rgba(244,241,236,.14);--max:1180px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter Tight",system-ui,sans-serif;background:var(--esc);color:var(--hueso);line-height:1.6;font-size:17px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+h1,h2,h3,.marca{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.98;letter-spacing:.01em}
+h2{font-size:clamp(2.4rem,7vw,4.4rem)}
+h2 .f{color:var(--foco)}
+.sub{color:var(--gris);max-width:54ch;margin-top:14px}
+.eti{color:var(--neon);font-weight:600;font-size:.9rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.eti svg{width:20px;height:20px}
+.aviso{background:#000;color:#DDD;font-size:.8rem;text-align:center;padding:8px 16px}
+.aviso a{color:var(--foco)}
+header{position:sticky;top:0;z-index:20;background:rgba(17,16,20,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0}
+.id{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:64px;height:40px;border:2px dashed var(--foco);border-radius:6px;display:grid;place-items:center;font-size:.62rem;font-weight:600;color:var(--foco);flex:none}
+.marca{font-size:1.55rem}
+.marca small{display:block;font-family:"Inter Tight";text-transform:none;font-size:.72rem;color:var(--gris);letter-spacing:.02em;margin-top:3px}
+.menu{display:none;gap:26px;font-weight:500;font-size:.95rem}
+.menu a{text-decoration:none;color:var(--gris)}
+.menu a:hover{color:var(--foco)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:6px;font:600 1rem "Inter Tight",sans-serif;text-decoration:none;border:2px solid transparent;transition:transform .2s,background .2s,color .2s;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--neon);outline-offset:3px}
+.btn-f{background:var(--foco);color:var(--esc)}
+.btn-f:hover{background:#FFE07A;transform:translateY(-2px)}
+.btn-l{border-color:var(--hueso);color:var(--hueso)}
+.btn-l:hover{background:var(--hueso);color:var(--esc)}
+.nav .btn{display:none;padding:10px 18px}
+
+.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 30%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 60% 55% at 70% 25%,rgba(255,210,63,.18),transparent 60%),linear-gradient(180deg,rgba(17,16,20,.2) 0%,rgba(17,16,20,.55) 45%,var(--esc) 96%)}
+.hero-in{position:relative;z-index:2;padding:140px 0 46px}
+.hero h1{font-size:clamp(3.4rem,15vw,9rem);line-height:.88}
+.hero h1 span{display:block}
+.hero h1 .f{color:var(--foco)}
+.hero h1 .n{color:transparent;-webkit-text-stroke:1.5px var(--hueso)}
+.hero p{max-width:44ch;color:#E2DDE4;font-size:1.08rem;margin-top:18px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.donde{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;color:var(--gris);margin-bottom:16px}
+.donde svg{width:18px;height:18px;color:var(--neon)}
+
+.marq{overflow:hidden;background:var(--foco);color:var(--esc);border-block:2px solid var(--esc)}
+.marq-in{display:flex;gap:40px;white-space:nowrap;padding:12px 0;font-family:Anton;font-size:1.5rem;text-transform:uppercase;width:max-content;animation:mq 26s linear infinite}
+.marq-in span::after{content:"✦";margin-left:40px;color:var(--neon)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:84px 0}
+.lista{margin-top:36px;border-top:1px solid var(--linea)}
+.item{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;padding:24px 0;border-bottom:1px solid var(--linea);align-items:start}
+.item .num{font-family:Anton;font-size:2.2rem;color:var(--neon);line-height:1}
+.item h3{font-size:2rem}
+.item p{grid-column:2;color:var(--gris);max-width:52ch}
+.item img{display:none}
+.item .btn{grid-column:2;justify-self:start;margin-top:10px;padding:10px 18px;font-size:.92rem}
+
+.xv{background:var(--telon)}
+.xv-g{display:grid;gap:30px;align-items:center}
+.duo{display:grid;grid-template-columns:1.2fr 1fr;gap:12px}
+.duo img{width:100%;height:100%;object-fit:cover;border-radius:4px;aspect-ratio:3/4}
+.duo img:last-child{margin-top:40px}
+.xv ul{list-style:none;display:grid;gap:10px;margin:20px 0 26px}
+.xv li{display:flex;gap:10px;align-items:center}
+.xv li svg{width:22px;height:22px;color:var(--foco);flex:none}
+
+.agenda{display:grid;gap:16px;margin-top:34px}
+.slot{border:1px solid var(--linea);border-radius:6px;padding:24px;display:flex;justify-content:space-between;align-items:end;gap:16px;background:linear-gradient(135deg,rgba(255,210,63,.08),transparent)}
+.slot span{color:var(--gris);font-size:.95rem}
+.slot b{font-family:Anton;font-size:2.2rem;font-weight:400;color:var(--foco);line-height:1}
+
+.tira{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:34px}
+.tira img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(.15)}
+
+.visita-g{display:grid;gap:22px;margin-top:34px}
+.ficha{background:var(--telon);border-radius:6px;padding:28px;border:1px solid var(--linea)}
+.ficha .d{display:flex;gap:10px;color:var(--gris);margin-top:12px}
+.ficha .d svg{width:22px;height:22px;color:var(--foco);flex:none}
+.mapa{border-radius:6px;overflow:hidden;min-height:340px;background:var(--telon);border:1px solid var(--linea)}
+.mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.3)}
+
+.cierre{position:relative;text-align:center;overflow:hidden}
+.cierre::before{content:"";position:absolute;left:50%;top:-40%;width:900px;height:900px;transform:translateX(-50%);background:radial-gradient(circle,rgba(255,210,63,.22),transparent 60%);pointer-events:none}
+.cierre .wrap{position:relative}
+.cierre h2{max-width:14ch;margin:0 auto}
+.cierre p{color:var(--gris);max-width:44ch;margin:14px auto 0}
+.cierre .cta{justify-content:center}
+footer{background:#0A090C;color:var(--gris);padding:42px 0 110px;font-size:.88rem;border-top:1px solid var(--linea)}
+.f1{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--linea)}
+.cred{margin-top:16px;font-size:.78rem;line-height:1.7}
+.cred a{color:var(--hueso)}
+.fixa{margin-top:8px;color:var(--hueso)}
+.fixa a{color:var(--foco)}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(10,9,12,.95);backdrop-filter:blur(8px);border-top:1px solid var(--linea)}
+.barra .btn{padding:13px 10px}
+.rev{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.rev.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}.marq-in{animation:none}.btn{transition:none}html{scroll-behavior:auto}}
+@media (min-width:820px){
+  .item{grid-template-columns:90px 1.2fr 1fr 200px;align-items:center;gap:24px}
+  .item p{grid-column:auto}
+  .item img{display:block;width:200px;height:130px;object-fit:cover;border-radius:4px;filter:grayscale(1);transition:filter .3s}
+  .item:hover img{filter:none}
+  .item .btn{grid-column:3;margin-top:0;grid-row:2}
+  .xv-g{grid-template-columns:1fr 1fr;gap:60px}
+  .agenda{grid-template-columns:1fr 1fr}
+  .tira{grid-template-columns:repeat(4,1fr)}
+  .visita-g{grid-template-columns:5fr 7fr}
+}
+@media (min-width:1000px){.menu{display:flex}.nav .btn{display:inline-flex}.barra{display:none}footer{padding-bottom:42px}}
+</style>
+</head>
+<body>
+<div class="aviso">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+<header>
+  <div class="wrap nav">
+    <a class="id" href="#inicio" aria-label="Gymnos Jazz, inicio"><span class="logo">Tu logo</span><span class="marca">Gymnos Jazz<small>Danza y acrobacia · Tecámac</small></span></a>
+    <nav class="menu" aria-label="Secciones"><a href="#clases">Clases</a><a href="#coreografias">Bodas y XV años</a><a href="#horario">Horario</a><a href="#visita">Ubicación</a></nav>
+    <a class="btn btn-f" href="https://wa.me/525510460484?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20en%20Gymnos%20Jazz."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> WhatsApp</a>
+  </div>
+</header>
+<main id="inicio">
+<section class="hero" style="padding:0">
+  <img src="https://images.unsplash.com/photo-1690267364312-447c41773aaf?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NHx8ZGFuY2VyJTIwYWNyb2JhdGljcyUyMGZsZXhpYmlsaXR5fGVufDF8MHx8fDE3OTUxOTYwNjV8MA&amp;ixlib=rb-4.1.0&amp;w=1600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Bailarina en un movimiento de danza bajo un foco de luz" width="1600" height="1067" fetchpriority="high">
+  <div class="wrap hero-in">
+    <span class="donde"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Calle Galeana 38, Tecámac</span>
+    <h1><span>Jazz</span><span class="f">Acrobacia</span><span class="n">Flexibilidad</span></h1>
+    <p>Clases de técnica, flexibilidad y expresión corporal, y coreografías a la medida para tu boda o tus XV años.</p>
+    <div class="cta">
+      <a class="btn btn-f" href="https://wa.me/525510460484?text=Hola%2C%20quiero%20informes%20de%20horarios%20y%20costos%20de%20las%20clases%20en%20Gymnos%20Jazz."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Pedir informes</a>
+      <a class="btn btn-l" href="#coreografias">Coreografías XV y bodas</a>
+    </div>
+  </div>
+</section>
+<div class="marq" aria-hidden="true"><div class="marq-in"><span>Jazz</span><span>Acrobacia</span><span>Flexibilidad</span><span>Técnica</span><span>Expresión corporal</span><span>XV años</span><span>Bodas</span><span>Jazz</span><span>Acrobacia</span><span>Flexibilidad</span><span>Técnica</span><span>Expresión corporal</span><span>XV años</span><span>Bodas</span></div></div>
+
+<section id="clases">
+  <div class="wrap">
+    <div class="eti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5.5l11-2V16"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg> Clases</div>
+    <h2>Del ensayo <span class="f">al escenario</span></h2>
+    <p class="sub">Pregunta por el grupo y el horario que van contigo, y por las promociones vigentes.</p>
+    <div class="lista">
+      <div class="item rev"><span class="num">01</span><h3>Jazz</h3><p>Ritmo, giros y coreografía con una base técnica sólida.</p><img src="https://images.unsplash.com/photo-1730148138348-7aa58edab2bb?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTV8fGphenolMjBkYW5jZSUyMGNsYXNzJTIwc3R1ZGlvfGVufDF8MHx8fDE3OTUxOTYwNjV8MA&amp;ixlib=rb-4.1.0&amp;w=400&amp;h=260&amp;q=70&amp;auto=format&amp;fit=crop" alt="Bailarines de jazz en escena" loading="lazy" width="400" height="260"><a class="btn btn-l" href="https://wa.me/525510460484?text=Hola%2C%20quiero%20saber%20el%20precio%20de%20las%20clases%20de%20jazz%20en%20Gymnos%20Jazz."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></div>
+      <div class="item rev"><span class="num">02</span><h3>Acrobacia</h3><p>Rodadas, apoyos y elementos acrobáticos, aprendidos paso a paso.</p><img src="https://images.unsplash.com/photo-1504005511787-4762d6f15ac0?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Mnx8ZGFuY2VyJTIwYWNyb2JhdGljcyUyMGZsZXhpYmlsaXR5fGVufDF8MHx8fDE3OTUxOTYwNjV8MA&amp;ixlib=rb-4.1.0&amp;w=400&amp;h=260&amp;q=70&amp;auto=format&amp;fit=crop" alt="Bailarina haciendo un puente acrobático" loading="lazy" width="400" height="260"><a class="btn btn-l" href="https://wa.me/525510460484?text=Hola%2C%20quiero%20saber%20el%20precio%20de%20las%20clases%20de%20acrobacia%20en%20Gymnos%20Jazz."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></div>
+      <div class="item rev"><span class="num">03</span><h3>Flexibilidad</h3><p>Trabajo de elongación para ganar rango de movimiento con control.</p><img src="https://images.unsplash.com/photo-1758526387518-f94285494e8b?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MjB8fGphenolMjBkYW5jZSUyMGNsYXNzJTIwc3R1ZGlvfGVufDF8MHx8fDE3OTUxOTYwNjV8MA&amp;ixlib=rb-4.1.0&amp;w=400&amp;h=260&amp;q=70&amp;auto=format&amp;fit=crop" alt="Bailarina estirando en el piso" loading="lazy" width="400" height="260"><a class="btn btn-l" href="https://wa.me/525510460484?text=Hola%2C%20quiero%20saber%20el%20precio%20de%20las%20clases%20de%20flexibilidad%20en%20Gymnos%20Jazz."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></div>
+      <div class="item rev"><span class="num">04</span><h3>Técnica y expresión</h3><p>Postura, presencia y expresión corporal para bailar con seguridad.</p><img src="https://images.unsplash.com/photo-1773708926616-ebc77941a4ba?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8OXx8amF6eiUyMGRhbmNlJTIwY2xhc3MlMjBzdHVkaW98ZW58MXwwfHx8MTc5NTE5NjA2NXww&amp;ixlib=rb-4.1.0&amp;w=400&amp;h=260&amp;q=70&amp;auto=format&amp;fit=crop" alt="Clase de danza con alumnas en línea" loading="lazy" width="400" height="260"><a class="btn btn-l" href="https://wa.me/525510460484?text=Hola%2C%20quiero%20saber%20el%20precio%20de%20las%20clases%20de%20t%C3%A9cnica%20en%20Gymnos%20Jazz."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="xv" id="coreografias">
+  <div class="wrap xv-g">
+    <div class="duo rev">
+      <img src="https://images.unsplash.com/photo-1730148137883-8650a1a7cfea?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTZ8fGphenolMjBkYW5jZSUyMGNsYXNzJTIwc3R1ZGlvfGVufDF8MHx8fDE3OTUxOTYwNjV8MA&amp;ixlib=rb-4.1.0&amp;w=600&amp;h=800&amp;q=75&amp;auto=format&amp;fit=crop" alt="Grupo de bailarines en escena con guantes rojos" loading="lazy" width="600" height="800">
+      <img src="https://images.unsplash.com/photo-1784302479734-4be9b95173ea?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTF8fGphenolMjBkYW5jZSUyMGNsYXNzJTIwc3R1ZGlvfGVufDF8MHx8fDE3OTUxOTYwNjV8MA&amp;ixlib=rb-4.1.0&amp;w=600&amp;h=800&amp;q=75&amp;auto=format&amp;fit=crop" alt="Niñas en clase de gimnasia con aros" loading="lazy" width="600" height="800">
+    </div>
+    <div class="rev">
+      <div class="eti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></svg> Para tu gran día</div>
+      <h2>Coreografías para <span class="f">bodas y XV años</span></h2>
+      <p class="sub">Montamos el baile que quieres presentar: vals, baile sorpresa o una coreografía con tus chambelanes y tus invitados.</p>
+      <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Coreografías para XV años</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Bailes para bodas</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Ensayos con tu grupo</li></ul>
+      <a class="btn btn-f" href="https://wa.me/525510460484?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20coreograf%C3%ADas%20para%20XV%20a%C3%B1os%20o%20boda%20en%20Gymnos%20Jazz."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Cotizar coreografía</a>
+    </div>
+  </div>
+</section>
+
+<section id="horario">
+  <div class="wrap">
+    <div class="eti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg> Horario</div>
+    <h2>Se abre <span class="f">el telón</span></h2>
+    <div class="agenda">
+      <div class="slot rev"><div><span>Lunes a viernes</span></div><b>8:00 – 21:00</b></div>
+      <div class="slot rev"><div><span>Sábado</span></div><b>9:00 – 10:00</b></div>
+    </div>
+    <div class="tira">
+      <img class="rev" src="https://images.unsplash.com/photo-1535525153412-5a42439a210d?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8ZGFuY2VyJTIwYWNyb2JhdGljcyUyMGZsZXhpYmlsaXR5fGVufDF8MHx8fDE3OTUxOTYwNjV8MA&amp;ixlib=rb-4.1.0&amp;w=500&amp;h=670&amp;q=72&amp;auto=format&amp;fit=crop" alt="Bailarina con luces de colores de noche" loading="lazy" width="500" height="670">
+      <img class="rev" src="https://images.unsplash.com/photo-1601474188333-d3eadd8ad33b?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8ZGFuY2VyJTIwYWNyb2JhdGljcyUyMGZsZXhpYmlsaXR5fGVufDF8MHx8fDE3OTUxOTYwNjV8MA&amp;ixlib=rb-4.1.0&amp;w=500&amp;h=670&amp;q=72&amp;auto=format&amp;fit=crop" alt="Bailarina en pleno salto" loading="lazy" width="500" height="670">
+      <img class="rev" src="https://images.unsplash.com/photo-1758670331632-47c8bc00f705?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTd8fGphenolMjBkYW5jZSUyMGNsYXNzJTIwc3R1ZGlvfGVufDF8MHx8fDE3OTUxOTYwNjV8MA&amp;ixlib=rb-4.1.0&amp;w=500&amp;h=670&amp;q=72&amp;auto=format&amp;fit=crop" alt="Bailarinas en un escenario iluminado" loading="lazy" width="500" height="670">
+      <img class="rev" src="https://images.unsplash.com/photo-1620760585173-4991b791ac64?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8OHx8amF6eiUyMGRhbmNlJTIwY2xhc3MlMjBzdHVkaW98ZW58MXwwfHx8MTc5NTE5NjA2NXww&amp;ixlib=rb-4.1.0&amp;w=500&amp;h=670&amp;q=72&amp;auto=format&amp;fit=crop" alt="Bailarín ensayando en un estudio amplio" loading="lazy" width="500" height="670">
+    </div>
+  </div>
+</section>
+
+<section id="visita" style="padding-top:10px">
+  <div class="wrap">
+    <div class="eti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Ubicación</div>
+    <h2>Encuéntranos <span class="f">en Tecámac</span></h2>
+    <div class="visita-g">
+      <div class="ficha rev">
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Calle Galeana No. 38, entre Calle Maestros y 5 de Mayo, Tecámac, Edo. Méx.</span></div>
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg><span>WhatsApp 55 1046 0484</span></div>
+        <div class="cta"><a class="btn btn-l" href="https://www.google.com/maps/search/?api=1&amp;query=Gymnos+Jazz+Tecamac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg> Ver opiniones en Google</a></div>
+      </div>
+      <div class="mapa rev"><iframe title="Mapa de Gymnos Jazz" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle%20Galeana%2038%2C%20Tec%C3%A1mac%2C%20M%C3%A9x.&amp;z=16&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="cierre">
+  <div class="wrap rev">
+    <h2>Tu lugar en <span class="f">el escenario</span></h2>
+    <p>Escríbenos para conocer horarios, grupos y promociones.</p>
+    <div class="cta"><a class="btn btn-f" href="https://wa.me/525510460484?text=Hola%2C%20quiero%20inscribirme%20en%20Gymnos%20Jazz.%20%C2%BFQu%C3%A9%20horarios%20tienen%3F"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Escribir por WhatsApp</a><a class="btn btn-l" href="tel:+525510460484"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h4l1.5 4.5-2.3 1.4a11 11 0 0 0 6.4 6.4l1.4-2.3 4.5 1.5v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/></svg> 55 1046 0484</a></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="f1"><div class="id"><span class="logo">Tu logo</span><span class="marca">Gymnos Jazz<small>Danza y acrobacia · Tecámac</small></span></div><div>WhatsApp 55 1046 0484 · L–V 8:00–21:00</div></div>
+    <p class="cred">Fotografías ilustrativas de <a href="https://unsplash.com/@dynamicwang?utm_source=fixa_demos&amp;utm_medium=referral">Dynamic Wang</a>, <a href="https://unsplash.com/@cordallman?utm_source=fixa_demos&amp;utm_medium=referral">Cord Allman</a>, <a href="https://unsplash.com/@henrique_photos?utm_source=fixa_demos&amp;utm_medium=referral">Henrique Junior</a>, <a href="https://unsplash.com/@silverkblack?utm_source=fixa_demos&amp;utm_medium=referral">Vitaly Gariev</a>, <a href="https://unsplash.com/@kazuo513?utm_source=fixa_demos&amp;utm_medium=referral">Kazuo ota</a>, <a href="https://unsplash.com/@anna_khromova?utm_source=fixa_demos&amp;utm_medium=referral">Anna Khromova</a>, <a href="https://unsplash.com/@aditya_ali?utm_source=fixa_demos&amp;utm_medium=referral">Aditya Ali</a>, <a href="https://unsplash.com/@nicolasladinosilva?utm_source=fixa_demos&amp;utm_medium=referral">Nicolas Ladino Silva</a> y <a href="https://unsplash.com/@linginit?utm_source=fixa_demos&amp;utm_medium=referral">Andrew Ling</a> en <a href="https://unsplash.com/?utm_source=fixa_demos&amp;utm_medium=referral">Unsplash</a>. Se reemplazan por las del negocio.</p>
+    <p class="fixa">Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com">FixA Consultoría</a>.</p>
+  </div>
+</footer>
+<div class="barra"><a class="btn btn-l" href="tel:+525510460484"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h4l1.5 4.5-2.3 1.4a11 11 0 0 0 6.4 6.4l1.4-2.3 4.5 1.5v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/></svg> Llamar</a><a class="btn btn-f" href="https://wa.me/525510460484?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20en%20Gymnos%20Jazz."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> WhatsApp</a></div>
+<script>(function(){var e=document.querySelectorAll('.rev');if(!('IntersectionObserver'in window)){e.forEach(function(x){x.classList.add('vis')});return}var o=new IntersectionObserver(function(n){n.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');o.unobserve(x.target)}})},{threshold:.12});e.forEach(function(x){o.observe(x)})})();</script>
+</body>
+</html>

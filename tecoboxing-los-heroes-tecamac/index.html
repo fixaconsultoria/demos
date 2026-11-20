@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--
+  MINI MANUAL DE MARCA · Tecoboxing (propuesta FixA)
+  Concepto: "esquina roja, esquina azul": la lona del ring, las cuerdas tensas y la campana que marca cada round de esfuerzo.
+  Paleta: lona #EEEDE8 (fondo) · carbón #121212 (texto) · esquina roja #D7263D (primario) · esquina azul #1E4FA3 (secundario) · cuerda #FFFFFF (superficies).
+  Tipografía: Teko 500/600 (marca y titulares) + Rethink Sans 400/500/600 (texto).
+  Logo: hueco punteado "Tu logo" con esquinas cortadas en diagonal, línea carbón. Favicon: inicial "T" en rojo.
+  Íconos: SVG lineales, trazo 2.2, extremos redondeados.
+  Recurso gráfico: tres cuerdas del ring como separadores y cortes en diagonal.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tecoboxing · Clases de box en Los Héroes Tecámac</title>
+<meta name="description" content="Tecoboxing, clases de box para principiantes, intermedios y avanzados en Los Héroes Tecámac, Sección Bosques. Informes por WhatsApp.">
+<meta property="og:title" content="Tecoboxing · Box en Los Héroes Tecámac">
+<meta property="og:description" content="Clases de box de nivel principiante a avanzado y sparring en Los Héroes Tecámac.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1731955139061-5d251fe4e03c?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MjB8fGJveGluZyUyMGd5bSUyMHRyYWluaW5nJTIwZ2xvdmVzfGVufDF8MHx8fDE3OTUxOTYwNjZ8MA&amp;ixlib=rb-4.1.0&amp;w=1200&amp;q=80&amp;auto=format&amp;fit=crop">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M12 0h52v52L52 64H0V12z' fill='%23D7263D'/%3E%3Ctext x='32' y='48' font-family='Arial,sans-serif' font-weight='800' font-size='38' text-anchor='middle' fill='%23fff'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600&family=Rethink+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--lona:#EEEDE8;--carbon:#121212;--gris:#55575C;--rojo:#D7263D;--rojo2:#B51D31;--azul:#1E4FA3;--blanco:#fff;--linea:#D6D4CC;--max:1160px;
+--corte:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Rethink Sans",system-ui,sans-serif;background:var(--lona);color:var(--carbon);line-height:1.6;font-size:17px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+h1,h2,h3,.marca{font-family:Teko,Impact,sans-serif;font-weight:600;line-height:.9;text-transform:uppercase;letter-spacing:.01em}
+h2{font-size:clamp(2.8rem,8vw,4.8rem)}
+h2 .r{color:var(--rojo)}
+.sub{color:var(--gris);max-width:54ch;margin-top:12px}
+.eti{display:inline-block;font-weight:600;font-size:.82rem;background:var(--carbon);color:#fff;padding:4px 10px;margin-bottom:14px;clip-path:var(--corte)}
+.cuerdas{height:22px;background:linear-gradient(var(--rojo) 0 4px,transparent 4px 9px,#fff 9px 13px,transparent 13px 18px,var(--azul) 18px 22px)}
+.aviso{background:var(--carbon);color:#E5E5E5;font-size:.8rem;text-align:center;padding:8px 16px}
+.aviso a{color:#FF7A8B}
+header{position:sticky;top:0;z-index:20;background:var(--lona);border-bottom:3px solid var(--carbon)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 0}
+.id{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:54px;height:54px;border:2px dashed var(--carbon);clip-path:none;display:grid;place-items:center;font-size:.62rem;font-weight:600;text-align:center;line-height:1.1;flex:none;border-radius:2px 14px 2px 14px}
+.marca{font-size:2.1rem;line-height:.85}
+.marca small{display:block;font-family:"Rethink Sans";text-transform:none;font-size:.72rem;font-weight:500;color:var(--gris);margin-top:4px;letter-spacing:0}
+.menu{display:none;gap:26px;font-weight:600;font-size:.95rem}
+.menu a{text-decoration:none}
+.menu a:hover{color:var(--rojo)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;font:600 1rem "Rethink Sans",sans-serif;text-decoration:none;border:0;clip-path:var(--corte);transition:transform .15s,background .15s;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--azul);outline-offset:3px}
+.btn-r{background:var(--rojo);color:#fff}
+.btn-r:hover{background:var(--rojo2);transform:translateY(-2px)}
+.btn-c{background:var(--carbon);color:#fff}
+.btn-c:hover{background:#333;transform:translateY(-2px)}
+.btn-b{background:#fff;color:var(--carbon)}
+.btn-b:hover{transform:translateY(-2px)}
+.nav .btn{display:none;padding:10px 18px}
+
+.hero{display:grid;background:var(--carbon);color:#fff;overflow:hidden}
+.hero .ft{position:relative;min-height:320px}
+.hero .ft img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.hero .tx{padding:36px 20px 44px;position:relative}
+.hero .tx::before{content:"";position:absolute;left:0;top:0;width:100%;height:8px;background:linear-gradient(90deg,var(--rojo) 50%,var(--azul) 50%)}
+.zona{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;color:#C9C9C9;margin-bottom:12px}
+.zona svg{width:18px;height:18px;color:var(--rojo)}
+.hero h1{font-size:clamp(3.6rem,13vw,7.4rem)}
+.hero h1 .r{color:var(--rojo)}
+.hero p{color:#D4D4D4;max-width:42ch;margin-top:14px;font-size:1.08rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+section{padding:78px 0}
+.niveles{display:grid;gap:18px;margin-top:34px}
+.nivel{background:#fff;clip-path:var(--corte);padding:26px 24px;position:relative;border-top:8px solid var(--carbon)}
+.nivel.rj{border-color:var(--rojo)}
+.nivel.az{border-color:var(--azul)}
+.nivel .k{font-family:Teko;font-size:1.3rem;color:var(--gris);font-weight:500}
+.nivel h3{font-size:2.6rem;margin:2px 0 8px}
+.nivel p{color:var(--gris)}
+.nivel .btn{margin-top:18px;padding:11px 18px;font-size:.93rem}
+
+.rounds{background:var(--carbon);color:#fff}
+.rounds .sub{color:#BDBDBD}
+.rg{display:grid;gap:14px;margin-top:34px}
+.rd{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:22px;background:#1D1D1F;clip-path:var(--corte)}
+.rd b{font-family:Teko;font-size:3.2rem;line-height:.8;color:var(--rojo)}
+.rd h3{font-size:1.9rem;margin-bottom:4px}
+.rd p{color:#BDBDBD;font-size:.97rem}
+.compite{margin-top:30px;display:flex;gap:14px;align-items:center;background:var(--azul);padding:20px 22px;clip-path:var(--corte)}
+.compite svg{width:34px;height:34px;flex:none}
+.compite p{font-weight:500}
+
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:34px}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:1;clip-path:var(--corte)}
+.gal .w{grid-column:span 2;aspect-ratio:16/9}
+
+.visita-g{display:grid;gap:22px;margin-top:34px}
+.ficha{background:#fff;padding:28px;clip-path:var(--corte)}
+.ficha .h{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:2px solid var(--lona)}
+.ficha .h b{font-family:Teko;font-size:1.7rem;font-weight:600;color:var(--rojo);line-height:1}
+.ficha .d{display:flex;gap:10px;color:var(--gris);margin-top:16px}
+.ficha .d svg{width:22px;height:22px;color:var(--rojo);flex:none}
+.mapa{min-height:340px;background:#fff;clip-path:var(--corte)}
+.mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+.cierre{background:var(--rojo);color:#fff;position:relative;overflow:hidden}
+.cierre-g{display:grid;gap:26px;align-items:center}
+.cierre p{max-width:44ch;margin-top:12px;color:#FFE3E7}
+.cierre img{width:100%;aspect-ratio:16/10;object-fit:cover;clip-path:var(--corte)}
+footer{background:var(--carbon);color:#BDBDBD;padding:40px 0 110px;font-size:.88rem}
+footer .logo{border-color:#fff;color:#fff}
+footer .marca{color:#fff}
+footer .marca small{color:#A9A9A9}
+.f1{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid #2C2C2C}
+.cred{margin-top:16px;font-size:.78rem;line-height:1.7}
+.cred a{color:#fff}
+.fixa{margin-top:8px;color:#fff}
+.fixa a{color:#FF7A8B}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--lona);border-top:3px solid var(--carbon)}
+.barra .btn{padding:13px 10px}
+.rev{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.rev.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+@media (min-width:820px){
+  .hero{grid-template-columns:1fr 1fr;min-height:min(84vh,720px)}
+  .hero .tx{order:-1;display:flex;flex-direction:column;justify-content:center;padding:60px 48px 60px max(20px,calc((100vw - var(--max))/2))}
+  .hero .ft{clip-path:polygon(16% 0,100% 0,100% 100%,0 100%)}
+  .niveles{grid-template-columns:repeat(3,1fr)}
+  .rg{grid-template-columns:repeat(3,1fr)}
+  .gal{grid-template-columns:2fr 1fr 1fr}
+  .gal .w{grid-column:auto;grid-row:span 2;aspect-ratio:auto}
+  .visita-g{grid-template-columns:5fr 7fr}
+  .cierre-g{grid-template-columns:1fr 1fr}
+}
+@media (min-width:1000px){.menu{display:flex}.nav .btn{display:inline-flex}.barra{display:none}footer{padding-bottom:40px}}
+</style>
+</head>
+<body>
+<div class="aviso">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+<header>
+  <div class="wrap nav">
+    <a class="id" href="#inicio" aria-label="Tecoboxing, inicio"><span class="logo">Tu<br>logo</span><span class="marca">Tecoboxing<small>Box · Los Héroes Tecámac</small></span></a>
+    <nav class="menu" aria-label="Secciones"><a href="#niveles">Niveles</a><a href="#rounds">Cómo empezar</a><a href="#visita">Horario y ubicación</a></nav>
+    <a class="btn btn-r" href="https://wa.me/525636671559?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20de%20box%20en%20Tecoboxing."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> WhatsApp</a>
+  </div>
+</header>
+<main id="inicio">
+<section class="hero" style="padding:0">
+  <div class="ft"><img src="https://images.unsplash.com/photo-1731955139061-5d251fe4e03c?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MjB8fGJveGluZyUyMGd5bSUyMHRyYWluaW5nJTIwZ2xvdmVzfGVufDF8MHx8fDE3OTUxOTYwNjZ8MA&amp;ixlib=rb-4.1.0&amp;w=1400&amp;q=80&amp;auto=format&amp;fit=crop" alt="Boxeadora golpeando manoplas que sostiene su entrenador" width="1400" height="933" fetchpriority="high"></div>
+  <div class="tx rev">
+    <span class="zona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Los Héroes Tecámac, Sección Bosques</span>
+    <h1>Sube al ring <span class="r">a tu nivel</span></h1>
+    <p>Clases de box para principiantes, intermedios y avanzados, con técnica, condición y sparring.</p>
+    <div class="cta">
+      <a class="btn btn-r" href="https://wa.me/525636671559?text=Hola%2C%20quiero%20informes%20de%20horarios%20y%20costos%20de%20las%20clases%20de%20box%20en%20Tecoboxing."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Pedir informes</a>
+      <a class="btn btn-b" href="#niveles">Ver niveles</a>
+    </div>
+  </div>
+</section>
+<div class="cuerdas" aria-hidden="true"></div>
+
+<section id="niveles">
+  <div class="wrap">
+    <span class="eti">Niveles</span>
+    <h2>Elige tu <span class="r">esquina</span></h2>
+    <p class="sub">Entrenas con gente de tu nivel. Pregunta por horarios y costos por WhatsApp.</p>
+    <div class="niveles">
+      <article class="nivel rev"><span class="k">Nivel 1</span><h3>Principiante</h3><p>Guardia, desplazamientos y golpes básicos. Ideal si nunca has boxeado.</p><a class="btn btn-c" href="https://wa.me/525636671559?text=Hola%2C%20nunca%20he%20boxeado%20y%20quiero%20informes%20del%20nivel%20principiante%20en%20Tecoboxing."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></article>
+      <article class="nivel rj rev"><span class="k">Nivel 2</span><h3>Intermedio</h3><p>Combinaciones, defensa y trabajo de manoplas para afinar la técnica.</p><a class="btn btn-r" href="https://wa.me/525636671559?text=Hola%2C%20quiero%20informes%20del%20nivel%20intermedio%20de%20box%20en%20Tecoboxing."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></article>
+      <article class="nivel az rev"><span class="k">Nivel 3</span><h3>Avanzado</h3><p>Sparring y preparación para quienes quieren llevar su box al siguiente nivel.</p><a class="btn btn-c" href="https://wa.me/525636671559?text=Hola%2C%20quiero%20informes%20del%20nivel%20avanzado%20y%20sparring%20en%20Tecoboxing."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="rounds" id="rounds">
+  <div class="wrap">
+    <span class="eti" style="background:var(--rojo)">Cómo empezar</span>
+    <h2>Tres rounds <span class="r">y ya entrenas</span></h2>
+    <div class="rg">
+      <div class="rd rev"><b>1</b><div><h3>Escríbenos</h3><p>Dinos si ya tienes experiencia y qué horario te queda.</p></div></div>
+      <div class="rd rev"><b>2</b><div><h3>Prepara tu equipo</h3><p>Trae ropa deportiva y vendas; te orientamos con lo demás.</p></div></div>
+      <div class="rd rev"><b>3</b><div><h3>Suena la campana</h3><p>Llega a tu primera clase y empieza a trabajar técnica y condición.</p></div></div>
+    </div>
+    <div class="compite rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15" r="5"/><path d="M8.5 3.5L11 10M15.5 3.5L13 10M7 3.5h10"/></svg><p>Los peleadores de Tecoboxing compiten fuera de casa: en octubre de 2026 subieron al ring en San Felipe, Guanajuato.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eti">Así se vive</span>
+    <h2>Sudor, <span class="r">técnica</span> y equipo</h2>
+    <div class="gal">
+      <img class="w rev" src="https://images.unsplash.com/photo-1716307043003-dbe6a5cc496e?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8Ym94aW5nJTIwcmluZyUyMHB1bmNoaW5nJTIwYmFnfGVufDF8MHx8fDE3OTUxOTYwNjd8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Gimnasio de box con ring y pera de velocidad" loading="lazy" width="900" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1561532325-7d5231a2dede?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8Ym94aW5nJTIwZ3ltJTIwdHJhaW5pbmclMjBnbG92ZXN8ZW58MXwwfHx8MTc5NTE5NjA2Nnww&amp;ixlib=rb-4.1.0&amp;w=600&amp;h=600&amp;q=75&amp;auto=format&amp;fit=crop" alt="Guantes de box sobre la lona de un ring" loading="lazy" width="600" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1620123449946-30d6efd4b8ba?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8Ym94aW5nJTIwcmluZyUyMHB1bmNoaW5nJTIwYmFnfGVufDF8MHx8fDE3OTUxOTYwNjd8MA&amp;ixlib=rb-4.1.0&amp;w=600&amp;h=600&amp;q=75&amp;auto=format&amp;fit=crop" alt="Guante apoyado en las cuerdas del ring" loading="lazy" width="600" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1780476871232-77e00975f97f?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTJ8fGJveGluZyUyMGd5bSUyMHRyYWluaW5nJTIwZ2xvdmVzfGVufDF8MHx8fDE3OTUxOTYwNjZ8MA&amp;ixlib=rb-4.1.0&amp;w=600&amp;h=600&amp;q=75&amp;auto=format&amp;fit=crop" alt="Dos boxeadores haciendo sparring" loading="lazy" width="600" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1785353122535-f823b49818f3?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8N3x8Ym94aW5nJTIwZ3ltJTIwdHJhaW5pbmclMjBnbG92ZXN8ZW58MXwwfHx8MTc5NTE5NjA2Nnww&amp;ixlib=rb-4.1.0&amp;w=600&amp;h=600&amp;q=75&amp;auto=format&amp;fit=crop" alt="Equipo de box acomodado sobre una mesa" loading="lazy" width="600" height="600">
+    </div>
+  </div>
+</section>
+
+<section id="visita" style="padding-top:20px">
+  <div class="wrap">
+    <span class="eti">Horario y ubicación</span>
+    <h2>Te esperamos <span class="r">en el gym</span></h2>
+    <div class="visita-g">
+      <div class="ficha rev">
+        <div class="h"><span>Lunes a viernes</span><b>7:00 – 21:00</b></div>
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Calle Cipreses, atrás de la primaria Ángela Peralta, Los Héroes Tecámac Sección Bosques, Tecámac, Edo. Méx.</span></div>
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg><span>WhatsApp 56 3667 1559</span></div>
+        <div class="cta"><a class="btn btn-c" href="https://www.google.com/maps/search/?api=1&amp;query=Tecoboxing+Heroes+Tecamac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg> Ver opiniones en Google</a></div>
+      </div>
+      <div class="mapa rev"><iframe title="Mapa de Tecoboxing" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Escuela%20Primaria%20%C3%81ngela%20Peralta%2C%20Los%20H%C3%A9roes%20Tec%C3%A1mac%2C%20Tec%C3%A1mac%2C%20M%C3%A9x.&amp;z=16&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="cierre">
+  <div class="wrap cierre-g">
+    <div class="rev">
+      <h2>¿Listo para el primer round?</h2>
+      <p>Escríbenos, te decimos en qué nivel empezar y qué horario te conviene.</p>
+      <div class="cta"><a class="btn btn-c" href="https://wa.me/525636671559?text=Hola%2C%20quiero%20empezar%20a%20entrenar%20box%20en%20Tecoboxing.%20%C2%BFQu%C3%A9%20horarios%20tienen%3F"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Escribir por WhatsApp</a><a class="btn btn-b" href="tel:+525636671559"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h4l1.5 4.5-2.3 1.4a11 11 0 0 0 6.4 6.4l1.4-2.3 4.5 1.5v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/></svg> 56 3667 1559</a></div>
+    </div>
+    <img class="rev" src="https://images.unsplash.com/photo-1575747515871-2e323827539e?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Mnx8Ym94aW5nJTIwcmluZyUyMHB1bmNoaW5nJTIwYmFnfGVufDF8MHx8fDE3OTUxOTYwNjd8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=70&amp;auto=format&amp;fit=crop" alt="Ring de box iluminado en un gimnasio" loading="lazy" width="900" height="563">
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="f1"><div class="id"><span class="logo">Tu<br>logo</span><span class="marca">Tecoboxing<small>Box · Los Héroes Tecámac</small></span></div><div>WhatsApp 56 3667 1559 · L–V 7:00–21:00</div></div>
+    <p class="cred">Fotografías ilustrativas de <a href="https://unsplash.com/@lisa_marie_theck?utm_source=fixa_demos&amp;utm_medium=referral">Lisa Marie Theck</a>, <a href="https://unsplash.com/@templenobleart?utm_source=fixa_demos&amp;utm_medium=referral">Temple Noble Art</a>, <a href="https://unsplash.com/@matthewapayne?utm_source=fixa_demos&amp;utm_medium=referral">Matthew Payne</a>, <a href="https://unsplash.com/@nemesiaproduction?utm_source=fixa_demos&amp;utm_medium=referral">Nemesia Production</a>, <a href="https://unsplash.com/@cldiego?utm_source=fixa_demos&amp;utm_medium=referral">Diego Corona</a>, <a href="https://unsplash.com/@ahmadakiin?utm_source=fixa_demos&amp;utm_medium=referral">Ahmad Thomas</a> y <a href="https://unsplash.com/@hypefilms?utm_source=fixa_demos&amp;utm_medium=referral">David Guliciuc</a> en <a href="https://unsplash.com/?utm_source=fixa_demos&amp;utm_medium=referral">Unsplash</a>. Se reemplazan por las del negocio.</p>
+    <p class="fixa">Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com">FixA Consultoría</a>.</p>
+  </div>
+</footer>
+<div class="barra"><a class="btn btn-c" href="tel:+525636671559"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h4l1.5 4.5-2.3 1.4a11 11 0 0 0 6.4 6.4l1.4-2.3 4.5 1.5v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/></svg> Llamar</a><a class="btn btn-r" href="https://wa.me/525636671559?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20de%20box%20en%20Tecoboxing."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> WhatsApp</a></div>
+<script>(function(){var e=document.querySelectorAll('.rev');if(!('IntersectionObserver'in window)){e.forEach(function(x){x.classList.add('vis')});return}var o=new IntersectionObserver(function(n){n.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');o.unobserve(x.target)}})},{threshold:.12});e.forEach(function(x){o.observe(x)})})();</script>
+</body>
+</html>

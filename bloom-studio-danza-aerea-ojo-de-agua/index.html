@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--
+  MINI MANUAL DE MARCA · Bloom Studio (propuesta FixA)
+  Concepto: "florecer en el aire": las telas se abren como pétalos; fuerza y gracia que crecen clase a clase.
+  Paleta: rubor #FFF7F4 (fondo) · ciruela tinta #2A1E2C (texto) · orquídea #A8325F (primario) · durazno #F4B9A6 (acento) · salvia #3E5C55 (secundario).
+  Tipografía: Fraunces 500/600 con itálica (marca y titulares) + Be Vietnam Pro 400/500 (texto).
+  Logo: hueco punteado "Tu logo" con forma de arco, línea orquídea. Favicon: inicial "B" en orquídea.
+  Íconos: SVG lineales, trazo 1.5, extremos redondeados.
+  Recurso gráfico: arcos y listones curvos que imitan las telas aéreas.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bloom Studio · Danza aérea en Ojo de Agua, Tecámac</title>
+<meta name="description" content="Bloom Studio, danza aérea en Ojo de Agua, Tecámac. Clases para adultas y grupo infantil. Informes por WhatsApp.">
+<meta property="og:title" content="Bloom Studio · Danza aérea en Tecámac">
+<meta property="og:description" content="Clases de danza aérea y grupo infantil en Ojo de Agua, Tecámac. Informes por WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1605797026569-dcbbb9139bf5?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Nnx8YWVyaWFsJTIwc2lsa3MlMjBkYW5jZXxlbnwxfDB8fHwxNzk1MTk2MDYzfDA&amp;ixlib=rb-4.1.0&amp;w=1200&amp;q=80&amp;auto=format&amp;fit=crop">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M4 64V30a28 28 0 0 1 56 0v34z' fill='%23A8325F'/%3E%3Ctext x='32' y='52' font-family='Georgia,serif' font-weight='700' font-size='34' text-anchor='middle' fill='%23fff'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Be+Vietnam+Pro:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--rubor:#FFF7F4;--tinta:#2A1E2C;--suave:#6A5868;--orq:#A8325F;--orq2:#8C2850;--dur:#F4B9A6;--dur2:#FBE3DA;--salvia:#3E5C55;--linea:#EBD7D0;--max:1140px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Be Vietnam Pro",system-ui,sans-serif;background:var(--rubor);color:var(--tinta);line-height:1.65;font-size:17px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+h1,h2,h3,.marca{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.1rem,5.6vw,3.4rem)}
+h2 em,h1 em{font-style:italic;font-weight:500;color:var(--orq)}
+.sub{color:var(--suave);max-width:54ch;margin-top:14px}
+.eti{font-size:.85rem;font-weight:500;color:var(--salvia);letter-spacing:.04em;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.eti svg{width:22px;height:22px}
+.aviso{background:var(--tinta);color:#F3E6EA;font-size:.8rem;text-align:center;padding:8px 16px}
+.aviso a{color:var(--dur)}
+header{position:sticky;top:0;z-index:20;background:rgba(255,247,244,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 0}
+.id{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:46px;height:54px;border:2px dashed var(--orq);border-radius:999px 999px 6px 6px;display:grid;place-items:center;padding-top:8px;font-size:.6rem;font-weight:500;color:var(--orq);text-align:center;line-height:1.1;flex:none}
+.marca{font-size:1.55rem}
+.marca small{display:block;font-family:"Be Vietnam Pro";font-weight:400;font-size:.72rem;color:var(--suave);letter-spacing:.02em;margin-top:2px}
+.menu{display:none;gap:28px;font-size:.95rem}
+.menu a{text-decoration:none}
+.menu a:hover{color:var(--orq)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:999px;font:500 1rem "Be Vietnam Pro",sans-serif;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,background .2s;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--salvia);outline-offset:3px}
+.btn-o{background:var(--orq);color:#fff}
+.btn-o:hover{background:var(--orq2);transform:translateY(-2px)}
+.btn-l{border-color:var(--tinta);color:var(--tinta)}
+.btn-l:hover{background:var(--dur2);transform:translateY(-2px)}
+.nav .btn{display:none;padding:10px 18px}
+
+.hero{position:relative;padding:40px 0 70px;overflow:hidden}
+.listones{position:absolute;inset:0;width:100%;height:100%;color:var(--dur);pointer-events:none}
+.hero-g{position:relative;display:grid;gap:34px;align-items:center}
+.hero h1{font-size:clamp(2.7rem,9vw,5.4rem)}
+.hero p{font-size:1.1rem;color:var(--suave);margin-top:18px;max-width:40ch}
+.zona{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--linea);border-radius:999px;padding:6px 14px;font-size:.88rem;margin-bottom:18px}
+.zona svg{width:18px;height:18px;color:var(--orq)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.arco{position:relative;justify-self:center;width:min(100%,460px)}
+.arco img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 24px 24px;background:#fff}
+.arco::before{content:"";position:absolute;inset:-14px -14px auto auto;width:100%;height:100%;border:1.5px solid var(--orq);border-radius:999px 999px 24px 24px;z-index:-1}
+.nota{position:absolute;left:-10px;bottom:28px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 18px 40px rgba(42,30,44,.14);font-size:.9rem;max-width:220px}
+.nota b{font-family:Fraunces;font-size:1.15rem;display:block;color:var(--orq)}
+
+section{padding:80px 0}
+.clases{display:grid;gap:24px;margin-top:36px}
+.clase{background:#fff;border-radius:28px;padding:16px 16px 26px;border:1px solid var(--linea)}
+.clase img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:999px 999px 18px 18px}
+.clase h3{font-size:1.7rem;margin:18px 8px 6px}
+.clase p{color:var(--suave);margin:0 8px 18px;font-size:.98rem}
+.clase .btn{margin-left:8px}
+
+.peques{background:var(--salvia);color:#F3F7F5;border-radius:36px;margin:0 12px;overflow:hidden}
+.peques-g{display:grid;gap:26px;align-items:center}
+.peques h2 em{color:var(--dur)}
+.peques p{color:#D9E6E2;margin-top:12px;max-width:46ch}
+.peques ul{list-style:none;display:grid;gap:10px;margin:20px 0 26px}
+.peques li{display:flex;gap:10px}
+.peques li svg{width:22px;height:22px;color:var(--dur);flex:none;margin-top:2px}
+.peques img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px}
+.peques .btn-o{background:var(--dur);color:var(--tinta)}
+.peques .btn-o:hover{background:#F8CBBC}
+
+.semana{display:grid;gap:10px;margin-top:34px}
+.dia{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:center;background:#fff;border:1px solid var(--linea);border-radius:18px;padding:14px 18px}
+.dia b{font-family:Fraunces;font-size:1.2rem}
+.dia span{display:flex;flex-wrap:wrap;gap:8px}
+.dia i{font-style:normal;background:var(--dur2);color:var(--orq2);border-radius:999px;padding:4px 12px;font-size:.92rem;font-weight:500}
+
+.gal{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:170px;gap:12px;margin-top:34px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:20px}
+.gal img:first-child{grid-row:span 2}
+
+.visita-g{display:grid;gap:22px;margin-top:34px}
+.donde{background:#fff;border-radius:28px;padding:28px;border:1px solid var(--linea)}
+.donde h3{font-size:1.6rem}
+.donde .d{display:flex;gap:10px;color:var(--suave);margin-top:14px}
+.donde .d svg{width:22px;height:22px;color:var(--orq);flex:none}
+.mapa{border-radius:28px;overflow:hidden;min-height:340px;background:var(--dur2);border:1px solid var(--linea)}
+.mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+.cierre{text-align:center}
+.cierre h2{max-width:15ch;margin:0 auto}
+.cierre p{color:var(--suave);max-width:42ch;margin:14px auto 0}
+.cierre .cta{justify-content:center}
+footer{background:var(--tinta);color:#CDBFC8;padding:42px 0 110px;font-size:.88rem}
+footer .marca{color:#fff}
+footer .marca small{color:#B9A9B4}
+footer .logo{border-color:var(--dur);color:var(--dur)}
+.f1{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.12)}
+.cred{margin-top:16px;font-size:.78rem;line-height:1.7}
+.cred a{color:#F3E6EA}
+.fixa{margin-top:8px;color:#fff}
+.fixa a{color:var(--dur)}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,247,244,.96);backdrop-filter:blur(8px);border-top:1px solid var(--linea)}
+.barra .btn{padding:13px 10px}
+.rev{opacity:0;transform:translateY(16px);transition:opacity .8s,transform .8s}
+.rev.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+@media (min-width:800px){
+  .hero{padding:70px 0 100px}
+  .hero-g{grid-template-columns:1.1fr .9fr}
+  .clases{grid-template-columns:repeat(3,1fr)}
+  .peques{margin:0 auto;max-width:calc(var(--max) + 80px)}
+  .peques-g{grid-template-columns:1fr 1fr;gap:50px}
+  .semana{grid-template-columns:repeat(3,1fr)}
+  .dia{grid-template-columns:1fr;align-items:start}
+  .gal{grid-template-columns:repeat(3,1fr);grid-auto-rows:250px}
+  .visita-g{grid-template-columns:5fr 7fr}
+}
+@media (min-width:1000px){.menu{display:flex}.nav .btn{display:inline-flex}.barra{display:none}footer{padding-bottom:42px}}
+</style>
+</head>
+<body>
+<div class="aviso">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+<header>
+  <div class="wrap nav">
+    <a class="id" href="#inicio" aria-label="Bloom Studio, inicio"><span class="logo">Tu<br>logo</span><span class="marca">Bloom Studio<small>Danza aérea · Ojo de Agua</small></span></a>
+    <nav class="menu" aria-label="Secciones"><a href="#clases">Clases</a><a href="#peques">Grupo infantil</a><a href="#horario">Horario</a><a href="#visita">Ubicación</a></nav>
+    <a class="btn btn-o" href="https://wa.me/525555030092?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20de%20danza%20a%C3%A9rea%20en%20Bloom%20Studio."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> WhatsApp</a>
+  </div>
+</header>
+<main id="inicio">
+<section class="hero">
+  <svg class="listones" viewBox="0 0 1200 700" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M-20 520C200 380 340 640 600 470S980 160 1240 260"/><path d="M-20 600C240 470 380 700 640 540S1000 260 1240 360" opacity=".6"/></svg>
+  <div class="wrap hero-g">
+    <div class="rev">
+      <span class="zona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Ojo de Agua, Tecámac</span>
+      <h1>Aprende a <em>volar</em> con danza aérea</h1>
+      <p>Fuerza, flexibilidad y confianza en clases guiadas, con grupos para adultas y un grupo nuevo para niñas.</p>
+      <div class="cta">
+        <a class="btn btn-o" href="https://wa.me/525555030092?text=Hola%2C%20quiero%20informes%20de%20horarios%20y%20costos%20de%20danza%20a%C3%A9rea%20en%20Bloom%20Studio."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Pedir informes</a>
+        <a class="btn btn-l" href="#horario">Ver horario</a>
+      </div>
+    </div>
+    <div class="arco rev">
+      <img src="https://images.unsplash.com/photo-1605797026569-dcbbb9139bf5?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Nnx8YWVyaWFsJTIwc2lsa3MlMjBkYW5jZXxlbnwxfDB8fHwxNzk1MTk2MDYzfDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;h=1125&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=entropy" alt="Bailarina en telas aéreas haciendo un split en el aire" width="900" height="1125" fetchpriority="high">
+      <div class="nota"><b>Grupo infantil</b>Martes y jueves, 5:00 pm</div>
+    </div>
+  </div>
+</section>
+
+<section id="clases" style="padding-top:30px">
+  <div class="wrap">
+    <div class="eti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4c5 0 4 8 8 8s3-8 8-8M4 20c5 0 4-8 8-8s3 8 8 8"/></svg> Clases</div>
+    <h2>Tres formas de <em>despegar</em></h2>
+    <p class="sub">Pregunta por el grupo que va con tu nivel y por los costos de mensualidad.</p>
+    <div class="clases">
+      <article class="clase rev"><img src="https://images.unsplash.com/photo-1738681172508-12b39b19ffd2?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8YWVyaWFsJTIwc2lsa3MlMjBkYW5jZXxlbnwxfDB8fHwxNzk1MTk2MDYzfDA&amp;ixlib=rb-4.1.0&amp;w=700&amp;h=700&amp;q=75&amp;auto=format&amp;fit=crop" alt="Bailarina invertida en telas rojas" loading="lazy" width="700" height="700"><h3>Danza aérea</h3><p>Figuras, giros y secuencias en el aire, con técnica paso a paso.</p><a class="btn btn-l" href="https://wa.me/525555030092?text=Hola%2C%20quiero%20saber%20el%20precio%20de%20las%20clases%20de%20danza%20a%C3%A9rea%20en%20Bloom%20Studio."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></article>
+      <article class="clase rev"><img src="https://images.unsplash.com/photo-1756314355527-5ce3ed168452?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTB8fGFlcmlhbCUyMHNpbGtzJTIwZGFuY2V8ZW58MXwwfHx8MTc5NTE5NjA2M3ww&amp;ixlib=rb-4.1.0&amp;w=700&amp;h=700&amp;q=75&amp;auto=format&amp;fit=crop" alt="Dos alumnas sonriendo sobre aparatos aéreos en un estudio" loading="lazy" width="700" height="700"><h3>Red aérea</h3><p>Nuevo aparato en el estudio para explorar otras posturas y movimientos.</p><a class="btn btn-l" href="https://wa.me/525555030092?text=Hola%2C%20quiero%20informes%20de%20las%20clases%20en%20red%20a%C3%A9rea%20en%20Bloom%20Studio."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></article>
+      <article class="clase rev"><img src="https://images.unsplash.com/photo-1793395779500-086ee187d0a4?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTV8fGFlcmlhbCUyMHNpbGtzJTIwZGFuY2V8ZW58MXwwfHx8MTc5NTE5NjA2M3ww&amp;ixlib=rb-4.1.0&amp;w=700&amp;h=700&amp;q=75&amp;auto=format&amp;fit=crop" alt="Bailarina en escena con tela blanca" loading="lazy" width="700" height="700"><h3>Clases temáticas</h3><p>Sesiones especiales y presentaciones para mostrar lo aprendido.</p><a class="btn btn-l" href="https://wa.me/525555030092?text=Hola%2C%20quiero%20saber%20de%20las%20pr%C3%B3ximas%20clases%20tem%C3%A1ticas%20en%20Bloom%20Studio."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar fechas</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="peques" id="peques">
+  <div class="wrap peques-g">
+    <div class="rev">
+      <div class="eti" style="color:var(--dur)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5.5" r="2.5"/><path d="M12 8v7M8 11l4-1 4 1M9.5 21l2.5-6 2.5 6"/></svg> Grupo infantil</div>
+      <h2>Niñas que <em>florecen</em> en el aire</h2>
+      <p>Un grupo pensado para las más pequeñas: juego, coordinación y fuerza en un ambiente seguro y acompañado.</p>
+      <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Martes y jueves a las 5:00 pm</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg>Grupo exclusivo infantil</li></ul>
+      <a class="btn btn-o" href="https://wa.me/525555030092?text=Hola%2C%20quiero%20informes%20del%20grupo%20infantil%20de%20danza%20a%C3%A9rea%20en%20Bloom%20Studio."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Apartar lugar</a>
+    </div>
+    <img class="rev" src="https://images.unsplash.com/photo-1724164013554-52eaf0953268?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NHx8YWVyaWFsJTIwc2lsa3MlMjBkYW5jZXxlbnwxfDB8fHwxNzk1MTk2MDYzfDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;h=675&amp;q=75&amp;auto=format&amp;fit=crop" alt="Clase grupal con telas aéreas en un estudio" loading="lazy" width="900" height="675">
+  </div>
+</section>
+
+<section id="horario">
+  <div class="wrap">
+    <div class="eti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg> Horario</div>
+    <h2>Encuentra tu <em>momento</em></h2>
+    <div class="semana">
+      <div class="dia rev"><b>Lunes</b><span><i>5:00 – 8:00 pm</i></span></div>
+      <div class="dia rev"><b>Martes</b><span><i>10:00 – 11:00 am</i><i>6:00 – 8:00 pm</i></span></div>
+      <div class="dia rev"><b>Miércoles</b><span><i>5:00 – 8:00 pm</i></span></div>
+      <div class="dia rev"><b>Jueves</b><span><i>10:00 – 11:00 am</i><i>7:00 – 8:00 pm</i></span></div>
+      <div class="dia rev"><b>Sábado</b><span><i>9:30 – 10:30 am</i></span></div>
+      <div class="dia rev"><b>Infantil</b><span><i>Mar y jue · 5:00 pm</i></span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="eti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></svg> Así se vive</div>
+    <h2>Ligereza que se <em>entrena</em></h2>
+    <div class="gal">
+      <img class="rev" src="https://images.unsplash.com/photo-1683169053926-2cabea86b754?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8N3x8YWVyaWFsJTIwc2lsa3MlMjBkYW5jZXxlbnwxfDB8fHwxNzk1MTk2MDYzfDA&amp;ixlib=rb-4.1.0&amp;w=700&amp;h=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Mujer sentada en telas aéreas azules" loading="lazy" width="700" height="900">
+      <img class="rev" src="https://images.unsplash.com/photo-1739164983708-77584209704a?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTd8fGFlcmlhbCUyMHNpbGtzJTIwZGFuY2V8ZW58MXwwfHx8MTc5NTE5NjA2M3ww&amp;ixlib=rb-4.1.0&amp;w=700&amp;q=75&amp;auto=format&amp;fit=crop" alt="Acróbata en aro aéreo bajo el cielo" loading="lazy" width="700" height="467">
+      <img class="rev" src="https://images.unsplash.com/photo-1571208986310-dad726705a9f?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8OXx8YWVyaWFsJTIwc2lsa3MlMjBkYW5jZXxlbnwxfDB8fHwxNzk1MTk2MDYzfDA&amp;ixlib=rb-4.1.0&amp;w=700&amp;q=75&amp;auto=format&amp;fit=crop" alt="Alumna invertida en aro aéreo dentro de un estudio" loading="lazy" width="700" height="467">
+      <img class="rev" src="https://images.unsplash.com/photo-1620279154913-75ac25085f2b?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8YWVyaWFsJTIwc2lsa3MlMjBkYW5jZXxlbnwxfDB8fHwxNzk1MTk2MDYzfDA&amp;ixlib=rb-4.1.0&amp;w=700&amp;h=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Mujer practicando en telas aéreas al aire libre" loading="lazy" width="700" height="900">
+      <img class="rev" src="https://images.unsplash.com/photo-1780698372524-46cc2dcd3d66?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8YWVyaWFsJTIwaG9vcCUyMGFjcm9iYXR8ZW58MXwwfHx8MTc5NTE5NjA2NHww&amp;ixlib=rb-4.1.0&amp;w=700&amp;q=75&amp;auto=format&amp;fit=crop" alt="Artista junto a un aro aéreo en escena" loading="lazy" width="700" height="467">
+    </div>
+  </div>
+</section>
+
+<section id="visita" style="padding-top:20px">
+  <div class="wrap">
+    <div class="eti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Ubicación</div>
+    <h2>Te esperamos en el <em>estudio</em></h2>
+    <div class="visita-g">
+      <div class="donde rev">
+        <h3>Bloom Studio</h3>
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Calle Peras esquina con Misiones, Ojo de Agua, Tecámac, Edo. Méx., C.P. 55770</span></div>
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg><span>WhatsApp 55 5503 0092</span></div>
+        <div class="cta"><a class="btn btn-l" href="https://www.google.com/maps/search/?api=1&amp;query=Bloom+Studio+Ojo+de+Agua+Tecamac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg> Ver opiniones en Google</a></div>
+      </div>
+      <div class="mapa rev"><iframe title="Mapa de Bloom Studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle%20Peras%20y%20Misiones%2C%20Ojo%20de%20Agua%2C%2055770%20Tec%C3%A1mac%2C%20M%C3%A9x.&amp;z=16&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="cierre">
+  <div class="wrap rev">
+    <h2>Tu primera clase está a un <em>mensaje</em></h2>
+    <p>Escríbenos y te decimos qué grupo te conviene según tu horario y tu experiencia.</p>
+    <div class="cta"><a class="btn btn-o" href="https://wa.me/525555030092?text=Hola%2C%20quiero%20tomar%20mi%20primera%20clase%20de%20danza%20a%C3%A9rea%20en%20Bloom%20Studio."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Escribir por WhatsApp</a><a class="btn btn-l" href="tel:+525555030092"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h4l1.5 4.5-2.3 1.4a11 11 0 0 0 6.4 6.4l1.4-2.3 4.5 1.5v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/></svg> 55 5503 0092</a></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="f1"><div class="id"><span class="logo">Tu<br>logo</span><span class="marca">Bloom Studio<small>Danza aérea · Ojo de Agua, Tecámac</small></span></div><div>WhatsApp 55 5503 0092</div></div>
+    <p class="cred">Fotografías ilustrativas de <a href="https://unsplash.com/@paulo_dias?utm_source=fixa_demos&amp;utm_medium=referral">Paulo Henrique Macedo Dias</a>, <a href="https://unsplash.com/@isavelev?utm_source=fixa_demos&amp;utm_medium=referral">Igor Savelev</a>, <a href="https://unsplash.com/@ageing_better?utm_source=fixa_demos&amp;utm_medium=referral">Centre for Ageing Better</a>, <a href="https://unsplash.com/@azimronnie?utm_source=fixa_demos&amp;utm_medium=referral">Azim Khan Ronnie</a>, <a href="https://unsplash.com/@mandydoan?utm_source=fixa_demos&amp;utm_medium=referral">Mandy Doan</a>, <a href="https://unsplash.com/@xbmpro?utm_source=fixa_demos&amp;utm_medium=referral">César Badilla Miranda</a>, <a href="https://unsplash.com/@alam06?utm_source=fixa_demos&amp;utm_medium=referral">Arthur Lamontagne</a>, <a href="https://unsplash.com/@obionyeador?utm_source=fixa_demos&amp;utm_medium=referral">Obi</a>, <a href="https://unsplash.com/@benjawede?utm_source=fixa_demos&amp;utm_medium=referral">Benjamin Wedemeyer</a> y <a href="https://unsplash.com/@iagoseo?utm_source=fixa_demos&amp;utm_medium=referral">Iago Yoshimi Seo</a> en <a href="https://unsplash.com/?utm_source=fixa_demos&amp;utm_medium=referral">Unsplash</a>. Se reemplazan por las del negocio.</p>
+    <p class="fixa">Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com">FixA Consultoría</a>.</p>
+  </div>
+</footer>
+<div class="barra"><a class="btn btn-l" href="tel:+525555030092"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h4l1.5 4.5-2.3 1.4a11 11 0 0 0 6.4 6.4l1.4-2.3 4.5 1.5v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/></svg> Llamar</a><a class="btn btn-o" href="https://wa.me/525555030092?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20de%20danza%20a%C3%A9rea%20en%20Bloom%20Studio."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> WhatsApp</a></div>
+<script>(function(){var e=document.querySelectorAll('.rev');if(!('IntersectionObserver'in window)){e.forEach(function(x){x.classList.add('vis')});return}var o=new IntersectionObserver(function(n){n.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');o.unobserve(x.target)}})},{threshold:.12});e.forEach(function(x){o.observe(x)})})();</script>
+</body>
+</html>

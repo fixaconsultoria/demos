@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--
+  MINI MANUAL DE MARCA · Kussanku Karate Do (propuesta FixA)
+  Concepto: "el camino del cinturón": la disciplina del dojo se ve en cada color de cinta; claridad del gi blanco, firmeza del negro y energía del rojo.
+  Paleta: papel #FAFAF7 (fondo) · sumi #151515 (texto) · rojo dojo #C8102E (primario) · tatami #E9E4D8 (superficies) · gris #5A5A5A (texto secundario).
+  Tipografía: Dela Gothic One (marca y titulares) + Golos Text 400/500/600 (texto).
+  Logo: hueco punteado "Tu logo" cuadrado, línea sumi, esquinas rectas. Favicon: inicial "K" en rojo.
+  Íconos: SVG lineales, trazo 2, extremos redondeados.
+  Recurso gráfico: barra de progresión de cintas (blanca, amarilla, naranja, verde, azul, café, negra).
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kussanku Karate Do · Ojo de Agua, Tecámac</title>
+<meta name="description" content="Kussanku Karate Do en Plaza Aquaterra, Ojo de Agua, Tecámac. Karate para niños y adultos, Baby-Karate, kick boxing y defensa personal. Informes por WhatsApp.">
+<meta property="og:title" content="Kussanku Karate Do · Tecámac">
+<meta property="og:description" content="Karate para niños desde 3 años y adultos, kick boxing y defensa personal en Ojo de Agua, Tecámac.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1541836567455-2d41eb6dd9b4?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Mnx8a2FyYXRlJTIwY2hpbGRyZW58ZW58MXwwfHx8MTc5NTE5NjA3N3ww&amp;ixlib=rb-4.1.0&amp;w=1200&amp;q=80&amp;auto=format&amp;fit=crop">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23C8102E'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-weight='900' font-size='38' text-anchor='middle' fill='%23fff'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#FAFAF7;--sumi:#151515;--rojo:#C8102E;--rojo2:#A50D25;--tatami:#E9E4D8;--gris:#5A5A5A;--linea:#D9D4C7;--max:1160px;
+--cintas:linear-gradient(90deg,#fff 0 14.28%,#F2C811 14.28% 28.56%,#F08A1C 28.56% 42.84%,#2E8B4E 42.84% 57.12%,#1F5FBF 57.12% 71.4%,#7A4A26 71.4% 85.68%,#151515 85.68%)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Golos Text",system-ui,sans-serif;background:var(--papel);color:var(--sumi);line-height:1.6;font-size:17px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+h1,h2,h3,.marca{font-family:"Dela Gothic One",sans-serif;font-weight:400;line-height:1.1}
+h2{font-size:clamp(1.9rem,5vw,3rem)}
+.sub{color:var(--gris);max-width:56ch;margin-top:14px}
+.eti{display:inline-flex;gap:8px;align-items:center;font-weight:600;font-size:.88rem;color:var(--rojo);margin-bottom:12px}
+.eti::before{content:"";width:18px;height:18px;background:var(--rojo);border-radius:50%}
+.aviso{background:var(--sumi);color:#EDEDED;font-size:.8rem;text-align:center;padding:8px 16px}
+.aviso a{color:#FF8A9B}
+header{position:sticky;top:0;z-index:20;background:var(--papel);border-bottom:2px solid var(--sumi)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0}
+.id{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:52px;height:52px;border:2px dashed var(--sumi);display:grid;place-items:center;font-size:.62rem;font-weight:600;text-align:center;line-height:1.1;flex:none}
+.marca{font-size:1.25rem}
+.marca small{display:block;font-family:"Golos Text";font-size:.72rem;color:var(--gris);font-weight:500;margin-top:2px}
+.menu{display:none;gap:26px;font-weight:500;font-size:.95rem}
+.menu a{text-decoration:none}
+.menu a:hover{color:var(--rojo)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;font:600 1rem "Golos Text",sans-serif;text-decoration:none;border:2px solid var(--sumi);transition:transform .15s,box-shadow .15s,background .15s;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--rojo);outline-offset:3px}
+.btn-r{background:var(--rojo);color:#fff;border-color:var(--rojo);box-shadow:4px 4px 0 var(--sumi)}
+.btn-r:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--sumi)}
+.btn-b{background:#fff;color:var(--sumi);box-shadow:4px 4px 0 var(--sumi)}
+.btn-b:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--sumi)}
+.nav .btn{display:none;padding:9px 16px;box-shadow:3px 3px 0 var(--sumi)}
+
+.hero{padding:40px 0 0}
+.hero-g{display:grid;gap:30px}
+.nuevo{display:inline-block;background:var(--sumi);color:#fff;font-weight:600;font-size:.85rem;padding:6px 12px;margin-bottom:18px}
+.nuevo b{color:#FF8A9B}
+.hero h1{font-size:clamp(2.4rem,8.5vw,4.6rem)}
+.hero h1 em{font-style:normal;color:var(--rojo)}
+.hero p{font-size:1.1rem;color:var(--gris);margin-top:16px;max-width:42ch}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.foto{position:relative}
+.foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%}
+.foto::before{content:"";position:absolute;left:-12px;top:24px;bottom:-12px;width:12px;background:var(--rojo)}
+.edades{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--sumi);background:#fff;margin-top:-2px}
+.edades div{padding:14px 12px;border-right:2px solid var(--sumi)}
+.edades div:last-child{border:0}
+.edades b{display:block;font-family:"Dela Gothic One";font-size:1.25rem;line-height:1.1}
+.edades span{font-size:.8rem;color:var(--gris)}
+.cinta{height:14px;background:var(--cintas);border-block:2px solid var(--sumi);margin-top:56px}
+
+section{padding:78px 0}
+.prog{display:grid;gap:0;margin-top:36px;border:2px solid var(--sumi);background:#fff}
+.p{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:22px;border-bottom:2px solid var(--sumi)}
+.p:last-child{border:0}
+.p .ed{font-family:"Dela Gothic One";font-size:1.6rem;color:var(--rojo);min-width:74px;line-height:1}
+.p .ed small{display:block;font-family:"Golos Text";font-size:.75rem;color:var(--gris);font-weight:500;margin-top:6px}
+.p h3{font-size:1.3rem;margin-bottom:6px}
+.p p{color:var(--gris);font-size:.97rem}
+.p .btn{grid-column:1/-1;justify-self:start;margin-top:4px;padding:10px 16px;font-size:.92rem;box-shadow:3px 3px 0 var(--sumi)}
+
+.disc{background:var(--tatami)}
+.chips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:32px}
+.chip{background:var(--papel);border:2px solid var(--sumi);padding:18px 16px;display:flex;flex-direction:column;gap:10px}
+.chip svg{width:30px;height:30px;color:var(--rojo)}
+.chip b{font-family:"Dela Gothic One";font-weight:400;font-size:1.05rem;line-height:1.15}
+.horas{display:grid;gap:14px;margin-top:30px}
+.hora{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--sumi);color:#fff;padding:18px 20px}
+.hora b{font-family:"Dela Gothic One";font-weight:400;font-size:1.1rem}
+.hora span{color:#D8D8D8;font-size:.95rem;text-align:right}
+
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:32px}
+.gal img{width:100%;aspect-ratio:1;object-fit:cover;border:2px solid var(--sumi)}
+.gal .w{grid-column:span 2;aspect-ratio:16/9}
+
+.sede-g{display:grid;gap:22px;margin-top:32px}
+.sede{background:#fff;border:2px solid var(--sumi);padding:26px;box-shadow:6px 6px 0 var(--rojo)}
+.sede h3{font-size:1.5rem;margin-bottom:10px}
+.sede .d{display:flex;gap:10px;color:var(--gris);margin-top:10px}
+.sede .d svg{width:22px;height:22px;color:var(--rojo);flex:none}
+.mapa{border:2px solid var(--sumi);min-height:340px;background:var(--tatami)}
+.mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+.cierre{background:var(--sumi);color:#fff;position:relative;overflow:hidden}
+.cierre-g{display:grid;gap:28px;align-items:center}
+.cierre h2 em{font-style:normal;color:#FF5A72}
+.cierre p{color:#CFCFCF;margin-top:14px;max-width:44ch}
+.cierre img{width:100%;aspect-ratio:16/10;object-fit:cover;filter:grayscale(1) contrast(1.1)}
+.cierre .btn-b{box-shadow:4px 4px 0 var(--rojo)}
+footer{background:var(--papel);border-top:2px solid var(--sumi);padding:40px 0 110px;font-size:.88rem;color:var(--gris)}
+.f1{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--linea)}
+.cred{margin-top:16px;font-size:.78rem;line-height:1.7}
+.fixa{margin-top:8px;color:var(--sumi)}
+.fixa a{color:var(--rojo)}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.4fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--papel);border-top:2px solid var(--sumi)}
+.barra .btn{padding:12px 8px;box-shadow:none}
+.rev{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.rev.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+@media (min-width:800px){
+  .hero{padding-top:64px}
+  .hero-g{grid-template-columns:1.15fr .85fr;align-items:end}
+  .hero-g>div:first-child{padding-bottom:40px}
+  .p{grid-template-columns:150px 1fr auto;align-items:center;padding:26px 30px}
+  .p .btn{margin-top:0;grid-column:auto}
+  .chips{grid-template-columns:repeat(4,1fr)}
+  .horas{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:2fr 1fr 1fr}
+  .gal .w{grid-column:auto;grid-row:span 2;aspect-ratio:auto;height:100%}
+  .sede-g{grid-template-columns:5fr 7fr}
+  .cierre-g{grid-template-columns:1fr 1fr}
+}
+@media (min-width:1000px){.menu{display:flex}.nav .btn{display:inline-flex}.barra{display:none}footer{padding-bottom:40px}}
+</style>
+</head>
+<body>
+<div class="aviso">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+<header>
+  <div class="wrap nav">
+    <a class="id" href="#inicio" aria-label="Kussanku Karate Do, inicio"><span class="logo">Tu<br>logo</span><span class="marca">Kussanku<small>Karate Do · Ojo de Agua, Tecámac</small></span></a>
+    <nav class="menu" aria-label="Secciones"><a href="#programas">Programas</a><a href="#disciplinas">Disciplinas</a><a href="#sede">Ubicación</a></nav>
+    <a class="btn btn-r" href="https://wa.me/525576474601?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20de%20karate%20en%20Kussanku."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> WhatsApp</a>
+  </div>
+</header>
+<main id="inicio">
+<section class="hero">
+  <div class="wrap hero-g">
+    <div class="rev">
+      <span class="nuevo"><b>Nueva sede</b> · Plaza Aquaterra, Ojo de Agua</span>
+      <h1>Disciplina que se nota <em>fuera</em> del dojo</h1>
+      <p>Karate para niños desde 3 años, jóvenes y adultos, además de kick boxing, defensa personal y entrenamiento funcional en Tecámac.</p>
+      <div class="cta">
+        <a class="btn btn-r" href="https://wa.me/525576474601?text=Hola%2C%20quiero%20informes%20de%20horarios%20y%20costos%20de%20karate%20en%20Kussanku."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Pedir informes</a>
+        <a class="btn btn-b" href="#programas">Ver programas</a>
+      </div>
+    </div>
+    <div class="rev">
+      <div class="foto"><img src="https://images.unsplash.com/photo-1541836567455-2d41eb6dd9b4?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Mnx8a2FyYXRlJTIwY2hpbGRyZW58ZW58MXwwfHx8MTc5NTE5NjA3N3ww&amp;ixlib=rb-4.1.0&amp;w=900&amp;h=1125&amp;q=80&amp;auto=format&amp;fit=crop" alt="Karateca con cinta negra en posición de guardia" width="900" height="1125" fetchpriority="high"></div>
+      <div class="edades"><div><b>3–6</b><span>Baby-Karate</span></div><div><b>3–13</b><span>Infantil</span></div><div><b>14–60</b><span>Jóvenes y adultos</span></div></div>
+    </div>
+  </div>
+  <div class="cinta" aria-hidden="true"></div>
+</section>
+
+<section id="programas">
+  <div class="wrap">
+    <span class="eti">Programas</span>
+    <h2>Una cinta a la vez</h2>
+    <p class="sub">Grupos por edad para que cada alumno avance con compañeros de su nivel. Pregunta por horarios y costos.</p>
+    <div class="prog">
+      <div class="p rev"><div class="ed">3–6<small>años</small></div><div><h3>Baby-Karate</h3><p>Coordinación, atención y respeto a través del juego y las bases del karate.</p></div><a class="btn btn-b" href="https://wa.me/525576474601?text=Hola%2C%20quiero%20informes%20de%20Baby-Karate%20para%20ni%C3%B1os%20de%203%20a%206%20a%C3%B1os."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></div>
+      <div class="p rev"><div class="ed">3–13<small>años</small></div><div><h3>Karate infantil</h3><p>Técnica, kata y combate por puntos con un camino claro de cintas.</p></div><a class="btn btn-b" href="https://wa.me/525576474601?text=Hola%2C%20quiero%20informes%20de%20karate%20infantil%20en%20Kussanku."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></div>
+      <div class="p rev"><div class="ed">14–60<small>años</small></div><div><h3>Jóvenes y adultos</h3><p>Karate, condición física y defensa personal, empieces desde cero o retomes.</p></div><a class="btn btn-b" href="https://wa.me/525576474601?text=Hola%2C%20quiero%20informes%20de%20karate%20para%20adultos%20en%20Kussanku."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="disc" id="disciplinas">
+  <div class="wrap">
+    <span class="eti">Disciplinas</span>
+    <h2>Todo en un mismo dojo</h2>
+    <div class="chips">
+      <div class="chip rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15" r="5"/><path d="M8.5 3.5L11 10M15.5 3.5L13 10M7 3.5h10"/></svg><b>Karate Do</b></div>
+      <div class="chip rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg><b>Combate por puntos</b></div>
+      <div class="chip rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2.5L4.5 13.5H11l-1 8 8.5-11H12z"/></svg><b>Kick boxing</b></div>
+      <div class="chip rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v6c0 4.5-3.2 7.8-7.5 9-4.3-1.2-7.5-4.5-7.5-9V6z"/><path d="M9 12l2 2 4-4"/></svg><b>Defensa personal</b></div>
+      <div class="chip rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></svg><b>Gimnasia y tricking</b></div>
+      <div class="chip rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4 0-6.5-2.6-6.5-6.2 0-3.6 3-5.6 3.5-9.3 2.4 1.5 3.4 3.4 3.4 5.1 1-.6 1.6-1.6 1.8-3 1.9 1.6 4.3 4.1 4.3 7.2 0 3.6-2.5 6.2-6.5 6.2z"/></svg><b>Entrenamiento funcional</b></div>
+      <div class="chip rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5.5" r="2.5"/><path d="M12 8v7M8 11l4-1 4 1M9.5 21l2.5-6 2.5 6"/></svg><b>Baby-Karate</b></div>
+      <div class="chip rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M16 5a3 3 0 0 1 0 6M18 14.2c1.8.7 3 2.5 3 5.3"/></svg><b>Grupos por edad</b></div>
+    </div>
+    <div class="horas">
+      <div class="hora rev"><b>Baby-Karate</b><span>Martes, miércoles y viernes<br>5:00 – 6:00 pm</span></div>
+      <div class="hora rev"><b>Kick boxing</b><span>Martes, miércoles y viernes<br>7:00 – 8:00 pm</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eti">Así se vive</span>
+    <h2>Respeto, técnica y equipo</h2>
+    <div class="gal">
+      <img class="w rev" src="https://images.unsplash.com/photo-1667384443065-b15c7caa4160?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MjB8fGthcmF0ZSUyMGNoaWxkcmVufGVufDF8MHx8fDE3OTUxOTYwNzd8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Niñas con gi blanco arrodilladas en fila en un dojo" loading="lazy" width="900" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1583668006690-ffc215fd5264?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NXx8a2FyYXRlJTIwY2hpbGRyZW58ZW58MXwwfHx8MTc5NTE5NjA3N3ww&amp;ixlib=rb-4.1.0&amp;w=600&amp;h=600&amp;q=75&amp;auto=format&amp;fit=crop" alt="Niñas practicando patadas de karate" loading="lazy" width="600" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1583668023935-b79e1c1af0a2?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8a2FyYXRlJTIwY2hpbGRyZW58ZW58MXwwfHx8MTc5NTE5NjA3N3ww&amp;ixlib=rb-4.1.0&amp;w=600&amp;h=600&amp;q=75&amp;auto=format&amp;fit=crop" alt="Niña con cinta verde lanzando un golpe" loading="lazy" width="600" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1516684991026-4c3032a2b4fd?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTJ8fGthcmF0ZSUyMGNoaWxkcmVufGVufDF8MHx8fDE3OTUxOTYwNzd8MA&amp;ixlib=rb-4.1.0&amp;w=600&amp;h=600&amp;q=75&amp;auto=format&amp;fit=crop" alt="Niños practicando combate con protecciones" loading="lazy" width="600" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1656653121475-e33829581294?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8a2FyYXRlJTIwYmxhY2slMjBiZWx0JTIwa2F0YXxlbnwxfDB8fHwxNzk1MTk2MDYyfDA&amp;ixlib=rb-4.1.0&amp;w=600&amp;h=600&amp;q=75&amp;auto=format&amp;fit=crop" alt="Manos ajustando una cinta de karate" loading="lazy" width="600" height="600">
+    </div>
+  </div>
+</section>
+
+<section id="sede" style="padding-top:20px">
+  <div class="wrap">
+    <span class="eti">Ubicación</span>
+    <h2>Nuestra nueva sede</h2>
+    <div class="sede-g">
+      <div class="sede rev">
+        <h3>Plaza Aquaterra</h3>
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Paseo de la Candelaria Mz. 66 Lt. 4, Ojo de Agua, Tecámac, Edo. Méx.</span></div>
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg><span>WhatsApp 55 7647 4601</span></div>
+        <div class="cta"><a class="btn btn-b" href="https://www.google.com/maps/search/?api=1&amp;query=Kussanku+Karate+Do+Ojo+de+Agua+Tecamac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg> Ver opiniones en Google</a></div>
+      </div>
+      <div class="mapa rev"><iframe title="Mapa de Kussanku Karate Do" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Paseo%20de%20la%20Candelaria%2C%20Hacienda%20Ojo%20de%20Agua%2C%2055770%20Tec%C3%A1mac%2C%20M%C3%A9x.&amp;z=16&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="cierre">
+  <div class="wrap cierre-g">
+    <div class="rev">
+      <h2>El primer paso es <em>presentarse</em></h2>
+      <p>Escríbenos, cuéntanos la edad de quien va a entrenar y te decimos qué grupo le corresponde.</p>
+      <div class="cta"><a class="btn btn-r" href="https://wa.me/525576474601?text=Hola%2C%20quiero%20inscribirme%20en%20Kussanku%20Karate%20Do.%20%C2%BFQu%C3%A9%20grupo%20me%20corresponde%3F"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Escribir por WhatsApp</a><a class="btn btn-b" href="tel:+525576474601"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h4l1.5 4.5-2.3 1.4a11 11 0 0 0 6.4 6.4l1.4-2.3 4.5 1.5v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/></svg> 55 7647 4601</a></div>
+    </div>
+    <img class="rev" src="https://images.unsplash.com/photo-1738835934988-ed0d238e8299?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTF8fGthcmF0ZSUyMGNoaWxkcmVufGVufDF8MHx8fDE3OTUxOTYwNzd8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=70&amp;auto=format&amp;fit=crop" alt="Practicantes de karate entrenando en parejas" loading="lazy" width="900" height="563">
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="f1"><div class="id"><span class="logo">Tu<br>logo</span><span class="marca">Kussanku<small>Karate Do · Ojo de Agua, Tecámac</small></span></div><div>WhatsApp 55 7647 4601</div></div>
+    <p class="cred">Fotografías ilustrativas de <a href="https://unsplash.com/@h4x0r3?utm_source=fixa_demos&amp;utm_medium=referral">Thao LEE</a>, <a href="https://unsplash.com/@da161?utm_source=fixa_demos&amp;utm_medium=referral">Daria Trofimova</a>, <a href="https://unsplash.com/@ashima_pargal?utm_source=fixa_demos&amp;utm_medium=referral">Ashima Pargal</a>, <a href="https://unsplash.com/@jyotirmoy?utm_source=fixa_demos&amp;utm_medium=referral">Jyotirmoy Gupta</a>, <a href="https://unsplash.com/@nguyenhung190402?utm_source=fixa_demos&amp;utm_medium=referral">Nguyen Hung</a> y <a href="https://unsplash.com/@syaiful_lm?utm_source=fixa_demos&amp;utm_medium=referral">Syaiful Lil M</a> en <a href="https://unsplash.com/?utm_source=fixa_demos&amp;utm_medium=referral">Unsplash</a>. Se reemplazan por las del negocio.</p>
+    <p class="fixa">Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com">FixA Consultoría</a>.</p>
+  </div>
+</footer>
+<div class="barra"><a class="btn btn-b" href="tel:+525576474601"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h4l1.5 4.5-2.3 1.4a11 11 0 0 0 6.4 6.4l1.4-2.3 4.5 1.5v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/></svg> Llamar</a><a class="btn btn-r" href="https://wa.me/525576474601?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20de%20karate%20en%20Kussanku."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> WhatsApp</a></div>
+<script>(function(){var e=document.querySelectorAll('.rev');if(!('IntersectionObserver'in window)){e.forEach(function(x){x.classList.add('vis')});return}var o=new IntersectionObserver(function(n){n.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');o.unobserve(x.target)}})},{threshold:.12});e.forEach(function(x){o.observe(x)})})();</script>
+</body>
+</html>
