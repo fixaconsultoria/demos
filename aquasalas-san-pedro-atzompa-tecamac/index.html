@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--
+  MINI MANUAL DE MARCA · Aquasalas Tecámac (propuesta FixA)
+  Concepto: "tu propio carril": disciplina de club deportivo con precio de barrio; cada alumno avanza a su ritmo, carril por carril.
+  Paleta: azulejo #F1F6F6 (fondo) · tinta #0E1B22 (texto) · pino alberca #0A4A48 (primario) · lima carril #D6F25A (acento, solo como relleno) · espuma #DDEBE9 (superficies).
+  Tipografía: Saira Condensed 700/800 (marca y titulares) + Onest 400/500/600 (texto).
+  Logo: hueco punteado "Tu logo" rectangular de esquinas suaves en pino; en el pie, línea lima sobre pino. Favicon: inicial "A" en pino.
+  Íconos: SVG lineales, trazo 1.8, extremos redondeados.
+  Recurso gráfico: cuerda de carril (franjas lima/blanco/pino) como separador y numeración "Carril 01, 02, 03".
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Aquasalas Tecámac · Escuela de natación en San Pedro Atzompa</title>
+<meta name="description" content="Aquasalas Tecámac, escuela de natación con agua climatizada en San Pedro Atzompa, Tecámac. Clases para niños, jóvenes y adultos. Informes por WhatsApp.">
+<meta property="og:title" content="Aquasalas Tecámac · Escuela de natación">
+<meta property="og:description" content="Clases de natación para niños, jóvenes y adultos en San Pedro Atzompa, Tecámac. Informes por WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1519315901367-f34ff9154487?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8c3dpbW1lciUyMGZyZWVzdHlsZSUyMHBvb2x8ZW58MXwwfHx8MTc5NTE5NTE0M3ww&amp;ixlib=rb-4.1.0&w=1200&q=80&auto=format&fit=crop">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A4A48'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-weight='800' font-size='38' text-anchor='middle' fill='%23fff'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fondo:#F1F6F6;--tinta:#0E1B22;--suave:#44545B;--pino:#0A4A48;--pino-2:#073634;
+  --lima:#D6F25A;--espuma:#DDEBE9;--blanco:#fff;--linea:#C9DAD8;
+  --r:14px;--max:1160px;
+  --rope:repeating-linear-gradient(90deg,var(--lima) 0 22px,#fff 22px 30px,var(--pino) 30px 52px,#fff 52px 60px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Onest,system-ui,sans-serif;background:var(--fondo);color:var(--tinta);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+h1,h2,h3,.marca{font-family:"Saira Condensed",sans-serif;line-height:1;letter-spacing:.005em}
+h2{font-size:clamp(2.3rem,6vw,3.6rem);font-weight:800}
+.lead{color:var(--suave);max-width:56ch;margin-top:14px}
+.aviso{background:var(--tinta);color:#E7F0EF;font-size:.8rem;text-align:center;padding:8px 16px}
+.aviso a{color:var(--lima)}
+.rope{height:8px;background:var(--rope);border-radius:8px}
+
+/* Header */
+header{background:var(--fondo);position:sticky;top:0;z-index:20;border-bottom:1px solid var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.id{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-slot{width:56px;height:44px;border:2px dashed var(--pino);border-radius:10px;display:grid;place-items:center;font-size:.62rem;font-weight:600;color:var(--pino);text-transform:none;letter-spacing:.02em;background:rgba(10,74,72,.05);flex:none}
+.marca{font-size:1.65rem;font-weight:800;color:var(--pino);text-transform:uppercase}
+.marca small{display:block;font-family:Onest,sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.04em;color:var(--suave);text-transform:none;margin-top:3px}
+.menu{display:none;gap:26px;font-size:.95rem;font-weight:500}
+.menu a{text-decoration:none}
+.menu a:hover{color:var(--pino)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 1rem Onest,sans-serif;padding:14px 22px;border-radius:999px;text-decoration:none;border:2px solid transparent;transition:transform .2s,background .2s,color .2s,border-color .2s;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:focus-visible,.menu a:focus-visible,a:focus-visible{outline:3px solid var(--lima);outline-offset:3px}
+.btn-lima{background:var(--lima);color:var(--tinta)}
+.btn-lima:hover{transform:translateY(-2px);background:#E3FA7A}
+.btn-pino{background:var(--pino);color:#fff}
+.btn-pino:hover{background:var(--pino-2);transform:translateY(-2px)}
+.btn-linea{border-color:currentColor;background:transparent}
+.btn-linea:hover{background:rgba(255,255,255,.12)}
+.nav .btn{display:none;padding:10px 18px;font-size:.92rem}
+
+/* Hero */
+.hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--pino-2)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,54,52,.2) 0%,rgba(7,54,52,.55) 38%,rgba(7,54,52,.94) 72%,rgba(7,54,52,.97) 100%);z-index:1}
+@media (min-width:760px){.hero::before{background:linear-gradient(90deg,rgba(7,54,52,.94) 0%,rgba(7,54,52,.78) 42%,rgba(7,54,52,.15) 75%),linear-gradient(0deg,rgba(7,54,52,.6),transparent 40%)}}
+.hero-in{position:relative;z-index:2;padding:120px 0 44px}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-size:.85rem}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--lima);display:block}
+.hero h1{font-size:clamp(3.1rem,12vw,7rem);font-weight:800;text-transform:uppercase;margin:18px 0 14px;max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--lima)}
+.hero p{max-width:46ch;font-size:1.08rem;color:#E4EFEE}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero .rope{position:relative;z-index:2}
+.hero-foot{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.18);margin-top:34px;border-radius:12px;overflow:hidden}
+.hero-foot div{background:rgba(7,54,52,.72);padding:12px 14px;font-size:.82rem;color:#D6E6E4}
+.hero-foot b{display:block;font-family:"Saira Condensed",sans-serif;font-size:1.35rem;color:#fff;font-weight:700;line-height:1.1}
+
+section{padding:76px 0}
+.kicker{font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:1.05rem;color:var(--pino);display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.kicker::before{content:"";width:28px;height:6px;border-radius:6px;background:var(--rope)}
+
+/* Lema */
+.lema{background:var(--pino);color:#fff;padding:54px 0}
+.lema-in{display:grid;gap:22px;align-items:center}
+.lema q{font-family:"Saira Condensed",sans-serif;font-weight:800;font-size:clamp(2rem,6.4vw,3.4rem);line-height:1.02;quotes:"“" "”"}
+.lema q span{color:var(--lima)}
+.lema p{color:#CFE1DF;max-width:44ch}
+
+/* Carriles (servicios) */
+.carriles{display:grid;gap:22px;margin-top:36px}
+.carril{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--linea);display:flex;flex-direction:column}
+.carril figure{position:relative;aspect-ratio:16/10;overflow:hidden}
+.carril figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.carril:hover figure img{transform:scale(1.04)}
+.num{position:absolute;left:14px;top:14px;background:var(--lima);color:var(--tinta);font-family:"Saira Condensed",sans-serif;font-weight:800;font-size:1rem;padding:4px 12px;border-radius:999px}
+.carril-b{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.carril h3{font-size:1.9rem;font-weight:800;color:var(--pino)}
+.carril p{color:var(--suave);font-size:.98rem}
+.carril ul{list-style:none;display:grid;gap:6px;font-size:.95rem;margin:4px 0 8px}
+.carril li{display:flex;gap:8px;align-items:flex-start}
+.carril li svg{width:18px;height:18px;flex:none;margin-top:4px;color:var(--pino)}
+.carril .btn{margin-top:auto;align-self:flex-start}
+
+/* Cómo inscribirte */
+.pasos-sec{background:var(--espuma)}
+.pasos{display:grid;gap:16px;margin-top:34px;counter-reset:p}
+.paso{background:#fff;border-radius:var(--r);padding:24px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;border-left:6px solid var(--pino)}
+.paso .ic{width:48px;height:48px;border-radius:12px;background:var(--pino);display:grid;place-items:center;color:var(--lima)}
+.paso .ic svg{width:26px;height:26px}
+.paso h3{font-size:1.5rem;font-weight:700;margin-bottom:4px}
+.paso p{color:var(--suave);font-size:.96rem}
+.ventajas{display:grid;gap:12px;margin-top:28px;grid-template-columns:1fr 1fr}
+.ventaja{display:flex;gap:10px;align-items:center;background:var(--fondo);border-radius:12px;padding:14px;font-weight:500;font-size:.95rem}
+.ventaja svg{width:22px;height:22px;color:var(--pino);flex:none}
+
+/* Galería */
+.galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:32px}
+.galeria img{width:100%;height:100%;object-fit:cover;border-radius:12px;aspect-ratio:1/1}
+.galeria .g-a{grid-column:span 2;aspect-ratio:16/9}
+.galeria .g-a img{aspect-ratio:auto}
+
+/* Horario + mapa */
+.visita{display:grid;gap:22px;margin-top:32px}
+.horario{background:var(--pino);color:#fff;border-radius:var(--r);padding:28px}
+.horario h3{font-size:1.8rem;font-weight:800;margin-bottom:14px}
+.fila{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.18);font-size:1rem}
+.fila b{font-family:"Saira Condensed",sans-serif;font-size:1.35rem;font-weight:700;color:var(--lima)}
+.dir{margin-top:18px;display:flex;gap:10px;color:#D6E6E4;font-size:.95rem}
+.dir svg{width:22px;height:22px;flex:none;color:var(--lima)}
+.horario .cta{margin-top:20px}
+.mapa{border-radius:var(--r);overflow:hidden;min-height:340px;border:1px solid var(--linea);background:var(--espuma)}
+.mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+/* Cierre */
+.cierre{position:relative;color:#fff;overflow:hidden;padding:96px 0;background:var(--pino-2)}
+.cierre img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22}
+.cierre .wrap{position:relative}
+.cierre h2{max-width:14ch;text-transform:uppercase}
+.cierre p{color:#D6E6E4;max-width:46ch;margin-top:14px}
+
+footer{background:var(--tinta);color:#B9C8CC;padding:44px 0 110px;font-size:.88rem}
+.f-top{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer .logo-slot{border-color:var(--lima);color:var(--lima);background:transparent}
+footer .marca{color:#fff}
+footer .marca small{color:#9FB1B5}
+.creditos{margin-top:18px;font-size:.78rem;line-height:1.7}
+.creditos a{color:#E3F0EE}
+.fixa{margin-top:10px;color:#fff}
+.fixa a{color:var(--lima)}
+
+/* Barra móvil */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(241,246,246,.96);backdrop-filter:blur(8px);border-top:1px solid var(--linea)}
+.barra .btn{padding:13px 10px;font-size:.95rem}
+
+.rev{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.rev.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}.btn,.carril figure img{transition:none}html{scroll-behavior:auto}}
+
+@media (min-width:760px){
+  .carriles{grid-template-columns:repeat(3,1fr)}
+  .pasos{grid-template-columns:repeat(3,1fr)}
+  .paso{grid-template-columns:1fr}
+  .ventajas{grid-template-columns:repeat(4,1fr)}
+  .galeria{grid-template-columns:2fr 1fr 1fr;grid-template-rows:repeat(2,220px)}
+  .galeria .g-a{grid-column:auto;grid-row:span 2;aspect-ratio:auto}
+  .galeria img{aspect-ratio:auto}
+  .visita{grid-template-columns:5fr 7fr}
+  .lema-in{grid-template-columns:3fr 2fr}
+}
+@media (min-width:980px){
+  .menu{display:flex}
+  .nav .btn{display:inline-flex}
+  .barra{display:none}
+  footer{padding-bottom:44px}
+  .hero-foot{max-width:640px}
+}
+</style>
+</head>
+<body>
+<div class="aviso">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="id" href="#inicio" aria-label="Aquasalas Tecámac, inicio">
+      <span class="logo-slot">Tu logo</span>
+      <span class="marca">Aquasalas<small>Escuela de natación · Tecámac</small></span>
+    </a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#clases">Clases</a><a href="#inscripcion">Inscripción</a><a href="#visita">Horario y ubicación</a>
+    </nav>
+    <a class="btn btn-pino" href="https://wa.me/525559320060?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20de%20nataci%C3%B3n%20en%20Aquasalas%20Tec%C3%A1mac."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" style="padding:0">
+  <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8c3dpbW1lciUyMGZyZWVzdHlsZSUyMHBvb2x8ZW58MXwwfHx8MTc5NTE5NTE0M3ww&amp;ixlib=rb-4.1.0&w=1600&q=80&auto=format&fit=crop" alt="Nadador en estilo libre entre cuerdas de carril de una alberca" width="1600" height="1067" fetchpriority="high">
+  <div class="wrap hero-in">
+    <span class="tag"><i></i>San Pedro Atzompa, Tecámac</span>
+    <h1>Aprende a nadar <em>a tu ritmo</em></h1>
+    <p>Escuela de natación con agua climatizada para niños, jóvenes y adultos, de todos los niveles. Grupos por edad y nivel, y horarios desde temprano.</p>
+    <div class="cta">
+      <a class="btn btn-lima" href="https://wa.me/525559320060?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20de%20nataci%C3%B3n%20en%20Aquasalas%20Tec%C3%A1mac."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Pedir informes por WhatsApp</a>
+      <a class="btn btn-linea" href="#clases">Ver clases</a>
+    </div>
+    <div class="hero-foot">
+      <div><b>6:00 h</b>abre entre semana</div>
+      <div><b>Todos</b>los niveles</div>
+      <div><b>Agua</b>climatizada</div>
+    </div>
+  </div>
+</section>
+<div class="rope" style="border-radius:0"></div>
+
+<section class="lema">
+  <div class="wrap lema-in rev">
+    <q>Escuela de natación de bajo costo y <span>grandes resultados</span></q>
+    <p>Así se presenta Aquasalas en Tecámac: clases constantes, grupos ordenados y un lugar cerca de casa para que toda la familia aprenda a moverse en el agua con seguridad.</p>
+  </div>
+</section>
+
+<section id="clases">
+  <div class="wrap">
+    <div class="kicker">Clases</div>
+    <h2>Un carril para cada edad</h2>
+    <p class="lead">Elige el grupo que va contigo. Pregunta por WhatsApp los horarios disponibles y el plan que más te conviene: mensual, trimestral o semestral.</p>
+    <div class="carriles">
+      <article class="carril rev">
+        <figure><img src="https://images.unsplash.com/photo-1651614158095-b98b6c1da74b?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8c3dpbW1pbmclMjBsZXNzb24lMjBjaGlsZHJlbnxlbnwxfDB8fHwxNzk1MTk1MTQyfDA&amp;ixlib=rb-4.1.0&w=900&q=75&auto=format&fit=crop" alt="Niños practicando patada con tablas en una alberca" loading="lazy" width="900" height="563"><span class="num">Carril 01</span></figure>
+        <div class="carril-b">
+          <h3>Niños</h3>
+          <p>Confianza en el agua, flotación y patada, con grupos según su edad y nivel.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Grupos por edad y nivel</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Agua climatizada</li>
+          </ul>
+          <a class="btn btn-pino" href="https://wa.me/525559320060?text=Hola%2C%20quiero%20saber%20el%20precio%20y%20horarios%20de%20nataci%C3%B3n%20para%20ni%C3%B1os%20en%20Aquasalas."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a>
+        </div>
+      </article>
+      <article class="carril rev">
+        <figure><img src="https://images.unsplash.com/photo-1515651513386-89be725f1571?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8OXx8c3dpbW1pbmclMjBsZXNzb24lMjBjaGlsZHJlbnxlbnwxfDB8fHwxNzk1MTk1MTQyfDA&amp;ixlib=rb-4.1.0&w=900&q=75&auto=format&fit=crop" alt="Dos nadadores en carriles de una alberca de agua clara" loading="lazy" width="900" height="563"><span class="num">Carril 02</span></figure>
+        <div class="carril-b">
+          <h3>Jóvenes</h3>
+          <p>Técnica de estilos y resistencia para quienes ya nadan y quieren mejorar.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Del nivel básico al avanzado</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Horarios flexibles</li>
+          </ul>
+          <a class="btn btn-pino" href="https://wa.me/525559320060?text=Hola%2C%20quiero%20saber%20el%20precio%20y%20horarios%20de%20nataci%C3%B3n%20para%20j%C3%B3venes%20en%20Aquasalas."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a>
+        </div>
+      </article>
+      <article class="carril rev">
+        <figure><img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8c3dpbW1lciUyMGZyZWVzdHlsZSUyMHBvb2x8ZW58MXwwfHx8MTc5NTE5NTE0M3ww&amp;ixlib=rb-4.1.0&w=900&q=75&auto=format&fit=crop&crop=entropy" alt="Adulto nadando estilo mariposa en una alberca" loading="lazy" width="900" height="563"><span class="num">Carril 03</span></figure>
+        <div class="carril-b">
+          <h3>Adultos</h3>
+          <p>Nunca es tarde: aprende desde cero o retoma la natación como ejercicio.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Desde cero o para entrenar</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Clases desde temprano</li>
+          </ul>
+          <a class="btn btn-pino" href="https://wa.me/525559320060?text=Hola%2C%20quiero%20saber%20el%20precio%20y%20horarios%20de%20nataci%C3%B3n%20para%20adultos%20en%20Aquasalas."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Preguntar precio</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pasos-sec" id="inscripcion">
+  <div class="wrap">
+    <div class="kicker">Inscripción</div>
+    <h2>Del primer mensaje a la alberca</h2>
+    <div class="pasos">
+      <div class="paso rev"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg></span><div><h3>1. Escríbenos</h3><p>Dinos la edad y el nivel de quien va a nadar. Te compartimos horarios y planes disponibles.</p></div></div>
+      <div class="paso rev"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><div><h3>2. Elige tu horario</h3><p>Entre semana desde las 6:00 de la mañana, o en fin de semana por la mañana.</p></div></div>
+      <div class="paso rev"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 19c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><circle cx="15" cy="6" r="2"/><path d="M6 11l4-3 3 2"/></svg></span><div><h3>3. Al agua</h3><p>Llega lista o listo para nadar y empieza en el grupo que va contigo.</p></div></div>
+    </div>
+    <div class="ventajas">
+      <div class="ventaja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/><path d="M12 9v7"/></svg>Agua climatizada</div>
+      <div class="ventaja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M16 5a3 3 0 0 1 0 6M18 14.2c1.8.7 3 2.5 3 5.3"/></svg>Grupos por nivel</div>
+      <div class="ventaja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Horarios flexibles</div>
+      <div class="ventaja"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>Cursos de verano</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Así se vive</div>
+    <h2>El agua, sin miedo</h2>
+    <div class="galeria">
+      <div class="g-a rev"><img src="https://images.unsplash.com/photo-1778141580411-b651578c5acf?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTl8fHN3aW1taW5nJTIwbGVzc29uJTIwY2hpbGRyZW58ZW58MXwwfHx8MTc5NTE5NTE0Mnww&amp;ixlib=rb-4.1.0&w=900&q=75&auto=format&fit=crop" alt="Instructor ayudando a un alumno a flotar en la alberca" loading="lazy" width="900" height="600"></div>
+      <img class="rev" src="https://images.unsplash.com/photo-1542497299-99d5862669b4?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8c3dpbW1pbmclMjBsZXNzb24lMjBjaGlsZHJlbnxlbnwxfDB8fHwxNzk1MTk1MTQyfDA&amp;ixlib=rb-4.1.0&w=900&q=75&auto=format&fit=crop&h=900" alt="Niño sonriendo sobre una tabla de natación" loading="lazy" width="600" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1726800820564-2eaecaa66b37?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NHx8c3dpbW1pbmclMjBsZXNzb24lMjBjaGlsZHJlbnxlbnwxfDB8fHwxNzk1MTk1MTQyfDA&amp;ixlib=rb-4.1.0&w=900&q=75&auto=format&fit=crop&h=900" alt="Mamá y bebé con flotador en la alberca" loading="lazy" width="600" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1786132371240-1034241806b2?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTN8fGtpZCUyMHN3aW1taW5nJTIwZ29nZ2xlc3xlbnwxfDB8fHwxNzk1MTk1MTQzfDA&amp;ixlib=rb-4.1.0&w=900&q=75&auto=format&fit=crop&h=900" alt="Goggles rojos sobre la orilla de una alberca" loading="lazy" width="600" height="600">
+      <img class="rev" src="https://images.unsplash.com/photo-1651614158095-b98b6c1da74b?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8c3dpbW1pbmclMjBsZXNzb24lMjBjaGlsZHJlbnxlbnwxfDB8fHwxNzk1MTk1MTQyfDA&amp;ixlib=rb-4.1.0&w=900&q=75&auto=format&fit=crop&h=900&crop=entropy" alt="Grupo de niños con tablas de natación" loading="lazy" width="600" height="600">
+    </div>
+  </div>
+</section>
+
+<section id="visita" style="padding-top:20px">
+  <div class="wrap">
+    <div class="kicker">Visítanos</div>
+    <h2>Horario y ubicación</h2>
+    <div class="visita">
+      <div class="horario rev">
+        <h3>Horario</h3>
+        <div class="fila"><span>Lunes a viernes</span><b>6:00 – 21:00</b></div>
+        <div class="fila"><span>Sábado y domingo</span><b>7:00 – 15:00</b></div>
+        <div class="dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Av. 16 de Septiembre Mz. 32 Lt. 32, San Pedro Atzompa, Tecámac, Edo. Méx., C.P. 55770</span></div>
+        <div class="cta">
+          <a class="btn btn-lima" href="https://www.google.com/maps/search/?api=1&query=Aquasalas+Tecamac+San+Pedro+Atzompa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg> Ver opiniones en Google</a>
+        </div>
+      </div>
+      <div class="mapa rev">
+        <iframe title="Mapa de Aquasalas Tecámac" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.%2016%20de%20Septiembre%2032%2C%20San%20Pedro%20Atzompa%2C%2055770%20Tec%C3%A1mac%2C%20M%C3%A9x.&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cierre">
+  <img src="https://images.unsplash.com/photo-1782958995190-75701221aab4?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8aW5kb29yJTIwc3dpbW1pbmclMjBwb29sJTIwbGFuZXN8ZW58MXwwfHx8MTc5NTE5NTE0Mnww&amp;ixlib=rb-4.1.0&w=1600&q=70&auto=format&fit=crop" alt="Alberca techada con carriles marcados" loading="lazy" width="1600" height="1067">
+  <div class="wrap rev">
+    <div class="kicker" style="color:var(--lima)">Inscripciones</div>
+    <h2>Tu lugar en el carril te espera</h2>
+    <p>Pregunta por horarios, grupos y planes. Te respondemos por WhatsApp.</p>
+    <div class="cta">
+      <a class="btn btn-lima" href="https://wa.me/525559320060?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20de%20nataci%C3%B3n%20en%20Aquasalas%20Tec%C3%A1mac."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> Escribir por WhatsApp</a>
+      <a class="btn btn-linea" href="tel:+525559320060"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h4l1.5 4.5-2.3 1.4a11 11 0 0 0 6.4 6.4l1.4-2.3 4.5 1.5v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/></svg> 55 5932 0060</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="id"><span class="logo-slot">Tu logo</span><span class="marca">Aquasalas<small>San Pedro Atzompa, Tecámac</small></span></div>
+      <div>WhatsApp 55 5932 0060 · L–V 6:00–21:00 · S–D 7:00–15:00</div>
+    </div>
+    <p class="creditos">Fotografías ilustrativas de <a href="https://unsplash.com/@marcusxsnapz?utm_source=fixa_demos&amp;utm_medium=referral">Marcus Ng</a>, <a href="https://unsplash.com/@kevinpaes?utm_source=fixa_demos&amp;utm_medium=referral">Kevin Paes</a>, <a href="https://unsplash.com/@jonnyclow?utm_source=fixa_demos&amp;utm_medium=referral">Jonny Clow</a>, <a href="https://unsplash.com/@gentritbsylejmani?utm_source=fixa_demos&amp;utm_medium=referral">Gentrit Sylejmani</a>, <a href="https://unsplash.com/@skytechaviation0?utm_source=fixa_demos&amp;utm_medium=referral">Skytech Aviation</a>, <a href="https://unsplash.com/@drewgilliam?utm_source=fixa_demos&amp;utm_medium=referral">Drew Gilliam</a>, <a href="https://unsplash.com/@faride_araujo?utm_source=fixa_demos&amp;utm_medium=referral">Faride Araujo</a>, <a href="https://unsplash.com/@kida2001?utm_source=fixa_demos&amp;utm_medium=referral">Andre Kidszun</a> y <a href="https://unsplash.com/@space_launch_system?utm_source=fixa_demos&amp;utm_medium=referral">Andy Wang</a> en <a href="https://unsplash.com/?utm_source=fixa_demos&amp;utm_medium=referral">Unsplash</a>. Se reemplazan por las del negocio.</p>
+    <p class="fixa">Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com">FixA Consultoría</a>.</p>
+  </div>
+</footer>
+
+<div class="barra">
+  <a class="btn btn-linea" style="color:var(--pino)" href="tel:+525559320060"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h4l1.5 4.5-2.3 1.4a11 11 0 0 0 6.4 6.4l1.4-2.3 4.5 1.5v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7a2 2 0 0 1 2-2.2z"/></svg> Llamar</a>
+  <a class="btn btn-pino" href="https://wa.me/525559320060?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informes%20de%20las%20clases%20de%20nataci%C3%B3n%20en%20Aquasalas%20Tec%C3%A1mac."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a5 5 0 0 1-2.4-2.4l1-1-1-2z"/></svg> WhatsApp</a>
+</div>
+
+<script>
+(function(){var els=document.querySelectorAll('.rev');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>
