@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--
+  MINI MANUAL DE MARCA · Intertravel, agencia de viajes (propuesta FixA)
+  Concepto: "una postal de correo aéreo": cada viaje se diseña y se escribe a mano para una persona, como una carta que viaja lejos.
+  Paleta: papel aéreo #F1F4F8 (fondo) · azul pasaporte #14244B (texto y secciones oscuras) · rojo correo #C8382F (primario, AA con blanco) · cielo #8EC5E8 (acento) · arena #F4E3C3 (superficie cálida).
+  Tipografía: Young Serif (marca y titulares, de timbre postal) + Albert Sans (texto).
+  Logo: hueco punteado "Tu logo" rectangular como un timbre, línea azul pasaporte. Favicon: inicial "I" en rojo correo.
+  Íconos: SVG lineales de trazo 1.7, extremos redondeados.
+  Recurso gráfico: franja diagonal rojo/azul de sobre de correo aéreo, timbre con borde perforado y matasellos circular.
+  Inspiración local: la salida desde el Centro de Aguascalientes, en el matasellos "Aguascalientes · Zona Centro".
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Intertravel · Agencia de viajes en Aguascalientes · Viajes a la medida</title>
+<meta name="description" content="Intertravel, agencia de viajes en Primo Verdad 202, Centro de Aguascalientes. Viajes únicos y personalizados, diseñados a la medida. Cotiza por WhatsApp.">
+<meta property="og:title" content="Intertravel · Viajes a la medida desde Aguascalientes">
+<meta property="og:description" content="Experiencias de viaje únicas y personalizadas. Cotiza por WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1572204443432-a427ee039e73?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Mnx8YWlycGxhbmUlMjB3aW5kb3clMjB3aW5nJTIwc3Vuc2V0fGVufDF8MHx8fDE3OTUxNjE1OTF8MA&amp;ixlib=rb-4.1.0&amp;w=1200&amp;q=80&amp;auto=format&amp;fit=crop">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23C8382F'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23fff'%3EI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#F1F4F8;--blanco:#fff;--azul:#14244B;--azul2:#22376B;--gris:#4A5571;--rojo:#C8382F;--rojo-h:#A52A22;--cielo:#8EC5E8;--arena:#F4E3C3;--linea:#D5DCE7;--wa:#128C4A}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--azul);font:17px/1.65 "Albert Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+h1,h2,h3,.marca b{font-family:"Young Serif",Georgia,serif;font-weight:400}
+h2{font-size:clamp(32px,4.4vw,54px);line-height:1.08;margin:0 0 16px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+section{padding:90px 0}
+.aereo{height:10px;background:repeating-linear-gradient(-45deg,var(--rojo) 0 16px,var(--blanco) 16px 24px,var(--azul2) 24px 40px,var(--blanco) 40px 48px)}
+.demo{background:var(--azul);color:#DCE3F0;font-size:13px;text-align:center;padding:8px 16px}.demo a{color:#fff;font-weight:700}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px}
+.marca{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo{width:50px;height:58px;border:2px dashed var(--azul);border-radius:4px;display:grid;place-items:center;font:600 10px/1.05 "Albert Sans",sans-serif;text-align:center;flex:none;color:var(--azul);background:var(--blanco)}
+.marca b{font-size:28px;line-height:1;display:block}
+.marca small{display:block;font-size:13px;color:var(--gris);margin-top:4px}
+nav.menu{display:flex;gap:28px;font-size:15px;font-weight:500}
+nav.menu a{text-decoration:none;color:var(--gris)}nav.menu a:hover{color:var(--rojo)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 15px/1 "Albert Sans",sans-serif;padding:16px 24px;border-radius:10px;text-decoration:none;border:2px solid transparent;transition:background .2s,color .2s,transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:19px;height:19px;flex:none}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--cielo);outline-offset:3px}
+.btn-wa{background:var(--wa);color:#fff}.btn-wa:hover{background:#0c703a}
+.btn-rojo{background:var(--rojo);color:#fff}.btn-rojo:hover{background:var(--rojo-h)}
+.btn-line{border-color:var(--azul);color:var(--azul)}.btn-line:hover{background:var(--azul);color:#fff}
+.btn-sm{padding:11px 16px;font-size:14px}
+.ico{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+/* hero */
+.hero{padding:30px 0 100px}
+.postal{position:relative;background:var(--blanco);padding:14px;border-radius:6px;box-shadow:0 30px 70px -40px rgba(20,36,75,.55)}
+.postal::before{content:"";position:absolute;inset:0;border-radius:6px;padding:10px;background:repeating-linear-gradient(-45deg,var(--rojo) 0 16px,var(--blanco) 16px 24px,var(--azul2) 24px 40px,var(--blanco) 40px 48px);-webkit-mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.postal .foto{position:relative;aspect-ratio:16/8;overflow:hidden;border-radius:2px}
+.postal .foto img{width:100%;height:100%;object-fit:cover}
+.postal .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,36,75,.82) 0%,rgba(20,36,75,.45) 45%,rgba(20,36,75,0) 75%)}
+.hero-txt{position:absolute;left:clamp(30px,5vw,70px);top:50%;transform:translateY(-50%);z-index:2;color:#fff;max-width:560px}
+.hero-txt h1{font-size:clamp(40px,5.6vw,74px);line-height:1.02;margin:0 0 18px}
+.hero-txt p{font-size:19px;color:#E3EAF5;margin:0 0 28px;max-width:440px}
+.acciones{display:flex;flex-wrap:wrap;gap:12px}
+.hero-txt .btn-line{border-color:#fff;color:#fff}.hero-txt .btn-line:hover{background:#fff;color:var(--azul)}
+.timbre{position:absolute;right:42px;top:42px;z-index:3;width:132px;padding:8px;background:radial-gradient(circle,transparent 3.6px,#fff 4.2px) -6px -6px/12px 12px;transform:rotate(4deg);filter:drop-shadow(0 8px 14px rgba(0,0,0,.25))}
+.timbre div{border:1.5px solid var(--rojo);padding:12px 8px;text-align:center;background:var(--arena)}
+.timbre b{font-family:"Young Serif";font-weight:400;display:block;font-size:22px;color:var(--rojo);line-height:1}
+.timbre span{font-size:10.5px;font-weight:700;letter-spacing:.04em;display:block;margin-top:6px;color:var(--azul)}
+.matasellos{position:absolute;right:150px;top:110px;z-index:3;width:120px;height:120px;color:rgba(255,255,255,.85);transform:rotate(-12deg)}
+/* intro */
+.intro .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.intro p{color:var(--gris);font-size:18px}
+.intro figure{margin:0;position:relative}
+.intro figure img{border-radius:6px;height:auto;aspect-ratio:5/4;object-fit:cover;width:100%;transform:rotate(-2deg);box-shadow:0 24px 50px -30px rgba(20,36,75,.6);border:10px solid var(--blanco)}
+.intro .firma{font-family:"Young Serif";font-size:24px;color:var(--rojo);margin-top:22px}
+/* viajes */
+.viajes{background:var(--blanco)}
+.cab{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px;flex-wrap:wrap}
+.cab p{max-width:460px;color:var(--gris);margin:0}
+.grid-v{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.viaje{background:var(--papel);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--linea)}
+.viaje figure{margin:0;aspect-ratio:4/3.3;overflow:hidden;position:relative}
+.viaje figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.viaje:hover figure img{transform:scale(1.05)}
+.viaje figure::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:repeating-linear-gradient(-45deg,var(--rojo) 0 10px,var(--blanco) 10px 14px,var(--azul2) 14px 24px,var(--blanco) 24px 28px)}
+.viaje .t{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.viaje h3{font-size:22px;margin:0 0 6px}
+.viaje p{color:var(--gris);font-size:15px;margin:0 0 18px;flex:1}
+/* pase */
+.pase-sec{background:var(--azul);color:#fff}
+.pase-sec h2{color:#fff}
+.pase-sec .cab p{color:#B9C5DD}
+.pase{display:grid;grid-template-columns:repeat(4,1fr);background:var(--blanco);color:var(--azul);border-radius:18px;position:relative;overflow:hidden}
+.pase::before{content:"";position:absolute;top:0;left:0;right:0;height:46px;background:var(--rojo)}
+.escala{position:relative;padding:66px 26px 30px;border-right:2px dashed var(--linea)}
+.escala:last-child{border-right:0}
+.escala .k{position:absolute;top:13px;left:26px;color:#fff;font-weight:700;font-size:13px;letter-spacing:.06em}
+.escala .i{width:50px;height:50px;border-radius:50%;background:var(--arena);display:grid;place-items:center;color:var(--rojo);margin-bottom:14px}
+.escala h3{font-size:21px;margin:0 0 6px}
+.escala p{margin:0;color:var(--gris);font-size:15px}
+/* galeria */
+.postales{display:flex;justify-content:center;gap:0;padding:10px 0 20px}
+.postales figure{margin:0 -14px;background:var(--blanco);padding:10px 10px 36px;box-shadow:0 20px 40px -24px rgba(20,36,75,.55);width:30%;position:relative}
+.postales figure:nth-child(1){transform:rotate(-5deg) translateY(10px)}
+.postales figure:nth-child(2){transform:rotate(2deg);z-index:2}
+.postales figure:nth-child(3){transform:rotate(-1.5deg) translateY(18px)}
+.postales img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.postales figcaption{position:absolute;left:12px;bottom:9px;font-family:"Young Serif";font-size:15px;color:var(--azul)}
+.galeria .nota{text-align:center;color:var(--gris);font-size:14px;margin-top:34px}
+/* ubic */
+.ubic{background:var(--arena)}
+.ubic .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:40px}
+.ficha{background:var(--blanco);border-radius:12px;padding:34px;position:relative;overflow:hidden}
+.ficha::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(-45deg,var(--rojo) 0 14px,var(--blanco) 14px 20px,var(--azul2) 20px 34px,var(--blanco) 34px 40px)}
+.ficha dl{margin:20px 0 26px}.ficha dt{font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--rojo);margin-top:16px}.ficha dd{margin:4px 0 0}
+.mapa{border-radius:12px;overflow:hidden;min-height:400px;background:#e6d6b8}
+.mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+/* cierre */
+.cierre{position:relative;color:#fff;text-align:center;padding:120px 0;overflow:hidden;background:var(--azul)}
+.cierre>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cierre::after{content:"";position:absolute;inset:0;background:rgba(20,36,75,.62)}
+.cierre .wrap{position:relative;z-index:2}
+.cierre h2{color:#fff;font-size:clamp(34px,5vw,60px);max-width:780px;margin:0 auto 16px}
+.cierre p{color:#E3EAF5;max-width:520px;margin:0 auto 30px}
+footer{background:#0E1A38;color:#AEB9D0;padding:48px 0 110px;font-size:14px}
+footer .top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
+footer .marca b{color:#fff}footer .marca small{color:#93A0BC}footer .logo{background:transparent;border-color:var(--cielo);color:var(--cielo)}
+footer a{color:#fff}
+.creditos{font-size:12px;color:#8592AE;margin-top:24px;line-height:1.6}
+.barra{display:none}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.vis{opacity:1;transform:none}
+.postales .reveal.vis:nth-child(1){transform:rotate(-5deg) translateY(10px)}.postales .reveal.vis:nth-child(2){transform:rotate(2deg)}.postales .reveal.vis:nth-child(3){transform:rotate(-1.5deg) translateY(18px)}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.viaje figure img,.btn{transition:none}html{scroll-behavior:auto}}
+@media (max-width:1000px){
+  nav.menu,.hdr-cta{display:none}
+  .grid-v{grid-template-columns:1fr 1fr}
+  .pase{grid-template-columns:1fr 1fr}.escala:nth-child(2){border-right:0}.escala:nth-child(-n+2){border-bottom:2px dashed var(--linea)}
+  .pase::before{display:none}.escala .k{color:var(--rojo)}.escala{padding-top:50px}
+  .intro .wrap,.ubic .wrap{grid-template-columns:1fr;gap:40px}
+  .postal .foto{aspect-ratio:4/3}
+}
+@media (max-width:700px){
+  body{font-size:16px}section{padding:66px 0}
+  .hero{padding:16px 0 70px}
+  .postal{padding:10px}.postal::before{padding:7px}
+  .postal .foto{aspect-ratio:auto;height:640px}.postal .foto img{object-position:62% 30%}
+  .postal .foto::after{background:linear-gradient(0deg,rgba(20,36,75,.92) 0%,rgba(20,36,75,.55) 55%,rgba(20,36,75,.15) 100%)}
+  .hero-txt{top:auto;bottom:26px;transform:none;left:20px;right:20px}
+  .hero-txt p{font-size:17px}
+  .timbre{right:22px;top:22px;width:104px}.timbre b{font-size:18px}
+  .matasellos{right:118px;top:58px;width:92px;height:92px}
+  .marca b{font-size:24px}.logo{width:44px;height:52px;font-size:9px}
+  .grid-v{grid-template-columns:1fr}
+  .pase{grid-template-columns:1fr}.escala{border-right:0;border-bottom:2px dashed var(--linea)}.escala:last-child{border-bottom:0}
+  .postales{flex-direction:column;align-items:center;gap:22px}.postales figure{width:86%;margin:0}
+  .ficha{padding:28px 24px}
+  .barra{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--linea)}
+  .barra .btn{padding:14px 10px}
+}
+</style>
+</head>
+<body>
+<div class="demo">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+<div class="aereo" aria-hidden="true"></div>
+<header>
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Intertravel, inicio"><span class="logo">Tu<br>logo</span><span><b>Intertravel</b><small>Agencia de viajes · Aguascalientes</small></span></a>
+    <nav class="menu" aria-label="Principal"><a href="#a-la-medida">A la medida</a><a href="#viajes">Viajes</a><a href="#como">Cómo funciona</a><a href="#ubicacion">Ubicación</a></nav>
+    <a class="btn btn-rojo btn-sm hdr-cta" href="https://wa.me/524499157192?text=Hola%20Intertravel%2C%20quiero%20cotizar%20un%20viaje." target="_blank" rel="noopener">Cotizar mi viaje</a>
+  </div>
+</header>
+<main id="inicio">
+<section class="hero">
+  <div class="wrap">
+    <div class="postal reveal">
+      <div class="foto">
+        <img src="https://images.unsplash.com/photo-1572204443432-a427ee039e73?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Mnx8YWlycGxhbmUlMjB3aW5kb3clMjB3aW5nJTIwc3Vuc2V0fGVufDF8MHx8fDE3OTUxNjE1OTF8MA&amp;ixlib=rb-4.1.0&amp;w=1600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Vista desde la ventanilla de un avión: el ala sobre un mar de nubes al atardecer" width="1600" height="900">
+        <div class="hero-txt">
+          <h1>Viajes únicos, diseñados para ti.</h1>
+          <p>Desde el Centro de Aguascalientes creamos experiencias de viaje personalizadas, a la medida de lo que sueñas.</p>
+          <div class="acciones">
+            <a class="btn btn-wa" href="https://wa.me/524499157192?text=Hola%20Intertravel%2C%20quiero%20cotizar%20un%20viaje." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Cotizar por WhatsApp</a>
+            <a class="btn btn-line" href="#viajes">Ver ideas de viaje</a>
+          </div>
+        </div>
+      </div>
+      <div class="timbre" aria-hidden="true"><div><b>Ags</b><span>DESTINO: EL MUNDO</span></div></div>
+      <svg class="matasellos" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="60" cy="60" r="34" fill="none" stroke="currentColor" stroke-width="1.5"/><text font-family="Albert Sans,sans-serif" font-size="11" font-weight="700" letter-spacing="2.2" fill="currentColor"><textPath href="#c">AGUASCALIENTES · ZONA CENTRO ·</textPath></text><path d="M44 62h32M70 55l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="a-la-medida">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>Un itinerario que no se repite</h2>
+      <p>No hay dos viajeros iguales. Por eso cada viaje empieza escuchando: a dónde quieres ir, con quién, a qué ritmo y qué tipo de experiencia buscas.</p>
+      <p>Con eso armamos una propuesta personalizada, pensada según tus sueños y preferencias, y la ajustamos contigo hasta que quede como la imaginaste.</p>
+      <p class="firma">Tu viaje, escrito a mano.</p>
+    </div>
+    <figure class="reveal"><img src="https://images.unsplash.com/photo-1499591934245-40b55745b905?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NHx8dHJhdmVsJTIwcGxhbm5pbmclMjBtYXAlMjBwYXNzcG9ydHxlbnwxfDB8fHwxNzk1MTYxNTc4fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Persona traza una ruta sobre un mapa mientras planea un viaje" loading="lazy" width="900" height="720"></figure>
+  </div>
+</section>
+
+<section class="viajes" id="viajes">
+  <div class="wrap">
+    <div class="cab reveal"><h2>¿Qué viaje tienes en mente?</h2><p>Elige una idea y cuéntanos los detalles por WhatsApp: fechas, número de viajeros y presupuesto aproximado.</p></div>
+    <div class="grid-v">
+      <article class="viaje reveal"><figure><img src="https://images.unsplash.com/photo-1541417904950-b855846fe074?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8dHVycXVvaXNlJTIwYmVhY2glMjBhZXJpYWx8ZW58MXwwfHx8MTc5NTE2MTU4MXww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Playa de arena blanca y mar turquesa vista desde el aire, con una palmera" loading="lazy" width="900" height="740"></figure><div class="t"><h3>Playa y descanso</h3><p>Sol, mar y días sin prisa para desconectarte.</p><a class="btn btn-rojo btn-sm" href="https://wa.me/524499157192?text=Hola%20Intertravel%2C%20quiero%20cotizar%20un%20viaje%20de%20playa." target="_blank" rel="noopener">Cotizar</a></div></article>
+      <article class="viaje reveal"><figure><img src="https://images.unsplash.com/photo-1616036902568-fa623d8f0c0a?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8ZXVyb3BlYW4lMjBvbGQlMjB0b3duJTIwc3RyZWV0JTIwdHJhdmVsZXJzfGVufDF8MHx8fDE3OTUxNjE1ODZ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Calle de una ciudad europea con edificios históricos y personas caminando" loading="lazy" width="900" height="740"></figure><div class="t"><h3>Ciudades y cultura</h3><p>Museos, arquitectura y calles para recorrer a pie.</p><a class="btn btn-rojo btn-sm" href="https://wa.me/524499157192?text=Hola%20Intertravel%2C%20quiero%20cotizar%20un%20viaje%20de%20ciudades%20y%20cultura." target="_blank" rel="noopener">Cotizar</a></div></article>
+      <article class="viaje reveal"><figure><img src="https://images.unsplash.com/photo-1729350038150-495c628bd695?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8OHx8YWlycGxhbmUlMjB3aW5kb3clMjB3aW5nJTIwc3Vuc2V0fGVufDF8MHx8fDE3OTUxNjE1OTF8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Ala de avión sobre las nubes al atardecer" loading="lazy" width="900" height="740"></figure><div class="t"><h3>Luna de miel</h3><p>Un viaje especial para empezar una nueva etapa.</p><a class="btn btn-rojo btn-sm" href="https://wa.me/524499157192?text=Hola%20Intertravel%2C%20quiero%20cotizar%20una%20luna%20de%20miel." target="_blank" rel="noopener">Cotizar</a></div></article>
+      <article class="viaje reveal"><figure><img src="https://images.unsplash.com/photo-1618064541372-289bdb6f5b7b?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NHx8dHVycXVvaXNlJTIwYmVhY2glMjBhZXJpYWx8ZW58MXwwfHx8MTc5NTE2MTU4MXww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Costa con palmeras, sombrillas y agua turquesa vista desde arriba" loading="lazy" width="900" height="740"></figure><div class="t"><h3>Viaje en familia</h3><p>Planes cómodos para que todos disfruten, grandes y chicos.</p><a class="btn btn-rojo btn-sm" href="https://wa.me/524499157192?text=Hola%20Intertravel%2C%20quiero%20cotizar%20un%20viaje%20en%20familia." target="_blank" rel="noopener">Cotizar</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="pase-sec" id="como">
+  <div class="wrap">
+    <div class="cab reveal"><h2>Tu viaje, en cuatro escalas</h2><p>Un proceso sencillo y acompañado, de la primera idea al día de la salida.</p></div>
+    <div class="pase reveal">
+      <div class="escala"><span class="k">ESCALA 1</span><span class="i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h4"/></svg></span><h3>Cuéntanos tu idea</h3><p>Destino, fechas, viajeros y lo que te gustaría vivir.</p></div>
+      <div class="escala"><span class="k">ESCALA 2</span><span class="i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l-5 2v14l5-2 6 2 5-2V4l-5 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></span><h3>Propuesta a la medida</h3><p>Diseñamos un viaje según tus preferencias.</p></div>
+      <div class="escala"><span class="k">ESCALA 3</span><span class="i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4-1L19 8a2.1 2.1 0 0 0-3-3L5 16l-1 4z"/><path d="M14 7l3 3"/></svg></span><h3>Ajustamos detalles</h3><p>Lo afinamos contigo hasta que quede como lo soñaste.</p></div>
+      <div class="escala"><span class="k">ESCALA 4</span><span class="i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 19h19"/><path d="M3 13l3 1 4-3-6-5 2-1 8 3 4-2a2 2 0 0 1 2 3.4L7 17l-4-4z"/></svg></span><h3>¡Buen viaje!</h3><p>Sales con todo listo y la tranquilidad de ir acompañado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria" aria-label="Postales">
+  <div class="wrap">
+    <div class="cab reveal" style="justify-content:center;text-align:center"><h2 style="margin:0 auto">Postales que te esperan</h2></div>
+    <div class="postales">
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1695390473966-185c1d01daed?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NHx8ZXVyb3BlYW4lMjBvbGQlMjB0b3duJTIwc3RyZWV0JTIwdHJhdmVsZXJzfGVufDF8MHx8fDE3OTUxNjE1ODZ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Plaza empedrada de una ciudad histórica con una viajera caminando" loading="lazy" width="900" height="675"><figcaption>Ciudades con historia</figcaption></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1612317889754-8ce3b4c14539?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Nnx8dHVycXVvaXNlJTIwYmVhY2glMjBhZXJpYWx8ZW58MXwwfHx8MTc5NTE2MTU4MXww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Orilla de mar turquesa sobre arena rosada vista desde el aire" loading="lazy" width="900" height="675"><figcaption>Mar turquesa</figcaption></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1697975298902-3af4a8d15fc6?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8N3x8ZXVyb3BlYW4lMjBvbGQlMjB0b3duJTIwc3RyZWV0JTIwdHJhdmVsZXJzfGVufDF8MHx8fDE3OTUxNjE1ODZ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Terrazas de cafés frente a edificios históricos al anochecer" loading="lazy" width="900" height="675"><figcaption>Tardes de café</figcaption></figure>
+    </div>
+    <p class="nota">Fotografías ilustrativas de destinos y viajes.</p>
+  </div>
+</section>
+
+<section class="ubic" id="ubicacion">
+  <div class="wrap">
+    <div class="ficha reveal">
+      <h2>Visítanos</h2>
+      <dl>
+        <dt>DIRECCIÓN</dt><dd>Calle Lic. Francisco Primo Verdad 202, Zona Centro, C.P. 20000, Aguascalientes, Ags.</dd>
+        <dt>HORARIO</dt><dd>Consulta horarios de atención por WhatsApp.</dd>
+        <dt>WHATSAPP</dt><dd>449 915 7192</dd>
+      </dl>
+      <div class="acciones">
+        <a class="btn btn-wa btn-sm" href="https://wa.me/524499157192?text=Hola%20Intertravel%2C%20quiero%20cotizar%20un%20viaje." target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Intertravel%20agencia%20de%20viajes%20Primo%20Verdad%20202%20Aguascalientes" target="_blank" rel="noopener">Ver opiniones en Google</a>
+      </div>
+    </div>
+    <div class="mapa reveal"><iframe title="Mapa de Intertravel" loading="lazy" src="https://www.google.com/maps?q=Calle%20Licenciado%20Francisco%20Primo%20Verdad%20202%2C%20Zona%20Centro%2C%2020000%20Aguascalientes%2C%20Ags.&amp;z=16&amp;output=embed"></iframe></div>
+  </div>
+</section>
+
+<section class="cierre">
+  <img src="https://images.unsplash.com/photo-1529947327457-8f5cb53bc1b6?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NXx8YWlycGxhbmUlMjB3aW5kb3clMjB3aW5nJTIwc3Vuc2V0fGVufDF8MHx8fDE3OTUxNjE1OTF8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="" loading="lazy" width="1600" height="900">
+  <div class="wrap reveal">
+    <h2>¿A dónde vamos ahora?</h2>
+    <p>Escríbenos tu idea de viaje y te preparamos una propuesta personalizada.</p>
+    <a class="btn btn-wa" href="https://wa.me/524499157192?text=Hola%20Intertravel%2C%20quiero%20cotizar%20un%20viaje." target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+  </div>
+</section>
+</main>
+<div class="aereo" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="marca" href="#inicio"><span class="logo">Tu<br>logo</span><span><b>Intertravel</b><small>Agencia de viajes · Aguascalientes</small></span></a>
+      <p style="margin:0">Primo Verdad 202, Zona Centro, Aguascalientes · WhatsApp <a href="https://wa.me/524499157192">449 915 7192</a></p>
+    </div>
+    <p style="margin-top:26px">Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com">FixA Consultoría</a>.</p>
+    <p class="creditos">Fotografías ilustrativas de <a href="https://unsplash.com/@jackcohen?utm_source=fixa_demos&amp;utm_medium=referral">Jack Cohen</a>, <a href="https://unsplash.com/@glenncarstenspeters?utm_source=fixa_demos&amp;utm_medium=referral">Glenn Carstens-Peters</a>, <a href="https://unsplash.com/@reallynattu?utm_source=fixa_demos&amp;utm_medium=referral">Nattu Adnan</a>, <a href="https://unsplash.com/@opixels?utm_source=fixa_demos&amp;utm_medium=referral">Hugh Whyte</a>, <a href="https://unsplash.com/@thewonderalice?utm_source=fixa_demos&amp;utm_medium=referral">Alice</a>, <a href="https://unsplash.com/@panevesht?utm_source=fixa_demos&amp;utm_medium=referral">Payam Moin Afshari</a>, <a href="https://unsplash.com/@eleniafiontzi?utm_source=fixa_demos&amp;utm_medium=referral">Eleni Afiontzi</a>, <a href="https://unsplash.com/@htotakasasha?utm_source=fixa_demos&amp;utm_medium=referral">Aleksandra Tykhonravova</a>, <a href="https://unsplash.com/@shotbykino?utm_source=fixa_demos&amp;utm_medium=referral">Kinø</a>, <a href="https://unsplash.com/@nicolasjleclercq?utm_source=fixa_demos&amp;utm_medium=referral">Nicolas J Leclercq</a> en <a href="https://unsplash.com/?utm_source=fixa_demos&amp;utm_medium=referral">Unsplash</a>. Se reemplazan por las del negocio.</p>
+  </div>
+</footer>
+<div class="barra"><a class="btn btn-line" href="tel:+524499157192">Llamar</a><a class="btn btn-wa" href="https://wa.me/524499157192?text=Hola%20Intertravel%2C%20quiero%20cotizar%20un%20viaje." target="_blank" rel="noopener">WhatsApp</a></div>
+<script>
+(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vis')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>
