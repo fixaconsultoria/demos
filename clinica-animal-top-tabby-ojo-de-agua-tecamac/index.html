@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!--
+  MINI MANUAL DE MARCA · Clínica Animal Top Tabby (propuesta FixA)
+  Concepto: "la cartilla bien llevada": una clínica de barrio ordenada y cercana, donde cada visita queda anotada como en la cartilla de vacunación de su mascota. El nombre (tabby = gato atigrado) inspira el recurso gráfico: rayas suaves de pelaje atigrado.
+  Paleta: papel azulado #F3F6FA (fondo) · tinta cobalto #14213D (texto) · azul cobalto #2347A8 (primario) · ámbar atigrado #E9A23B (acento) · cielo #DCE6F7 (superficies suaves).
+  Tipografía: Paytone One (marca y titulares) + Readex Pro 300/400/500/600 (texto).
+  Logo: hueco punteado "Tu logo" circular (como una placa de collar), línea cobalto. Favicon: inicial "T" en cobalto.
+  Íconos: SVG lineales, trazo 1.8, extremos redondeados.
+  Recurso gráfico: franjas atigradas en ámbar (pelaje tabby) y tarjetas tipo "cartilla" con renglones.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Clínica Animal Top Tabby · Veterinaria en Ojo de Agua, Tecámac</title>
+<meta name="description" content="Clínica Animal Top Tabby: veterinaria en calle Huertas 79, Ojo de Agua, Tecámac. Abre de martes a domingo de 10:00 a 18:00. Escríbanos por WhatsApp.">
+<meta property="og:title" content="Clínica Animal Top Tabby · Veterinaria en Ojo de Agua">
+<meta property="og:description" content="Veterinaria en Ojo de Agua, Tecámac. Martes a domingo, 10:00 a 18:00. Pregunte por WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1700665537650-1bf37979aae0?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8cHVwcHklMjB2YWNjaW5lJTIwdmV0ZXJpbmFyaWFufGVufDF8MHx8fDE3OTU1OTQ0ODl8MA&amp;ixlib=rb-4.1.0&amp;w=1200&amp;q=80&amp;auto=format&amp;fit=crop">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232347A8'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-weight='800' font-size='36' text-anchor='middle' fill='%23ffffff'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Readex+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#F3F6FA;--tinta:#14213D;--gris:#4A5670;--azul:#2347A8;--azul2:#1A3683;--ambar:#E9A23B;--ambar2:#B9741A;--cielo:#DCE6F7;--linea:#D3DCEB;--wa:#137A41;--max:1160px;--r:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Readex Pro",system-ui,sans-serif;background:var(--papel);color:var(--tinta);line-height:1.6;font-size:17px;font-weight:300}
+b,strong{font-weight:500}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(var(--max),100% - 36px);margin-inline:auto}
+h1,h2,h3,.marca{font-family:"Paytone One",system-ui,sans-serif;font-weight:400;letter-spacing:-.01em;line-height:1.08}
+h2{font-size:clamp(1.9rem,5.2vw,3rem)}
+h3{font-size:1.2rem}
+.lead{color:var(--gris);max-width:56ch;margin-top:14px;font-size:1.06rem}
+.ico{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sec{padding:clamp(64px,10vw,112px) 0}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--azul);font-weight:500;margin-bottom:12px}
+.kicker::before{content:"";width:34px;height:10px;border-radius:5px;background:repeating-linear-gradient(115deg,var(--ambar) 0 5px,transparent 5px 9px)}
+/* aviso */
+.aviso{background:var(--tinta);color:#E8EDF7;font-size:.82rem;text-align:center;padding:8px 14px}
+.aviso a{color:#F6C878}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(243,246,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+.id{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-hueco{width:50px;height:50px;border:2px dashed var(--azul);border-radius:50%;display:grid;place-items:center;font-size:.6rem;font-weight:500;color:var(--azul);text-align:center;line-height:1.1;background:rgba(35,71,168,.06);flex:none}
+.marca{font-size:1.18rem;line-height:1.05}
+.marca small{display:block;font-family:"Readex Pro",sans-serif;font-size:.74rem;color:var(--gris);font-weight:400;letter-spacing:0}
+.nav ul{display:none;list-style:none;gap:26px;font-weight:400}
+.nav ul a{text-decoration:none}
+.nav ul a:hover{color:var(--azul)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 24px;font-weight:500;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s;border:2px solid transparent;font-size:1rem;font-family:inherit;cursor:pointer}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--ambar);outline-offset:3px}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#0E6334;transform:translateY(-2px);box-shadow:0 10px 22px rgba(19,122,65,.25)}
+.btn-line{border-color:var(--tinta);color:var(--tinta)}
+.btn-line:hover{background:var(--tinta);color:#fff}
+.btn-sm{padding:10px 18px;font-size:.92rem}
+.nav .btn{display:none}
+/* hero */
+.hero{padding:28px 0 0}
+.hero-grid{display:grid;gap:26px}
+.hero h1{font-size:clamp(2.3rem,8.4vw,4.3rem);margin:8px 0 16px}
+.hero h1 em{font-style:normal;color:var(--azul);background:linear-gradient(transparent 68%,rgba(233,162,59,.45) 68%)}
+.hero p.sub{color:var(--gris);font-size:1.1rem;max-width:48ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.foto-hero{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3.3;box-shadow:0 24px 50px rgba(20,33,61,.18)}
+.foto-hero img{width:100%;height:100%;object-fit:cover;object-position:55% 40%}
+.foto-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:repeating-linear-gradient(115deg,var(--ambar) 0 12px,var(--ambar2) 12px 18px,var(--ambar) 18px 30px)}
+.cartilla{position:relative;margin:-56px 14px 0;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 16px 36px rgba(20,33,61,.14);border:1px solid var(--linea);z-index:2}
+.cartilla h3{font-size:1rem;display:flex;align-items:center;gap:8px;color:var(--azul)}
+.cartilla ul{list-style:none;margin-top:8px}
+.cartilla li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--linea);font-size:.95rem}
+.cartilla li:last-child{border-bottom:0}
+.cartilla li span:last-child{font-weight:500}
+.cerrado{color:#A23B2A}
+.datos{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;color:var(--gris);font-size:.95rem}
+.datos span{display:inline-flex;align-items:center;gap:8px}
+.datos .ico{color:var(--azul);width:20px;height:20px}
+/* servicios */
+.serv-grid{display:grid;gap:18px;margin-top:36px}
+.serv{background:#fff;border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.serv:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(20,33,61,.1)}
+.serv img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.serv .ic{width:52px;height:52px;border-radius:50%;background:var(--cielo);color:var(--azul);display:grid;place-items:center;margin:22px 22px 0}
+.serv .tx{padding:18px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.serv p{color:var(--gris);font-size:.98rem}
+.serv .lnk{margin-top:auto;padding-top:10px;display:inline-flex;align-items:center;gap:8px;color:var(--wa);font-weight:500;text-decoration:none}
+.serv .lnk:hover{text-decoration:underline}
+.nota{margin-top:22px;color:var(--gris);font-size:.9rem}
+/* proceso */
+.proceso{background:var(--tinta);color:#E8EDF7}
+.proceso h2{color:#fff}
+.proceso .lead{color:#B9C4DA}
+.pasos{display:grid;gap:16px;margin-top:38px;counter-reset:p}
+.paso{border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:24px;position:relative;background:rgba(255,255,255,.03)}
+.paso::before{counter-increment:p;content:counter(p);font-family:"Paytone One";font-size:1.1rem;width:42px;height:42px;border-radius:50%;background:var(--ambar);color:var(--tinta);display:grid;place-items:center;margin-bottom:14px}
+.paso h3{color:#fff;margin-bottom:6px}
+.paso p{color:#B9C4DA;font-size:.97rem}
+/* galeria */
+.galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:34px}
+.galeria figure{border-radius:18px;overflow:hidden;position:relative}
+.galeria img{width:100%;height:100%;min-height:0;object-fit:cover;aspect-ratio:1/1;transition:transform .5s}
+.galeria figure:hover img{transform:scale(1.04)}
+.galeria figure:first-child{grid-column:span 2}
+.galeria figure:first-child img{aspect-ratio:16/9}
+/* gatos */
+.split{display:grid;gap:30px;align-items:center}
+.split .ph{border-radius:var(--r);overflow:hidden;aspect-ratio:5/4}
+.split .ph img{width:100%;height:100%;object-fit:cover}
+.check{list-style:none;margin-top:22px;display:grid;gap:12px}
+.check li{display:flex;gap:12px;align-items:flex-start}
+.check .ico{color:var(--azul);margin-top:2px}
+/* ubicacion */
+.ubi{display:grid;gap:22px;margin-top:34px}
+.mapa{border-radius:var(--r);overflow:hidden;border:1px solid var(--linea);min-height:320px;background:var(--cielo)}
+.mapa iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.ficha{background:#fff;border:1px solid var(--linea);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:16px}
+.ficha .row{display:flex;gap:12px}
+.ficha .row .ico{color:var(--azul);margin-top:3px}
+.ficha .acc{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+/* cierre */
+.cierre{position:relative;overflow:hidden;background:var(--azul);color:#fff;border-radius:28px;padding:clamp(36px,7vw,64px) clamp(22px,7vw,64px) calc(clamp(36px,7vw,64px) + 46px);text-align:center}
+.cierre::before{content:"";position:absolute;inset:auto -10% -30px -10%;height:64px;background:repeating-linear-gradient(115deg,rgba(233,162,59,.9) 0 14px,transparent 14px 30px);opacity:.55}
+.cierre h2{color:#fff;position:relative}
+.cierre p{color:#DCE6F7;max-width:50ch;margin:14px auto 0;position:relative}
+.cierre .cta{justify-content:center;position:relative}
+.cierre .btn-line{border-color:#fff;color:#fff}
+.cierre .btn-line:hover{background:#fff;color:var(--azul)}
+/* footer */
+footer{background:var(--tinta);color:#B9C4DA;padding:48px 0 110px;margin-top:clamp(64px,10vw,112px);font-size:.92rem}
+footer .id{color:#fff}
+footer .logo-hueco{border-color:#9DB4EA;color:#9DB4EA;background:transparent}
+footer .marca small{color:#9AA6C0}
+.fgrid{display:grid;gap:26px}
+footer a{color:#F6C878}
+.creditos{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:20px;font-size:.8rem;color:#9AA6C0;display:grid;gap:8px}
+/* barra movil */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.4fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--linea);backdrop-filter:blur(8px)}
+.barra .btn{padding:13px 10px}
+.barra .btn-line{border-color:var(--azul);color:var(--azul)}
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+@media (min-width:720px){
+  .serv-grid{grid-template-columns:repeat(2,1fr)}
+  .pasos{grid-template-columns:repeat(3,1fr)}
+  .galeria{grid-template-columns:repeat(4,1fr)}
+  .galeria figure:first-child{grid-column:span 2;grid-row:span 2}
+  .galeria figure:first-child img{aspect-ratio:auto}
+  .fgrid{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media (min-width:980px){
+  .nav ul{display:flex}
+  .nav .btn{display:inline-flex}
+  .hero{padding:56px 0 0}
+  .hero-grid{grid-template-columns:1.02fr 1fr;align-items:center;gap:56px}
+  .foto-hero{aspect-ratio:4/4.3}
+  .cartilla{position:absolute;left:-46px;bottom:46px;margin:0;width:300px}
+  .serv-grid{grid-template-columns:repeat(3,1fr)}
+  .split{grid-template-columns:1fr 1fr;gap:64px}
+  .ubi{grid-template-columns:1.5fr 1fr}
+  .barra{display:none}
+  footer{padding-bottom:48px}
+}
+</style>
+</head>
+<body>
+
+<div class="aviso">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="id" href="#inicio">
+      <span class="logo-hueco" aria-hidden="true">Tu<br>logo</span>
+      <span class="marca">Top Tabby<small>Clínica Animal · Ojo de Agua</small></span>
+    </a>
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#visita">Su visita</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+    </ul>
+    <a class="btn btn-wa btn-sm" href="https://wa.me/525636655555?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20para%20mi%20mascota" target="_blank" rel="noopener">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 2.6 6.5 6.4 6.8l1.1-1.6-2-1-1 .9c-1.2-.5-2.2-1.5-2.7-2.7l.9-1-1-2z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="kicker">Veterinaria en Ojo de Agua, Tecámac</span>
+      <h1>Atención veterinaria <em>cerca de casa</em> para perros y gatos</h1>
+      <p class="sub">En calle Huertas 79, Ojo de Agua. Escríbanos por WhatsApp, cuéntenos qué tiene su mascota y le decimos cuándo pasar.</p>
+      <div class="cta">
+        <a class="btn btn-wa" href="https://wa.me/525636655555?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20para%20mi%20mascota" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 2.6 6.5 6.4 6.8l1.1-1.6-2-1-1 .9c-1.2-.5-2.2-1.5-2.7-2.7l.9-1-1-2z"/></svg>
+          Agendar por WhatsApp
+        </a>
+        <a class="btn btn-line" href="tel:+525541873364">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M5 4h3.5l1.6 4-2.2 1.4a11 11 0 0 0 5.7 5.7l1.4-2.2 4 1.6V18a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          Llamar
+        </a>
+      </div>
+      <div class="datos">
+        <span><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.4 6.8 19.2l1-5.9L3.5 9.2l5.9-.8z"/></svg>5 estrellas en Google</span>
+        <span><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Martes a domingo</span>
+      </div>
+    </div>
+    <div class="rv" style="position:relative">
+      <div class="foto-hero">
+        <img src="https://images.unsplash.com/photo-1700665537650-1bf37979aae0?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8cHVwcHklMjB2YWNjaW5lJTIwdmV0ZXJpbmFyaWFufGVufDF8MHx8fDE3OTU1OTQ0ODl8MA&amp;ixlib=rb-4.1.0&amp;w=1600&amp;q=80&amp;auto=format&amp;fit=crop" width="1600" height="1067" alt="Dos médicos veterinarios con uniforme azul revisan a un cachorro en un consultorio">
+      </div>
+      <div class="cartilla">
+        <h3><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Horario de atención</h3>
+        <ul>
+          <li><span>Martes a domingo</span><span>10:00 – 18:00</span></li>
+          <li><span>Lunes</span><span class="cerrado">Cerrado</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="servicios">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">El servicio</span>
+      <h2>¿En qué le ayudamos hoy?</h2>
+      <p class="lead">Pregunte por WhatsApp por el servicio que necesita su mascota y le damos precio y horario disponible.</p>
+    </div>
+    <div class="serv-grid">
+      <article class="serv rv">
+        <img src="https://images.unsplash.com/photo-1725409796872-8b41e8eca929?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Mnx8dmV0ZXJpbmFyaWFuJTIwY2F0JTIwZXhhbXxlbnwxfDB8fHwxNzk1NTk0NDg3fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" width="900" height="600" loading="lazy" alt="Gatito blanco durante una revisión con estetoscopio">
+        <div class="tx">
+          <h3>Consulta general</h3>
+          <p>Revisión completa cuando su mascota no come, está decaída o simplemente toca su chequeo.</p>
+          <a class="lnk" href="https://wa.me/525636655555?text=Hola%2C%20%C2%BFcu%C3%A1nto%20cuesta%20la%20consulta%20general%3F" target="_blank" rel="noopener">Preguntar precio <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="serv rv">
+        <img src="https://images.unsplash.com/photo-1561555006-34e7d9717c33?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTh8fHB1cHB5JTIwdmFjY2luZSUyMHZldGVyaW5hcmlhbnxlbnwxfDB8fHwxNzk1NTk0NDg5fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=600&amp;crop=entropy" width="900" height="600" loading="lazy" alt="Cachorro café cargado en brazos mirando a la cámara">
+        <div class="tx">
+          <h3>Vacunas y desparasitación</h3>
+          <p>Para cachorros, gatitos y adultos. Lleve su cartilla y le decimos qué le toca.</p>
+          <a class="lnk" href="https://wa.me/525636655555?text=Hola%2C%20quisiera%20saber%20precio%20de%20vacunas%20y%20desparasitaci%C3%B3n" target="_blank" rel="noopener">Preguntar precio <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="serv rv">
+        <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8dmV0ZXJpbmFyaWFuJTIwY2F0JTIwZXhhbXxlbnwxfDB8fHwxNzk1NTk0NDg3fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" width="900" height="600" loading="lazy" alt="Persona acaricia la cabeza de un gato atigrado con calma">
+        <div class="tx">
+          <h3>Atención para gatos</h3>
+          <p>Los gatos se estresan fuera de casa: pregunte cómo preparar su visita para que sea tranquila.</p>
+          <a class="lnk" href="https://wa.me/525636655555?text=Hola%2C%20quisiera%20informaci%C3%B3n%20para%20llevar%20a%20mi%20gato" target="_blank" rel="noopener">Preguntar <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+    <p class="nota">Confirme por WhatsApp qué servicios y estudios tiene disponibles la clínica.</p>
+  </div>
+</section>
+
+<section class="sec proceso" id="visita">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker" style="color:#F6C878">Su visita</span>
+      <h2>Así de fácil es llevar a su mascota</h2>
+      <p class="lead">Sin vueltas: nos escribe, le damos hora y llega directo a consulta.</p>
+    </div>
+    <div class="pasos">
+      <div class="paso rv"><h3>Escríbanos</h3><p>Por WhatsApp, cuéntenos qué tiene su mascota, su edad y si ya tiene vacunas.</p></div>
+      <div class="paso rv"><h3>Le damos horario</h3><p>Le confirmamos el día y la hora, de martes a domingo entre 10:00 y 18:00.</p></div>
+      <div class="paso rv"><h3>Llegue a Huertas 79</h3><p>En Ojo de Agua. Traiga su cartilla y, si es gato, en su transportadora.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div class="ph rv"><img src="https://images.unsplash.com/photo-1602556818918-064af3b32844?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTJ8fHRhYmJ5JTIwY2F0fGVufDF8MHx8fDE3OTU1OTQ0ODh8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=720&amp;crop=entropy" width="900" height="720" loading="lazy" alt="Gato atigrado café recostado sobre una cobija blanca"></div>
+    <div class="rv">
+      <span class="kicker">Antes de venir</span>
+      <h2>Una cartilla al día, una mascota sana</h2>
+      <p class="lead">Pequeños hábitos que ayudan en cada consulta:</p>
+      <ul class="check">
+        <li><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg><span>Lleve su <strong>cartilla de vacunación</strong> para revisar qué le toca.</span></li>
+        <li><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg><span>Anote desde cuándo nota el síntoma y si ha comido o tomado agua.</span></li>
+        <li><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg><span>Perros con correa y gatos en transportadora, por su seguridad.</span></li>
+        <li><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg><span>Recuerde que <strong>los lunes no abrimos</strong>: escríbanos con tiempo.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Así se vive</span>
+      <h2>Perros y gatos, con calma</h2>
+    </div>
+    <div class="galeria">
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1655306963086-a34411c0915b?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTl8fHRhYmJ5JTIwY2F0fGVufDF8MHx8fDE3OTU1OTQ0ODh8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" width="900" height="600" loading="lazy" alt="Un perro café y un gato naranja duermen juntos sobre una cobija"></figure>
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1770499388247-e00b6c2bf53e?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTl8fHZldGVyaW5hcmlhbiUyMGNhdCUyMGV4YW18ZW58MXwwfHx8MTc5NTU5NDQ4N3ww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=900&amp;crop=entropy" width="900" height="900" loading="lazy" alt="Gato atigrado gris con ojos verdes mirando de frente"></figure>
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1561555006-34e7d9717c33?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MTh8fHB1cHB5JTIwdmFjY2luZSUyMHZldGVyaW5hcmlhbnxlbnwxfDB8fHwxNzk1NTk0NDg5fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=900&amp;crop=faces" width="900" height="900" loading="lazy" alt="Cachorro de orejas grandes sostenido con cuidado"></figure>
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1725409796872-8b41e8eca929?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Mnx8dmV0ZXJpbmFyaWFuJTIwY2F0JTIwZXhhbXxlbnwxfDB8fHwxNzk1NTk0NDg3fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=900" width="900" height="900" loading="lazy" alt="Manos revisando con cuidado a un gatito blanco"></figure>
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8dmV0ZXJpbmFyaWFuJTIwY2F0JTIwZXhhbXxlbnwxfDB8fHwxNzk1NTk0NDg3fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=900&amp;crop=entropy" width="900" height="900" loading="lazy" alt="Gato atigrado recibiendo caricias"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="ubicacion" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Ubicación</span>
+      <h2>Estamos en Ojo de Agua</h2>
+    </div>
+    <div class="ubi">
+      <div class="mapa rv"><iframe title="Mapa de Clínica Animal Top Tabby" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Cl%C3%ADnica%20Animal%20Top%20Tabby%2C%20Huertas%2079%2C%20Ojo%20de%20Agua%2C%2055770%20Tec%C3%A1mac%2C%20M%C3%A9x.&amp;z=16&amp;output=embed"></iframe></div>
+      <div class="ficha rv">
+        <div class="row"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><div><strong>Huertas 79</strong><br>Ojo de Agua, 55770 Tecámac, Edo. Méx.</div></div>
+        <div class="row"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><div>Martes a domingo, 10:00 – 18:00<br><span class="cerrado">Lunes cerrado</span></div></div>
+        <div class="row"><svg class="ico" viewBox="0 0 24 24"><path d="M5 4h3.5l1.6 4-2.2 1.4a11 11 0 0 0 5.7 5.7l1.4-2.2 4 1.6V18a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div>WhatsApp 56 3665 5555<br>Teléfono 55 4187 3364</div></div>
+        <div class="acc">
+          <a class="btn btn-wa btn-sm" href="https://wa.me/525636655555?text=Hola%2C%20%C2%BFme%20pueden%20compartir%20su%20ubicaci%C3%B3n%3F" target="_blank" rel="noopener">Pedir ubicación</a>
+          <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cl%C3%ADnica%20Animal%20Top%20Tabby%20Ojo%20de%20Agua%20Tec%C3%A1mac" target="_blank" rel="noopener">Ver opiniones en Google</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cierre rv">
+    <h2>¿Su mascota necesita consulta?</h2>
+    <p>Escríbanos ahora y le damos horario esta misma semana, de martes a domingo.</p>
+    <div class="cta">
+      <a class="btn btn-wa" href="https://wa.me/525636655555?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20para%20mi%20mascota" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      <a class="btn btn-line" href="tel:+525541873364">Llamar</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="id" href="#inicio"><span class="logo-hueco" aria-hidden="true">Tu<br>logo</span><span class="marca">Top Tabby<small>Clínica Animal · Ojo de Agua</small></span></a>
+        <p style="margin-top:14px;max-width:36ch">Veterinaria en Huertas 79, Ojo de Agua, Tecámac, Estado de México.</p>
+      </div>
+      <div><strong style="color:#fff">Horario</strong><br>Martes a domingo<br>10:00 – 18:00<br>Lunes cerrado</div>
+      <div><strong style="color:#fff">Contacto</strong><br><a href="https://wa.me/525636655555" target="_blank" rel="noopener">WhatsApp 56 3665 5555</a><br><a href="tel:+525541873364">Tel. 55 4187 3364</a></div>
+    </div>
+    <div class="creditos">
+      <span>Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com">FixA Consultoría</a>.</span>
+      <span>Fotografías ilustrativas de <a href="https://unsplash.com/@jonatanbustos25?utm_source=fixa_demos&amp;utm_medium=referral">Jonatan Bustos</a>, <a href="https://unsplash.com/@judy_beth_morris_idaho?utm_source=fixa_demos&amp;utm_medium=referral">Judy Beth Morris</a>, <a href="https://unsplash.com/@karl_janisse?utm_source=fixa_demos&amp;utm_medium=referral">Karl Janisse</a>, <a href="https://unsplash.com/@lowmurmer?utm_source=fixa_demos&amp;utm_medium=referral">Parker Coffman</a>, <a href="https://unsplash.com/@darbylee12?utm_source=fixa_demos&amp;utm_medium=referral">Darby P.</a>, <a href="https://unsplash.com/@micahbg?utm_source=fixa_demos&amp;utm_medium=referral">Micah Giszack</a> y <a href="https://unsplash.com/@cameramandan83?utm_source=fixa_demos&amp;utm_medium=referral">Dan Dennis</a> en <a href="https://unsplash.com/?utm_source=fixa_demos&amp;utm_medium=referral">Unsplash</a>. Se reemplazan por las del negocio.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="barra">
+  <a class="btn btn-line" href="tel:+525541873364">Llamar</a>
+  <a class="btn btn-wa" href="https://wa.me/525636655555?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20para%20mi%20mascota" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+(function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>
