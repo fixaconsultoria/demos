@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--
+  MINI MANUAL DE MARCA · FANGY Studio (propuesta FixA)
+  Concepto: "luz de mañana en la barra": un estudio pequeño y cuidado donde el movimiento es lento, preciso y consciente. La forma del arco (ventanal de estudio de ballet) enmarca fotos y logo.
+  Paleta: niebla rosada #FBF3F1 (fondo) · tinta ciruela #2A1825 (texto) · baya #8E2A57 (primario) · durazno #F2B8A2 (acento) · rosa polvo #F3DDD8 (superficies).
+  Tipografía: Josefin Sans 300/600 (marca y titulares, espaciada y fina como una línea de barra) + Nunito 400/600/700 (texto).
+  Logo: hueco punteado "Tu logo" con forma de arco, línea baya. Favicon: inicial "F" en baya.
+  Íconos: SVG lineales, trazo 1.6, extremos redondeados.
+  Recurso gráfico: arcos y una línea horizontal fina tipo barra de ballet que separa secciones.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>FANGY Studio · Pilates mat y barre en San Cristóbal, Ecatepec</title>
+<meta name="description" content="FANGY Studio: clases de pilates mat y barre en Vicente Villada 4A, San Cristóbal Centro, Ecatepec. Clase suelta o paquetes. Reserva tu lugar por WhatsApp.">
+<meta property="og:title" content="FANGY Studio · Pilates mat y barre en Ecatepec">
+<meta property="og:description" content="Pilates mat y barre en San Cristóbal Centro, Ecatepec. Clase suelta o paquetes; reserva por WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1619385006580-6f5550cabbb3?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8YmFycmUlMjBmaXRuZXNzfGVufDF8MHx8fDE3OTU3NjcyNzR8MA&amp;ixlib=rb-4.1.0&amp;w=1200&amp;q=80&amp;auto=format&amp;fit=crop">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%238E2A57'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-weight='700' font-size='34' text-anchor='middle' fill='%23FBF3F1'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--fondo:#FBF3F1;--tinta:#2A1825;--gris:#5E4A57;--baya:#8E2A57;--baya2:#6F1F43;--durazno:#F2B8A2;--polvo:#F3DDD8;--linea:#E6CFCA;--wa:#137A41;--max:1140px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito",system-ui,sans-serif;background:var(--fondo);color:var(--tinta);line-height:1.65;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(var(--max),100% - 36px);margin-inline:auto}
+h1,h2,h3,.marca{font-family:"Josefin Sans",system-ui,sans-serif;line-height:1.08}
+h1{font-weight:300;font-size:clamp(2.5rem,8.4vw,4.6rem);letter-spacing:-.01em}
+h1 em{font-style:normal;font-weight:600;color:var(--baya)}
+h2{font-weight:300;font-size:clamp(2rem,5.6vw,3.1rem)}
+h2 b{font-weight:600;color:var(--baya)}
+h3{font-weight:600;font-size:1.35rem}
+.lead{color:var(--gris);max-width:54ch;margin-top:16px;font-size:1.07rem}
+.ico{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sec{padding:clamp(64px,10vw,116px) 0}
+.barra{display:flex;align-items:center;gap:14px;color:var(--baya);font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:.98rem;margin-bottom:14px}
+.barra::before{content:"";width:46px;height:2px;background:var(--baya);border-radius:2px;box-shadow:0 6px 0 -0 var(--durazno)}
+.aviso{background:var(--tinta);color:#F6E9EE;font-size:.82rem;text-align:center;padding:8px 14px}
+.aviso a{color:var(--durazno)}
+header{position:sticky;top:0;z-index:20;background:rgba(251,243,241,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+.id{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-hueco{width:46px;height:54px;border:2px dashed var(--baya);border-radius:23px 23px 8px 8px;display:grid;place-items:center;font-size:.6rem;font-weight:700;color:var(--baya);text-align:center;line-height:1.1;background:rgba(142,42,87,.05);flex:none;padding-top:6px}
+.marca{font-weight:600;font-size:1.35rem;letter-spacing:.14em}
+.marca small{display:block;font-family:"Nunito",sans-serif;font-size:.72rem;letter-spacing:.02em;color:var(--gris);font-weight:600}
+.nav ul{display:none;list-style:none;gap:28px;font-weight:600;font-size:.95rem}
+.nav ul a{text-decoration:none}
+.nav ul a:hover{color:var(--baya)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 24px;font-weight:700;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s;border:2px solid transparent;font-size:1rem;font-family:inherit;cursor:pointer}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--durazno);outline-offset:3px}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#0E6334;transform:translateY(-2px);box-shadow:0 10px 22px rgba(19,122,65,.25)}
+.btn-baya{background:var(--baya);color:#fff}
+.btn-baya:hover{background:var(--baya2);transform:translateY(-2px)}
+.btn-line{border-color:var(--tinta);color:var(--tinta)}
+.btn-line:hover{background:var(--tinta);color:var(--fondo)}
+.nav .btn{padding:10px 16px;font-size:.9rem}
+.nav .btn span{display:none}
+/* hero */
+.hero{padding:28px 0 60px;position:relative;overflow:hidden}
+.hero-grid{display:grid;gap:30px}
+.arco{position:relative;border-radius:999px 999px 26px 26px;overflow:hidden;aspect-ratio:4/4.6;background:var(--polvo);box-shadow:0 30px 60px -30px rgba(42,24,37,.45)}
+.arco img{width:100%;height:100%;object-fit:cover;object-position:60% 30%}
+.arco::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(142,42,87,.28))}
+.sello{position:absolute;left:-6px;bottom:28px;background:var(--fondo);border-radius:0 999px 999px 0;padding:12px 20px 12px 22px;font-size:.88rem;font-weight:700;display:flex;gap:10px;align-items:center;box-shadow:0 10px 24px rgba(42,24,37,.12);z-index:2}
+.sello .ico{color:var(--baya)}
+.hero .lugar{display:flex;gap:8px;align-items:center;color:var(--gris);font-weight:600;margin-top:18px}
+.hero .lugar .ico{color:var(--baya);width:20px;height:20px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{border:1px solid var(--linea);background:#fff;border-radius:999px;padding:7px 14px;font-size:.86rem;font-weight:600;color:var(--gris)}
+.chip b{color:var(--baya)}
+/* clases */
+.clases{background:#fff}
+.cl-grid{display:grid;gap:26px;margin-top:44px}
+.clase{background:var(--fondo);border-radius:26px;overflow:hidden;display:flex;flex-direction:column}
+.clase img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.clase .in{padding:26px 24px 28px;display:flex;flex-direction:column;gap:12px;flex:1}
+.clase p{color:var(--gris)}
+.clase ul{list-style:none;display:grid;gap:8px;margin:4px 0 8px}
+.clase li{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:.95rem}
+.clase li .ico{color:var(--baya);width:20px;height:20px;margin-top:2px}
+.clase .btn{align-self:flex-start;margin-top:auto}
+/* paquetes */
+.paq{display:grid;gap:40px;align-items:center}
+.pasos{display:grid;gap:16px;margin-top:30px;counter-reset:p}
+.paso{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start;padding:20px;border-radius:20px;background:#fff;border:1px solid var(--linea)}
+.paso .n{width:52px;height:60px;border-radius:26px 26px 10px 10px;background:var(--polvo);color:var(--baya);display:grid;place-items:center;font-family:"Josefin Sans";font-weight:600;font-size:1.4rem;padding-top:4px}
+.paso p{color:var(--gris);font-size:.97rem}
+.foto-paq{border-radius:26px;overflow:hidden;position:relative}
+.foto-paq img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.nota{margin-top:20px;font-size:.92rem;color:var(--gris);display:flex;gap:10px}
+.nota .ico{color:var(--baya)}
+/* galería */
+.gal{background:var(--tinta);color:var(--fondo)}
+.gal h2 b{color:var(--durazno)}
+.gal .lead{color:#D9C6D0}
+.gal .barra{color:var(--durazno)}.gal .barra::before{background:var(--durazno);box-shadow:none}
+.tira{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:40px}
+.tira figure{border-radius:20px;overflow:hidden}
+.tira figure:nth-child(1){border-radius:999px 999px 20px 20px}
+.tira img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;transition:transform .6s}
+.tira figure:hover img{transform:scale(1.04)}
+/* visita */
+.visita-grid{display:grid;gap:28px;margin-top:40px}
+.horario{background:#fff;border-radius:26px;padding:28px 24px;border:1px solid var(--linea)}
+.horario h3{display:flex;gap:10px;align-items:center}
+.horario h3 .ico{color:var(--baya)}
+.hrs{list-style:none;margin-top:18px}
+.hrs li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--linea);font-size:.97rem}
+.hrs li:last-child{border:0}
+.hrs span:last-child{font-weight:700;text-align:right}
+.dir{margin-top:20px;display:flex;gap:10px;color:var(--gris)}
+.dir .ico{color:var(--baya)}
+.mapa{background:var(--polvo);border-radius:26px;overflow:hidden;min-height:340px;border:1px solid var(--linea)}
+.mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.acc{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+/* cierre */
+.cierre{position:relative;color:#fff;text-align:center;overflow:hidden}
+.cierre img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cierre::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,24,37,.78),rgba(110,31,67,.86));z-index:1}
+.cierre .wrap{position:relative;z-index:2;padding:clamp(80px,12vw,130px) 0}
+.cierre h2{color:#fff}
+.cierre p{max-width:46ch;margin:16px auto 0;color:#F3E3EA}
+.cierre .cta{justify-content:center}
+footer{background:var(--tinta);color:#D9C6D0;padding:46px 0 120px;font-size:.88rem}
+footer .id{color:#fff;margin-bottom:20px}
+footer .logo-hueco{border-color:var(--durazno);color:var(--durazno);background:transparent}
+footer .marca small{color:#C9B3BF}
+.pie{display:grid;gap:10px}
+.pie a{color:var(--durazno)}
+.creditos{font-size:.78rem;color:#B9A2AF}
+/* barra móvil */
+.movil{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.4fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(251,243,241,.96);backdrop-filter:blur(8px);border-top:1px solid var(--linea)}
+.movil .btn{padding:13px 10px;font-size:.95rem}
+.rev{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rev.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rev{opacity:1;transform:none}}
+@media (min-width:760px){
+  .nav .btn span{display:inline}
+  .cl-grid{grid-template-columns:1fr 1fr}
+  .tira{grid-template-columns:repeat(4,1fr)}
+  .visita-grid{grid-template-columns:1fr 1.3fr}
+}
+@media (min-width:980px){
+  .nav ul{display:flex}
+  .hero{padding:56px 0 90px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:60px}
+  .hero-txt{order:-1}
+  .paq{grid-template-columns:.9fr 1.1fr;gap:70px}
+  .movil{display:none}
+  footer{padding-bottom:46px}
+  .pie{grid-template-columns:1fr 1fr;align-items:end}
+}
+</style>
+</head>
+<body>
+<div class="aviso">Propuesta de diseño hecha por <a href="https://fixaconsultoria.com">FixA Consultoría</a>. No es el sitio oficial del negocio.</div>
+<header>
+  <div class="wrap nav">
+    <a class="id" href="#inicio" aria-label="FANGY Studio, inicio">
+      <span class="logo-hueco">Tu<br>logo</span>
+      <span class="marca">FANGY<small>Studio · Pilates y barre</small></span>
+    </a>
+    <ul>
+      <li><a href="#clases">Clases</a></li>
+      <li><a href="#paquetes">Paquetes</a></li>
+      <li><a href="#visita">Horario</a></li>
+    </ul>
+    <a class="btn btn-wa" href="https://wa.me/525574350208?text=Hola%20FANGY%20Studio%2C%20quiero%20reservar%20una%20clase." target="_blank" rel="noopener">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 2.6 6.5 6.5 6.8l1.2-1.6-2-1-1 .8c-1-.5-2-1.5-2.5-2.5l.8-1-1-2z"/></svg><span>Reservar</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="arco rev">
+      <img src="https://images.unsplash.com/photo-1619385006580-6f5550cabbb3?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8YmFycmUlMjBmaXRuZXNzfGVufDF8MHx8fDE3OTU3NjcyNzR8MA&amp;ixlib=rb-4.1.0&amp;w=1600&amp;q=80&amp;auto=format&amp;fit=crop&amp;h=1800" width="1600" height="1840" alt="Mujer entrenando con una mancuerna ligera frente a la barra de un estudio luminoso">
+      <div class="sello"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Clases desde las 7 de la mañana</div>
+    </div>
+    <div class="hero-txt rev">
+      <p class="barra">Pilates mat · Barre</p>
+      <h1>Muévete con calma, <em>con fuerza</em> y con intención.</h1>
+      <p class="lead">Clases de pilates mat y barre en grupos pequeños, para fortalecer, alinear la postura y ganar movilidad a tu ritmo. Reserva tu lugar por WhatsApp.</p>
+      <p class="lugar"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.4-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.6-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>San Cristóbal Centro, Ecatepec de Morelos</p>
+      <div class="cta">
+        <a class="btn btn-wa" href="https://wa.me/525574350208?text=Hola%20FANGY%20Studio%2C%20quiero%20reservar%20mi%20primera%20clase.%20%C2%BFQu%C3%A9%20horarios%20tienen%20disponibles%3F" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/></svg>Reservar mi clase</a>
+        <a class="btn btn-line" href="#clases">Ver clases</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><b>L–V</b> mañana y noche</span>
+        <span class="chip"><b>Sáb y dom</b> por la mañana</span>
+        <span class="chip">Clase suelta o paquete</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec clases" id="clases">
+  <div class="wrap">
+    <p class="barra rev">Las clases</p>
+    <h2 class="rev">Dos disciplinas, <b>un mismo cuidado</b></h2>
+    <p class="lead rev">Ejercicio de bajo impacto que trabaja abdomen, espalda, piernas y glúteos con control del movimiento y respiración.</p>
+    <div class="cl-grid">
+      <article class="clase rev">
+        <img src="https://images.unsplash.com/photo-1717500252747-7fb0d76be34f?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8cGlsYXRlcyUyMG1hdCUyMGNsYXNzfGVufDF8MHx8fDE3OTU3NjcyNTZ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" loading="lazy" width="900" height="563" alt="Instructora corrige a alumnas que trabajan en tapete con pelota de pilates">
+        <div class="in">
+          <h3>Pilates mat</h3>
+          <p>Trabajo en tapete con el peso de tu cuerpo y accesorios ligeros. Fortalece el centro, mejora la postura y la flexibilidad.</p>
+          <ul>
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Control del abdomen y la espalda</li>
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Movilidad y respiración</li>
+          </ul>
+          <a class="btn btn-baya" href="https://wa.me/525574350208?text=Hola%20FANGY%20Studio%2C%20quiero%20preguntar%20el%20precio%20de%20las%20clases%20de%20pilates%20mat." target="_blank" rel="noopener">Preguntar precio</a>
+        </div>
+      </article>
+      <article class="clase rev">
+        <img src="https://images.unsplash.com/photo-1731325632689-7ecab02d39f3?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Nnx8cGlsYXRlcyUyMG1hdCUyMGNsYXNzfGVufDF8MHx8fDE3OTU3NjcyNTZ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" loading="lazy" width="900" height="563" alt="Grupo de mujeres haciendo ejercicios de fuerza en tapete dentro de un estudio">
+        <div class="in">
+          <h3>Barre</h3>
+          <p>Inspirada en el ballet, combina pequeños movimientos, isometría y resistencia para tonificar con precisión.</p>
+          <ul>
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Tonificación de piernas y glúteos</li>
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Equilibrio y postura</li>
+          </ul>
+          <a class="btn btn-baya" href="https://wa.me/525574350208?text=Hola%20FANGY%20Studio%2C%20quiero%20preguntar%20el%20precio%20de%20las%20clases%20de%20barre." target="_blank" rel="noopener">Preguntar precio</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="paquetes">
+  <div class="wrap paq">
+    <div class="foto-paq rev">
+      <img src="https://images.unsplash.com/photo-1591291621164-2c6367723315?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8cGlsYXRlcyUyMGVxdWlwbWVudCUyMG1hdHxlbnwxfDB8fHwxNzk1NzY3Mjc1fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=1125" loading="lazy" width="900" height="1125" alt="Tapete rosa con bloque y mancuernas ligeras sobre piso de madera">
+    </div>
+    <div class="rev">
+      <p class="barra">Paquetes y reservas</p>
+      <h2>Tu lugar, <b>apartado</b> en tres pasos</h2>
+      <div class="pasos">
+        <div class="paso"><span class="n">1</span><div><h3>Elige clase suelta o paquete</h3><p>Entre más clases tiene el paquete, menor es el costo por clase. La vigencia depende del número de clases.</p></div></div>
+        <div class="paso"><span class="n">2</span><div><h3>Reserva por WhatsApp</h3><p>Dinos qué día y horario prefieres y te apartamos tu lugar en la clase.</p></div></div>
+        <div class="paso"><span class="n">3</span><div><h3>¿Cambio de planes?</h3><p>Puedes cambiar el horario de tu reserva avisando por WhatsApp.</p></div></div>
+      </div>
+      <p class="nota"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg>Pregunta por los paquetes vigentes y las promociones del mes.</p>
+      <div class="cta"><a class="btn btn-wa" href="https://wa.me/525574350208?text=Hola%20FANGY%20Studio%2C%20%C2%BFme%20pueden%20compartir%20los%20paquetes%20de%20clases%20disponibles%3F" target="_blank" rel="noopener">Ver paquetes por WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec gal">
+  <div class="wrap">
+    <p class="barra rev">Así se vive</p>
+    <h2 class="rev">Una hora para ti, <b>sin prisas</b></h2>
+    <p class="lead rev">Grupos pequeños, música suave y atención a cada movimiento.</p>
+    <div class="tira">
+      <figure class="rev"><img src="https://images.unsplash.com/photo-1637157216470-d92cd2edb2e8?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8Mnx8cGlsYXRlcyUyMGVxdWlwbWVudCUyMG1hdHxlbnwxfDB8fHwxNzk1NzY3Mjc1fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=1200" loading="lazy" width="900" height="1200" alt="Pies descalzos sobre un tapete verde iluminado por el sol de la mañana"></figure>
+      <figure class="rev"><img src="https://images.unsplash.com/photo-1731325632687-51e90609e700?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8MXx8cGlsYXRlcyUyMG1hdCUyMGNsYXNzfGVufDF8MHx8fDE3OTU3NjcyNTZ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=1200&amp;crop=entropy" loading="lazy" width="900" height="1200" alt="Mujer en plancha elevando una pierna durante una clase en grupo"></figure>
+      <figure class="rev"><img src="https://images.unsplash.com/photo-1734640817404-a0e4e0cc24c2?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NHx8cGlsYXRlcyUyMG1hdCUyMGNsYXNzfGVufDF8MHx8fDE3OTU3NjcyNTZ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=1200" loading="lazy" width="900" height="1200" alt="Persona enrollando su tapete al terminar la clase"></figure>
+      <figure class="rev"><img src="https://images.unsplash.com/photo-1649888639789-b611bc359d9b?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8NHx8d29tZW4lMjBzdHJldGNoaW5nJTIwY2xhc3MlMjBzdHVkaW8lMjB3aW5kb3clMjBsaWdodHxlbnwxfDB8fHwxNzk1NzY3NDE5fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop&amp;h=1200&amp;crop=entropy" loading="lazy" width="900" height="1200" alt="Mujer haciendo un estiramiento lateral en un estudio blanco con ventanales"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visita">
+  <div class="wrap">
+    <p class="barra rev">Visítanos</p>
+    <h2 class="rev">En el centro de <b>San Cristóbal</b></h2>
+    <div class="visita-grid">
+      <div class="horario rev">
+        <h3><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Horario de clases</h3>
+        <ul class="hrs">
+          <li><span>Lunes a viernes</span><span>7:00 – 11:00 y 18:00 – 21:00</span></li>
+          <li><span>Sábado</span><span>8:00 – 11:00</span></li>
+          <li><span>Domingo</span><span>9:00 – 11:00</span></li>
+        </ul>
+        <p class="dir"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.4-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.6-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Vicente Villada 4A, San Cristóbal Centro, 55000 Ecatepec de Morelos, Méx.</p>
+        <div class="acc">
+          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=FANGY%20Studio%20Vicente%20Villada%204A%20San%20Crist%C3%B3bal%20Ecatepec" target="_blank" rel="noopener">Ver opiniones en Google</a>
+        </div>
+      </div>
+      <div class="mapa rev">
+        <iframe title="Mapa de FANGY Studio" loading="lazy" src="https://www.google.com/maps?q=Vicente%20Villada%204A%2C%20San%20Crist%C3%B3bal%20Centro%2C%2055000%20Ecatepec%20de%20Morelos%2C%20M%C3%A9x.&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cierre">
+  <img src="https://images.unsplash.com/photo-1495109251996-432ef0887b37?ixid=M3wxMTM3OTA0fDB8MXxzZWFyY2h8M3x8d29tZW4lMjBzdHJldGNoaW5nJTIwY2xhc3MlMjBzdHVkaW8lMjB3aW5kb3clMjBsaWdodHxlbnwxfDB8fHwxNzk1NzY3NDE5fDA&amp;ixlib=rb-4.1.0&amp;w=1600&amp;q=75&amp;auto=format&amp;fit=crop" loading="lazy" width="1600" height="900" alt="Grupo en clase de barre a contraluz frente a grandes ventanales">
+  <div class="wrap">
+    <h2>Tu primera clase está a un mensaje</h2>
+    <p>Escríbenos, cuéntanos qué horario te acomoda y te apartamos tu lugar.</p>
+    <div class="cta"><a class="btn btn-wa" href="https://wa.me/525574350208?text=Hola%20FANGY%20Studio%2C%20quiero%20reservar%20mi%20primera%20clase." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/></svg>Escribir por WhatsApp</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="id" href="#inicio"><span class="logo-hueco">Tu<br>logo</span><span class="marca">FANGY<small>Studio · Pilates y barre · Ecatepec</small></span></a>
+    <div class="pie">
+      <span>Vicente Villada 4A, San Cristóbal Centro, Ecatepec · WhatsApp 55 7435 0208<br>Propuesta de sitio elaborada por <a href="https://fixaconsultoria.com">FixA Consultoría</a>.</span>
+      <span class="creditos">Fotografías ilustrativas de <a href="https://unsplash.com/@alexgoesglobal?utm_source=fixa_demos&amp;utm_medium=referral">Alexandra Tran</a>, <a href="https://unsplash.com/@ahmetkurt?utm_source=fixa_demos&amp;utm_medium=referral">Ahmet Kurt</a>, <a href="https://unsplash.com/@rothaargebirge?utm_source=fixa_demos&amp;utm_medium=referral">Jessica Streser</a>, <a href="https://unsplash.com/@elli19?utm_source=fixa_demos&amp;utm_medium=referral">Elena Kloppenburg</a>, <a href="https://unsplash.com/@bearsnap?utm_source=fixa_demos&amp;utm_medium=referral">Junseong Lee</a>, <a href="https://unsplash.com/@hanna_witte_photography?utm_source=fixa_demos&amp;utm_medium=referral">Hanna Witte</a>, <a href="https://unsplash.com/@sunday2sunday?utm_source=fixa_demos&amp;utm_medium=referral">SUNDAY II SUNDAY</a> y <a href="https://unsplash.com/@joyreal328?utm_source=fixa_demos&amp;utm_medium=referral">Joy Real</a> en <a href="https://unsplash.com/?utm_source=fixa_demos&amp;utm_medium=referral">Unsplash</a>. Se reemplazan por las del negocio.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="movil">
+  <a class="btn btn-line" href="tel:+525574350208">Llamar</a>
+  <a class="btn btn-wa" href="https://wa.me/525574350208?text=Hola%20FANGY%20Studio%2C%20quiero%20reservar%20una%20clase." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+<script>
+(function(){var els=document.querySelectorAll('.rev');if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('on')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>
